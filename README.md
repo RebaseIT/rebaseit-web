@@ -1,5 +1,5 @@
 # URL to figma:
-https://www.figma.com/file/9UMckGuYjgMcgvinVNeJZE/Rebase-IT-Web?type=design&node-id=0-1&mode=design&t=lOvmEdQPevPm5w3S-0
+https://www.figma.com/proto/PkCESHAQW3XZVhnq9Q0fwQ/Rebase-IT-segunda-web?node-id=1-3&starting-point-node-id=74%3A462
 
 
 # Nuxt 3 Minimal Starter
