@@ -1,4 +1,3 @@
-
 <script setup>
 const props = defineProps({
   text: {
@@ -33,7 +32,7 @@ const bigText = computed(() => props.bigText ? '56px' : '32px');
   -webkit-text-fill-color: transparent;
   font-size: v-bind(bigText);
   font-family: IBM Plex Mono;
-  font-weight: 600;
+  font-weight: 500;
   line-height: normal;
 }
 </style>

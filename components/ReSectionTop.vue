@@ -9,13 +9,21 @@ const props = defineProps({
 </script>
 <template>
   <div class="section pt-8">
-    <slot>{{ text }}</slot>
+    <div class="content">
+      <slot>{{ text }}</slot>
+    </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
-.section{
+.section {
   background-image: url("images/background_1.jpg");
- 
+  background-repeat: no-repeat;
+  background-size: 100% 100vh;
+  .content {
+    position: relative;
+    max-width: 1240px;
+    margin: 0 auto;
+  }
 }
 </style>

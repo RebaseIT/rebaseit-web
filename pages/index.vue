@@ -1,28 +1,35 @@
 <template>
   <ReSectionTop>
     <div class="row px-6 py-6">
-      <div class="col-6">
+      <div class="col-8 pb-0" :class="{ 'col-12 text-center': isMobile }">
         <ReTitleGradient big-text>
           Making every
         </ReTitleGradient>
       </div>
-      <div class="col-6">
+      <div class="col-8 pt-0" :class="{ 'col-12 text-center': isMobile }">
         <ReTitleGradient big-text>
-          version better.
+          version <span class="font-bold">better.</span>
         </ReTitleGradient>
       </div>
-      <div class="col-6">
+      <template v-if="!isMobile">
+        <RePolygon height="190px" width="180px" top="340px" right="500px" />
+        <RePolygon height="320px" width="300px" top="100px" right="170px" />
+        <RePolygon height="85px" width="75px" top="40px" right="100px" />
+        <RePolygon height="160px" width="150px" top="380px" right="0" />
+      </template>
+
+      <div class="col-6" :class="{ 'col-12 text-center': isMobile }">
         <ReTitleSpan
           black-text
           big-text
           bold
         >
-          Rebase IT se especializa en software y servicios de consultoría. 
-          Combinamos habilidades de diseño, ingeniería y operacionales 
+          Rebase IT se especializa en software y servicios de consultoría.
+          Combinamos habilidades de diseño, ingeniería y operacionales
           para dar a nuestros clientes el mejor servicio posible.
         </ReTitleSpan>
       </div>
-      <div class="col-2 py-4">
+      <div class="flex py-4" :class="{ 'justify-content-center': isMobile }">
         <ReButton label="Contactanos" />
       </div>
     </div>
@@ -32,7 +39,7 @@
       <ReTitleGradient class="flex">
         Nuestros Productos
       </ReTitleGradient>
-  
+
       <div class="py-4">
         <ReTabView />
       </div>
@@ -44,10 +51,10 @@
     </ReTitleGradient>
     <div class="row flex justify-content-evenly pt-4 pb-8">
       <img
-        src="/images/clients/nineAzul.png"  
+        src="/images/clients/nineAzul.png"
         height="70"
       >
-    
+
       <img
         src="/images/clients/pillmaykenAzul.png"
         height="70"
@@ -66,7 +73,7 @@
             big-text
             bold
           >
-            En RebaseIT nos especializamos en múltiples frentes, manteniéndonos en la vanguardia 
+            En RebaseIT nos especializamos en múltiples frentes, manteniéndonos en la vanguardia
             de la industria y ofreciendo así el más amplio abanico de soluciones para cada caso.
           </ReTitleSpan>
         </div>
@@ -84,3 +91,8 @@
   </section>
 </template>
 
+<script setup lang="ts">
+import { useViewport } from '~/composables/useViewport';
+
+const { isMobile } = useViewport();
+</script>
