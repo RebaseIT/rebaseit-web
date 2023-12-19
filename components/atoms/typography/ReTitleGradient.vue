@@ -16,7 +16,7 @@ const props = defineProps({
 
 })
 
-const bigText = computed(() => props.bigText ? '56px' : '32px');
+const bigText = computed(() => props.bigText ? '60px' : '40px');
 </script>
 
 <template>

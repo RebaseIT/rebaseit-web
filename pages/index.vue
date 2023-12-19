@@ -17,7 +17,6 @@
         <RePolygon height="85px" width="75px" top="40px" right="100px" />
         <RePolygon height="160px" width="150px" top="380px" right="0" />
       </template>
-
       <div class="col-6" :class="{ 'col-12 text-center': isMobile }">
         <ReTitleSpan
           black-text
@@ -35,11 +34,10 @@
     </div>
   </ReSectionTop>
   <ReSectionProducts>
-    <div class="py-8">
+    <div class="py-8 px-6">
       <ReTitleGradient class="flex">
         Nuestros Productos
       </ReTitleGradient>
-
       <div class="py-4">
         <ReTabView />
       </div>
