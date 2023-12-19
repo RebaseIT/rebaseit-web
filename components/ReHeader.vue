@@ -42,22 +42,22 @@ const items = ref([
 
 .menu-bar {
   opacity: 0.8;
-  display: flex; 
-  border-radius: 0; 
+  display: flex;
+  border-radius: 0;
   height: 60px;
   box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.4);
   justify-content: space-between;
   &:deep(.p-menuitem-text) {
-    color: #0470B8 !important;     
-  } 
- 
+    color: #0470B8 !important;
+  }
+
 }
 .re-header {
   position: fixed;
-  width: 100%; 
+  width: 100%;
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(4px);
-  z-index: 1;  
+  z-index: 100;
 }
 
 </style>

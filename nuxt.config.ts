@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     "@/assets/css/main.scss"
   ],
   modules: [
+    '@vueuse/nuxt',
     ['@nuxtjs/eslint-module', { /* module options */ }]
   ],
   build: {
