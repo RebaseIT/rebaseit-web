@@ -1,5 +1,5 @@
 <template>
-  <img alt="polygon" src="images/polygon-blue.png" :style="styleObject" class="floating-image"/>
+  <img alt="polygon" src="~/public/images/polygon-blue.png" :style="styleObject" class="floating-image"/>
 </template>
 
 <script>

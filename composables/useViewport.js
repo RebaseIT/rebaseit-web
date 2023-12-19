@@ -1,12 +1,14 @@
 import { ref, onMounted, onUnmounted } from 'vue';
-
-export function useViewport() {
+import { breakpointsTailwind, useBreakpoints } from '@vueuse/core'
+export function useViewport(key) {
+    const breakpoints = useBreakpoints(breakpointsTailwind)
     const isMobile = ref(false);
     let checkViewport;
 
     onMounted(() => {
+
         checkViewport = () => {
-            isMobile.value = window.innerWidth <= 1040;
+            isMobile.value = breakpoints.isSmaller(key);
         };
 
         window.addEventListener('resize', checkViewport);

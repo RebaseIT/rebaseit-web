@@ -94,5 +94,5 @@
 <script setup lang="ts">
 import { useViewport } from '~/composables/useViewport';
 
-const { isMobile } = useViewport();
+const { isMobile } = useViewport('xl');
 </script>
