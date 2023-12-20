@@ -2,7 +2,6 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: [
-    "primevue/resources/themes/lara-light-blue/theme.css",
     "@/assets/css/main.scss"
   ],
   modules: [

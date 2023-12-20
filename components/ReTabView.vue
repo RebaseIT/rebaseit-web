@@ -63,7 +63,6 @@ const selected = () => {
 
 
 <style scoped lang="scss">
-$blue: #88ABFE;
 .container {
   max-width: 1240px;
   margin: 0 auto;
@@ -74,7 +73,7 @@ $blue: #88ABFE;
     margin: 0 auto;
     border-radius: 8px;
     padding: 2px;
-    background: linear-gradient($blue,#0470B8);
+    background: linear-gradient(var(--secondary-color),var(--primary-color));
     &:deep(.p-tabview-nav){
       display: flex;
       flex-direction: column;
@@ -99,11 +98,11 @@ $blue: #88ABFE;
       justify-content: center;
       width: 100%;
       border-bottom: 0;
-      background-color: #FFFFFF;
+      background-color: var(--surface-a);
     }
     &:deep(.p-highlight){
       border: 0;
-      border-bottom: 2px solid $blue;
+      border-bottom: 2px solid var(--secondary-color);
       background: rgba(242, 250, 255, 1);
     }
     &:deep(.p-tabview){
@@ -125,23 +124,23 @@ $blue: #88ABFE;
         border: none;
       }
       &:deep(.p-tabview-header){
-        border-bottom: 2px solid $blue;
+        border-bottom: 2px solid var(--secondary-color);
         background: rgba(242, 250, 255, 1);
       }
       &:deep(.p-highlight){
-        background: #FFFFFF;
+        background: var(--surface-a);
       }
       &:deep(.p-highlight[data-pc-index="0"][data-pc-section="header"]){
         border-bottom: 0;
-        border-right: 2px solid $blue;
+        border-right: 2px solid var(--secondary-color);
         border-radius: 0 6px 0 0;;
-        background-color: #FFFFFF;
+        background-color: var(--surface-a);
       }
       &:deep(.p-highlight[data-pc-index="1"][data-pc-section="header"]){
         border-bottom: 0;
-        border-left: 2px solid $blue;
+        border-left: 2px solid var(--secondary-color);
         border-radius: 6px 0 0 0;
-        background-color: #FFFFFF;
+        background-color: var(--surface-a);
       }
     }
   }
