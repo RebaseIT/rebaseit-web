@@ -35,28 +35,21 @@
   </ReSectionTop>
   <ReSectionProducts>
     <div class="py-8 px-6">
-      <ReTitleGradient class="flex">
+      <ReTitleGradientAlt>
         Nuestros Productos
-      </ReTitleGradient>
+      </ReTitleGradientAlt>
       <div class="py-4">
         <ReTabView />
       </div>
     </div>
   </ReSectionProducts>
   <ReSectionClients>
-    <ReTitleGradient class="flex justify-content-end pt-4">
+    <ReTitleGradientAlt class="flex justify-content-end pt-4">
       Nuestros Clientes
-    </ReTitleGradient>
-    <div class="row flex justify-content-evenly pt-4 pb-8">
-      <img
-        src="/images/clients/nineAzul.png"
-        height="70"
-      >
-
-      <img
-        src="/images/clients/pillmaykenAzul.png"
-        height="70"
-      >
+    </ReTitleGradientAlt>
+    <div class="flex justify-content-evenly pt-4 pb-8 gap-4" :class="{ 'flex-column align-items-center': isMobile }">
+      <ReImage src="/images/clients/nineAzul.png" alt="nineAzul" max-width="158" />
+      <ReImage src="/images/clients/pillmaykenAzul.png" alt="pillmaykenAzul" max-width="374" />
     </div>
   </ReSectionClients>
   <ReSectionWhatWeDo>
