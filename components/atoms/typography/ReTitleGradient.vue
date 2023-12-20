@@ -9,14 +9,20 @@ const props = defineProps({
     type: String,
     default: '#FFFFFF'
   },
-  bigText: {
-    type: Boolean,
-    default: false
+  fontSize: {
+    type: String,
+    default: '40px'
+  },
+  fontFamily: {
+    type: String,
+    default: 'Titillium Web'
+  },
+  fontWeight: {
+    type: String,
+    default: '700'
   }
-
 })
 
-const bigText = computed(() => props.bigText ? '60px' : '40px');
 </script>
 
 <template>
@@ -30,9 +36,9 @@ const bigText = computed(() => props.bigText ? '60px' : '40px');
   background: -webkit-linear-gradient(45deg,rgb(4, 90, 147), rgb(136, 171, 254));
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: v-bind(bigText);
-  font-family: IBM Plex Mono;
-  font-weight: 500;
+  font-size: v-bind(fontSize);
+  font-family: v-bind(fontFamily);
+  font-weight: v-bind(fontWeight);
   line-height: normal;
 }
 </style>

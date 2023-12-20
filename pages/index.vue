@@ -2,12 +2,12 @@
   <ReSectionTop>
     <div class="row px-6 py-6">
       <div class="col-8 pb-0" :class="{ 'col-12 text-center': isMobile }">
-        <ReTitleGradient big-text>
+        <ReTitleGradient font-family="IBM Plex Mono" font-size="60px" font-weight="500">
           Making every
         </ReTitleGradient>
       </div>
       <div class="col-8 pt-0" :class="{ 'col-12 text-center': isMobile }">
-        <ReTitleGradient big-text>
+        <ReTitleGradient font-family="IBM Plex Mono" font-size="60px" font-weight="500">
           version <span class="font-bold">better.</span>
         </ReTitleGradient>
       </div>
@@ -35,21 +35,21 @@
   </ReSectionTop>
   <ReSectionProducts>
     <div class="py-8 px-6">
-      <ReTitleGradientAlt>
+      <ReTitleGradient>
         Nuestros Productos
-      </ReTitleGradientAlt>
+      </ReTitleGradient>
       <div class="py-4">
         <ReTabView />
       </div>
     </div>
   </ReSectionProducts>
   <ReSectionClients>
-    <ReTitleGradientAlt class="flex justify-content-end pt-4">
+    <ReTitleGradient class="flex justify-content-end pt-4">
       Nuestros Clientes
-    </ReTitleGradientAlt>
+    </ReTitleGradient>
     <div class="flex justify-content-evenly pt-4 pb-8 gap-4" :class="{ 'flex-column align-items-center': isMobile }">
-      <ReImage src="/images/clients/nineAzul.png" alt="nineAzul" max-width="158" />
-      <ReImage src="/images/clients/pillmaykenAzul.png" alt="pillmaykenAzul" max-width="374" />
+      <ReImage src="/images/clients/nineAzul.png" alt="nineAzul" max-width="158px" />
+      <ReImage src="/images/clients/pillmaykenAzul.png" alt="pillmaykenAzul" max-width="374px" />
     </div>
   </ReSectionClients>
   <ReSectionWhatWeDo>

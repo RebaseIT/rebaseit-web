@@ -12,7 +12,7 @@ const props = defineProps({
   width: {
     type: String,
     required: false,
-    default: ''
+    default: '100%'
   },
   maxWidth: {
     type: String,
@@ -22,7 +22,7 @@ const props = defineProps({
   height: {
     type: String,
     required: false,
-    default: ''
+    default: 'auto'
   },
   maxHeight: {
     type: String,
@@ -30,11 +30,6 @@ const props = defineProps({
     default: ''
   },
 })
-
-const width = computed(() => props.width || '100%');
-const height = computed(() => props.height || 'auto');
-const maxWidth = computed(() => `${props.maxWidth}px`);
-const maxHeight = computed(() => `${props.maxHeight}px`);
 
 </script>
 <template>
