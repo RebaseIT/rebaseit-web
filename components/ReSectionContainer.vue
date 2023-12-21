@@ -8,15 +8,12 @@ const props = defineProps({
   image: {
     type: String,
     required: false,
-    default: ''
+    default: 'url(images/background_1.jpg)'
   },
 })
-const backgroundImageStyle = computed(() => ({
-  backgroundImage: `url(${props.image})`
-}))
 </script>
 <template>
-  <div class="section" :style="backgroundImageStyle">
+  <div class="section">
     <div class="content">
       <slot>{{ text }}</slot>
     </div>
@@ -25,6 +22,7 @@ const backgroundImageStyle = computed(() => ({
 
 <style lang="scss" scoped>
 .section {
+  background-image: v-bind(image);
   background-repeat: no-repeat;
   background-size: 100% 100vh;
   .content {
