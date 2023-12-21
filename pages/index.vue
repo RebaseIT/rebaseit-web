@@ -74,9 +74,7 @@
       </div>
     </div>
   </ReSectionWhatWeDo>
-  <section class="py-8">
-    <ReContactUs />
-  </section>
+  <ReContactUs />
 </template>
 
 <script setup lang="ts">

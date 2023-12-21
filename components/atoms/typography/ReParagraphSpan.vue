@@ -9,10 +9,6 @@ const props = defineProps({
     type: Boolean,
     default: false
   },
-  blackText: {
-    type: Boolean,
-    default: false
-  },
   bigText: {
     type: Boolean,
     default: false
