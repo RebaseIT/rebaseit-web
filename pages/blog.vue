@@ -7,7 +7,7 @@
         </ReTitleGradient>
         <div>
           <ReTitleSpan
-            color="var(--black)"
+            color="black"
             big-text
             bold
           >

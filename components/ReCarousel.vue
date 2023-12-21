@@ -38,7 +38,7 @@ const responsiveOptions = ref([
       <template #item="slotProps">
         <div class="border surface-border border-round p-5">
           <ReParagraphSpan
-            color="var(--black)"
+            color="black"
             font-weight
           >
             Desde que adoptamos Sherlock en nuestro departamento de
@@ -57,7 +57,7 @@ const responsiveOptions = ref([
             <div>
               <ReTitleSpan
                 bold
-                color="var(--black)"
+                color="black"
                 class="font-size-text"
               >
                 Eva López
@@ -65,7 +65,7 @@ const responsiveOptions = ref([
             </div>
             <div>
               <ReTitleSpan
-                color="var(--black)"
+                color="black"
                 class="font-size-text"
               >
                 CEO Smart Co.

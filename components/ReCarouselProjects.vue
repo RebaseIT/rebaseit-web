@@ -59,7 +59,7 @@ const responsiveOptions = ref([
             </template>
             <template #content>
               <ReParagraphSpan
-                color="var(--black)"
+                color="black"
                 font-weight
                 class="flex justify-content-center"
               >

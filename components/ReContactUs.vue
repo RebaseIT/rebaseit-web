@@ -11,7 +11,7 @@ const { isMobile } = useViewport('lg');
         <div class="py-4">
           <ReParagraphSpan
               big-text
-              color="var(--black)"
+              color="black"
           >
             Nos comunicaremos en breve.
           </ReParagraphSpan>
@@ -35,7 +35,7 @@ const { isMobile } = useViewport('lg');
               <ReParagraphSpan color="var(--primary-color)">
                 <b>O envianos un mensaje a: </b>
               </ReParagraphSpan>
-              <ReParagraphSpan color="var(--black)">
+              <ReParagraphSpan color="black">
                 <b><a href="mailto:sales@rebaseit.tech">sales@rebaseit.tech</a></b>
               </ReParagraphSpan>
             </div>
@@ -56,7 +56,7 @@ const { isMobile } = useViewport('lg');
   background-color: var(--light-blue);
     a {
       text-decoration: none;
-      color: var(--black);
+      color: black;
     }
   }
   &:deep(.p-card-body){
