@@ -8,22 +8,7 @@ const props = defineProps({
 })
 </script>
 <template>
-  <div class="section pt-8">
-    <div class="content">
-      <slot>{{ text }}</slot>
-    </div>
-  </div>
+  <ReContainer class="pt-8" image="images/background_1.jpg">
+    <slot>{{ text }}</slot>
+  </ReContainer>
 </template>
-
-<style lang="scss" scoped>
-.section {
-  background-image: url("images/background_1.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 100vh;
-  .content {
-    position: relative;
-    max-width: 1240px;
-    margin: 0 auto;
-  }
-}
-</style>
