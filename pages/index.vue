@@ -19,7 +19,7 @@
       </template>
       <div class="col-6" :class="{ 'col-12 text-center': isMobile }">
         <ReTitleSpan
-          black-text
+          color="var(--black)"
           big-text
           bold
         >
@@ -60,7 +60,7 @@
         </ReTitleGradient>
         <div class="mt-3">
           <ReTitleSpan
-            black-text
+            color="var(--black)"
             big-text
             bold
           >

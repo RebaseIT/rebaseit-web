@@ -8,7 +8,7 @@ const props = defineProps({
 })
 </script>
 <template>
-  <ReContainer class="pt-8" image="images/background_1.jpg">
+  <ReSectionContainer class="pt-8" image="images/background_1.jpg">
     <slot>{{ text }}</slot>
-  </ReContainer>
+  </ReSectionContainer>
 </template>

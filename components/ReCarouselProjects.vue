@@ -59,7 +59,7 @@ const responsiveOptions = ref([
             </template>
             <template #content>
               <ReParagraphSpan
-                black-text
+                color="var(--black)"
                 font-weight
                 class="flex justify-content-center"
               >
@@ -90,7 +90,7 @@ const responsiveOptions = ref([
     &:deep(.p-carousel-item p-carousel-item-active p-carousel-item-start){
       background-color: #F2FAFF;
     }
-  }  
+  }
 }
 </style>
 

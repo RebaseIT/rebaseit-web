@@ -7,16 +7,16 @@
         </ReTitleGradient>
         <div>
           <ReTitleSpan
-            black-text
+            color="var(--black)"
             big-text
             bold
           >
-            Desde Rebase IT, acompañamos a nuestros clientes en todo el ciclo de vida del proyecto, 
+            Desde Rebase IT, acompañamos a nuestros clientes en todo el ciclo de vida del proyecto,
             brindándoles soluciones superadoras y ajustadas a sus necesidades particulares.
           </ReTitleSpan>
         </div>
-      </div>   
-   
+      </div>
+
       <div class="col-4 px-8">
         <img
           alt="logo"

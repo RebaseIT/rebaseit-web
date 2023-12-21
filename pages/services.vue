@@ -7,16 +7,16 @@
         </ReTitleGradient>
         <div>
           <ReTitleSpan
-            black-text
+            color="var(--black)"
             big-text
             bold
           >
-            Rebase IT cuenta con un amplio repertorio de especialidades, 
+            Rebase IT cuenta con un amplio repertorio de especialidades,
             dando así la atención más completa y la solución indicada para tus necesidades.
           </ReTitleSpan>
         </div>
-      </div>   
-   
+      </div>
+
       <div class="col-4 px-8">
         <img
           alt="logo"

@@ -7,15 +7,15 @@
         </ReTitleGradient>
         <div>
           <ReTitleSpan
-            black-text
+            color="var(--black)"
             big-text
             bold
           >
             Enterate de todas las noticias que Rebase IT tiene para vos.
           </ReTitleSpan>
         </div>
-      </div>   
-   
+      </div>
+
       <div class="col-4 px-8">
         <img
           alt="logo"

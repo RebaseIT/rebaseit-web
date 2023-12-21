@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from "vue";
 
-const images = ref([  
+const images = ref([
   {src: '/images/gatito1.jpeg'},
   {src: '/images/gatito2.jpeg'},
   {src: '/images/gatito3.jpeg'},
@@ -38,14 +38,14 @@ const responsiveOptions = ref([
       <template #item="slotProps">
         <div class="border surface-border border-round px-5 pt-4">
           <ReParagraphSpan
-            black-text
+            color="var(--black)"
             font-weight
           >
             Desde que adoptamos Sherlock en nuestro departamento de
             Sistemas, hemos podido detectar cualquier brecha de seguridad
             en tiempo record!
           </ReParagraphSpan>
-      
+
           <div class="pt-4 row">
             <img
               :src="slotProps.data.src"
@@ -53,11 +53,11 @@ const responsiveOptions = ref([
               width="60"
               class="img-border"
             >
-           
+
             <div>
-              <ReTitleSpan  
-                bold            
-                black-text
+              <ReTitleSpan
+                bold
+                color="var(--black)"
                 class="font-size-text"
               >
                 Eva López
@@ -65,7 +65,7 @@ const responsiveOptions = ref([
             </div>
             <div>
               <ReTitleSpan
-                black-text
+                color="var(--black)"
                 class="font-size-text"
               >
                 CEO Smart Co.
@@ -86,7 +86,7 @@ const responsiveOptions = ref([
   &:deep(.p-carousel-content){
     background-color: #F5FAFF;
     border-radius: 10px;
-  }&:deep(.p-carousel-indicator .p-link){    
+  }&:deep(.p-carousel-indicator .p-link){
     border-radius: 100%;
     width: 16px;
     height: 16px;
