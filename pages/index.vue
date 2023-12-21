@@ -53,12 +53,12 @@
     </div>
   </ReSectionClients>
   <ReSectionWhatWeDo>
-    <div class="row flex py-8">
-      <div class="pr-8">
+    <div class="row flex py-8 px-6 justify-space-between align-items-center gap-4" :class="{ 'flex-column justify-center': isMobile }">
+      <div class="col-6" :class="{ 'col-12': isMobile }">
         <ReTitleGradient>
-          Qué hacemos?
+          ¿Qué hacemos?
         </ReTitleGradient>
-        <div>
+        <div class="mt-3">
           <ReTitleSpan
             black-text
             big-text
@@ -69,11 +69,8 @@
           </ReTitleSpan>
         </div>
       </div>
-      <div class="flex justify-content-end ">
-        <img
-          src="/images/stuff.png"
-          height="260"
-        >
+      <div class="flex">
+        <ReImage src="/images/stuff.png" max-width="480px"/>
       </div>
     </div>
   </ReSectionWhatWeDo>
@@ -85,5 +82,5 @@
 <script setup lang="ts">
 import { useViewport } from '~/composables/useViewport';
 
-const { isMobile } = useViewport('xl');
+const { isMobile } = useViewport('lg');
 </script>

@@ -8,13 +8,7 @@ const props = defineProps({
 })
 </script>
 <template>
-  <div class="section px-8">
+  <ReSectionContainer image="url(images/background_3.jpg)">
     <slot>{{ text }}</slot>
-  </div>
+  </ReSectionContainer>
 </template>
-
-<style lang="scss" scoped>
-.section{
-  background-image: url("images/background_3.jpg"); 
-}
-</style>
