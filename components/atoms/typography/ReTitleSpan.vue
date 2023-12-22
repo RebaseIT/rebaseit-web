@@ -20,7 +20,7 @@ const props = defineProps({
 })
 
 const fontWeight = computed(() => props.bold ? 400 : 200)
-const bigText = computed(() => props.bigText ? '22px' : '18px');
+const bigText = computed(() => props.bigText ? '25px' : '18px');
 
 </script>
 
