@@ -87,7 +87,9 @@ const { isMobile } = useViewport('sm');
     <div class="footer-content row flex px-6 gap-4" :class="{ 'flex-column': isMobile }">
       <div class="w-full footer-logo-container">
         <div>
-          <ReImage alt="logo-footer" src="/images/logo-footer.png" max-width="170px" />
+          <NuxtLink to="/" class="text-link">
+            <ReImage alt="logo-footer" src="/images/logo-footer.png" max-width="170px" />
+          </NuxtLink>
         </div>
         <div class="py-4 gap-3">
           <ReTitleSpan big-text>
@@ -136,14 +138,11 @@ const { isMobile } = useViewport('sm');
             :key="`${submenu.title}`"
             v-for="(submenu) in menu.menus"
           >
-            <NuxtLink
-              :to="menu.to"
-              class="text-link"
-            >
+            <div>
               <ReSubtitle>
                 {{ submenu.title }}
               </ReSubtitle>
-            </NuxtLink>
+            </div>
           </div>
         </div>
       </div>

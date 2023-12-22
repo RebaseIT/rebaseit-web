@@ -23,6 +23,7 @@ defineProps({
   font-weight: 100;
   line-height: normal;
   text-decoration: none;
+  cursor: default;
 }
 </style>
 
