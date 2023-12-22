@@ -5945,3 +5945,17 @@
 .p-speeddial-item.p-focus > .p-speeddial-action {
   box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #9dc1fb, 0 1px 2px 0 black;
 }
+.p-gradient-card {
+  border-radius: 8px;
+  padding: 2px;
+  background: linear-gradient(var(--secondary-color),var(--primary-color));
+  .p-gradient-card-content {
+    padding: 32px;
+    background: white;
+    border-radius: 6px;
+    width: 100%;
+  }
+}
+.p-container-min-h {
+  min-height: 470px;
+}
