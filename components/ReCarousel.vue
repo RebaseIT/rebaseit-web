@@ -8,19 +8,16 @@ const images = ref([
 ]);
 const responsiveOptions = ref([
   {
-    breakpoint: '1199px',
     numVisible: 3,
-    numScroll: 3
+    numScroll: 1
   },
   {
-    breakpoint: '991px',
-    numVisible: 2,
+    numVisible: 3,
     numScroll: 2
   },
   {
-    breakpoint: '767px',
-    numVisible: 1,
-    numScroll: 1
+    numVisible: 3,
+    numScroll: 3
   }
 ]);
 
@@ -115,6 +112,4 @@ const responsiveOptions = ref([
     margin-top: 56px;
   }
 }
-
-
 </style>
