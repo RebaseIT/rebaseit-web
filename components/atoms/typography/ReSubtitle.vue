@@ -18,10 +18,11 @@ defineProps({
 <style scoped>
 .re-subtitle {
   color: #ffffff;
-  font-size: 12px;
+  font-size: 15px;
   font-family: Roboto;
   font-weight: 100;
   line-height: normal;
+  text-decoration: none;
 }
 </style>
 

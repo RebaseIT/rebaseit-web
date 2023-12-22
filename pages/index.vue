@@ -1,6 +1,6 @@
 <template>
   <ReSectionTop>
-    <div class="row px-6 py-6">
+    <div class="row px-6 py-8">
       <div class="col-8 pb-0" :class="{ 'col-12 text-center': isMobile }">
         <ReTitleGradient font-family="IBM Plex Mono" font-size="60px" font-weight="500">
           Making every
@@ -12,10 +12,10 @@
         </ReTitleGradient>
       </div>
       <template v-if="!isMobile">
-        <RePolygon height="190px" width="180px" top="340px" right="500px" />
-        <RePolygon height="320px" width="300px" top="100px" right="170px" />
-        <RePolygon height="85px" width="75px" top="40px" right="100px" />
-        <RePolygon height="160px" width="150px" top="380px" right="0" />
+        <RePolygon height="190px" width="180px" top="375px" right="500px" />
+        <RePolygon height="320px" width="300px" top="130px" right="170px" />
+        <RePolygon height="85px" width="75px" top="60px" right="100px" />
+        <RePolygon height="160px" width="150px" top="410px" right="0" />
       </template>
       <div class="col-6" :class="{ 'col-12 text-center': isMobile }">
         <ReTitleSpan
@@ -80,5 +80,5 @@
 <script setup lang="ts">
 import { useViewport } from '~/composables/useViewport';
 
-const { isMobile } = useViewport('lg');
+const { isMobile } = useViewport('xl');
 </script>

@@ -1,8 +1,9 @@
 <script setup>
+import { useViewport } from '~/composables/useViewport';
 const menus = ref([
   {
     title: "Home",
-    to: "/home"
+    to: "/"
   },
   {
     title: "Conocenos",
@@ -10,7 +11,7 @@ const menus = ref([
   },
   {
     title: "Proyectos",
-    to: "/",
+    to: "/projects",
     menus: [
       {
         title: "Sherlock",
@@ -24,7 +25,7 @@ const menus = ref([
   },
   {
     title: "Servicios",
-    to: "/",
+    to: "/services",
     menus: [
       {
         title: "Frontend",
@@ -53,7 +54,7 @@ const menus = ref([
     ]
   },  {
     title: "Blog",
-    to: "/",
+    to: "/blog",
     menus: [
       {
         title: "Todos los artículos",
@@ -79,47 +80,46 @@ const menus = ref([
   }
 
 ])
-
+const { isMobile } = useViewport('sm');
 </script>
 <template>
   <div class="footer">
-    <div class="row flex p-3">
-      <div class="col-4 px-8">
+    <div class="footer-content row flex px-6 gap-4" :class="{ 'flex-column': isMobile }">
+      <div class="w-full footer-logo-container">
         <div>
-          <img
-            alt="logo"
-            src="/assets/logo-footer.png"
-            height="70"
-            width="130"
-          >
+          <ReImage alt="logo-footer" src="/images/logo-footer.png" max-width="170px" />
         </div>
-        <div class="py-4">
-          <ReTitleSpan>
+        <div class="py-4 gap-3">
+          <ReTitleSpan big-text>
             ¿Tenés un proyecto?
           </ReTitleSpan>
-          <ReTitleSpan bold>
+          <br>
+          <ReTitleSpan bold big-text>
             Hablemos
           </ReTitleSpan>
         </div>
-        <div class="py-4">
-          <img
-            alt="logo"
-            src="/assets/logo-insta.svg"
-            height="28"
-            width="28"
-          >
-          <img
-            class="mx-4"
-            alt="logo"
-            src="/assets/logo-linkedin.svg"
-            height="28"
-            width="28"
-          >
+        <div class="py-4 gap-3">
+          <!-- TODO: add instagram link
+          <a href="https://www.linkedin.com/company/rebase-it/">
+            <img
+              alt="logo"
+              src="/assets/logo-insta.svg"
+              height="28"
+              width="28"
+          </a>
+          >-->
+          <a href="https://www.linkedin.com/company/rebase-it/">
+            <ReImage
+                alt="linkedin"
+                src="/images/logo-linkedin.svg"
+                max-width="32px"
+            />
+          </a>
         </div>
       </div>
-      <div class="col-8 flex justify-content-evenly">
+      <div class="w-full gap-3 flex md:justify-content-evenly flex-wrap" :class="{ 'justify-content-start': isMobile }">
         <div
-          class="py-4"
+          class="py-4 gap-3 flex flex-column"
           :key="`${index}-${menu.title}`"
           v-for="(menu, index) in menus"
         >
@@ -131,7 +131,7 @@ const menus = ref([
               {{ menu.title }}
             </ReTitle>
           </NuxtLink>
-          <div            
+          <div
             class="py-1"
             :key="`${submenu.title}`"
             v-for="(submenu) in menu.menus"
@@ -154,17 +154,16 @@ const menus = ref([
 <style scoped>
 .footer {
     background: linear-gradient(135deg, #0470B8 46.44%, #88ABFE 100%);
+  .footer-content {
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+  .footer-logo-container {
+    min-width: 230px;
+    max-width: 240px;
+  }
 }
-/*
-ESTO NO TIENE QUE QUEDAR ACA MOVER A UN COMPONENTE
-*/
 .text-link {
   text-decoration: none;
-}
-/*
-ESTO NO TIENE QUE QUEDAR ACA Y EL NOMBRE ESTA MAL --> MOVER A ARCHIVO GENERICO
-*/
-.text-color {
-  background-color: #FFFFFF;
 }
 </style>
