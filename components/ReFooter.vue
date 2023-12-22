@@ -7,7 +7,7 @@ const menus = ref([
   },
   {
     title: "Conocenos",
-    to: "/",
+    to: "/about-us",
   },
   {
     title: "Proyectos",
