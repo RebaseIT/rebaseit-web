@@ -79,7 +79,7 @@ const teamOptions = [
       <ReTitleGradient class="align-self-center">
         Conocé a nuestro equipo
       </ReTitleGradient>
-      <div class="flex flex-row flex-wrap justify-content-center gap-8">
+      <div class="flex flex-row flex-wrap justify-content-center gap-4 xl:gap-8" :class="{ 'mt-6': isMobile }">
         <div class="flex flex-column align-items-center w-fit" v-for="member in teamOptions">
           <ReImage
             :alt="member.alt"
@@ -89,6 +89,7 @@ const teamOptions = [
             :style="`margin-top: ${ !isMobile ? member.mt : 0 }`"
           />
           <ReTitleSpan
+              class="mt-3"
               color="var(--primary-color)"
               bold
           >
