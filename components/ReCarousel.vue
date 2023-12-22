@@ -1,26 +1,23 @@
 <script setup>
 import { ref } from "vue";
 
-const images = ref([  
+const images = ref([
   {src: '/images/gatito1.jpeg'},
   {src: '/images/gatito2.jpeg'},
   {src: '/images/gatito3.jpeg'},
 ]);
 const responsiveOptions = ref([
   {
-    breakpoint: '1199px',
     numVisible: 3,
-    numScroll: 3
+    numScroll: 1
   },
   {
-    breakpoint: '991px',
-    numVisible: 2,
+    numVisible: 3,
     numScroll: 2
   },
   {
-    breakpoint: '767px',
-    numVisible: 1,
-    numScroll: 1
+    numVisible: 3,
+    numScroll: 3
   }
 ]);
 
@@ -36,16 +33,16 @@ const responsiveOptions = ref([
       class="carousel-color"
     >
       <template #item="slotProps">
-        <div class="border surface-border border-round px-5 pt-4">
+        <div class="border surface-border border-round p-5">
           <ReParagraphSpan
-            black-text
+            color="black"
             font-weight
           >
             Desde que adoptamos Sherlock en nuestro departamento de
             Sistemas, hemos podido detectar cualquier brecha de seguridad
             en tiempo record!
           </ReParagraphSpan>
-      
+
           <div class="pt-4 row">
             <img
               :src="slotProps.data.src"
@@ -53,11 +50,11 @@ const responsiveOptions = ref([
               width="60"
               class="img-border"
             >
-           
+
             <div>
-              <ReTitleSpan  
-                bold            
-                black-text
+              <ReTitleSpan
+                bold
+                color="black"
                 class="font-size-text"
               >
                 Eva López
@@ -65,7 +62,7 @@ const responsiveOptions = ref([
             </div>
             <div>
               <ReTitleSpan
-                black-text
+                color="black"
                 class="font-size-text"
               >
                 CEO Smart Co.
@@ -79,31 +76,40 @@ const responsiveOptions = ref([
 </template>
 
 <style lang="scss" scoped>
-.img-border {
-  border-radius: 100%;
-}
 .carousel-color {
+  .img-border {
+    border-radius: 100%;
+  }
   &:deep(.p-carousel-content){
     background-color: #F5FAFF;
     border-radius: 10px;
-  }&:deep(.p-carousel-indicator .p-link){    
+  }
+  &:deep(.p-carousel-indicator .p-link){
     border-radius: 100%;
     width: 16px;
     height: 16px;
     border: 1px solid #0470B8;
     background: transparent;
-  }&:deep(.p-carousel-indicator.p-highlight button){
+  }
+  &:deep(.p-carousel-indicator.p-highlight button){
     background-color: #0470B8;
-  }&:deep(.p-carousel-next-icon){
-    width: 34px;
-    height: 34px;
-    color: #0470B8;
-  }&:deep(.p-carousel-prev-icon){
+  }
+  &:deep(.p-carousel-next-icon){
     width: 34px;
     height: 34px;
     color: #0470B8;
   }
+  &:deep(.p-carousel-prev-icon){
+    width: 34px;
+    height: 34px;
+    color: #0470B8;
+  }
+  &:deep(.p-carousel-item){
+    flex: 1 0 100% !important;
+  }
+  &:deep(.p-carousel-next),
+  &:deep(.p-carousel-prev) {
+    margin-top: 56px;
+  }
 }
-
-
 </style>
