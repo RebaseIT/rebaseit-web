@@ -91,6 +91,7 @@ const teamOptions = [
           <ReTitleSpan
               class="mt-3"
               color="var(--primary-color)"
+              text-transform="uppercase"
               bold
           >
             {{ member.name }}
