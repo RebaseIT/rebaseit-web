@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import { useViewport } from '~/composables/useViewport';
-
-const { isMobile } = useViewport('xl');
 const ourValues = [
   {
     title: 'Honestidad y transparencia',
@@ -70,7 +67,8 @@ const ourValues = [
 <template>
   <ReSectionContainer image="url(images/section_products_bg.png)">
     <div
-      class="flex flex-column pb-8 px-6">
+      class="flex flex-column pb-8 px-6"
+    >
       <ReTitleGradient class="align-self-center">
         Valores que nos definen
       </ReTitleGradient>

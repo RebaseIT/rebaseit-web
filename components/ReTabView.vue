@@ -1,7 +1,7 @@
 <script setup>
 import { useViewport } from '~/composables/useViewport';
 
-const { isMobile } = useViewport('md');
+const { isSmaller: isMobile } = useViewport('md');
 const isSelected = ref(false);
 const selected = () => {
   isSelected.value = !isSelected.value;

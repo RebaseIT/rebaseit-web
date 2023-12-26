@@ -80,7 +80,7 @@ const menus = ref([
   }
 
 ])
-const { isMobile } = useViewport('sm');
+const { isSmaller: isMobile } = useViewport('sm');
 </script>
 <template>
   <div class="footer">

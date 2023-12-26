@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { useViewport } from '~/composables/useViewport';
 
-const { isMobile } = useViewport('lg');
-const { extraLargeViewport } = useViewport('xl');
+const { isSmaller: isMobile } = useViewport('lg');
+const { isGreaterOrEqual: showPolygon } = useViewport('xl');
 
 const title = 'Somos RebaseIT.';
 const subtitle = 'Conectamos a cada uno de nuestros clientes con la solución más adecuada para sus necesidades, garantizando siempre calidad y rentabilidad.';
@@ -45,6 +45,27 @@ const teamOptions = [
     mt: '80px'
   }
 ];
+
+const sectionOptions = [
+  {
+    title: 'Misión',
+    description: 'Conectar a cada uno de nuestros clientes con la solución mas adecuada para sus necesidades, garantizando la calidad y rentabilidad de las mismas.',
+    image: {
+      src: 'images/puzzle.png',
+      alt: 'puzzle-image',
+      maxWidth: '262px'
+    }
+  },
+  {
+    title: 'Visión',
+    description: 'Convertirnos en una empresa lider del mercado de software a medida, asegurando la calidad en cada uno de nuestros proyectos.',
+    image: {
+      src: 'images/brujula.png',
+      alt: 'brujula-image',
+      maxWidth: '210px'
+    }
+  }
+]
 </script>
 
 <template>
@@ -62,11 +83,11 @@ const teamOptions = [
       <div class="p-gradient-card mt-4">
         <div
           class="p-gradient-card-content relative"
-          :class="{ 'p-container-min-h': extraLargeViewport }"
+          :class="{ 'p-container-min-h': showPolygon }"
         >
           <div
             class="col-6"
-            :class="{ 'col-12': !extraLargeViewport }"
+            :class="{ 'col-12': !showPolygon }"
           >
             <ReTitleSpan
               color="black"
@@ -78,7 +99,7 @@ const teamOptions = [
               A natus officiis quo quisquam nihil est sapiente adipisci aut odit soluta 33 voluptas labore et culpa voluptatem ut culpa magni! Ut omnis similique eum accusamus exercitationem est internos fugit. Aut commodi sequi hic accusantium alias et similique optio non voluptas nemo.
             </ReTitleSpan>
           </div>
-          <template v-if="extraLargeViewport">
+          <template v-if="showPolygon">
             <RePolygon
               height="115px"
               width="100px"
@@ -111,14 +132,14 @@ const teamOptions = [
   <ReSectionContainer image="url(images/section_products_bg.png)">
     <div
       class="flex flex-column pb-8 px-2"
-      :class="{ 'px-6': !extraLargeViewport }"
+      :class="{ 'px-6': isMobile }"
     >
       <ReTitleGradient class="align-self-center">
         Conocé a nuestro equipo
       </ReTitleGradient>
       <div
         class="flex flex-row flex-wrap justify-content-center gap-4 xl:gap-8"
-        :class="{ 'mt-6': !extraLargeViewport }"
+        :class="{ 'mt-6': isMobile }"
       >
         <div
           class="flex flex-column align-items-center w-fit"
@@ -130,7 +151,7 @@ const teamOptions = [
             :src="member.image"
             width="178px"
             height="205px"
-            :style="`margin-top: ${ extraLargeViewport ? member.mt : 0 }`"
+            :style="`margin-top: ${ !isMobile ? member.mt : 0 }`"
           />
           <ReTitleSpan
             class="mt-3 font-semibold"
@@ -149,39 +170,25 @@ const teamOptions = [
       class="flex p-6 gap-8 justify-space-between"
       :class="{ 'flex-column': isMobile }"
     >
-      <div class="p-gradient-card">
+      <div
+        class="p-gradient-card"
+        v-for="section in sectionOptions"
+        :key="section.title"
+      >
         <div class="p-gradient-card-content flex flex-column justify-center align-items-center">
           <ReTitleGradient class="align-self-center">
-            Misión
+            {{ section.title }}
           </ReTitleGradient>
           <ReTitleSpan
             class="my-4"
             color="black"
           >
-            Conectar a cada uno de nuestros clientes con la solución mas adecuada para sus necesidades, garantizando la calidad y rentabilidad de las mismas.
+            {{ section.description }}
           </ReTitleSpan>
           <ReImage
-            alt="Nuestra misión"
-            src="images/puzzle.png"
-            max-width="262px"
-          />
-        </div>
-      </div>
-      <div class="p-gradient-card">
-        <div class="p-gradient-card-content flex flex-column justify-center align-items-center">
-          <ReTitleGradient class="align-self-center">
-            Visión
-          </ReTitleGradient>
-          <ReTitleSpan
-            class="my-4"
-            color="black"
-          >
-            Convertirnos en una empresa lider del mercado de software a medida, asegurando la calidad en cada uno de nuestros proyectos.
-          </ReTitleSpan>
-          <ReImage
-            alt="Nuestra misión"
-            src="images/brujula.png"
-            max-width="210px"
+            :alt="section.image.alt"
+            :src="section.image.src"
+            :max-width="section.image.maxWidth"
           />
         </div>
       </div>

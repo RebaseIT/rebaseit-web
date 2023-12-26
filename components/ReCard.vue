@@ -1,12 +1,8 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-
 const hovered = ref(false);
-
 const handleMouseOver = () => {
   hovered.value = true;
 };
-
 const handleMouseOut = () => {
   hovered.value = false;
 };
@@ -14,17 +10,7 @@ const handleMouseOut = () => {
 const props = defineProps({
   value: {
     type: Object,
-    required: true,
-    default: () => ({
-      title: '',
-      description: '',
-      img: {
-        src: '',
-        srcAlt: '',
-        width: '',
-        height: ''
-      }
-    })
+    required: true
   }
 });
 </script>
@@ -37,7 +23,7 @@ const props = defineProps({
     @click="handleMouseOver"
   >
     <div
-      class="p-gradient-card-content relative flex flex-column align-items-center justify-content-center w-fit p-4 w-12rem h-26rem"
+      class="p-gradient-card-content flex flex-column align-items-center justify-content-center p-4"
     >
       <ReImage
         class="p-gradient-card-content-image"
@@ -66,6 +52,8 @@ const props = defineProps({
 <style scoped>
 .p-gradient-card-content {
   transition: all .3s ease-in-out;
+  height: 26rem !important;
+  width: 12rem !important;
 }
 .p-gradient-card-content:hover,
 .p-gradient-card-content:active,
