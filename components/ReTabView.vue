@@ -19,12 +19,15 @@ const selected = () => {
         <template #header>
           <div class="header-img">
             <img
-                src="/images/logo_sherlock_deg.png"
-                height="50"
+              src="/images/logo_sherlock_deg.png"
+              height="50"
             >
           </div>
         </template>
-        <div class="flex justify-content-center align-items-center lg:p-6 gap-5" :class="{ 'flex-column p-1': isMobile }">
+        <div
+          class="flex justify-content-center align-items-center lg:p-6 gap-5"
+          :class="{ 'flex-column p-1': isMobile }"
+        >
           <img
             src="/images/sherlock_img.jpg"
             height="250"
@@ -41,12 +44,15 @@ const selected = () => {
         <template #header>
           <div class="header-img">
             <img
-                src="/images/reconnect.png"
-                height="50"
+              src="/images/reconnect.png"
+              height="50"
             >
           </div>
         </template>
-        <div class="flex justify-content-center align-items-center lg:p-6 gap-5" :class="{ 'flex-column p-1': isMobile }">
+        <div
+          class="flex justify-content-center align-items-center lg:p-6 gap-5"
+          :class="{ 'flex-column p-1': isMobile }"
+        >
           <img
             src="/images/sherlock_2_img.jpg"
             height="250"

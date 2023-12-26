@@ -27,23 +27,37 @@ defineProps({
 
 <template>
   <ReSectionContainer>
-    <div class="row flex py-8 px-6 justify-space-between align-items-center gap-4" :class="{ 'flex-column justify-center': isMobile }">
-      <div class="col-6" :class="{ 'col-12': isMobile }">
-        <ReTitleGradient font-family="IBM Plex Mono" font-size="60px" font-weight="600">
+    <div
+      class="row flex py-8 px-6 justify-space-between align-items-center gap-4"
+      :class="{ 'flex-column justify-center': isMobile }"
+    >
+      <div
+        class="col-6"
+        :class="{ 'col-12': isMobile }"
+      >
+        <ReTitleGradient
+          font-family="IBM Plex Mono"
+          font-size="60px"
+          font-weight="600"
+        >
           {{ title }}
         </ReTitleGradient>
-        <div class="mt-3">
+        <div class="mt-4">
           <ReTitleSpan
-              color="black"
-              big-text
-              bold
+            color="black"
+            big-text
+            bold
           >
             {{ subtitle }}
           </ReTitleSpan>
         </div>
       </div>
       <div class="flex">
-        <ReImage :alt="image.alt" :src="image.src" :max-width="image.maxWidth"/>
+        <ReImage
+          :alt="image.alt"
+          :src="image.src"
+          :max-width="image.maxWidth"
+        />
       </div>
     </div>
   </ReSectionContainer>

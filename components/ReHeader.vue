@@ -27,8 +27,16 @@ const items = ref([
       class="menu-bar px-6"
     >
       <template #start>
-        <NuxtLink to="/" class="text-link">
-          <ReImage class="cursor-pointer" alt="logo" src="/images/logo-header.png" max-width="130px" />
+        <NuxtLink
+          to="/"
+          class="text-link"
+        >
+          <ReImage
+            class="cursor-pointer"
+            alt="logo"
+            src="/images/logo-header.png"
+            max-width="130px"
+          />
         </NuxtLink>
       </template>
     </Menubar>

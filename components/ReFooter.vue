@@ -84,42 +84,60 @@ const { isMobile } = useViewport('sm');
 </script>
 <template>
   <div class="footer">
-    <div class="footer-content row flex px-6 gap-4" :class="{ 'flex-column': isMobile }">
+    <div
+      class="footer-content row flex px-6 gap-4"
+      :class="{ 'flex-column': isMobile }"
+    >
       <div class="w-full footer-logo-container">
         <div>
-          <NuxtLink to="/" class="text-link">
-            <ReImage alt="logo-footer" src="/images/logo-footer.png" max-width="170px" />
+          <NuxtLink
+            to="/"
+            class="text-link"
+          >
+            <ReImage
+              alt="logo-footer"
+              src="/images/logo-footer.png"
+              max-width="170px"
+            />
           </NuxtLink>
         </div>
         <div class="py-4 gap-3">
-          <ReTitleSpan big-text>
+          <ReTitleSpan
+            big-text
+          >
             ¿Tenés un proyecto?
           </ReTitleSpan>
           <br>
-          <ReTitleSpan bold big-text>
+          <ReTitleSpan
+            bold
+            big-text
+          >
             Hablemos
           </ReTitleSpan>
         </div>
         <div class="py-4 gap-3">
           <!-- TODO: add instagram link
-          <a href="https://www.linkedin.com/company/rebase-it/">
-            <img
+            <a href="https://www.linkedin.com/company/rebase-it/">
+              <img
               alt="logo"
               src="/assets/logo-insta.svg"
               height="28"
               width="28"
-          </a>
+            </a>
           >-->
           <a href="https://www.linkedin.com/company/rebase-it/">
             <ReImage
-                alt="linkedin"
-                src="/images/logo-linkedin.svg"
-                max-width="32px"
+              alt="linkedin"
+              src="/images/logo-linkedin.svg"
+              max-width="32px"
             />
           </a>
         </div>
       </div>
-      <div class="w-full gap-3 flex md:justify-content-evenly flex-wrap" :class="{ 'justify-content-start': isMobile }">
+      <div
+        class="w-full gap-3 flex md:justify-content-evenly flex-wrap"
+        :class="{ 'justify-content-start': isMobile }"
+      >
         <div
           class="py-4 gap-3 flex flex-column"
           :key="`${index}-${menu.title}`"
