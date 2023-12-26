@@ -1,23 +1,60 @@
 <template>
   <ReSectionTop>
     <div class="row px-6 py-8">
-      <div class="col-8 pb-0" :class="{ 'col-12 text-center': isMobile }">
-        <ReTitleGradient font-family="IBM Plex Mono" font-size="60px" font-weight="500">
+      <div
+        class="col-8 pb-0"
+        :class="{ 'col-12 text-center': isMobile }"
+      >
+        <ReTitleGradient
+          font-family="IBM Plex Mono"
+          font-size="60px"
+          font-weight="500"
+        >
           Making every
         </ReTitleGradient>
       </div>
-      <div class="col-8 pt-0" :class="{ 'col-12 text-center': isMobile }">
-        <ReTitleGradient font-family="IBM Plex Mono" font-size="60px" font-weight="500">
+      <div
+        class="col-8 pt-0"
+        :class="{ 'col-12 text-center': isMobile }"
+      >
+        <ReTitleGradient
+          font-family="IBM Plex Mono"
+          font-size="60px"
+          font-weight="500"
+        >
           version <span class="font-bold">better.</span>
         </ReTitleGradient>
       </div>
       <template v-if="!isMobile">
-        <RePolygon height="190px" width="180px" top="375px" right="500px" />
-        <RePolygon height="320px" width="300px" top="130px" right="170px" />
-        <RePolygon height="85px" width="75px" top="60px" right="100px" />
-        <RePolygon height="160px" width="150px" top="410px" right="0" />
+        <RePolygon
+          height="190px"
+          width="180px"
+          top="375px"
+          right="500px"
+        />
+        <RePolygon
+          height="320px"
+          width="300px"
+          top="130px"
+          right="170px"
+        />
+        <RePolygon
+          height="85px"
+          width="75px"
+          top="60px"
+          right="100px"
+        />
+        <RePolygon
+          height="160px"
+          width="150px"
+          top="410px"
+          right="0"
+        />
       </template>
-      <div class="col-6" :class="{ 'col-12 text-center': isMobile }">
+      <div
+        class="col-6"
+        :class="{ 'col-12 text-center': isMobile }"
+      >
         <ReTitleSpan
           color="black"
           big-text
@@ -28,7 +65,10 @@
           para dar a nuestros clientes el mejor servicio posible.
         </ReTitleSpan>
       </div>
-      <div class="flex py-4" :class="{ 'justify-content-center': isMobile }">
+      <div
+        class="flex py-4"
+        :class="{ 'justify-content-center': isMobile }"
+      >
         <ReButton label="Contactanos" />
       </div>
     </div>
@@ -47,14 +87,31 @@
     <ReTitleGradient class="flex justify-content-end pt-4">
       Nuestros Clientes
     </ReTitleGradient>
-    <div class="flex justify-content-evenly pt-4 pb-8 gap-4" :class="{ 'flex-column align-items-center': isMobile }">
-      <ReImage src="/images/clients/nineAzul.png" alt="nineAzul" max-width="158px" />
-      <ReImage src="/images/clients/pillmaykenAzul.png" alt="pillmaykenAzul" max-width="374px" />
+    <div
+      class="flex justify-content-evenly pt-4 pb-8 gap-4"
+      :class="{ 'flex-column align-items-center': isMobile }"
+    >
+      <ReImage
+        src="/images/clients/nineAzul.png"
+        alt="nineAzul"
+        max-width="158px"
+      />
+      <ReImage
+        src="/images/clients/pillmaykenAzul.png"
+        alt="pillmaykenAzul"
+        max-width="374px"
+      />
     </div>
   </ReSectionClients>
   <ReSectionWhatWeDo>
-    <div class="row flex py-8 px-6 justify-space-between align-items-center gap-4" :class="{ 'flex-column justify-center': isMobile }">
-      <div class="col-6" :class="{ 'col-12': isMobile }">
+    <div
+      class="row flex py-8 px-6 justify-space-between align-items-center gap-4"
+      :class="{ 'flex-column justify-center': isMobile }"
+    >
+      <div
+        class="col-6"
+        :class="{ 'col-12': isMobile }"
+      >
         <ReTitleGradient>
           ¿Qué hacemos?
         </ReTitleGradient>
@@ -70,7 +127,10 @@
         </div>
       </div>
       <div class="flex">
-        <ReImage src="/images/stuff.png" max-width="480px"/>
+        <ReImage
+          src="/images/stuff.png"
+          max-width="480px"
+        />
       </div>
     </div>
   </ReSectionWhatWeDo>

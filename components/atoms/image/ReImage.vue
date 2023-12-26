@@ -33,7 +33,10 @@ const props = defineProps({
 
 </script>
 <template>
-  <img :src="src" :alt="alt">
+  <img
+    :src="src"
+    :alt="alt"
+  >
 </template>
 
 <style lang="scss" scoped>

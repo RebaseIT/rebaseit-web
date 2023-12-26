@@ -16,11 +16,15 @@ const props = defineProps({
   color: {
     type: String,
     default: '#FFFFFF'
-  }
+  },
+  textTransform: {
+    type: String,
+    default: 'none'
+  },
 })
 
 const fontWeight = computed(() => props.bold ? 400 : 200)
-const bigText = computed(() => props.bigText ? '25px' : '18px');
+const bigText = computed(() => props.bigText ? '25px' : '20px');
 
 </script>
 
@@ -36,6 +40,7 @@ const bigText = computed(() => props.bigText ? '25px' : '18px');
   font-size: v-bind(bigText);
   font-family: Raleway;
   line-height: normal;
-  font-weight: v-bind(fontWeight)
+  font-weight: v-bind(fontWeight);
+  text-transform: v-bind(textTransform);
 }
 </style>

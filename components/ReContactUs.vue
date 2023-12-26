@@ -5,13 +5,16 @@ const { isMobile } = useViewport('lg');
 </script>
 <template>
   <ReSectionContainer image="url(images/background_5.png)">
-    <div class="row flex py-8 px-6 justify-space-between gap-4" :class="{ 'flex-column align-items-center': isMobile }">
+    <div
+      class="row flex py-8 px-6 justify-space-between gap-4"
+      :class="{ 'flex-column align-items-center': isMobile }"
+    >
       <div class="w-full">
         <ReTitleGradient> Contactanos </ReTitleGradient>
         <div class="py-4">
           <ReParagraphSpan
-              big-text
-              color="black"
+            big-text
+            color="black"
           >
             Nos comunicaremos en breve.
           </ReParagraphSpan>
@@ -39,7 +42,6 @@ const { isMobile } = useViewport('lg');
                 <b><a href="mailto:sales@rebaseit.tech">sales@rebaseit.tech</a></b>
               </ReParagraphSpan>
             </div>
-
           </template>
         </Card>
       </div>
