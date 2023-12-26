@@ -70,9 +70,7 @@ const ourValues = [
 <template>
   <ReSectionContainer image="url(images/section_products_bg.png)">
     <div
-      class="flex flex-column pb-8 px-2"
-      :class="{ 'px-6': isMobile }"
-    >
+      class="flex flex-column pb-8 px-6">
       <ReTitleGradient class="align-self-center">
         Valores que nos definen
       </ReTitleGradient>

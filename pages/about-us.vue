@@ -146,8 +146,8 @@ const teamOptions = [
   <ReValues />
   <ReSectionContainer image="url(images/section_products_bg.png)">
     <div
-      class="flex pt-6 pb-8 px-2 gap-8 justify-space-between"
-      :class="{ 'flex-column px-6': isMobile }"
+      class="flex p-6 gap-8 justify-space-between"
+      :class="{ 'flex-column': isMobile }"
     >
       <div class="p-gradient-card">
         <div class="p-gradient-card-content flex flex-column justify-center align-items-center">
