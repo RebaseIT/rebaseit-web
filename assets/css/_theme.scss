@@ -245,6 +245,10 @@
   --primary-900:#183462;
 }
 
+.bg-light-blue {
+  background-color: var(--light-blue) !important;
+}
+
 .p-autocomplete .p-autocomplete-loader {
   right: 0.75rem;
 }
@@ -5958,4 +5962,8 @@
 }
 .p-container-min-h {
   min-height: 470px;
+}
+
+.min-h-7 {
+  min-height: 120px;
 }
