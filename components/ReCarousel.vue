@@ -94,16 +94,6 @@ const responsiveOptions = ref([
   &:deep(.p-carousel-indicator.p-highlight button){
     background-color: #0470B8;
   }
-  &:deep(.p-carousel-next-icon){
-    width: 34px;
-    height: 34px;
-    color: #0470B8;
-  }
-  &:deep(.p-carousel-prev-icon){
-    width: 34px;
-    height: 34px;
-    color: #0470B8;
-  }
   &:deep(.p-carousel-item){
     flex: 1 0 100% !important;
   }

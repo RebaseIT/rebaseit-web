@@ -121,12 +121,6 @@ const updateMiddleIndex = (event) => {
     height: 600px !important;
     padding-top: 20px;
   }
-  &:deep(.p-carousel-next-icon),
-  &:deep(.p-carousel-prev-icon){
-    width: 34px;
-    height: 34px;
-    color: #0470B8;
-  }
   &:deep(.p-card-body){
     display: flex;
     flex-direction: column;
