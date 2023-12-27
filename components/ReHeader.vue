@@ -2,19 +2,19 @@
 const items = ref([
   {
     label: 'Conocenos',
-    to: '/about-us'
+    url: '/about-us'
   },
   {
     label: 'Proyectos',
-    to: '/projects'
+    url: '/projects'
   },
   {
     label: 'Servicios',
-    to: '/services'
+    url: '/services'
   },
   {
     label: 'Blog',
-    to: '/blog'
+    url: '/blog'
   }
 ])
 

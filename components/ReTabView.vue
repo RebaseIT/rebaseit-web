@@ -14,53 +14,53 @@ const selected = () => {
     <TabView class="card-tab-view">
       <div @click="selected">
         <TabPanel>
-        <template #header>
-          <div class="header-img">
-            <img
-              src="/images/logo_sherlock_deg.png"
-              height="50"
-            >
-          </div>
-        </template>
-        <div
-          class="flex justify-content-center align-items-center lg:p-6 gap-5"
-          :class="{ 'flex-column p-1': isMobile }"
-        >
-          <img
-            src="/images/sherlock_img.jpg"
-            height="250"
+          <template #header>
+            <div class="header-img">
+              <img
+                src="/images/logo_sherlock_deg.png"
+                height="50"
+              >
+            </div>
+          </template>
+          <div
+            class="flex justify-content-center align-items-center lg:p-6 gap-5"
+            :class="{ 'flex-column p-1': isMobile }"
           >
-          <div class="max-w-24rem">
-            ¿Alguna vez te hackearon o intentaron hackear a alguien de tu organización?
-            Cuando se trata de ciberseguridad, podés optar por <b>Sherlock</b>: una solución que centraliza y automatiza las tareas de respuesta a incidentes realizadas por los analistas de ciberseguridad.
+            <img
+              src="/images/sherlock_img.jpg"
+              height="250"
+            >
+            <div class="max-w-24rem">
+              ¿Alguna vez te hackearon o intentaron hackear a alguien de tu organización?
+              Cuando se trata de ciberseguridad, podés optar por <b>Sherlock</b>: una solución que centraliza y automatiza las tareas de respuesta a incidentes realizadas por los analistas de ciberseguridad.
+            </div>
           </div>
-        </div>
-      </TabPanel>
+        </TabPanel>
       </div>
       <div @click="selected">
         <TabPanel>
-        <template #header>
-          <div class="header-img">
-            <img
-              src="/images/reconnect.png"
-              height="50"
-            >
-          </div>
-        </template>
-        <div
-          class="flex justify-content-center align-items-center lg:p-6 gap-5"
-          :class="{ 'flex-column p-1': isMobile }"
-        >
-          <img
-            src="/images/sherlock_2_img.jpg"
-            height="250"
+          <template #header>
+            <div class="header-img">
+              <img
+                src="/images/reconnect.png"
+                height="50"
+              >
+            </div>
+          </template>
+          <div
+            class="flex justify-content-center align-items-center lg:p-6 gap-5"
+            :class="{ 'flex-column p-1': isMobile }"
           >
-          <div class="max-w-24rem">
-            El proceso de contratación y el manejo de datos de grandes sumas de candidatos puede ser desordenado y desorientador.
-            <b>Rebase Connect</b> es una aplicación de análisis de datos dedicada a los contratadores, encargándose de la <b>estandarización</b> de información, <b>seguimiento</b> de búsquedas, e <b>indicadores</b> de métricas.
+            <img
+              src="/images/sherlock_2_img.jpg"
+              height="250"
+            >
+            <div class="max-w-24rem">
+              El proceso de contratación y el manejo de datos de grandes sumas de candidatos puede ser desordenado y desorientador.
+              <b>Rebase Connect</b> es una aplicación de análisis de datos dedicada a los contratadores, encargándose de la <b>estandarización</b> de información, <b>seguimiento</b> de búsquedas, e <b>indicadores</b> de métricas.
+            </div>
           </div>
-        </div>
-      </TabPanel>
+        </TabPanel>
       </div>
     </TabView>
   </div>

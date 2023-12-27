@@ -11,13 +11,14 @@ const sectionTop = { title, subtitle, image };
 
 <template>
   <ReSectionImage
-      class="pt-8"
-      v-bind="sectionTop"
+    class="pt-8"
+    v-bind="sectionTop"
   />
-  <ReSectionContainer class="p-6 h-full" image="url(/images/section_products_bg.png)">
+  <ReSectionContainer
+    class="py-2 px-6"
+    image="url(/images/section_products_bg.png)"
+  >
     <ReCarouselProjects />
   </ReSectionContainer>
-  <section class="py-8">
-    <ReContactUs />
-  </section>
+  <ReContactUs />
 </template>
