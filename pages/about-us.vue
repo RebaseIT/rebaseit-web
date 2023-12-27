@@ -175,7 +175,7 @@ const sectionOptions = [
         v-for="section in sectionOptions"
         :key="section.title"
       >
-        <div class="p-gradient-card-content flex flex-column justify-center align-items-center">
+        <div class="p-gradient-card-content-hovered flex flex-column justify-center align-items-center">
           <ReTitleGradient class="align-self-center">
             {{ section.title }}
           </ReTitleGradient>
