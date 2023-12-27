@@ -24,7 +24,7 @@ const props = defineProps({
 .section {
   background-image: v-bind(image);
   background-repeat: no-repeat;
-  background-size: 100% 100vh;
+  background-size: 100% 100%;
   .content {
     position: relative;
     max-width: 1320px;
