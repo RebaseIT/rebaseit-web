@@ -1,6 +1,7 @@
 <script setup>
 import { useViewport } from '~/composables/useViewport';
-const { isMobile } = useViewport('lg');
+
+const { isSmaller: isMobile } = useViewport('lg');
 defineProps({
   title: {
     type: String,

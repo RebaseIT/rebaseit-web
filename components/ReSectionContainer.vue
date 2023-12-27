@@ -27,7 +27,7 @@ const props = defineProps({
   background-size: 100% 100vh;
   .content {
     position: relative;
-    max-width: 1240px;
+    max-width: 1320px;
     margin: 0 auto;
   }
 }

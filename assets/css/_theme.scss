@@ -245,6 +245,10 @@
   --primary-900:#183462;
 }
 
+.bg-light-blue {
+  background-color: var(--light-blue) !important;
+}
+
 .p-autocomplete .p-autocomplete-loader {
   right: 0.75rem;
 }
@@ -5949,13 +5953,22 @@
   border-radius: 8px;
   padding: 2px;
   background: linear-gradient(var(--secondary-color),var(--primary-color));
-  .p-gradient-card-content {
+  .p-gradient-card-content,
+  .p-gradient-card-content-hovered {
     padding: 32px;
     background: white;
     border-radius: 6px;
     width: 100%;
   }
+  .p-gradient-card-content-hovered:hover,
+  .p-gradient-card-content-hovered:active,
+  .p-gradient-card-content-hovered:focus {
+    background: var(--light-blue);
+  }
 }
 .p-container-min-h {
   min-height: 470px;
+}
+.min-h-7 {
+  min-height: 120px;
 }

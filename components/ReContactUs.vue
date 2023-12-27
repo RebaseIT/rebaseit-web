@@ -1,7 +1,7 @@
 <script setup>
 import { useViewport } from '~/composables/useViewport';
 
-const { isMobile } = useViewport('lg');
+const { isSmaller: isMobile } = useViewport('lg');
 </script>
 <template>
   <ReSectionContainer image="url(images/background_5.png)">

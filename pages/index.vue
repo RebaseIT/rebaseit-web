@@ -1,3 +1,9 @@
+<script setup lang="ts">
+import { useViewport } from "~/composables/useViewport";
+
+const { isSmaller: isMobile } = useViewport('xl');
+</script>
+
 <template>
   <ReSectionTop>
     <div class="row px-6 py-8">
@@ -136,9 +142,3 @@
   </ReSectionWhatWeDo>
   <ReContactUs />
 </template>
-
-<script setup lang="ts">
-import { useViewport } from '~/composables/useViewport';
-
-const { isMobile } = useViewport('xl');
-</script>

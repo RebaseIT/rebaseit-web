@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { useViewport } from '~/composables/useViewport';
-const { isMobile } = useViewport('xl');
+
+const { isSmaller: isMobile } = useViewport('lg');
+const { isGreaterOrEqual: showPolygon } = useViewport('xl');
 
 const title = 'Somos RebaseIT.';
 const subtitle = 'Conectamos a cada uno de nuestros clientes con la solución más adecuada para sus necesidades, garantizando siempre calidad y rentabilidad.';
@@ -42,6 +44,27 @@ const teamOptions = [
     alt: 'jorge-covello',
     mt: '80px'
   }
+];
+
+const sectionOptions = [
+  {
+    title: 'Misión',
+    description: 'Conectar a cada uno de nuestros clientes con la solución mas adecuada para sus necesidades, garantizando la calidad y rentabilidad de las mismas.',
+    image: {
+      src: 'images/puzzle.png',
+      alt: 'puzzle-image',
+      maxWidth: '262px'
+    }
+  },
+  {
+    title: 'Visión',
+    description: 'Convertirnos en una empresa lider del mercado de software a medida, asegurando la calidad en cada uno de nuestros proyectos.',
+    image: {
+      src: 'images/brujula.png',
+      alt: 'brujula-image',
+      maxWidth: '210px'
+    }
+  }
 ]
 </script>
 
@@ -60,11 +83,11 @@ const teamOptions = [
       <div class="p-gradient-card mt-4">
         <div
           class="p-gradient-card-content relative"
-          :class="{ 'p-container-min-h': !isMobile }"
+          :class="{ 'p-container-min-h': showPolygon }"
         >
           <div
             class="col-6"
-            :class="{ 'col-12': isMobile }"
+            :class="{ 'col-12': !showPolygon }"
           >
             <ReTitleSpan
               color="black"
@@ -76,7 +99,7 @@ const teamOptions = [
               A natus officiis quo quisquam nihil est sapiente adipisci aut odit soluta 33 voluptas labore et culpa voluptatem ut culpa magni! Ut omnis similique eum accusamus exercitationem est internos fugit. Aut commodi sequi hic accusantium alias et similique optio non voluptas nemo.
             </ReTitleSpan>
           </div>
-          <template v-if="!isMobile">
+          <template v-if="showPolygon">
             <RePolygon
               height="115px"
               width="100px"
@@ -141,4 +164,35 @@ const teamOptions = [
       </div>
     </div>
   </ReSectionContainer>
+  <ReValues />
+  <ReSectionContainer image="url(images/section_products_bg.png)">
+    <div
+      class="flex p-6 gap-8 justify-space-between"
+      :class="{ 'flex-column': isMobile }"
+    >
+      <div
+        class="p-gradient-card"
+        v-for="section in sectionOptions"
+        :key="section.title"
+      >
+        <div class="p-gradient-card-content-hovered flex flex-column justify-center align-items-center">
+          <ReTitleGradient class="align-self-center">
+            {{ section.title }}
+          </ReTitleGradient>
+          <ReTitleSpan
+            class="my-4"
+            color="black"
+          >
+            {{ section.description }}
+          </ReTitleSpan>
+          <ReImage
+            :alt="section.image.alt"
+            :src="section.image.src"
+            :max-width="section.image.maxWidth"
+          />
+        </div>
+      </div>
+    </div>
+  </ReSectionContainer>
+  <ReContactUs />
 </template>
