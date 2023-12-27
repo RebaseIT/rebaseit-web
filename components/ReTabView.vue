@@ -12,10 +12,8 @@ const selected = () => {
 <template>
   <div class="container">
     <TabView class="card-tab-view">
-      <TabPanel
-        class="flex-container"
-        @click="selected"
-      >
+      <div @click="selected">
+        <TabPanel>
         <template #header>
           <div class="header-img">
             <img
@@ -38,9 +36,9 @@ const selected = () => {
           </div>
         </div>
       </TabPanel>
-      <TabPanel
-        @click="selected"
-      >
+      </div>
+      <div @click="selected">
+        <TabPanel>
         <template #header>
           <div class="header-img">
             <img
@@ -63,6 +61,7 @@ const selected = () => {
           </div>
         </div>
       </TabPanel>
+      </div>
     </TabView>
   </div>
 </template>
@@ -113,10 +112,6 @@ const selected = () => {
     }
     &:deep(.p-tabview){
       border: 0 !important;
-    }
-    .flex-container {
-      display: flex;
-      flex-direction: row;
     }
     img {
       border-radius: 10px;

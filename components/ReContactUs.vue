@@ -4,7 +4,7 @@ import { useViewport } from '~/composables/useViewport';
 const { isSmaller: isMobile } = useViewport('lg');
 </script>
 <template>
-  <ReSectionContainer image="url(images/background_5.png)">
+  <ReSectionContainer image="url(/images/background_5.png)">
     <div
       class="row flex py-8 px-6 justify-space-between gap-4"
       :class="{ 'flex-column align-items-center': isMobile }"

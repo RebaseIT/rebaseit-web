@@ -7,7 +7,7 @@ const { isGreaterOrEqual: showPolygon } = useViewport('xl');
 const title = 'Somos RebaseIT.';
 const subtitle = 'Conectamos a cada uno de nuestros clientes con la solución más adecuada para sus necesidades, garantizando siempre calidad y rentabilidad.';
 const image = {
-  src: 'images/id.png',
+  src: '/images/id.png',
   alt: 'id-image',
   maxWidth: '400px'
 };
@@ -16,31 +16,31 @@ const sectionTop = { title, subtitle, image };
 const teamOptions = [
   {
     name: 'Juan Cueli',
-    image: 'images/team/juan-cueli.png',
+    image: '/images/team/juan-cueli.png',
     alt: 'juan-cueli',
     mt: '80px'
   },
   {
     name: 'Ezequiel Díaz',
-    image: 'images/team/ezequiel-diaz.png',
+    image: '/images/team/ezequiel-diaz.png',
     alt: 'ezequiel-diaz',
     mt: '160px'
   },
   {
     name: 'Rodrigo Díaz',
-    image: 'images/team/rodrigo-diaz.png',
+    image: '/images/team/rodrigo-diaz.png',
     alt: 'rodrigo-diaz',
     mt: '240px'
   },
   {
     name: 'Martín Urteaga',
-    image: 'images/team/martin-urteaga.png',
+    image: '/images/team/martin-urteaga.png',
     alt: 'martin-urteaga',
     mt: '160px'
   },
   {
     name: 'Jorge Covello',
-    image: 'images/team/jorge-covello.png',
+    image: '/images/team/jorge-covello.png',
     alt: 'jorge-covello',
     mt: '80px'
   }
@@ -51,7 +51,7 @@ const sectionOptions = [
     title: 'Misión',
     description: 'Conectar a cada uno de nuestros clientes con la solución mas adecuada para sus necesidades, garantizando la calidad y rentabilidad de las mismas.',
     image: {
-      src: 'images/puzzle.png',
+      src: '/images/puzzle.png',
       alt: 'puzzle-image',
       maxWidth: '262px'
     }
@@ -60,7 +60,7 @@ const sectionOptions = [
     title: 'Visión',
     description: 'Convertirnos en una empresa lider del mercado de software a medida, asegurando la calidad en cada uno de nuestros proyectos.',
     image: {
-      src: 'images/brujula.png',
+      src: '/images/brujula.png',
       alt: 'brujula-image',
       maxWidth: '210px'
     }
@@ -73,7 +73,7 @@ const sectionOptions = [
     class="pt-8"
     v-bind="sectionTop"
   />
-  <ReSectionContainer image="url(images/section_products_bg.png)">
+  <ReSectionContainer image="url(/images/section_products_bg.png)">
     <div class="flex flex-column py-8 px-6">
       <ReTitleGradient
         class="align-self-center"
@@ -129,7 +129,7 @@ const sectionOptions = [
       </div>
     </div>
   </ReSectionContainer>
-  <ReSectionContainer image="url(images/section_products_bg.png)">
+  <ReSectionContainer image="url(/images/section_products_bg.png)">
     <div
       class="flex flex-column pb-8 px-2"
       :class="{ 'px-6': isMobile }"
@@ -165,7 +165,7 @@ const sectionOptions = [
     </div>
   </ReSectionContainer>
   <ReValues />
-  <ReSectionContainer image="url(images/section_products_bg.png)">
+  <ReSectionContainer image="url(/images/section_products_bg.png)">
     <div
       class="flex p-6 gap-8 justify-space-between"
       :class="{ 'flex-column': isMobile }"

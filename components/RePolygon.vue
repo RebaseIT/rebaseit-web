@@ -1,7 +1,7 @@
 <template>
   <img
     alt="polygon"
-    src="~/public/images/polygon-blue.png"
+    src="/images/polygon-blue.png"
     :style="styleObject"
     class="floating-image"
   >

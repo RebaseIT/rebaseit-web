@@ -17,7 +17,7 @@ defineProps({
     required: true,
     default: () => {
       return {
-        src: 'images/background_1.jpg',
+        src: '/images/background_1.jpg',
         alt: 'id-image',
         maxWidth: '400px'
       }
@@ -33,12 +33,12 @@ defineProps({
       :class="{ 'flex-column justify-center': isMobile }"
     >
       <div
-        class="col-6"
+        class="col-8"
         :class="{ 'col-12': isMobile }"
       >
         <ReTitleGradient
           font-family="IBM Plex Mono"
-          font-size="60px"
+          :font-size="isMobile ? '50px' : '60px'"
           font-weight="600"
         >
           {{ title }}
