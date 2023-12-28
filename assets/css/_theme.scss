@@ -2537,6 +2537,12 @@
   border-radius: 50%;
   transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
   margin: 0.5rem;
+  .p-carousel-next-icon,
+  .p-carousel-prev-icon {
+     width: 34px;
+     height: 34px;
+     color: #0470B8;
+   }
 }
 .p-carousel .p-carousel-content .p-carousel-prev:enabled:hover,
 .p-carousel .p-carousel-content .p-carousel-next:enabled:hover {

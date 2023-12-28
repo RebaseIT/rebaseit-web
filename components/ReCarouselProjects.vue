@@ -86,8 +86,9 @@ const updateMiddleIndex = (event) => {
               color="black"
               font-weight
               class="flex justify-content-center"
-              :html="slotProps.data.content"
-            />
+            >
+              <span v-html="slotProps.data.content" />
+            </ReParagraphSpan>
           </template>
           <template #footer>
             <div class="flex justify-content-center">
@@ -116,12 +117,6 @@ const updateMiddleIndex = (event) => {
   &:deep(.p-carousel-items-content) {
     height: 600px !important;
     padding-top: 20px;
-  }
-  &:deep(.p-carousel-next-icon),
-  &:deep(.p-carousel-prev-icon){
-    width: 34px;
-    height: 34px;
-    color: #0470B8;
   }
   &:deep(.p-card-body){
     display: flex;

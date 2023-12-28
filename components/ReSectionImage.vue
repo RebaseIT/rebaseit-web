@@ -49,7 +49,7 @@ defineProps({
             big-text
             bold
           >
-            {{ subtitle }}
+            <span v-html="subtitle" />
           </ReTitleSpan>
         </div>
       </div>
