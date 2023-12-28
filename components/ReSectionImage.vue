@@ -45,11 +45,12 @@ defineProps({
         </ReTitleGradient>
         <div class="mt-4">
           <ReTitleSpan
-            :html="subtitle"
             color="black"
             font-size="25px"
             font-weight="400"
-          />
+          >
+            <span v-html="subtitle" />
+          </ReTitleSpan>
         </div>
       </div>
       <div class="flex">
