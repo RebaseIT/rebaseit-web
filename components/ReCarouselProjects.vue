@@ -9,7 +9,7 @@ const projects = [
       src: '/images/clients/nineAzul.png',
       maxWidth: '130px'
     },
-    route: '/blog/nine-azul'
+    route: '/blog/nine'
   },
   {
     content: '¿Alguna vez te hackearon o intentaron hackear a alguien de tu organización? Cuando se trata de ciberseguridad, podés optar por <b>Sherlock</b>: una solución que centraliza y automatiza las tareas de respuesta a incidentes realizadas por los analistas de ciberseguridad.',
