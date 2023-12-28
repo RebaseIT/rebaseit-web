@@ -1,7 +1,7 @@
 import { ref, onMounted, onUnmounted } from 'vue';
 import { breakpointsTailwind, useBreakpoints } from '@vueuse/core'
 export function useViewport(key) {
-  const breakpoints = useBreakpoints(breakpointsTailwind)
+  const breakpoints = useBreakpoints({ ...breakpointsTailwind, lg: 1080 })
   const isSmaller = ref(false);
   const isGreaterOrEqual = ref(false);
   let checkViewport;

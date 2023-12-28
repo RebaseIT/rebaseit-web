@@ -1,7 +1,7 @@
 <script setup>
 import { useViewport } from '~/composables/useViewport';
 
-const { isSmaller: isMobile } = useViewport('xl');
+const { isSmaller: isMobile } = useViewport('lg');
 const projects = [
   {
     content: 'Realizamos el proceso de configuración del sistema de administración digital de iluminación LED de nuestro cliente Nine Shopping, para que puedan celebrar las fiestas de la mejor manera.',
@@ -31,22 +31,18 @@ const projects = [
 
 const responsiveOptions = ref([
   {
-    breakpoint: '1280px',
-    numVisible: 2,
-    numScroll: 1
-  },
-  {
-    breakpoint: '920px',
+    breakpoint: '1080px',
     numVisible: 1,
     numScroll: 1
-  },
+  }
 ]);
 
 const carrouselItems = computed(() => {
   if (isMobile.value) {
-    return [...projects, ...projects];
+    return [...projects];
   }
-  return [{}, ...projects, ...projects, ...projects, {}]
+  // Add empty items to the start and end of the array to make the first and last items invisible in desktop
+  return [{}, ...projects, {}];
 });
 
 const middleIndex = ref(1);
@@ -135,20 +131,15 @@ const updateMiddleIndex = (event) => {
     min-height: 398px;
     max-width: 256px;
     text-align: center;
-    @media (max-width: 580px) {
-      min-height: 310px;
-      max-width: 200px;
-    }
   }
 }
 .middle-item {
   transform: scale(1.3);
-  transition: transform 0.5s;
+  transition: transform .5s;
   &:deep(.p-card){
     background-color: var(--light-blue-20);
   }
 }
-
 @media (max-width: 580px) {
   .carousel {
     &:deep(.p-carousel-prev) {
