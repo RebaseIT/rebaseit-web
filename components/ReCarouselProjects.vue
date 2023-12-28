@@ -9,7 +9,7 @@ const projects = [
       src: '/images/clients/nineAzul.png',
       maxWidth: '130px'
     },
-    route: '/blog/nine-azul'
+    route: '/blog/nine'
   },
   {
     content: '¿Alguna vez te hackearon o intentaron hackear a alguien de tu organización? Cuando se trata de ciberseguridad, podés optar por <b>Sherlock</b>: una solución que centraliza y automatiza las tareas de respuesta a incidentes realizadas por los analistas de ciberseguridad.',
@@ -65,7 +65,6 @@ const updateMiddleIndex = (event) => {
     :responsive-options="responsiveOptions"
     :show-indicators="false"
     @update:page="updateMiddleIndex($event)"
-    circular
   >
     <template #item="slotProps">
       <div
@@ -109,6 +108,7 @@ const updateMiddleIndex = (event) => {
 .carousel {
   &:deep(.p-carousel-items-container) {
     height: 100%;
+    transition: all .5s ease-in-out;
   }
   &:deep(.p-carousel-item) {
     align-self: center;
