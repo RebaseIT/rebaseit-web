@@ -10,7 +10,7 @@ const recentPosts = ref([
     items: [
       {
         text: '- Sherlock, TOP 6 mejores trabajos en Argentina!',
-        route: '/blog/sherlock'
+        route: 'https://www.linkedin.com/posts/rebase-it_security-information-incidentresponse-activity-6995398634041143296-kqQ7'
       }
     ]
   },
@@ -24,11 +24,11 @@ const recentPosts = ref([
     items: [
       {
         text: '- Si trabajas en RRHH, te invitamos a rellenar una breve encuesta',
-        route: '/blog/rrhh'
+        route: 'https://www.linkedin.com/feed/update/urn:li:activity:7008800849233633280/'
       },
       {
-        text: '- Presentamos Shelock, la mejor respuesta para tu análisis de ciberseguridad',
-        route: '/blog/sherlock'
+        text: '- Presentamos Sherlock, la mejor respuesta para tu análisis de ciberseguridad',
+        route: 'https://www.linkedin.com/posts/rebase-it_security-information-incidentresponse-activity-6994309011672068096-uj3V'
       }
     ]
   },
@@ -42,7 +42,7 @@ const recentPosts = ref([
     items: [
       {
         text: '- Programamos las luces de Nine Shopping en Moreno',
-        route: '/blog/nine-shopping'
+        route: 'https://www.linkedin.com/posts/rebase-it_tech-sales-project-activity-7002987786941181952-cAVt'
       }
     ]
   },
@@ -56,7 +56,7 @@ const recentPosts = ref([
     items: [
       {
         text: '- Desde nuestro equipo te deseamos, FELICES FIESTAS',
-        route: '/blog/holiday'
+        route: 'https://www.linkedin.com/posts/rebase-it_estamos-llegando-a-fin-de-a%C3%B1o-y-con-el-equipo-activity-7012159369505062912-0zSQ'
       }
     ]
   }
@@ -80,19 +80,19 @@ const recentPosts = ref([
             </ReTitleGradient>
             <div class="flex min-h-7">
               <ReImage
-                  class="m-auto"
-                  :src="value.image.src"
-                  :alt="value.title"
-                  :max-width="value.image.maxWidth"
-                  :height="value.image.height"
+                class="m-auto"
+                :src="value.image.src"
+                :alt="value.title"
+                :max-width="value.image.maxWidth"
+                :height="value.image.height"
               />
             </div>
             <div v-for="item in value.items" :key="item.text">
               <a :href="item.route">
                 <ReParagraphSpan
-                    class="p-gradient-card-content-span"
-                    color="var(--primary-color)"
-                    bold
+                  class="p-gradient-card-content-span"
+                  color="var(--primary-color)"
+                  bold
                 >
                   {{ item.text }}
                 </ReParagraphSpan>
@@ -100,7 +100,6 @@ const recentPosts = ref([
               <hr class="text-blue-400">
             </div>
           </div>
-
         </div>
       </div>
     </div>
