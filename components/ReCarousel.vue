@@ -6,21 +6,6 @@ const images = ref([
   {src: '/images/gatito2.jpeg'},
   {src: '/images/gatito3.jpeg'},
 ]);
-const responsiveOptions = ref([
-  {
-    numVisible: 3,
-    numScroll: 1
-  },
-  {
-    numVisible: 3,
-    numScroll: 2
-  },
-  {
-    numVisible: 3,
-    numScroll: 3
-  }
-]);
-
 </script>
 
 <template>
@@ -29,7 +14,6 @@ const responsiveOptions = ref([
       :value="images"
       :num-visible="1"
       :num-scroll="1"
-      :responsive-options="responsiveOptions"
       class="carousel-color"
     >
       <template #item="slotProps">
