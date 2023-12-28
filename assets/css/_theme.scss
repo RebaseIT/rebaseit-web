@@ -123,6 +123,8 @@
 
 :root {
   --light-blue:#F0F9FF;
+  --light-blue-10:#F2FAFF;
+  --light-blue-20:#DEF3FF;
   --blue-50:#f5f9ff;
   --blue-100:#d0e1fd;
   --blue-200:#abc9fb;
@@ -2527,8 +2529,8 @@
 
 .p-carousel .p-carousel-content .p-carousel-prev,
 .p-carousel .p-carousel-content .p-carousel-next {
-  width: 2rem;
-  height: 2rem;
+  width: 3rem;
+  height: 3rem;
   color: #6c757d;
   border: 0 none;
   background: transparent;

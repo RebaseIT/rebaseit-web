@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "primeflex": "^3.3.1",
-    "primevue": "^3.30.0",
+    "primevue": "^3.45.0",
     "sass": "^1.63.6"
   }
 }

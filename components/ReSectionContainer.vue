@@ -8,7 +8,7 @@ const props = defineProps({
   image: {
     type: String,
     required: false,
-    default: 'url(images/background_1.jpg)'
+    default: 'url(/images/background_1.jpg)'
   },
 })
 </script>

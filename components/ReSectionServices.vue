@@ -15,6 +15,6 @@ const props = defineProps({
 
 <style lang="scss" scoped>
 .section{
-  background-image: url("images/background_4.jpg"); 
+  background-image: url("/images/background_4.jpg");
 }
 </style>

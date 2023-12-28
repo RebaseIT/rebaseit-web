@@ -5,6 +5,11 @@ const props = defineProps({
     required: false,
     default: ''
   },
+  html: {
+    type: String,
+    required: false,
+    default: ''
+  },
   bold: {
     type: Boolean,
     default: false
@@ -20,13 +25,17 @@ const props = defineProps({
 })
 
 const fontWeight = computed(() => props.bold ? 600 : 400)
-const bigText = computed(() => props.bigText ? '18px' : '14px');
+const bigText = computed(() => props.bigText ? '18px' : '15px');
 
 </script>
 
 <template>
   <span class="re-title-span">
-    <slot>{{ text }}</slot>
+    <span
+      v-if="html"
+      v-html="html"
+    />
+    <slot v-else>{{ text }}</slot>
   </span>
 </template>
 

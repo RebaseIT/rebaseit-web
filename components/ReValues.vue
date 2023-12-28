@@ -4,8 +4,8 @@ const ourValues = [
     title: 'Honestidad y transparencia',
     description: 'Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
     img: {
-      src: 'images/values/value-1.png',
-      srcAlt: 'images/values/value-alt-1.png',
+      src: '/images/values/value-1.png',
+      srcAlt: '/images/values/value-alt-1.png',
       width: '64px',
       height: '115px'
     }
@@ -14,8 +14,8 @@ const ourValues = [
     title: 'Excelencia técnica',
     description: 'Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
     img: {
-      src: 'images/values/value-2.png',
-      srcAlt: 'images/values/value-alt-2.png',
+      src: '/images/values/value-2.png',
+      srcAlt: '/images/values/value-alt-2.png',
       width: '86px',
       height: '115px'
     }
@@ -24,8 +24,8 @@ const ourValues = [
     title: 'Compromiso',
     description: 'Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
     img: {
-      src: 'images/values/value-3.png',
-      srcAlt: 'images/values/value-alt-3.png',
+      src: '/images/values/value-3.png',
+      srcAlt: '/images/values/value-alt-3.png',
       width: '133px',
       height: '57px',
       mb: '58px'
@@ -35,8 +35,8 @@ const ourValues = [
     title: 'Proactividad',
     description: 'Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
     img: {
-      src: 'images/values/value-4.png',
-      srcAlt: 'images/values/value-alt-4.png',
+      src: '/images/values/value-4.png',
+      srcAlt: '/images/values/value-alt-4.png',
       width: '122px',
       height: '115px'
     }
@@ -45,8 +45,8 @@ const ourValues = [
     title: 'Racionalidad',
     description: 'Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
     img: {
-      src: 'images/values/value-5.png',
-      srcAlt: 'images/values/value-alt-5.png',
+      src: '/images/values/value-5.png',
+      srcAlt: '/images/values/value-alt-5.png',
       width: '101px',
       height: '115px'
     }
@@ -55,8 +55,8 @@ const ourValues = [
     title: 'Aprendizaje e innovación',
     description: 'Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
     img: {
-      src: 'images/values/value-6.png',
-      srcAlt: 'images/values/value-alt-6.png',
+      src: '/images/values/value-6.png',
+      srcAlt: '/images/values/value-alt-6.png',
       width: '80px',
       height: '115px'
     }
@@ -65,7 +65,7 @@ const ourValues = [
 </script>
 
 <template>
-  <ReSectionContainer image="url(images/section_products_bg.png)">
+  <ReSectionContainer image="url(/images/section_products_bg.png)">
     <div
       class="flex flex-column pb-8 px-6"
     >
