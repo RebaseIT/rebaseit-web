@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import ReCategoryPosts from "~/components/ReCategoryPosts.vue";
+
 const title = 'Publicaciones';
 const subtitle = 'Enterate de todas las noticias que Rebase IT tiene para vos.';
 const image = {
@@ -52,5 +54,7 @@ const sectionTop = { title, subtitle, image };
       />
     </div>
   </ReSectionContainer>
+  <ReCategoryPosts />
+  <ReRecentPosts />
   <ReContactUs />
 </template>

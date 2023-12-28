@@ -91,7 +91,7 @@ const sectionOptions = [
           >
             <ReTitleSpan
               color="black"
-              bold
+              font-weight="400"
             >
               <!-- TODO: update about us history -->
               Lorem ipsum dolor sit amet. Ex fugiat dolores non omnis sequi qui velit quisquam aut sequi tempore et suscipit labore aut vitae enim qui atque vitae. Qui vero quaerat quo recusandae fugit non commodi laboriosam.

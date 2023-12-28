@@ -103,14 +103,14 @@ const { isSmaller: isMobile } = useViewport('sm');
         </div>
         <div class="py-4 gap-3">
           <ReTitleSpan
-            big-text
+            font-size="25px"
           >
             ¿Tenés un proyecto?
           </ReTitleSpan>
           <br>
           <ReTitleSpan
-            bold
-            big-text
+            font-size="25px"
+            font-weight="400"
           >
             Hablemos
           </ReTitleSpan>

@@ -65,7 +65,6 @@ const updateMiddleIndex = (event) => {
     :responsive-options="responsiveOptions"
     :show-indicators="false"
     @update:page="updateMiddleIndex($event)"
-    circular
   >
     <template #item="slotProps">
       <div
@@ -109,6 +108,7 @@ const updateMiddleIndex = (event) => {
 .carousel {
   &:deep(.p-carousel-items-container) {
     height: 100%;
+    transition: all .5s ease-in-out;
   }
   &:deep(.p-carousel-item) {
     align-self: center;

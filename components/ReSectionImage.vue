@@ -47,8 +47,8 @@ defineProps({
           <ReTitleSpan
             :html="subtitle"
             color="black"
-            big-text
-            bold
+            font-size="25px"
+            font-weight="400"
           />
         </div>
       </div>
