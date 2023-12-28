@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import ReCategoryPosts from "~/components/ReCategoryPosts.vue";
+import { useViewport } from "~/composables/useViewport";
 
+const { isSmaller: isMobile } = useViewport('lg');
 const title = 'Publicaciones';
 const subtitle = 'Enterate de todas las noticias que Rebase IT tiene para vos.';
 const image = {
@@ -22,8 +23,9 @@ const sectionTop = { title, subtitle, image };
   >
     <div
       class="flex justify-content-between py-8 px-6 gap-8"
+      :class="{ 'flex-column align-items-center': isMobile }"
     >
-      <div class="flex flex-column justify-space-between">
+      <div class="flex flex-column justify-space-between gap-3">
         <ReTitleGradient
           font-family="IBM Plex Mono"
           font-weight="600"
