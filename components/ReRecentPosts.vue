@@ -25,7 +25,7 @@ const recentPosts = ref([
     }
   },
   {
-    title: 'Desde nuestro equipo te deseamos, FELICES FIESTAS!',
+    title: 'Desde nuestro equipo te deseamos, ¡FELICES FIESTAS!',
     date: '25/12/22',
     image: {
       src: '/images/posts/xmas.png'

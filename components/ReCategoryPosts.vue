@@ -55,7 +55,7 @@ const recentPosts = ref([
     },
     items: [
       {
-        text: '- Desde nuestro equipo te deseamos, FELICES FIESTAS',
+        text: '- Desde nuestro equipo te deseamos, ¡FELICES FIESTAS',
         route: 'https://www.linkedin.com/posts/rebase-it_estamos-llegando-a-fin-de-a%C3%B1o-y-con-el-equipo-activity-7012159369505062912-0zSQ'
       }
     ]
@@ -97,7 +97,7 @@ const recentPosts = ref([
                   {{ item.text }}
                 </ReParagraphSpan>
               </a>
-              <hr class="text-blue-400">
+              <hr>
             </div>
           </div>
         </div>
@@ -111,9 +111,13 @@ const recentPosts = ref([
   min-height: 540px;
   .p-gradient-card-content {
     background-color: var(--light-blue);
-    .p-gradient-card-content-span {
-      text-decoration: underline;
-    }
   }
+}
+hr {
+  border: none;
+  border-top: 1px solid var(--primary-color)
+}
+a {
+  text-decoration: none;
 }
 </style>
