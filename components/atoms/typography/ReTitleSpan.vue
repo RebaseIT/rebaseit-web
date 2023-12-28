@@ -5,11 +5,6 @@ const props = defineProps({
     required: false,
     default: ''
   },
-  html: {
-    type: String,
-    required: false,
-    default: ''
-  },
   bold: {
     type: Boolean,
     default: false
@@ -35,11 +30,7 @@ const bigText = computed(() => props.bigText ? '25px' : '20px');
 
 <template>
   <span class="re-title-span">
-    <span
-      v-if="html"
-      v-html="html"
-    />
-    <slot v-else>{{ text }}</slot>
+    <slot>{{ text }}</slot>
   </span>
 </template>
 

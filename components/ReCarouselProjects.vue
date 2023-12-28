@@ -86,8 +86,9 @@ const updateMiddleIndex = (event) => {
               color="black"
               font-weight
               class="flex justify-content-center"
-              :html="slotProps.data.content"
-            />
+            >
+              <span v-html="slotProps.data.content" />
+            </ReParagraphSpan>
           </template>
           <template #footer>
             <div class="flex justify-content-center">
