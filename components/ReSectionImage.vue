@@ -14,7 +14,7 @@ defineProps({
   },
   image: {
     type: Object,
-    required: true,
+    required: false,
     default: () => {
       return {
         src: '/images/background_1.jpg',

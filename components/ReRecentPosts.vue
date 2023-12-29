@@ -48,7 +48,11 @@ const recentPosts = ref([
         Posteos recientes
       </ReTitleGradient>
       <div class="card-container flex flex-wrap gap-3 mt-4">
-        <div class="card-content flex justify-space-between p-3 gap-6" v-for="value in recentPosts" :key="value.title">
+        <div
+          class="card-content flex justify-space-between p-3 gap-6"
+          v-for="value in recentPosts"
+          :key="value.title"
+        >
           <div class="flex flex-column">
             <ReTitleSpan
               color="var(--primary-color)"
