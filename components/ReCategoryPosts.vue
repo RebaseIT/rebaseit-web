@@ -70,7 +70,11 @@ const recentPosts = ref([
         Posteos por categoría
       </ReTitleGradient>
       <div class="flex flex-wrap justify-content-center gap-4 mt-4">
-        <div class="p-gradient-card max-w-17rem" v-for="value in recentPosts" :key="value.title">
+        <div
+          class="p-gradient-card max-w-17rem"
+          v-for="value in recentPosts"
+          :key="value.title"
+        >
           <div class="p-gradient-card-content h-full flex flex-column p-3 gap-4 align-items-center">
             <ReTitleGradient
               class="text-center"
@@ -87,7 +91,10 @@ const recentPosts = ref([
                 :height="value.image.height"
               />
             </div>
-            <div v-for="item in value.items" :key="item.text">
+            <div
+              v-for="item in value.items"
+              :key="item.text"
+            >
               <a :href="item.route">
                 <ReParagraphSpan
                   class="p-gradient-card-content-span"
