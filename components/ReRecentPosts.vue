@@ -8,35 +8,40 @@ const recentPosts = ref([
     date: '23/03/23',
     image: {
       src: '/images/posts/sherlock-1.png'
-    }
+    },
+    route: 'https://www.linkedin.com/posts/rebase-it_security-information-incidentresponse-activity-6994309011672068096-uj3V'
   },
   {
     title: 'Si trabajas en RRHH, te invitamos a rellenar una breve encuesta',
     date: '17/03/23',
     image: {
       src: '/images/posts/megaphone.png'
-    }
+    },
+    route: 'https://www.linkedin.com/feed/update/urn:li:activity:7008800849233633280/'
   },
   {
     title: 'Programamos las luces de Nine Shopping en Moreno',
     date: '26/12/22',
     image: {
       src: '/images/posts/shopping.png'
-    }
+    },
+    route: 'https://www.linkedin.com/posts/rebase-it_tech-sales-project-activity-7002987786941181952-cAVt'
   },
   {
     title: 'Desde nuestro equipo te deseamos, ¡FELICES FIESTAS!',
     date: '25/12/22',
     image: {
       src: '/images/posts/xmas.png'
-    }
+    },
+    route: 'https://www.linkedin.com/posts/rebase-it_estamos-llegando-a-fin-de-a%C3%B1o-y-con-el-equipo-activity-7012159369505062912-0zSQ'
   },
   {
     title: 'Sherlock, TOP 6 mejores trabajos en Argentina!',
     date: '15/12/22',
     image: {
       src: '/images/posts/team.png'
-    }
+    },
+    route: 'https://www.linkedin.com/posts/rebase-it_security-information-incidentresponse-activity-6995398634041143296-kqQ7'
   }
 ])
 </script>
@@ -48,8 +53,10 @@ const recentPosts = ref([
         Posteos recientes
       </ReTitleGradient>
       <div class="card-container flex flex-wrap gap-3 mt-4">
-        <div
-          class="card-content flex justify-space-between p-3 gap-6"
+        <a
+          :href="value.route"
+          target="_blank"
+          class="card-content cursor-pointer flex justify-space-between p-3 gap-6"
           v-for="value in recentPosts"
           :key="value.title"
         >
@@ -77,7 +84,7 @@ const recentPosts = ref([
             :alt="value.title"
             :max-width="isMobile ? '80px' : '140px'"
           />
-        </div>
+        </a>
       </div>
     </div>
   </ReSectionContainer>
@@ -99,6 +106,8 @@ const recentPosts = ref([
       background-color: var(--third-color);
     }
   }
+  a {
+    text-decoration: none;
+  }
 }
-
 </style>
