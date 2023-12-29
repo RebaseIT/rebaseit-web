@@ -69,7 +69,7 @@ const selected = () => {
 
 <style scoped lang="scss">
 .container {
-  max-width: 1240px;
+  max-width: 1320px;
   margin: 0 auto;
   .card-tab-view {
     position: relative;

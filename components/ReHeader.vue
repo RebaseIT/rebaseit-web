@@ -53,7 +53,7 @@ const items = ref([
 }
 .menu-bar {
   width: 100%;
-  max-width: 1240px;
+  max-width: 1320px;
   margin: 0 auto;
   justify-content: space-between;
   border: none;
