@@ -16,7 +16,7 @@ const sectionTop = { title, subtitle, image };
   />
   <ReSectionContainer
     class="py-2 px-6"
-    image="url(/images/section_products_bg.png)"
+    image="url(/images/background/background-2.png)"
   >
     <ReCarouselProjects />
   </ReSectionContainer>

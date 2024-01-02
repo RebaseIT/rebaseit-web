@@ -64,7 +64,7 @@ const recentPosts = ref([
 </script>
 
 <template>
-  <ReSectionContainer image="url(/images/section_products_bg.png)">
+  <ReSectionContainer image="url(/images/background/background-2.png)">
     <div class="py-8 px-6">
       <ReTitleGradient>
         Posteos por categoría
@@ -95,7 +95,10 @@ const recentPosts = ref([
               v-for="item in value.items"
               :key="item.text"
             >
-              <a :href="item.route" target="_blank">
+              <a
+                :href="item.route"
+                target="_blank"
+              >
                 <ReParagraphSpan
                   class="p-gradient-card-content-span"
                   color="var(--primary-color)"

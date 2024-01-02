@@ -8,7 +8,7 @@ const props = defineProps({
   image: {
     type: [String, Boolean],
     required: false,
-    default: 'url(/images/background_1.jpg)'
+    default: 'url(/images/background/background-1.png)'
   },
   bgColor: {
     type: String,
@@ -29,8 +29,8 @@ const props = defineProps({
 .section {
   background-color: v-bind(bgColor);
   background-image: v-bind(image);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-repeat: repeat;
+  background-size: cover;
   .content {
     position: relative;
     max-width: 1320px;
