@@ -9,10 +9,6 @@ const props = defineProps({
     type: Boolean,
     default: false
   },
-  bigText: {
-    type: Boolean,
-    default: false
-  },
   color: {
     type: String,
     default: '#FFFFFF'
@@ -21,11 +17,15 @@ const props = defineProps({
     type: String,
     default: 'none'
   },
+  fontSize: {
+    type: String,
+    default: '20px'
+  },
+  fontWeight: {
+    type: String,
+    default: '200'
+  }
 })
-
-const fontWeight = computed(() => props.bold ? 400 : 200)
-const bigText = computed(() => props.bigText ? '25px' : '20px');
-
 </script>
 
 <template>
@@ -37,7 +37,7 @@ const bigText = computed(() => props.bigText ? '25px' : '20px');
 <style scoped>
 .re-title-span {
   color: v-bind(color);
-  font-size: v-bind(bigText);
+  font-size: v-bind(fontSize);
   font-family: Raleway;
   line-height: normal;
   font-weight: v-bind(fontWeight);

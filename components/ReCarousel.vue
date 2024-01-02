@@ -37,7 +37,7 @@ const images = ref([
 
             <div>
               <ReTitleSpan
-                bold
+                font-weight="400"
                 color="black"
                 class="font-size-text"
               >

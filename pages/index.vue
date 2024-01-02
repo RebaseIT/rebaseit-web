@@ -63,8 +63,8 @@ const { isSmaller: isMobile } = useViewport('xl');
       >
         <ReTitleSpan
           color="black"
-          big-text
-          bold
+          font-size="25px"
+          font-weight="400"
         >
           Rebase IT se especializa en software y servicios de consultoría.
           Combinamos habilidades de diseño, ingeniería y operacionales
@@ -124,8 +124,8 @@ const { isSmaller: isMobile } = useViewport('xl');
         <div class="mt-3">
           <ReTitleSpan
             color="black"
-            big-text
-            bold
+            font-size="25px"
+            font-weight="400"
           >
             En RebaseIT nos especializamos en múltiples frentes, manteniéndonos en la vanguardia
             de la industria y ofreciendo así el más amplio abanico de soluciones para cada caso.

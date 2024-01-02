@@ -1,32 +1,62 @@
-<template>
-  <ReSectionTop>
-    <div class="row flex py-6">
-      <div class="col-8 px-8">
-        <ReTitleGradient big-text>
-          Publicaciones
-        </ReTitleGradient>
-        <div>
-          <ReTitleSpan
-            color="black"
-            big-text
-            bold
-          >
-            Enterate de todas las noticias que Rebase IT tiene para vos.
-          </ReTitleSpan>
-        </div>
-      </div>
+<script setup lang="ts">
+import { useViewport } from "~/composables/useViewport";
 
-      <div class="col-4 px-8">
-        <img
-          alt="logo"
-          src="/images/news.png"
-          height="180"
-          width="200"
+const { isSmaller: isMobile } = useViewport('lg');
+const title = 'Publicaciones';
+const subtitle = 'Enterate de todas las noticias que Rebase IT tiene para vos.';
+const image = {
+  src: '/images/news.png',
+  alt: 'news-image',
+  maxWidth: '350px'
+};
+const sectionTop = { title, subtitle, image };
+</script>
+
+<template>
+  <ReSectionImage
+    class="pt-8"
+    v-bind="sectionTop"
+  />
+  <ReSectionContainer
+    bg-color="var(--light-blue)"
+    :image="false"
+  >
+    <div
+      class="flex justify-content-between py-8 px-6 gap-8"
+      :class="{ 'flex-column align-items-center': isMobile }"
+    >
+      <div class="flex flex-column justify-space-between gap-3">
+        <ReTitleGradient
+          font-family="IBM Plex Mono"
+          font-weight="600"
         >
+          Última noticia:
+        </ReTitleGradient>
+        <ReTitleGradient>
+          Presentamos Sherlock, la mejor respuesta para tu análisis de ciberseguridad
+        </ReTitleGradient>
+        <ReTitleGradient
+          font-weight="600"
+          font-size="15px"
+          class="align-self-end"
+        >
+          Publicado el 23/03/23
+        </ReTitleGradient>
+        <NuxtLink to="/blog/sherlock">
+          <ReButton
+            label="Conocé más"
+            class="max-w-12rem"
+          />
+        </NuxtLink>
       </div>
+      <ReImage
+        src="/images/sherlock.png"
+        alt="sherlock-image"
+        max-width="480px"
+      />
     </div>
-  </ReSectionTop>
-  <section class="py-8">
-    <ReContactUs />
-  </section>
+  </ReSectionContainer>
+  <ReCategoryPosts />
+  <ReRecentPosts />
+  <ReContactUs />
 </template>

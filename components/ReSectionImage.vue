@@ -38,7 +38,7 @@ defineProps({
       >
         <ReTitleGradient
           font-family="IBM Plex Mono"
-          :font-size="isMobile ? '50px' : '60px'"
+          :font-size="isMobile ? '40px' : '60px'"
           font-weight="600"
         >
           {{ title }}
@@ -46,8 +46,8 @@ defineProps({
         <div class="mt-4">
           <ReTitleSpan
             color="black"
-            big-text
-            bold
+            font-size="25px"
+            font-weight="400"
           >
             <span v-html="subtitle" />
           </ReTitleSpan>
