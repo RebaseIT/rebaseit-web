@@ -73,7 +73,7 @@ const sectionOptions = [
     class="pt-8"
     v-bind="sectionTop"
   />
-  <ReSectionContainer image="url(/images/background/background-2.png)">
+  <ReSectionContainer background="url(/images/background/background-2.png)">
     <div class="flex flex-column py-8 px-6">
       <ReTitleGradient
         class="align-self-center"
@@ -129,7 +129,7 @@ const sectionOptions = [
       </div>
     </div>
   </ReSectionContainer>
-  <ReSectionContainer image="url(/images/background/background-2.png)">
+  <ReSectionContainer background="url(/images/background/background-2.png)">
     <div
       class="flex flex-column pb-8 px-2"
       :class="{ 'px-6': isMobile }"
@@ -165,7 +165,7 @@ const sectionOptions = [
     </div>
   </ReSectionContainer>
   <ReValues />
-  <ReSectionContainer image="url(/images/background/background-2.png)">
+  <ReSectionContainer background="url(/images/background/background-2.png)">
     <div
       class="flex p-6 gap-8 justify-space-between"
       :class="{ 'flex-column': isMobile }"

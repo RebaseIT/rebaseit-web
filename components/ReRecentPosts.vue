@@ -47,7 +47,7 @@ const recentPosts = ref([
 </script>
 
 <template>
-  <ReSectionContainer image="url(/images/background/background-2.png)">
+  <ReSectionContainer background="url(/images/background/background-2.png)">
     <div class="px-6">
       <ReTitleGradient>
         Posteos recientes

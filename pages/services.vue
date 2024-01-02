@@ -14,7 +14,7 @@ const sectionTop = { title, subtitle, image };
     class="pt-8"
     v-bind="sectionTop"
   />
-  <ReSectionContainer image="url(/images/background/background-3.png)">
+  <ReSectionContainer background="url(/images/background/background-3.png)">
     <ReCarouselServices />
   </ReSectionContainer>
   <ReContactUs />

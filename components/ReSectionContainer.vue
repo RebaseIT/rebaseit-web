@@ -5,10 +5,10 @@ const props = defineProps({
     required: false,
     default: ''
   },
-  image: {
-    type: [String, Boolean],
+  background: {
+    type: String,
     required: false,
-    default: 'url(/images/background/background-1.png)'
+    default: ''
   },
   bgColor: {
     type: String,
@@ -24,11 +24,10 @@ const props = defineProps({
     </div>
   </div>
 </template>
-
 <style lang="scss" scoped>
 .section {
   background-color: v-bind(bgColor);
-  background-image: v-bind(image);
+  background-image: v-bind(background);
   background-repeat: repeat;
   background-size: cover;
   .content {

@@ -19,7 +19,7 @@ const sectionTop = { title, subtitle, image };
   />
   <ReSectionContainer
     bg-color="var(--light-blue)"
-    :image="false"
+    background=""
   >
     <div
       class="flex justify-content-between py-8 px-6 gap-8"
