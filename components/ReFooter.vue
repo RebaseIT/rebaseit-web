@@ -172,7 +172,7 @@ const { isSmaller: isMobile } = useViewport('sm');
 .footer {
     background: linear-gradient(135deg, #0470B8 46.44%, #88ABFE 100%);
   .footer-content {
-    max-width: 1240px;
+    max-width: 1320px;
     margin: 0 auto;
   }
   .footer-logo-container {

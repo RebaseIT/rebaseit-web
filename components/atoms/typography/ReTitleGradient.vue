@@ -5,6 +5,10 @@ const props = defineProps({
     required: false,
     default: ''
   },
+  textTransform: {
+    type: String,
+    default: 'none'
+  },
   color: {
     type: String,
     default: '#FFFFFF'
@@ -40,5 +44,6 @@ const props = defineProps({
   font-family: v-bind(fontFamily);
   font-weight: v-bind(fontWeight);
   line-height: normal;
+  text-transform: v-bind(textTransform);
 }
 </style>

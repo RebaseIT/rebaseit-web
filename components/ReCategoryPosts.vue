@@ -95,7 +95,7 @@ const recentPosts = ref([
               v-for="item in value.items"
               :key="item.text"
             >
-              <a :href="item.route">
+              <a :href="item.route" target="_blank">
                 <ReParagraphSpan
                   class="p-gradient-card-content-span"
                   color="var(--primary-color)"
