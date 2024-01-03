@@ -2,6 +2,68 @@
 import { useViewport } from '~/composables/useViewport';
 
 const { isSmaller: isMobile } = useViewport('lg');
+const router = useRouter();
+
+const invalidField = ref(false);
+
+const form = ref({
+  name: '',
+  lastName: '',
+  email: '',
+  phone: '',
+  message: ''
+});
+
+const isValid = computed(() => {
+  return form.value.name && form.value.lastName && form.value.email && form.value.message && !invalidField.value
+});
+
+const emailTemplate = computed(() => {
+  return `
+    <div>
+      <h1>¡Hola!</h1>
+      <p>Recibiste un mensaje de ${form.value.name} ${form.value.lastName}</p>
+      <p>Nombre: ${form.value.name}</p>
+      <p>Apellido: ${form.value.lastName}</p>
+      <p>Correo: ${form.value.email}</p>
+      <p>Teléfono: ${form.value.phone}</p>
+      <p>Mensaje: ${form.value.message}</p>
+    </div>
+  `;
+});
+const sendEmail = async () => {
+  const msg = {
+    personalizations: [
+      {
+        to: [
+          {
+            email: "sales@rebaseit.tech",
+            name: "Rebase IT"
+          }
+        ]
+      }
+    ],
+    from: {
+      email: "devops@rebaseit.tech",
+      name: "Rebase IT"
+    },
+    subject: "Solicitud de contacto desde web",
+    content: [
+      {
+        type: "text/html",
+        value: emailTemplate.value
+      }
+    ]
+  }
+  await useFetch("/api/sendgrid", {
+    method: "POST",
+    body: msg
+  }).then(() => {
+    router.push('/thank-you');
+  }).catch((err) => {
+    console.log(err);
+  });
+}
 </script>
 <template>
   <ReSectionContainer background="url(/images/background/background-2.png)">
@@ -27,12 +89,39 @@ const { isSmaller: isMobile } = useViewport('lg');
         <Card>
           <template #content>
             <form class="flex flex-column gap-2">
-              <ReInputText label="Nombre *" />
-              <ReInputText label="Apellido *" />
-              <ReInputText label="Dirección de E-mail *" />
-              <ReInputText label="Número de Teléfono" />
-              <ReTextarea label="Deja tu mensaje *" />
-              <ReButton label="Enviar" />
+              <ReInputText
+                v-model="form.name"
+                label="Nombre *"
+                @invalid="invalidField = $event"
+              />
+              <ReInputText
+                v-model="form.lastName"
+                label="Apellido *"
+                @invalid="invalidField = $event"
+              />
+              <ReInputText
+                v-model="form.email"
+                label="Dirección de E-mail *"
+                field-type="email"
+                @invalid="invalidField = $event"
+              />
+              <ReInputText
+                v-model="form.phone"
+                label="Número de Teléfono"
+                field-type="phone"
+                :is-required="false"
+                @invalid="invalidField = $event"
+              />
+              <ReTextarea
+                v-model="form.message"
+                label="Deja tu mensaje *"
+                @invalid="invalidField = $event"
+              />
+              <ReButton
+                @click="sendEmail"
+                :class="{ 'p-disabled': !isValid }"
+                label="Enviar"
+              />
             </form>
             <div class="pt-3">
               <ReParagraphSpan color="var(--primary-color)">
