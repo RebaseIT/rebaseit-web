@@ -65,7 +65,7 @@ const ourValues = [
 </script>
 
 <template>
-  <ReSectionContainer image="url(/images/section_products_bg.png)">
+  <ReSectionContainer background="url(/images/background/background-2.png)">
     <div
       class="flex flex-column pb-8 px-6"
     >

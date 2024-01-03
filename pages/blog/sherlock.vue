@@ -19,7 +19,10 @@ const images = [
 ]
 </script>
 <template>
-  <ReSectionContainer class="pt-8">
+  <ReSectionContainer
+    background="url(/images/background/background-1.png)"
+    class="pt-8"
+  >
     <div
       class="flex gap-4 py-8 px-6 justify-space-between align-items-center"
       :class="{ 'flex-column justify-content-center': isMobile }"
@@ -49,7 +52,6 @@ const images = [
   </ReSectionContainer>
   <ReSectionContainer
     bg-color="white"
-    :image="false"
   >
     <div class="flex py-8 px-6">
       <ReTitleSpan color="black">
@@ -62,7 +64,6 @@ const images = [
   </ReSectionContainer>
   <ReSectionContainer
     bg-color="var(--light-blue)"
-    :image="false"
   >
     <div
       class="flex py-8 px-6 gap-4 flex-wrap justify-space-between"
