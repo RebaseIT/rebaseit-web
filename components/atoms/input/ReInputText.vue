@@ -16,6 +16,10 @@ const props = defineProps({
   fieldType: {
     type: String,
     default: 'text'
+  },
+  validators: {
+    type: Array,
+    default: () => []
   }
 })
 
@@ -30,46 +34,25 @@ const errorMessages = {
   text: 'El campo debe contener al menos 3 caracteres'
 };
 
-const fieldsValidation = {
-  text: () => {
-    const regex = /.*[a-zA-Z].*[a-zA-Z].*[a-zA-Z].*/;
-    if (!regex.test(inputValue.value)) {
-      error.value = true;
-      errorMessage.value = errorMessages.text;
-    } else {
-      error.value = false;
-      errorMessage.value = '';
-    }
-  },
-  email: () => {
-    const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
-    if (!emailRegex.test(inputValue.value)) {
-      error.value = true;
-      errorMessage.value = errorMessages.email;
-    } else {
-      error.value = false;
-      errorMessage.value = '';
-    }
-  },
-  phone: () => {
-    const phoneRegex = /^\d{10,}$/;
-    if (!phoneRegex.test(inputValue.value)) {
-      error.value = true;
-      errorMessage.value = errorMessages.phone;
-    } else {
-      error.value = false;
-      errorMessage.value = '';
-    }
-  }
-}
-
 const validateInput = () => {
   if (props.isRequired && !inputValue.value) {
     error.value = true;
     errorMessage.value = errorMessages.required;
   } else {
-    return fieldsValidation[props.fieldType]();
+    return validateError(props.validators, inputValue.value, props.fieldType);
   }
+}
+
+const validateError = (validators, input, key) => {
+  validators.map(validator => {
+    if (validator(input)) {
+      error.value = true;
+      errorMessage.value = errorMessages[key];
+    } else {
+      error.value = false;
+      errorMessage.value = '';
+    }
+  })
 }
 
 watch(inputValue, (newVal) => {

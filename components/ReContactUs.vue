@@ -1,11 +1,21 @@
 <script setup>
 import { useViewport } from '~/composables/useViewport';
+import { useToast } from 'primevue/usetoast';
+import ReInputText from "~/components/atoms/input/ReInputText.vue";
+import ReTextarea from "~/components/atoms/input/ReTextarea.vue";
 
 const { isSmaller: isMobile } = useViewport('lg');
 const router = useRouter();
+const toast = useToast();
+
+const regex = {
+  text: /.*[a-zA-Z].*[a-zA-Z].*[a-zA-Z].*/,
+  email: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
+  phone: /^\d{10,}$/,
+  textarea: /^.{10,}$/
+}
 
 const invalidField = ref(false);
-
 const form = ref({
   name: '',
   lastName: '',
@@ -14,10 +24,57 @@ const form = ref({
   message: ''
 });
 
+const fields = ref([
+  {
+    component: ReInputText,
+    model: 'name',
+    label: 'Nombre *',
+    isRequired: true,
+    validators: [
+      (value) => !regex.text.test(value)
+    ]
+  },
+  {
+    component: ReInputText,
+    model: 'lastName',
+    label: 'Apellido *',
+    isRequired: true,
+    validators: [
+      (value) => !regex.text.test(value)
+    ]
+  },
+  {
+    component: ReInputText,
+    model: 'email',
+    label: 'Dirección de E-mail *',
+    isRequired: true,
+    validators: [
+      (value) => !regex.email.test(value)
+    ]
+  },
+  {
+    component: ReInputText,
+    model: 'phone',
+    label: 'Número de Teléfono',
+    isRequired: false,
+    validators: [
+      (value) => !regex.phone.test(value)
+    ]
+  },
+  {
+    component: ReTextarea,
+    model: 'message',
+    label: 'Deja tu mensaje *',
+    isRequired: true,
+    validators: [
+      (value) => !regex.textarea.test(value)
+    ]
+  }
+])
+
 const isValid = computed(() => {
   return form.value.name && form.value.lastName && form.value.email && form.value.message && !invalidField.value
 });
-
 const emailTemplate = computed(() => {
   return `
     <div>
@@ -31,6 +88,7 @@ const emailTemplate = computed(() => {
     </div>
   `;
 });
+
 const sendEmail = async () => {
   const msg = {
     personalizations: [
@@ -61,7 +119,11 @@ const sendEmail = async () => {
   }).then(() => {
     router.push('/thank-you');
   }).catch((err) => {
-    console.log(err);
+    toast.add({
+      severity: 'error',
+      detail: err.message,
+      life: 3000,
+    });
   });
 }
 </script>
@@ -89,34 +151,19 @@ const sendEmail = async () => {
         <Card>
           <template #content>
             <form class="flex flex-column gap-2">
-              <ReInputText
-                v-model="form.name"
-                label="Nombre *"
-                @invalid="invalidField = $event"
-              />
-              <ReInputText
-                v-model="form.lastName"
-                label="Apellido *"
-                @invalid="invalidField = $event"
-              />
-              <ReInputText
-                v-model="form.email"
-                label="Dirección de E-mail *"
-                field-type="email"
-                @invalid="invalidField = $event"
-              />
-              <ReInputText
-                v-model="form.phone"
-                label="Número de Teléfono"
-                field-type="phone"
-                :is-required="false"
-                @invalid="invalidField = $event"
-              />
-              <ReTextarea
-                v-model="form.message"
-                label="Deja tu mensaje *"
-                @invalid="invalidField = $event"
-              />
+              <template
+                v-for="(item, index) in fields"
+                :key="index"
+              >
+                <component
+                  v-model="form[item.model]"
+                  :is="item.component"
+                  :label="item.label"
+                  :is-required="item.isRequired"
+                  :validators="item.validators"
+                  @invalid="invalidField = $event"
+                />
+              </template>
               <ReButton
                 @click="sendEmail"
                 :class="{ 'p-disabled': !isValid }"
@@ -143,8 +190,8 @@ const sendEmail = async () => {
   width: 100%;
   max-width: 430px;
   &:deep(.p-card){
-  border: 2px solid var(--primary-color);
-  background-color: var(--light-blue);
+    border: 2px solid var(--primary-color);
+    background-color: var(--light-blue);
     a {
       text-decoration: none;
       color: black;

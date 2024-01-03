@@ -13,6 +13,10 @@ const props = defineProps({
     type: Boolean,
     default: true
   },
+  validators: {
+    type: Array,
+    default: () => []
+  }
 })
 const inputValue = ref(props.modelValue);
 const error = ref(false);
@@ -20,20 +24,7 @@ const errorMessage = ref('');
 
 const errorMessages = {
   required: 'Este campo es requerido',
-  minLength: 'El campo debe contener al menos 10 caracteres'
-};
-
-const fieldsValidation = {
-  textarea: () => {
-    const regex = /^.{10,}$/;
-    if (!regex.test(inputValue.value)) {
-      error.value = true;
-      errorMessage.value = errorMessages.minLength;
-    } else {
-      error.value = false;
-      errorMessage.value = '';
-    }
-  }
+  textarea: 'El campo debe contener al menos 10 caracteres'
 };
 
 const validateInput = () => {
@@ -41,8 +32,20 @@ const validateInput = () => {
     error.value = true;
     errorMessage.value = errorMessages.required;
   } else {
-    return fieldsValidation.textarea();
+    return validateError(props.validators, inputValue.value, 'textarea');
   }
+}
+
+const validateError = (validators, input, key) => {
+  validators.map(validator => {
+    if (validator(input)) {
+      error.value = true;
+      errorMessage.value = errorMessages[key];
+    } else {
+      error.value = false;
+      errorMessage.value = '';
+    }
+  })
 }
 
 watch(inputValue, (newVal) => {
