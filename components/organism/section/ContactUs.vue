@@ -1,19 +1,11 @@
 <script setup>
 import { useViewport } from '~/composables/useViewport';
 import { useToast } from 'primevue/usetoast';
-import ReInputText from "~/components/atoms/input/ReInputText.vue";
-import ReTextarea from "~/components/atoms/input/ReTextarea.vue";
+import { REGEX, MESSAGES } from "~/constants/fieldErrors";
 
 const { isSmaller: isMobile } = useViewport('lg');
 const router = useRouter();
 const toast = useToast();
-
-const regex = {
-  text: /.*[a-zA-Z].*[a-zA-Z].*[a-zA-Z].*/,
-  email: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
-  phone: /^\d{10,}$/,
-  textarea: /^.{10,}$/
-}
 
 const invalidField = ref(false);
 const form = ref({
@@ -26,50 +18,40 @@ const form = ref({
 
 const fields = [
   {
-    component: ReInputText,
     model: 'name',
     label: 'Nombre *',
     isRequired: true,
     validators: [
-      (value) => !regex.text.test(value)
+      (value) => !value && MESSAGES.REQUIRED,
+      (value) => !REGEX.TEXT.test(value) && MESSAGES.MIN_LENGTH(3)
     ]
   },
   {
-    component: ReInputText,
     model: 'lastName',
     label: 'Apellido *',
     isRequired: true,
     validators: [
-      (value) => !regex.text.test(value)
+      (value) => !value && MESSAGES.REQUIRED,
+      (value) => !REGEX.TEXT.test(value) && MESSAGES.MIN_LENGTH(3)
     ]
   },
   {
-    component: ReInputText,
     model: 'email',
     label: 'Dirección de E-mail *',
     isRequired: true,
     fieldType: 'email',
     validators: [
-      (value) => !regex.email.test(value)
+      (value) => !value && MESSAGES.REQUIRED,
+      (value) => !REGEX.EMAIL.test(value) && MESSAGES.EMAIL
     ]
   },
   {
-    component: ReInputText,
     model: 'phone',
     label: 'Número de Teléfono',
     isRequired: false,
     fieldType: 'phone',
     validators: [
-      (value) => !regex.phone.test(value)
-    ]
-  },
-  {
-    component: ReTextarea,
-    model: 'message',
-    label: 'Deja tu mensaje *',
-    isRequired: true,
-    validators: [
-      (value) => !regex.textarea.test(value)
+      (value) => !REGEX.PHONE.test(value) && MESSAGES.PHONE
     ]
   }
 ]
@@ -157,16 +139,20 @@ const sendEmail = async () => {
                 v-for="(item, index) in fields"
                 :key="index"
               >
-                <component
+                <ReInputText
                   v-model="form[item.model]"
-                  :is="item.component"
                   :label="item.label"
-                  :is-required="item.isRequired"
-                  :field-type="item.fieldType"
                   :validators="item.validators"
-                  @invalid="invalidField = $event"
                 />
               </template>
+              <ReTextarea
+                v-model="form.message"
+                label="Deja tu mensaje *"
+                :validators="[
+                  (value) => !value && MESSAGES.REQUIRED,
+                  (value) => !REGEX.TEXTAREA.test(value) && MESSAGES.MIN_LENGTH(10)
+                ]"
+              />
               <ReButton
                 @click="sendEmail"
                 :class="{ 'p-disabled': !isValid }"
