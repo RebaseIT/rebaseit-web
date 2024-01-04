@@ -1,13 +1,12 @@
 <script setup>
 import { useViewport } from '~/composables/useViewport';
 import { useToast } from 'primevue/usetoast';
-import { REGEX, MESSAGES } from "~/constants/fieldErrors";
+import { REGEX, isRequired, biggerThan, isValidEmail, isValidPhone } from "~/constants/fieldErrors";
 
 const { isSmaller: isMobile } = useViewport('lg');
 const router = useRouter();
 const toast = useToast();
 
-const invalidField = ref(false);
 const form = ref({
   name: '',
   lastName: '',
@@ -20,44 +19,44 @@ const fields = [
   {
     model: 'name',
     label: 'Nombre *',
-    isRequired: true,
     validators: [
-      (value) => !value && MESSAGES.REQUIRED,
-      (value) => !REGEX.TEXT.test(value) && MESSAGES.MIN_LENGTH(3)
+      isRequired,
+      biggerThan(3)
     ]
   },
   {
     model: 'lastName',
     label: 'Apellido *',
-    isRequired: true,
     validators: [
-      (value) => !value && MESSAGES.REQUIRED,
-      (value) => !REGEX.TEXT.test(value) && MESSAGES.MIN_LENGTH(3)
+      isRequired,
+      biggerThan(3)
     ]
   },
   {
     model: 'email',
     label: 'Dirección de E-mail *',
-    isRequired: true,
-    fieldType: 'email',
     validators: [
-      (value) => !value && MESSAGES.REQUIRED,
-      (value) => !REGEX.EMAIL.test(value) && MESSAGES.EMAIL
+      isRequired,
+      isValidEmail
     ]
   },
   {
     model: 'phone',
     label: 'Número de Teléfono',
-    isRequired: false,
-    fieldType: 'phone',
     validators: [
-      (value) => !REGEX.PHONE.test(value) && MESSAGES.PHONE
+      isValidPhone
     ]
   }
 ]
 
 const isValid = computed(() => {
-  return form.value.name && form.value.lastName && form.value.email && form.value.message && !invalidField.value
+  return (
+    REGEX.TEXT(3).test(form.value.name) &&
+    REGEX.TEXT(3).test(form.value.lastName) &&
+    REGEX.EMAIL.test(form.value.email) &&
+    REGEX.TEXT(10).test(form.value.message) &&
+    (form.value.phone.length ? REGEX.PHONE.test(form.value.phone) : true)
+  );
 });
 const emailTemplate = computed(() => {
   return `
@@ -149,8 +148,8 @@ const sendEmail = async () => {
                 v-model="form.message"
                 label="Deja tu mensaje *"
                 :validators="[
-                  (value) => !value && MESSAGES.REQUIRED,
-                  (value) => !REGEX.TEXTAREA.test(value) && MESSAGES.MIN_LENGTH(10)
+                  isRequired,
+                  biggerThan(10)
                 ]"
               />
               <ReButton
