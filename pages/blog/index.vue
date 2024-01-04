@@ -12,7 +12,7 @@ const image = {
 </script>
 
 <template>
-  <ReSectionImage
+  <SectionImage
     class="pt-8"
     :title="title"
     :subtitle="subtitle"
@@ -56,7 +56,7 @@ const image = {
       />
     </div>
   </ReSectionContainer>
-  <ReCategoryPosts />
-  <ReRecentPosts />
-  <ReContactUs />
+  <CategoryPosts />
+  <RecentPosts />
+  <ContactUs />
 </template>

@@ -68,7 +68,7 @@ const sectionOptions = [
 </script>
 
 <template>
-  <ReSectionImage
+  <SectionImage
     class="pt-8"
     :title="title"
     :subtitle="subtitle"
@@ -164,7 +164,7 @@ const sectionOptions = [
       </div>
     </div>
   </ReSectionContainer>
-  <ReValues />
+  <OurValues />
   <ReSectionContainer background="/images/background/background-2.png">
     <div
       class="flex p-6 gap-8 justify-space-between"
@@ -194,5 +194,5 @@ const sectionOptions = [
       </div>
     </div>
   </ReSectionContainer>
-  <ReContactUs />
+  <ContactUs />
 </template>

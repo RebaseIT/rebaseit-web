@@ -16,6 +16,10 @@ const props = defineProps({
   validators: {
     type: Array,
     default: () => []
+  },
+  fieldType: {
+    type: String,
+    default: 'text'
   }
 })
 const inputValue = ref(props.modelValue);

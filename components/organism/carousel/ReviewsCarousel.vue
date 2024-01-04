@@ -1,6 +1,4 @@
 <script setup>
-import { ref } from "vue";
-
 const images = ref([
   {src: '/images/gatito1.jpeg'},
   {src: '/images/gatito2.jpeg'},

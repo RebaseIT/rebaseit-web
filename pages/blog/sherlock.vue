@@ -78,7 +78,7 @@ const images = [
       />
     </div>
   </ReSectionContainer>
-  <ReContactUs />
+  <ContactUs />
 </template>
 
 <style lang="scss" scoped>

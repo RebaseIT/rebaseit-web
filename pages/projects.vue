@@ -9,7 +9,7 @@ const image = {
 </script>
 
 <template>
-  <ReSectionImage
+  <SectionImage
     class="pt-8"
     :title="title"
     :subtitle="subtitle"
@@ -19,7 +19,7 @@ const image = {
     class="py-2 px-6"
     background="/images/background/background-2.png"
   >
-    <ReCarouselProjects />
+    <ProjectsCarousel />
   </ReSectionContainer>
-  <ReContactUs />
+  <ContactUs />
 </template>

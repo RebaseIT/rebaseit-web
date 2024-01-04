@@ -84,7 +84,7 @@ const { isSmaller: isMobile } = useViewport('xl');
         Nuestros Productos
       </ReTitleGradient>
       <div class="py-4">
-        <ReTabView />
+        <ServicesTabView />
       </div>
     </div>
   </ReSectionProducts>
@@ -138,5 +138,5 @@ const { isSmaller: isMobile } = useViewport('xl');
       </div>
     </div>
   </ReSectionWhatWeDo>
-  <ReContactUs />
+  <ContactUs />
 </template>

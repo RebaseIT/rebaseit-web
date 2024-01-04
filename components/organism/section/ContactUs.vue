@@ -146,7 +146,7 @@ const sendEmail = async () => {
           </ReParagraphSpan>
         </div>
         <div class="carrousel-container align-self-center">
-          <ReCarousel />
+          <ReviewsCarousel />
         </div>
       </div>
       <div class="contact-card">

@@ -9,14 +9,14 @@ const image = {
 </script>
 
 <template>
-  <ReSectionImage
+  <SectionImage
     class="pt-8"
     :title="title"
     :subtitle="subtitle"
     :image="image"
   />
   <ReSectionContainer background="/images/background/background-3.png">
-    <ReCarouselServices />
+    <ServicesCarousel />
   </ReSectionContainer>
-  <ReContactUs />
+  <ContactUs />
 </template>

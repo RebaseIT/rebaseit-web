@@ -3,9 +3,9 @@
 </script>
 <template>
   <div>
-    <ReHeader />
+    <Header />
     <slot />
     <Toast />
-    <ReFooter />
+    <Footer />
   </div>
 </template>
