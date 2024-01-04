@@ -11,11 +11,11 @@ const props = defineProps({
   },
   color: {
     type: String,
-    default: '#FFFFFF'
+    default: 'white'
   },
   fontSize: {
     type: String,
-    default: '40px'
+    default: 'xl'
   },
   fontFamily: {
     type: String,
@@ -26,7 +26,9 @@ const props = defineProps({
     default: '700'
   }
 })
-
+const fontSizeVar = computed(() => {
+  return `var(--${props.fontSize})`
+})
 </script>
 
 <template>
@@ -40,7 +42,7 @@ const props = defineProps({
   background: -webkit-linear-gradient(45deg,rgb(4, 90, 147), rgb(136, 171, 254));
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: v-bind(fontSize);
+  font-size: v-bind(fontSizeVar);
   font-family: v-bind(fontFamily);
   font-weight: v-bind(fontWeight);
   line-height: normal;

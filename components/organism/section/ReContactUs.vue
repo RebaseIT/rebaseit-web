@@ -24,7 +24,7 @@ const form = ref({
   message: ''
 });
 
-const fields = ref([
+const fields = [
   {
     component: ReInputText,
     model: 'name',
@@ -48,6 +48,7 @@ const fields = ref([
     model: 'email',
     label: 'Dirección de E-mail *',
     isRequired: true,
+    fieldType: 'email',
     validators: [
       (value) => !regex.email.test(value)
     ]
@@ -57,6 +58,7 @@ const fields = ref([
     model: 'phone',
     label: 'Número de Teléfono',
     isRequired: false,
+    fieldType: 'phone',
     validators: [
       (value) => !regex.phone.test(value)
     ]
@@ -70,7 +72,7 @@ const fields = ref([
       (value) => !regex.textarea.test(value)
     ]
   }
-])
+]
 
 const isValid = computed(() => {
   return form.value.name && form.value.lastName && form.value.email && form.value.message && !invalidField.value
@@ -128,7 +130,7 @@ const sendEmail = async () => {
 }
 </script>
 <template>
-  <ReSectionContainer background="url(/images/background/background-2.png)">
+  <ReSectionContainer background="/images/background/background-2.png">
     <div
       class="row flex py-8 px-6 justify-space-between gap-4"
       :class="{ 'flex-column align-items-center': isMobile }"
@@ -160,6 +162,7 @@ const sendEmail = async () => {
                   :is="item.component"
                   :label="item.label"
                   :is-required="item.isRequired"
+                  :field-type="item.fieldType"
                   :validators="item.validators"
                   @invalid="invalidField = $event"
                 />

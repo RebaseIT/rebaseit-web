@@ -20,7 +20,7 @@ const images = [
 </script>
 <template>
   <ReSectionContainer
-    background="url(/images/background/background-1.png)"
+    background="/images/background/background-1.png"
     class="pt-8"
   >
     <div
@@ -71,7 +71,7 @@ const images = [
     >
       <ReImage
         v-for="(image, index) in images"
-        :key="`sherlock-image-${index}`"
+        :key="`image-${index}`"
         :src="image.src"
         :alt="`sherlock-image-${index}`"
         max-width="580px"

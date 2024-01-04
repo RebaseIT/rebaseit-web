@@ -75,7 +75,7 @@ watch(inputValue, (newVal) => {
   <ReTitleSpan
     v-if="error"
     font-weight="400"
-    font-size="12px"
+    font-size="xs"
     color="red"
   >
     {{ errorMessage }}
@@ -88,7 +88,7 @@ watch(inputValue, (newVal) => {
     border-color: transparent !important;
   }
   &:deep(.p-inputtext) {
-    border-color: #0470B8 !important;
+    border-color: var(--primary-color) !important;
   }
 }
 </style>

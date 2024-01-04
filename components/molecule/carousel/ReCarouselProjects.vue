@@ -69,8 +69,8 @@ const updateMiddleIndex = (event) => {
     <template #item="slotProps">
       <div
         v-if="slotProps.data.content"
-        :class="{ 'middle-item': slotProps.index === middleIndex }"
         class="flex justify-content-center py-4 px-2 card-style"
+        :class="{ 'middle-item': slotProps.index === middleIndex }"
       >
         <Card>
           <template #title>

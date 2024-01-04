@@ -64,7 +64,7 @@ const recentPosts = ref([
 </script>
 
 <template>
-  <ReSectionContainer background="url(/images/background/background-2.png)">
+  <ReSectionContainer background="/images/background/background-2.png">
     <div class="py-8 px-6">
       <ReTitleGradient>
         Posteos por categoría
@@ -72,13 +72,13 @@ const recentPosts = ref([
       <div class="flex flex-wrap justify-content-center gap-4 mt-4">
         <div
           class="p-gradient-card max-w-17rem"
-          v-for="value in recentPosts"
-          :key="value.title"
+          v-for="(value, index) in recentPosts"
+          :key="`recent-${index}`"
         >
           <div class="p-gradient-card-content h-full flex flex-column p-3 gap-4 align-items-center">
             <ReTitleGradient
               class="text-center"
-              font-size="25px"
+              font-size="lg"
             >
               {{ value.title }}
             </ReTitleGradient>
@@ -92,8 +92,8 @@ const recentPosts = ref([
               />
             </div>
             <div
-              v-for="item in value.items"
-              :key="item.text"
+              v-for="(item, idx) in value.items"
+              :key="idx"
             >
               <a
                 :href="item.route"

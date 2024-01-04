@@ -11,38 +11,37 @@ const image = {
   alt: 'id-image',
   maxWidth: '400px'
 };
-const sectionTop = { title, subtitle, image };
 
 const teamOptions = [
   {
     name: 'Juan Cueli',
     image: '/images/team/juan-cueli.png',
     alt: 'juan-cueli',
-    mt: '80px'
+    class: 'space-layout-sm'
   },
   {
     name: 'Ezequiel Díaz',
     image: '/images/team/ezequiel-diaz.png',
     alt: 'ezequiel-diaz',
-    mt: '160px'
+    class: 'space-layout-md'
   },
   {
     name: 'Rodrigo Díaz',
     image: '/images/team/rodrigo-diaz.png',
     alt: 'rodrigo-diaz',
-    mt: '240px'
+    class: 'space-layout-lg'
   },
   {
     name: 'Martín Urteaga',
     image: '/images/team/martin-urteaga.png',
     alt: 'martin-urteaga',
-    mt: '160px'
+    class: 'space-layout-md'
   },
   {
     name: 'Jorge Covello',
     image: '/images/team/jorge-covello.png',
     alt: 'jorge-covello',
-    mt: '80px'
+    class: 'space-layout-smspace-layout-md'
   }
 ];
 
@@ -71,9 +70,11 @@ const sectionOptions = [
 <template>
   <ReSectionImage
     class="pt-8"
-    v-bind="sectionTop"
+    :title="title"
+    :subtitle="subtitle"
+    :image="image"
   />
-  <ReSectionContainer background="url(/images/background/background-2.png)">
+  <ReSectionContainer background="/images/background/background-2.png">
     <div class="flex flex-column py-8 px-6">
       <ReTitleGradient
         class="align-self-center"
@@ -86,8 +87,7 @@ const sectionOptions = [
           :class="{ 'p-container-min-h': showPolygon }"
         >
           <div
-            class="col-6"
-            :class="{ 'col-12': !showPolygon }"
+            :class="{ 'col-6': showPolygon, 'col-12': !showPolygon }"
           >
             <ReTitleSpan
               color="black"
@@ -129,7 +129,7 @@ const sectionOptions = [
       </div>
     </div>
   </ReSectionContainer>
-  <ReSectionContainer background="url(/images/background/background-2.png)">
+  <ReSectionContainer background="/images/background/background-2.png">
     <div
       class="flex flex-column pb-8 px-2"
       :class="{ 'px-6': isMobile }"
@@ -143,15 +143,15 @@ const sectionOptions = [
       >
         <div
           class="flex flex-column align-items-center w-fit"
-          v-for="member in teamOptions"
-          :key="member.name"
+          v-for="(member, index) in teamOptions"
+          :key="`member-${index}`"
         >
           <ReImage
             :alt="member.alt"
             :src="member.image"
             width="178px"
             height="205px"
-            :style="`margin-top: ${ !isMobile ? member.mt : 0 }`"
+            :class="!isMobile ? member.class : 'mt-0'"
           />
           <ReTitleSpan
             class="mt-3 font-semibold"
@@ -165,15 +165,15 @@ const sectionOptions = [
     </div>
   </ReSectionContainer>
   <ReValues />
-  <ReSectionContainer background="url(/images/background/background-2.png)">
+  <ReSectionContainer background="/images/background/background-2.png">
     <div
       class="flex p-6 gap-8 justify-space-between"
       :class="{ 'flex-column': isMobile }"
     >
       <div
         class="p-gradient-card"
-        v-for="section in sectionOptions"
-        :key="section.title"
+        v-for="(section, index) in sectionOptions"
+        :key="`section-${index}`"
       >
         <div class="p-gradient-card-content-hovered flex flex-column justify-center align-items-center">
           <ReTitleGradient class="align-self-center">
