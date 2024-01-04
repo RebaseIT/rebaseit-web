@@ -9,49 +9,25 @@ const props = defineProps({
     type: String,
     default: ''
   },
-  isRequired: {
-    type: Boolean,
-    default: true
-  },
   validators: {
     type: Array,
     default: () => []
   }
 })
 const inputValue = ref(props.modelValue);
-const error = ref(false);
 const errorMessage = ref('');
 
-const errorMessages = {
-  required: 'Este campo es requerido',
-  textarea: 'El campo debe contener al menos 10 caracteres'
-};
-
 const validateInput = () => {
-  if (props.isRequired && !inputValue.value) {
-    error.value = true;
-    errorMessage.value = errorMessages.required;
-  } else {
-    return validateError(props.validators, inputValue.value, 'textarea');
-  }
+  errorMessage.value = '';
+  validateError(props.validators, inputValue.value);
 }
-
-const validateError = (validators, input, key) => {
-  validators.map(validator => {
-    if (validator(input)) {
-      error.value = true;
-      errorMessage.value = errorMessages[key];
-    } else {
-      error.value = false;
-      errorMessage.value = '';
-    }
-  })
+const validateError = (validators, input) => {
+  errorMessage.value = validators.map(validator => validator(input)).find(Boolean);
 }
 
 watch(inputValue, (newVal) => {
   validateInput();
   emit('update:modelValue', newVal);
-  emit('invalid', error.value);
 });
 </script>
 
@@ -61,11 +37,11 @@ watch(inputValue, (newVal) => {
     @blur="validateInput"
     rows="4"
     cols="30"
-    :class="{ 'p-invalid': error }"
+    :class="{ 'p-invalid': !!errorMessage }"
     v-model="inputValue"
   />
   <ReTitleSpan
-    v-if="error"
+    v-if="errorMessage"
     font-weight="400"
     font-size="12px"
     color="red"
