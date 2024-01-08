@@ -15,13 +15,13 @@ const form = ref(
     return acc;
   }, {})
 );
-const onSubmit = handleSubmit((form) => {
+const submitAfterValidateForm = handleSubmit((form) => {
   emit('form', form);
 });
 </script>
 <template>
   <form
-    @submit="onSubmit"
+    @submit="submitAfterValidateForm"
     class="flex flex-column gap-2"
   >
     <template

@@ -169,7 +169,7 @@ const sendEmail = async (formData) => {
   width: 100%;
   max-width: 625px;
   margin: 0 auto;
-  @media (min-width: 1024px) {
+  @media (min-width: 1080px) {
     margin: 0;
   }
 }
