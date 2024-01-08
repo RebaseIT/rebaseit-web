@@ -1,4 +1,10 @@
-<script setup lang="ts">
+<script setup>
+const props = defineProps({
+  value: {
+    type: Object,
+    required: true
+  }
+});
 const hovered = ref(false);
 const handleMouseOver = () => {
   hovered.value = true;
@@ -6,13 +12,6 @@ const handleMouseOver = () => {
 const handleMouseOut = () => {
   hovered.value = false;
 };
-
-const props = defineProps({
-  value: {
-    type: Object,
-    required: true
-  }
-});
 </script>
 
 <template>
@@ -31,7 +30,7 @@ const props = defineProps({
         :src="hovered ? value.img.srcAlt : value.img.src"
         :width="value.img.width"
         :height="value.img.height"
-        :style="{ marginBottom: value.img.mb }"
+        :class="value.img.class"
       />
       <ReTitleSpan
         class="p-gradient-card-content-title mt-3 font-bold text-center"
@@ -58,7 +57,7 @@ const props = defineProps({
 .p-gradient-card-content:hover,
 .p-gradient-card-content:active,
 .p-gradient-card-content:focus {
-  background: linear-gradient(180deg, #0470B8 0%, #88ABFE 100%);
+  background: linear-gradient(180deg, var(--primary-color) 0%, var(--secondary-color) 100%);
   .p-gradient-card-content-image,
   .p-gradient-card-content-title {
     transition: all .3s ease;

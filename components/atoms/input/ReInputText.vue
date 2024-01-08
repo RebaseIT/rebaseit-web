@@ -52,7 +52,7 @@ const { value: inputValue, errorMessage, handleBlur } = useField(props.id, value
     border-color: transparent !important;
   }
   &:deep(.p-inputtext) {
-    border-color: #0470B8 !important;
+    border-color: var(--primary-color) !important;
   }
 }
 </style>

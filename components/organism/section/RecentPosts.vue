@@ -47,7 +47,7 @@ const recentPosts = ref([
 </script>
 
 <template>
-  <ReSectionContainer background="url(/images/background/background-2.png)">
+  <ReSectionContainer background="/images/background/background-2.png">
     <div class="px-6">
       <ReTitleGradient>
         Posteos recientes
@@ -57,23 +57,22 @@ const recentPosts = ref([
           :href="value.route"
           target="_blank"
           class="card-content cursor-pointer flex justify-space-between p-3 gap-6"
-          v-for="value in recentPosts"
-          :key="value.title"
+          v-for="(value, index) in recentPosts"
+          :key="index"
         >
           <div class="flex flex-column">
             <ReTitleSpan
-              color="var(--primary-color)"
+              class="primary"
               text-transform="uppercase"
-              font-size="12px"
+              font-size="xs"
               font-weight="600"
             >
               {{ value.date }}
             </ReTitleSpan>
             <ReTitleSpan
-              class="mt-3 font-semibold"
-              color="var(--primary-color)"
+              class="primary mt-3 font-semibold"
               text-transform="uppercase"
-              font-size="12px"
+              font-size="xs"
               font-weight="700"
             >
               {{ value.title }}

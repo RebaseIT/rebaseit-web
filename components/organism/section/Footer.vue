@@ -103,13 +103,15 @@ const { isSmaller: isMobile } = useViewport('sm');
         </div>
         <div class="py-4 gap-3">
           <ReTitleSpan
-            font-size="25px"
+            class="text-white"
+            font-size="lg"
           >
             ¿Tenés un proyecto?
           </ReTitleSpan>
           <br>
           <ReTitleSpan
-            font-size="25px"
+            class="text-white"
+            font-size="lg"
             font-weight="400"
           >
             Hablemos
@@ -140,21 +142,21 @@ const { isSmaller: isMobile } = useViewport('sm');
       >
         <div
           class="py-4 gap-3 flex flex-column"
-          :key="`${index}-${menu.title}`"
+          :key="`menu-${index}`"
           v-for="(menu, index) in menus"
         >
           <NuxtLink
             :to="menu.to"
             class="text-link"
           >
-            <ReTitle>
+            <ReTitle class="text-white">
               {{ menu.title }}
             </ReTitle>
           </NuxtLink>
           <div
             class="py-1"
-            :key="`${submenu.title}`"
-            v-for="(submenu) in menu.menus"
+            v-for="(submenu, idx) in menu.menus"
+            :key="`submenu-${idx}`"
           >
             <div>
               <ReSubtitle>
@@ -170,7 +172,7 @@ const { isSmaller: isMobile } = useViewport('sm');
 
 <style scoped>
 .footer {
-    background: linear-gradient(135deg, #0470B8 46.44%, #88ABFE 100%);
+    background: linear-gradient(135deg, var(--primary-color) 46.44%, var(--secondary-color) 100%);
   .footer-content {
     max-width: 1320px;
     margin: 0 auto;

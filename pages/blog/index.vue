@@ -9,17 +9,16 @@ const image = {
   alt: 'news-image',
   maxWidth: '350px'
 };
-const sectionTop = { title, subtitle, image };
 </script>
 
 <template>
-  <ReSectionImage
+  <SectionImage
     class="pt-8"
-    v-bind="sectionTop"
+    :title="title"
+    :subtitle="subtitle"
+    :image="image"
   />
-  <ReSectionContainer
-    bg-color="var(--light-blue)"
-  >
+  <ReSectionContainer class="bg-light-blue">
     <div
       class="flex justify-content-between py-8 px-6 gap-8"
       :class="{ 'flex-column align-items-center': isMobile }"
@@ -36,7 +35,7 @@ const sectionTop = { title, subtitle, image };
         </ReTitleGradient>
         <ReTitleGradient
           font-weight="600"
-          font-size="15px"
+          font-size="sm"
           class="align-self-end"
         >
           Publicado el 23/03/23
@@ -55,7 +54,7 @@ const sectionTop = { title, subtitle, image };
       />
     </div>
   </ReSectionContainer>
-  <ReCategoryPosts />
-  <ReRecentPosts />
-  <ReContactUs />
+  <CategoryPosts />
+  <RecentPosts />
+  <ContactUs />
 </template>

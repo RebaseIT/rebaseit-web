@@ -6,16 +6,17 @@ const image = {
   alt: 'gears-image',
   maxWidth: '370px'
 };
-const sectionTop = { title, subtitle, image };
 </script>
 
 <template>
-  <ReSectionImage
+  <SectionImage
     class="pt-8"
-    v-bind="sectionTop"
+    :title="title"
+    :subtitle="subtitle"
+    :image="image"
   />
-  <ReSectionContainer background="url(/images/background/background-3.png)">
-    <ReCarouselServices />
+  <ReSectionContainer background="/images/background/background-3.png">
+    <ServicesCarousel />
   </ReSectionContainer>
-  <ReContactUs />
+  <ContactUs />
 </template>

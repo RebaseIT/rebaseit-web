@@ -1,7 +1,7 @@
 <template>
   <ReSectionContainer
     class="py-8"
-    background="url(/images/background/background-2.png)"
+    background="/images/background/background-2.png"
   >
     <div class="h-full flex flex-column align-items-center justify-content-center">
       <ReTitleGradient class="my-8">
@@ -19,5 +19,3 @@
     </div>
   </ReSectionContainer>
 </template>
-<script setup lang="ts">
-</script>

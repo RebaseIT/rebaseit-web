@@ -9,22 +9,21 @@ const props = defineProps({
     type: Boolean,
     default: false
   },
-  color: {
-    type: String,
-    default: '#FFFFFF'
-  },
   textTransform: {
     type: String,
     default: 'none'
   },
   fontSize: {
     type: String,
-    default: '20px'
+    default: 'base'
   },
   fontWeight: {
     type: String,
     default: '200'
   }
+})
+const cssFontSize = computed(() => {
+  return `var(--font-size-${props.fontSize})`
 })
 </script>
 
@@ -36,8 +35,7 @@ const props = defineProps({
 
 <style scoped>
 .re-title-span {
-  color: v-bind(color);
-  font-size: v-bind(fontSize);
+  font-size: v-bind(cssFontSize);
   font-family: Raleway;
   line-height: normal;
   font-weight: v-bind(fontWeight);
