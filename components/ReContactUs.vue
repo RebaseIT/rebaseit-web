@@ -70,7 +70,6 @@ const sendEmail = async (formData) => {
       <p>Mensaje: ${formData.message}</p>
     </div>
   `;
-  console.log(template)
   const msg = {
     personalizations: [
       {
