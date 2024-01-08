@@ -124,7 +124,7 @@ const sendEmail = async (formData) => {
           </ReParagraphSpan>
         </div>
         <div class="carrousel-container align-self-center">
-          <ReCarousel />
+          <ReviewsCarousel />
         </div>
       </div>
       <div class="contact-card">
@@ -135,7 +135,7 @@ const sendEmail = async (formData) => {
               @form="sendEmail"
             />
             <div class="pt-3">
-              <ReParagraphSpan color="var(--primary-color)">
+              <ReParagraphSpan class="primary">
                 <b>O envianos un mensaje a: </b>
               </ReParagraphSpan>
               <ReParagraphSpan color="black">

@@ -62,7 +62,7 @@ const recentPosts = ref([
         >
           <div class="flex flex-column">
             <ReTitleSpan
-              color="var(--primary-color)"
+              class="primary"
               text-transform="uppercase"
               font-size="xs"
               font-weight="600"
@@ -70,8 +70,7 @@ const recentPosts = ref([
               {{ value.date }}
             </ReTitleSpan>
             <ReTitleSpan
-              class="mt-3 font-semibold"
-              color="var(--primary-color)"
+              class="primary mt-3 font-semibold"
               text-transform="uppercase"
               font-size="xs"
               font-weight="700"

@@ -9,11 +9,6 @@ const props = defineProps({
     type: String,
     required: false,
     default: ''
-  },
-  bgColor: {
-    type: String,
-    required: false,
-    default: 'transparent'
   }
 })
 const backgroundImg = computed(() => {
@@ -29,7 +24,6 @@ const backgroundImg = computed(() => {
 </template>
 <style lang="scss" scoped>
 .section {
-  background-color: v-bind(bgColor);
   background-image: v-bind(backgroundImg);
   background-repeat: repeat;
   background-size: cover;

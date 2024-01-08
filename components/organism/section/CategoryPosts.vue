@@ -100,8 +100,7 @@ const recentPosts = ref([
                 target="_blank"
               >
                 <ReParagraphSpan
-                  class="p-gradient-card-content-span"
-                  color="var(--primary-color)"
+                  class="primary p-gradient-card-content-span"
                   bold
                 >
                   {{ item.text }}

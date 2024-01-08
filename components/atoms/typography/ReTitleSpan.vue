@@ -9,10 +9,6 @@ const props = defineProps({
     type: Boolean,
     default: false
   },
-  color: {
-    type: String,
-    default: 'white'
-  },
   textTransform: {
     type: String,
     default: 'none'
@@ -39,7 +35,6 @@ const fontSizeVar = computed(() => {
 
 <style scoped>
 .re-title-span {
-  color: v-bind(color);
   font-size: v-bind(fontSizeVar);
   font-family: Raleway;
   line-height: normal;

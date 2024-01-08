@@ -5,10 +5,6 @@ const props = defineProps({
     required: false,
     default: ''
   },
-  color: {
-    type: String,
-    default: 'white'
-  },
   bold: {
     type: Boolean,
     default: false
@@ -26,7 +22,6 @@ const fontWeight = computed(() => props.bold ? 600 : 400)
 
 <style scoped>
 .re-title {
-  color: v-bind(color);
   font-size: var(--base);
   font-family: Roboto;
   font-weight: v-bind(fontWeight);

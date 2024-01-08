@@ -154,8 +154,7 @@ const sectionOptions = [
             :class="!isMobile ? member.class : 'mt-0'"
           />
           <ReTitleSpan
-            class="mt-3 font-semibold"
-            color="var(--primary-color)"
+            class="primary mt-3 font-semibold"
             text-transform="uppercase"
           >
             {{ member.name }}

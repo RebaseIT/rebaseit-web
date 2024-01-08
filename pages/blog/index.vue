@@ -18,9 +18,7 @@ const image = {
     :subtitle="subtitle"
     :image="image"
   />
-  <ReSectionContainer
-    bg-color="var(--light-blue)"
-  >
+  <ReSectionContainer class="bg-light-blue">
     <div
       class="flex justify-content-between py-8 px-6 gap-8"
       :class="{ 'flex-column align-items-center': isMobile }"

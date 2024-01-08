@@ -30,9 +30,8 @@ const images = [
       <div class="flex flex-column gap-4 align-self-start">
         <ReTitleSpan
           @click="goBack"
-          color="var(--primary-color)"
           font-weight="600"
-          class="cursor-pointer"
+          class="primary cursor-pointer"
         >
           &lt; Volver
         </ReTitleSpan>
@@ -62,9 +61,7 @@ const images = [
       </ReTitleSpan>
     </div>
   </ReSectionContainer>
-  <ReSectionContainer
-    bg-color="var(--light-blue)"
-  >
+  <ReSectionContainer class="bg-light-blue">
     <div
       class="flex py-8 px-6 gap-4 flex-wrap justify-space-between"
       :class="{ 'flex-column align-items-center': isMobile }"

@@ -9,10 +9,6 @@ const props = defineProps({
     type: String,
     default: 'none'
   },
-  color: {
-    type: String,
-    default: 'white'
-  },
   fontSize: {
     type: String,
     default: 'xl'
