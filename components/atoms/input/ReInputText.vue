@@ -25,10 +25,6 @@ const { value: inputValue, errorMessage, handleBlur } = useField(props.id, value
   const error = props.validators.map(validator => validator(value)).find(Boolean);
   return error || true;
 });
-
-watch(inputValue, (newVal) => {
-  emit('update:modelValue', newVal);
-});
 </script>
 
 
@@ -41,6 +37,7 @@ watch(inputValue, (newVal) => {
     :class="{ 'p-invalid': errorMessage }"
     aria-describedby="text-error"
     @blur="handleBlur"
+    @update:model-value="emit('update:modelValue', $event)"
   />
   <small
     class="p-error"

@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import { useForm } from 'vee-validate';
 
 const { handleSubmit } = useForm();

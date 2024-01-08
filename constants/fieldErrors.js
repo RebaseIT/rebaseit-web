@@ -15,9 +15,6 @@ const isRequired = (value) => !value && MESSAGES.REQUIRED
 const minLength = (value, min) => !REGEX.TEXT(min).test(value) && MESSAGES.MIN_LENGTH(min)
 const biggerThan = (number) => (value) => minLength(value, number)
 const isValidEmail = (value) => !REGEX.EMAIL.test(value) && MESSAGES.EMAIL
-const isValidPhone = (value) => {
-  if (!value) return true
-  return !REGEX.PHONE.test(value) && MESSAGES.PHONE
-}
+const isValidPhone = (value) => !value || !REGEX.PHONE.test(value) && MESSAGES.PHONE
 
 export { isRequired, biggerThan, isValidEmail, isValidPhone }
