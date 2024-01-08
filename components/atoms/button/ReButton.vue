@@ -1,5 +1,16 @@
+<script setup>
+defineProps({
+  type: {
+    type: String,
+    default: 'button',
+    validator: (value) => ['submit', 'reset', 'button'].includes(value),
+  },
+})
+</script>
+
 <template>
   <Button
+    :type="type"
     class="re-button"
   />
 </template>

@@ -1,52 +1,51 @@
 <script setup>
-const emit = defineEmits(['update:modelValue', 'invalid']);
+import { useField } from 'vee-validate';
+
+const emit = defineEmits(['update:modelValue']);
 const props = defineProps({
-  label :{
+  id: {
     type: String,
-    default: ''
+    required: true
   },
   modelValue: {
     type: String,
-    default: ''
+    required: true
+  },
+  label: {
+    type: String,
+    required: true
   },
   validators: {
     type: Array,
     default: () => []
   }
-})
-const inputValue = ref(props.modelValue);
-const errorMessage = ref('');
+});
 
-const validateInput = () => {
-  errorMessage.value = '';
-  validateError(props.validators, inputValue.value);
-}
-const validateError = (validators, input) => {
-  errorMessage.value = validators.map(validator => validator(input)).find(Boolean);
-}
+const { value: inputValue, errorMessage, handleBlur } = useField(props.id, value => {
+  const error = props.validators.map(validator => validator(value)).find(Boolean);
+  return error || true;
+});
 
 watch(inputValue, (newVal) => {
-  validateInput();
   emit('update:modelValue', newVal);
 });
 </script>
 
 <template>
-  <label>{{ label }}</label>
+  <label :for="id">{{ label }}</label>
   <Textarea
-    @blur="validateInput"
+    :id="id"
+    v-model="inputValue"
     rows="4"
     cols="30"
-    :class="{ 'p-invalid': !!errorMessage }"
-    v-model="inputValue"
+    :class="{ 'p-invalid': errorMessage }"
+    @blur="handleBlur"
   />
-  <ReTitleSpan
-    v-if="errorMessage"
-    font-weight="400"
-    font-size="12px"
-    color="red"
+  <small
+    class="p-error"
+    id="text-error"
   >
-    {{ errorMessage }}
-  </ReTitleSpan>
+    {{ errorMessage || '&nbsp;' }}
+  </small>
 </template>
 
