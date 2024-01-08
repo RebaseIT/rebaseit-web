@@ -22,8 +22,8 @@ const props = defineProps({
     default: '700'
   }
 })
-const fontSizeVar = computed(() => {
-  return `var(--${props.fontSize})`
+const cssFontSize = computed(() => {
+  return `var(--font-size-${props.fontSize})`
 })
 </script>
 
@@ -38,7 +38,7 @@ const fontSizeVar = computed(() => {
   background: -webkit-linear-gradient(45deg,rgb(4, 90, 147), rgb(136, 171, 254));
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: v-bind(fontSizeVar);
+  font-size: v-bind(cssFontSize);
   font-family: v-bind(fontFamily);
   font-weight: v-bind(fontWeight);
   line-height: normal;

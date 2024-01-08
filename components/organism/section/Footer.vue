@@ -103,12 +103,14 @@ const { isSmaller: isMobile } = useViewport('sm');
         </div>
         <div class="py-4 gap-3">
           <ReTitleSpan
+            class="text-white"
             font-size="lg"
           >
             ¿Tenés un proyecto?
           </ReTitleSpan>
           <br>
           <ReTitleSpan
+            class="text-white"
             font-size="lg"
             font-weight="400"
           >
@@ -147,7 +149,7 @@ const { isSmaller: isMobile } = useViewport('sm');
             :to="menu.to"
             class="text-link"
           >
-            <ReTitle>
+            <ReTitle class="text-white">
               {{ menu.title }}
             </ReTitle>
           </NuxtLink>

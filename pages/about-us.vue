@@ -87,7 +87,7 @@ const sectionOptions = [
           :class="{ 'p-container-min-h': showPolygon }"
         >
           <div
-            :class="{ 'col-6': showPolygon, 'col-12': !showPolygon }"
+            :class="showPolygon ?  'col-6' : 'col-12'"
           >
             <ReTitleSpan
               color="black"
@@ -151,7 +151,7 @@ const sectionOptions = [
             :src="member.image"
             width="178px"
             height="205px"
-            :class="!isMobile ? member.class : 'mt-0'"
+            :class="isMobile ? 'mt-0' : member.class"
           />
           <ReTitleSpan
             class="primary mt-3 font-semibold"

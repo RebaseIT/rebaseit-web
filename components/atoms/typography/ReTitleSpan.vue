@@ -22,8 +22,8 @@ const props = defineProps({
     default: '200'
   }
 })
-const fontSizeVar = computed(() => {
-  return `var(--${props.fontSize})`
+const cssFontSize = computed(() => {
+  return `var(--font-size-${props.fontSize})`
 })
 </script>
 
@@ -35,7 +35,7 @@ const fontSizeVar = computed(() => {
 
 <style scoped>
 .re-title-span {
-  font-size: v-bind(fontSizeVar);
+  font-size: v-bind(cssFontSize);
   font-family: Raleway;
   line-height: normal;
   font-weight: v-bind(fontWeight);

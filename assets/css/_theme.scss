@@ -58,6 +58,10 @@
   color: var(--primary-color) !important;
 }
 
+.text-white {
+  color: white !important;
+}
+
 .bg-light-blue {
     background-color: var(--light-blue) !important;
 }
@@ -256,13 +260,13 @@
   --primary-800:#204887;
   --primary-900:#183462;
   /* Font */
-  --xs: 12px;
-  --sm: 15px;
-  --md: 18px;
-  --base: 20px;
-  --lg: 25px;
-  --xl: 40px;
-  --xl-2: 60px;
+  --font-size-xs: 12px;
+  --font-size-sm: 15px;
+  --font-size-md: 18px;
+  --font-size-base: 20px;
+  --font-size-lg: 25px;
+  --font-size-xl: 40px;
+  --font-size-xl-2: 60px;
   /* Layout */
   --layout-xs: 58px;
   --layout-sm: 80px;

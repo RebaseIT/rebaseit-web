@@ -91,7 +91,7 @@ const selected = () => {
     }
     &:deep(.p-tabview-panels){
       font-family: Raleway;
-      font-size: var(--md)
+      font-size: var(--font-size-md)
     }
     &:deep(.p-tabview-nav-link){
       background: transparent !important;

@@ -22,7 +22,7 @@ const fontWeight = computed(() => props.bold ? 600 : 400)
 
 <style scoped>
 .re-title {
-  font-size: var(--base);
+  font-size: var(--font-size-base);
   font-family: Roboto;
   font-weight: v-bind(fontWeight);
 }

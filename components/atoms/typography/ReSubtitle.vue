@@ -18,7 +18,7 @@ defineProps({
 <style scoped>
 .re-subtitle {
   color: white;
-  font-size: var(--sm);
+  font-size: var(--font-size-sm);
   font-family: Roboto;
   font-weight: 100;
   line-height: normal;
