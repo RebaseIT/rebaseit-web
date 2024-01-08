@@ -1,23 +1,17 @@
 <script setup>
 import { useViewport } from '~/composables/useViewport';
 import { useToast } from 'primevue/usetoast';
-import { REGEX, isRequired, biggerThan, isValidEmail, isValidPhone } from "~/constants/fieldErrors";
+import { isRequired, biggerThan, isValidEmail, isValidPhone } from '~/constants/fieldErrors';
 
 const { isSmaller: isMobile } = useViewport('lg');
 const router = useRouter();
 const toast = useToast();
 
-const form = ref({
-  name: '',
-  lastName: '',
-  email: '',
-  phone: '',
-  message: ''
-});
-
 const fields = [
   {
     model: 'name',
+    id: 'name',
+    type: 'text',
     label: 'Nombre *',
     validators: [
       isRequired,
@@ -26,6 +20,8 @@ const fields = [
   },
   {
     model: 'lastName',
+    id: 'lastName',
+    type: 'text',
     label: 'Apellido *',
     validators: [
       isRequired,
@@ -34,6 +30,8 @@ const fields = [
   },
   {
     model: 'email',
+    id: 'email',
+    type: 'text',
     label: 'Dirección de E-mail *',
     validators: [
       isRequired,
@@ -42,37 +40,36 @@ const fields = [
   },
   {
     model: 'phone',
+    id: 'phone',
+    type: 'text',
     label: 'Número de Teléfono',
     validators: [
       isValidPhone
     ]
+  },
+  {
+    model: 'message',
+    id: 'message',
+    type: 'textarea',
+    label: 'Deja tu mensaje *',
+    validators: [
+      isRequired,
+      biggerThan(10)
+    ]
   }
-]
-
-const isValid = computed(() => {
-  return (
-    REGEX.TEXT(3).test(form.value.name) &&
-    REGEX.TEXT(3).test(form.value.lastName) &&
-    REGEX.EMAIL.test(form.value.email) &&
-    REGEX.TEXT(10).test(form.value.message) &&
-    (form.value.phone.length ? REGEX.PHONE.test(form.value.phone) : true)
-  );
-});
-const emailTemplate = computed(() => {
-  return `
+];
+const sendEmail = async (formData) => {
+  const template = `
     <div>
       <h1>¡Hola!</h1>
-      <p>Recibiste un mensaje de ${form.value.name} ${form.value.lastName}</p>
-      <p>Nombre: ${form.value.name}</p>
-      <p>Apellido: ${form.value.lastName}</p>
-      <p>Correo: ${form.value.email}</p>
-      <p>Teléfono: ${form.value.phone}</p>
-      <p>Mensaje: ${form.value.message}</p>
+      <p>Recibiste un mensaje de ${formData.name} ${formData.lastName}</p>
+      <p>Nombre: ${formData.name}</p>
+      <p>Apellido: ${formData.lastName}</p>
+      <p>Correo: ${formData.email}</p>
+      <p>Teléfono: ${formData.phone}</p>
+      <p>Mensaje: ${formData.message}</p>
     </div>
   `;
-});
-
-const sendEmail = async () => {
   const msg = {
     personalizations: [
       {
@@ -92,7 +89,7 @@ const sendEmail = async () => {
     content: [
       {
         type: "text/html",
-        value: emailTemplate.value
+        value: template
       }
     ]
   }
@@ -127,37 +124,16 @@ const sendEmail = async () => {
           </ReParagraphSpan>
         </div>
         <div class="carrousel-container align-self-center">
-          <ReviewsCarousel />
+          <ReCarousel />
         </div>
       </div>
       <div class="contact-card">
         <Card>
           <template #content>
-            <form class="flex flex-column gap-2">
-              <template
-                v-for="(item, index) in fields"
-                :key="index"
-              >
-                <ReInputText
-                  v-model="form[item.model]"
-                  :label="item.label"
-                  :validators="item.validators"
-                />
-              </template>
-              <ReTextarea
-                v-model="form.message"
-                label="Deja tu mensaje *"
-                :validators="[
-                  isRequired,
-                  biggerThan(10)
-                ]"
-              />
-              <ReButton
-                @click="sendEmail"
-                :class="{ 'p-disabled': !isValid }"
-                label="Enviar"
-              />
-            </form>
+            <DynamicForm
+              :fields="fields"
+              @form="sendEmail"
+            />
             <div class="pt-3">
               <ReParagraphSpan color="var(--primary-color)">
                 <b>O envianos un mensaje a: </b>
