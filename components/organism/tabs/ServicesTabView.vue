@@ -83,6 +83,9 @@ const selected = () => {
       display: flex;
       flex-direction: column;
       border: 0;
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
     }
     &:deep(.p-tabview-nav-content){
       border-radius: 8px 8px 0 0;
@@ -97,6 +100,7 @@ const selected = () => {
       background: transparent !important;
       border: 0 !important;
       padding: 8px !important;
+      box-shadow: none !important;
     }
     &:deep(.p-tabview-header){
       display: flex;

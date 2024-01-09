@@ -83,7 +83,7 @@ const menus = ref([
 const { isSmaller: isMobile } = useViewport('sm');
 </script>
 <template>
-  <div class="footer">
+  <div class="footer py-5">
     <div
       class="footer-content row flex px-6 gap-4"
       :class="{ 'flex-column': isMobile }"

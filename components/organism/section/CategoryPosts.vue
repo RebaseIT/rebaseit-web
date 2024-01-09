@@ -120,6 +120,10 @@ const recentPosts = ref([
   min-height: 540px;
   .p-gradient-card-content {
     background-color: var(--light-blue);
+    &:hover {
+      background-color: var(--third-color);
+      transition: all .5s ease-in-out;
+    }
   }
 }
 hr {
