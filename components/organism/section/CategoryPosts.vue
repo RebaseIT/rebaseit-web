@@ -117,7 +117,6 @@ const recentPosts = ref([
 
 <style lang="scss" scoped>
 .p-gradient-card {
-  min-height: 540px;
   .p-gradient-card-content {
     background-color: var(--light-blue);
     &:hover {

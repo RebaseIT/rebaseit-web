@@ -47,7 +47,7 @@ const items = ref([
             v-bind="props.action"
             @click="navigate"
           >
-            <span class="ml-2">{{ item.label }}</span>
+            <span>{{ item.label }}</span>
           </a>
         </NuxtLink>
       </template>
@@ -57,7 +57,6 @@ const items = ref([
 
 <style lang="scss" scoped>
 .re-header {
-  opacity: 0.8;
   display: flex;
   border-radius: 0;
   box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.4);
@@ -84,6 +83,9 @@ const items = ref([
     align-items: center;
     justify-content: center;
   }
+  &:deep(.p-icon) {
+    transform: scale(1.5);
+  }
   &:deep(.p-menuitem-content) {
     border-radius: 8px;
     margin: 0 4px;
@@ -94,6 +96,22 @@ const items = ref([
       border-radius: 8px;
       background: var(--third-color) !important;
     }
+  }
+  &:deep(.p-menubar-root-list) {
+    transition: all .5s ease-in-out;
+  }
+  &:deep(.p-menuitem-link) {
+    min-height: 65px;
+  }
+  &:deep(.p-focus) {
+    > .p-menuitem-content {
+      background-color: white !important;
+    }
+  }
+  &:deep(.p-menubar-button) {
+    box-shadow: none !important;
+    width: 4rem;
+    height: 4rem;
   }
   @media (min-width: 961px) {
     align-items: center;

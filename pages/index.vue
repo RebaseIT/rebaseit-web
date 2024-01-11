@@ -89,23 +89,25 @@ const { isSmaller: isMobile } = useViewport('xl');
     </div>
   </ReSectionProducts>
   <ReSectionClients>
-    <ReTitleGradient class="flex justify-content-end pt-4">
-      Nuestros Clientes
-    </ReTitleGradient>
-    <div
-      class="flex justify-content-evenly pt-4 pb-8 gap-4"
-      :class="{ 'flex-column align-items-center': isMobile }"
-    >
-      <ReImage
-        src="/images/clients/nineAzul.png"
-        alt="nineAzul"
-        max-width="158px"
-      />
-      <ReImage
-        src="/images/clients/pillmaykenAzul.png"
-        alt="pillmaykenAzul"
-        max-width="374px"
-      />
+    <div class="pb-8 px-6">
+      <ReTitleGradient class="flex justify-content-end pt-4">
+        Nuestros Clientes
+      </ReTitleGradient>
+      <div
+        class="flex justify-content-evenly gap-4"
+        :class="{ 'flex-column align-items-center': isMobile }"
+      >
+        <ReImage
+          src="/images/clients/nineAzul.png"
+          alt="nineAzul"
+          max-width="158px"
+        />
+        <ReImage
+          src="/images/clients/pillmaykenAzul.png"
+          alt="pillmaykenAzul"
+          max-width="374px"
+        />
+      </div>
     </div>
   </ReSectionClients>
   <ReSectionWhatWeDo>
