@@ -92,7 +92,10 @@ const updateMiddleIndex = (event) => {
           </template>
           <template #footer>
             <div class="flex justify-content-center">
-              <a :href="slotProps.data.route" target="_blank">
+              <a
+                :href="slotProps.data.route"
+                target="_blank"
+              >
                 <ReButton
                   label="Conocé más"
                 />

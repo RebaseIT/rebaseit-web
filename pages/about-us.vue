@@ -87,7 +87,7 @@ const sectionOptions = [
           :class="{ 'p-container-min-h': showPolygon }"
         >
           <div
-            :class="showPolygon ?  'col-6' : 'col-12'"
+            :class="showPolygon ? 'col-6' : 'col-12'"
           >
             <ReTitleSpan
               color="black"

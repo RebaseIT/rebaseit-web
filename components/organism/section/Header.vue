@@ -40,7 +40,12 @@ const items = ref([
         </NuxtLink>
       </template>
       <template #item="{ item, props }">
-        <NuxtLink v-if="item.url" v-slot="{ href, navigate }" :to="item.url" custom>
+        <NuxtLink
+          v-if="item.url"
+          v-slot="{ href, navigate }"
+          :to="item.url"
+          custom
+        >
           <a
             :class="{ 'current-page': item.url === route.path }"
             :href="href"
@@ -75,6 +80,13 @@ const items = ref([
   margin: 0 auto;
   justify-content: space-between;
   border: none;
+  z-index: 2;
+  position: relative;
+  &:deep(.p-menubar-root-list) {
+    transition: all .5s ease-in-out;
+    z-index: 1 !important;
+    animation: fadeIn .5s ease-in-out forwards;
+  }
   a {
     text-decoration: none;
   }
@@ -96,9 +108,6 @@ const items = ref([
       border-radius: 8px;
       background: var(--third-color) !important;
     }
-  }
-  &:deep(.p-menubar-root-list) {
-    transition: all .5s ease-in-out;
   }
   &:deep(.p-menuitem-link) {
     min-height: 65px;
@@ -127,6 +136,14 @@ const items = ref([
       flex-wrap: wrap;
       list-style-type: none !important;
     }
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 </style>

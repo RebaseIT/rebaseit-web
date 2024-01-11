@@ -109,8 +109,7 @@ const sendEmail = async (formData) => {
 </script>
 <template>
   <ReSectionContainer background="/images/background/background-2.png">
-    <div class="py-8 px-6"
-    >
+    <div class="py-8 px-6">
       <div class="w-full">
         <ReTitleGradient> Contactanos </ReTitleGradient>
         <div class="py-4">
@@ -136,8 +135,8 @@ const sendEmail = async (formData) => {
           <Card>
             <template #content>
               <DynamicForm
-                  :fields="fields"
-                  @form="sendEmail"
+                :fields="fields"
+                @form="sendEmail"
               />
               <div class="pt-3">
                 <ReParagraphSpan class="primary">

@@ -101,7 +101,10 @@ const { isSmaller: isMobile } = useViewport('sm');
             />
           </NuxtLink>
         </div>
-        <div class="flex gap-2 w-full" :class="isMobile ? 'flex-row justify-content-between' : 'flex-column'">
+        <div
+          class="flex gap-2 w-full"
+          :class="isMobile ? 'flex-row justify-content-between' : 'flex-column'"
+        >
           <div class="py-4 gap-3">
             <ReTitleSpan
               class="text-white"
