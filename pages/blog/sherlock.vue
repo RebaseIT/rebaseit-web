@@ -19,6 +19,9 @@ const images = [
 ]
 </script>
 <template>
+  <Head>
+    <Title>Sherlock</Title>
+  </Head>
   <ReSectionContainer
     background="/images/background/background-1.png"
     class="pt-8"

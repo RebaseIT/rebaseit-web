@@ -68,6 +68,9 @@ const sectionOptions = [
 </script>
 
 <template>
+  <Head>
+    <Title>Nosotros</Title>
+  </Head>
   <SectionImage
     class="pt-8"
     :title="title"

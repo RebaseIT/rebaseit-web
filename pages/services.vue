@@ -9,6 +9,9 @@ const image = {
 </script>
 
 <template>
+  <Head>
+    <Title>Servicios</Title>
+  </Head>
   <SectionImage
     class="pt-8"
     :title="title"

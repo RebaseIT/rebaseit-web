@@ -5,6 +5,9 @@ const { isSmaller: isMobile } = useViewport('xl');
 </script>
 
 <template>
+  <Head>
+    <Title>Home</Title>
+  </Head>
   <ReSectionTop>
     <div class="row px-6 py-8">
       <div
