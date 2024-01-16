@@ -1,21 +1,49 @@
-
 <script setup>
-const props = defineProps({
-  label :{
-    type: String,
-    default: ''
-  }
-})
+import { useField } from 'vee-validate';
 
+const emit = defineEmits(['update:modelValue']);
+const props = defineProps({
+  id: {
+    type: String,
+    required: true
+  },
+  modelValue: {
+    type: String,
+    required: true
+  },
+  label: {
+    type: String,
+    required: true
+  },
+  validators: {
+    type: Array,
+    default: () => []
+  }
+});
+
+const { value: inputValue, errorMessage, handleBlur } = useField(props.id, value => {
+  return props.validators.map(validator => validator(value)).find(Boolean) || true;
+});
 </script>
 
+
 <template>
-  <label>{{ label }}</label>
+  <label :for="id">{{ label }}</label>
   <InputText
+    :id="id"
+    v-model="inputValue"
     type="text"
-    class="re-input-text"
+    :class="{ 'p-invalid': errorMessage }"
     aria-describedby="text-error"
+    @blur="handleBlur"
+    @update:model-value="emit('update:modelValue', $event)"
   />
+  <small
+    class="p-error"
+    id="text-error"
+  >
+    {{ errorMessage || '&nbsp;' }}
+  </small>
 </template>
 
 <style lang="scss" scoped>
@@ -24,7 +52,7 @@ const props = defineProps({
     border-color: transparent !important;
   }
   &:deep(.p-inputtext) {
-    border-color: #0470B8 !important;
-  } 
+    border-color: var(--primary-color) !important;
+  }
 }
 </style>

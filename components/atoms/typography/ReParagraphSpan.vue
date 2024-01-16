@@ -12,10 +12,6 @@ const props = defineProps({
   bigText: {
     type: Boolean,
     default: false
-  },
-  color: {
-    type: String,
-    default: '#FFFFFF'
   }
 })
 
@@ -32,7 +28,6 @@ const bigText = computed(() => props.bigText ? '18px' : '15px');
 
 <style scoped>
 .re-title-span {
-  color: v-bind(color);
   font-size: v-bind(bigText);
   font-family: Raleway;
   line-height: normal;

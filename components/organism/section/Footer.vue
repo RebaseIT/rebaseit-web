@@ -83,7 +83,7 @@ const menus = ref([
 const { isSmaller: isMobile } = useViewport('sm');
 </script>
 <template>
-  <div class="footer">
+  <div class="footer py-5">
     <div
       class="footer-content row flex px-6 gap-4"
       :class="{ 'flex-column': isMobile }"
@@ -101,37 +101,49 @@ const { isSmaller: isMobile } = useViewport('sm');
             />
           </NuxtLink>
         </div>
-        <div class="py-4 gap-3">
-          <ReTitleSpan
-            font-size="25px"
+        <div
+          class="flex gap-2 w-full"
+          :class="isMobile ? 'flex-row justify-content-between' : 'flex-column'"
+        >
+          <div class="py-4 gap-3">
+            <ReTitleSpan
+              class="text-white"
+              font-size="lg"
+            >
+              ¿Tenés un proyecto?
+            </ReTitleSpan>
+            <br>
+            <ReTitleSpan
+              class="text-white"
+              font-size="lg"
+              font-weight="400"
+            >
+              Hablemos
+            </ReTitleSpan>
+          </div>
+          <div
+            class="py-4 gap-3"
+            :class="{ 'flex align-items-center': isMobile }"
           >
-            ¿Tenés un proyecto?
-          </ReTitleSpan>
-          <br>
-          <ReTitleSpan
-            font-size="25px"
-            font-weight="400"
-          >
-            Hablemos
-          </ReTitleSpan>
-        </div>
-        <div class="py-4 gap-3">
-          <!-- TODO: add instagram link
-            <a href="https://www.linkedin.com/company/rebase-it/">
-              <img
-              alt="logo"
-              src="/assets/logo-insta.svg"
-              height="28"
-              width="28"
+            <!-- TODO: add instagram link
+              <a href="https://www.linkedin.com/company/rebase-it/">
+                <img
+                alt="logo"
+                src="/assets/logo-insta.svg"
+                height="28"
+                width="28"
+              </a>
+            >-->
+            <a
+              href="https://www.linkedin.com/company/rebase-it/"
+            >
+              <ReImage
+                alt="linkedin"
+                src="/images/logo-linkedin.svg"
+                max-width="32px"
+              />
             </a>
-          >-->
-          <a href="https://www.linkedin.com/company/rebase-it/">
-            <ReImage
-              alt="linkedin"
-              src="/images/logo-linkedin.svg"
-              max-width="32px"
-            />
-          </a>
+          </div>
         </div>
       </div>
       <div
@@ -140,21 +152,21 @@ const { isSmaller: isMobile } = useViewport('sm');
       >
         <div
           class="py-4 gap-3 flex flex-column"
-          :key="`${index}-${menu.title}`"
+          :key="`menu-${index}`"
           v-for="(menu, index) in menus"
         >
           <NuxtLink
             :to="menu.to"
             class="text-link"
           >
-            <ReTitle>
+            <ReTitle class="text-white">
               {{ menu.title }}
             </ReTitle>
           </NuxtLink>
           <div
             class="py-1"
-            :key="`${submenu.title}`"
-            v-for="(submenu) in menu.menus"
+            v-for="(submenu, idx) in menu.menus"
+            :key="`submenu-${idx}`"
           >
             <div>
               <ReSubtitle>
@@ -170,14 +182,14 @@ const { isSmaller: isMobile } = useViewport('sm');
 
 <style scoped>
 .footer {
-    background: linear-gradient(135deg, #0470B8 46.44%, #88ABFE 100%);
+    background: linear-gradient(135deg, var(--primary-color) 46.44%, var(--secondary-color) 100%);
   .footer-content {
     max-width: 1320px;
     margin: 0 auto;
   }
   .footer-logo-container {
     min-width: 230px;
-    max-width: 240px;
+    max-width: 330px;
   }
 }
 .text-link {

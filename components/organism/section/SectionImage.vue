@@ -27,18 +27,17 @@ defineProps({
 </script>
 
 <template>
-  <ReSectionContainer background="url(/images/background/background-1.png)">
+  <ReSectionContainer background="/images/background/background-1.png">
     <div
       class="row flex py-8 px-6 justify-space-between align-items-center gap-4"
       :class="{ 'flex-column justify-center': isMobile }"
     >
       <div
-        class="col-8"
-        :class="{ 'col-12': isMobile }"
+        :class="{ 'col-8': !isMobile, 'col-12': isMobile }"
       >
         <ReTitleGradient
           font-family="IBM Plex Mono"
-          :font-size="isMobile ? '40px' : '60px'"
+          :font-size="isMobile ? 'xl' : 'xl-2'"
           font-weight="600"
         >
           {{ title }}
@@ -46,7 +45,7 @@ defineProps({
         <div class="mt-4">
           <ReTitleSpan
             color="black"
-            font-size="25px"
+            font-size="lg"
             font-weight="400"
           >
             <span v-html="subtitle" />

@@ -5,6 +5,9 @@ const { isSmaller: isMobile } = useViewport('xl');
 </script>
 
 <template>
+  <Head>
+    <Title>Home</Title>
+  </Head>
   <ReSectionTop>
     <div class="row px-6 py-8">
       <div
@@ -13,7 +16,7 @@ const { isSmaller: isMobile } = useViewport('xl');
       >
         <ReTitleGradient
           font-family="IBM Plex Mono"
-          font-size="60px"
+          font-size="xl-2"
           font-weight="500"
         >
           Making every
@@ -25,7 +28,7 @@ const { isSmaller: isMobile } = useViewport('xl');
       >
         <ReTitleGradient
           font-family="IBM Plex Mono"
-          font-size="60px"
+          font-size="xl-2"
           font-weight="500"
         >
           version <span class="font-bold">better.</span>
@@ -58,12 +61,11 @@ const { isSmaller: isMobile } = useViewport('xl');
         />
       </template>
       <div
-        class="col-6"
-        :class="{ 'col-12 text-center': isMobile }"
+        :class="{ 'col-6': !isMobile, 'col-12 text-center': isMobile }"
       >
         <ReTitleSpan
           color="black"
-          font-size="25px"
+          font-size="lg"
           font-weight="400"
         >
           Rebase IT se especializa en software y servicios de consultoría.
@@ -85,28 +87,30 @@ const { isSmaller: isMobile } = useViewport('xl');
         Nuestros Productos
       </ReTitleGradient>
       <div class="py-4">
-        <ReTabView />
+        <ServicesTabView />
       </div>
     </div>
   </ReSectionProducts>
   <ReSectionClients>
-    <ReTitleGradient class="flex justify-content-end pt-4">
-      Nuestros Clientes
-    </ReTitleGradient>
-    <div
-      class="flex justify-content-evenly pt-4 pb-8 gap-4"
-      :class="{ 'flex-column align-items-center': isMobile }"
-    >
-      <ReImage
-        src="/images/clients/nineAzul.png"
-        alt="nineAzul"
-        max-width="158px"
-      />
-      <ReImage
-        src="/images/clients/pillmaykenAzul.png"
-        alt="pillmaykenAzul"
-        max-width="374px"
-      />
+    <div class="pb-8 px-6">
+      <ReTitleGradient class="flex justify-content-end pt-4">
+        Nuestros Clientes
+      </ReTitleGradient>
+      <div
+        class="flex justify-content-evenly gap-4"
+        :class="{ 'flex-column align-items-center': isMobile }"
+      >
+        <ReImage
+          src="/images/clients/nineAzul.png"
+          alt="nineAzul"
+          max-width="158px"
+        />
+        <ReImage
+          src="/images/clients/pillmaykenAzul.png"
+          alt="pillmaykenAzul"
+          max-width="374px"
+        />
+      </div>
     </div>
   </ReSectionClients>
   <ReSectionWhatWeDo>
@@ -115,8 +119,7 @@ const { isSmaller: isMobile } = useViewport('xl');
       :class="{ 'flex-column justify-center': isMobile }"
     >
       <div
-        class="col-6"
-        :class="{ 'col-12': isMobile }"
+        :class="{ 'col-6': !isMobile, 'col-12': isMobile }"
       >
         <ReTitleGradient>
           ¿Qué hacemos?
@@ -124,7 +127,7 @@ const { isSmaller: isMobile } = useViewport('xl');
         <div class="mt-3">
           <ReTitleSpan
             color="black"
-            font-size="25px"
+            font-size="lg"
             font-weight="400"
           >
             En RebaseIT nos especializamos en múltiples frentes, manteniéndonos en la vanguardia
@@ -140,5 +143,5 @@ const { isSmaller: isMobile } = useViewport('xl');
       </div>
     </div>
   </ReSectionWhatWeDo>
-  <ReContactUs />
+  <ContactUs />
 </template>

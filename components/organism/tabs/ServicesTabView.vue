@@ -16,10 +16,10 @@ const selected = () => {
         <TabPanel>
           <template #header>
             <div class="header-img">
-              <img
+              <ReImage
                 src="/images/logo_sherlock_deg.png"
-                height="50"
-              >
+                max-width="200px"
+              />
             </div>
           </template>
           <div
@@ -27,6 +27,7 @@ const selected = () => {
             :class="{ 'flex-column p-1': isMobile }"
           >
             <img
+              class="content-img"
               src="/images/sherlock_img.jpg"
               height="250"
             >
@@ -41,10 +42,10 @@ const selected = () => {
         <TabPanel>
           <template #header>
             <div class="header-img">
-              <img
+              <ReImage
                 src="/images/reconnect.png"
-                height="50"
-              >
+                max-width="165px"
+              />
             </div>
           </template>
           <div
@@ -52,6 +53,7 @@ const selected = () => {
             :class="{ 'flex-column p-1': isMobile }"
           >
             <img
+              class="content-img"
               src="/images/sherlock_2_img.jpg"
               height="250"
             >
@@ -81,8 +83,13 @@ const selected = () => {
     background: linear-gradient(var(--secondary-color),var(--primary-color));
     &:deep(.p-tabview-nav){
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      justify-content: space-around;
+      border: none;
       border: 0;
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
     }
     &:deep(.p-tabview-nav-content){
       border-radius: 8px 8px 0 0;
@@ -91,12 +98,13 @@ const selected = () => {
     }
     &:deep(.p-tabview-panels){
       font-family: Raleway;
-      font-size: 18px
+      font-size: var(--font-size-md)
     }
     &:deep(.p-tabview-nav-link){
       background: transparent !important;
       border: 0 !important;
       padding: 8px !important;
+      box-shadow: none !important;
     }
     &:deep(.p-tabview-header){
       display: flex;
@@ -113,36 +121,29 @@ const selected = () => {
     &:deep(.p-tabview){
       border: 0 !important;
     }
-    img {
+    .content-img {
       border-radius: 10px;
       width: 100%;
       max-width: 300px
     }
-    @media (min-width: 768px) {
-      &:deep(.p-tabview-nav){
-        flex-direction: row;
-        justify-content: space-around;
-        border: none;
-      }
-      &:deep(.p-tabview-header){
-        border-bottom: 2px solid var(--secondary-color);
-        background: rgba(242, 250, 255, 1);
-      }
-      &:deep(.p-highlight){
-        background: var(--surface-a);
-      }
-      &:deep(.p-highlight[data-pc-index="0"][data-pc-section="header"]){
-        border-bottom: 0;
-        border-right: 2px solid var(--secondary-color);
-        border-radius: 0 6px 0 0;;
-        background-color: var(--surface-a);
-      }
-      &:deep(.p-highlight[data-pc-index="1"][data-pc-section="header"]){
-        border-bottom: 0;
-        border-left: 2px solid var(--secondary-color);
-        border-radius: 6px 0 0 0;
-        background-color: var(--surface-a);
-      }
+    &:deep(.p-tabview-header){
+      border-bottom: 2px solid var(--secondary-color);
+      background: rgba(242, 250, 255, 1);
+    }
+    &:deep(.p-highlight){
+      background: var(--surface-a);
+    }
+    &:deep(.p-highlight[data-pc-index="0"][data-pc-section="header"]){
+      border-bottom: 0;
+      border-right: 2px solid var(--secondary-color);
+      border-radius: 0 6px 0 0;;
+      background-color: var(--surface-a);
+    }
+    &:deep(.p-highlight[data-pc-index="1"][data-pc-section="header"]){
+      border-bottom: 0;
+      border-left: 2px solid var(--secondary-color);
+      border-radius: 6px 0 0 0;
+      background-color: var(--surface-a);
     }
   }
 }

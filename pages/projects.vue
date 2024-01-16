@@ -6,19 +6,23 @@ const image = {
   alt: 'folder-image',
   maxWidth: '350px'
 };
-const sectionTop = { title, subtitle, image };
 </script>
 
 <template>
-  <ReSectionImage
+  <Head>
+    <Title>Proyectos</Title>
+  </Head>
+  <SectionImage
     class="pt-8"
-    v-bind="sectionTop"
+    :title="title"
+    :subtitle="subtitle"
+    :image="image"
   />
   <ReSectionContainer
     class="py-2 px-6"
-    background="url(/images/background/background-2.png)"
+    background="/images/background/background-2.png"
   >
-    <ReCarouselProjects />
+    <ProjectsCarousel />
   </ReSectionContainer>
-  <ReContactUs />
+  <ContactUs />
 </template>

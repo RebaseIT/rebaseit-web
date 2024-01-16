@@ -1,12 +1,10 @@
-
 <script setup>
 </script>
 <template>
   <div>
-    <ReHeader />
-   
+    <Header />
     <slot />
-    
-    <ReFooter />
+    <Toast />
+    <Footer />
   </div>
 </template>

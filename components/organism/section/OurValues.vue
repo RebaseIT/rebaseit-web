@@ -28,7 +28,7 @@ const ourValues = [
       srcAlt: '/images/values/value-alt-3.png',
       width: '133px',
       height: '57px',
-      mb: '58px'
+      class: 'space-layout-bottom'
     }
   },
   {
@@ -65,7 +65,7 @@ const ourValues = [
 </script>
 
 <template>
-  <ReSectionContainer background="url(/images/background/background-2.png)">
+  <ReSectionContainer background="/images/background/background-2.png">
     <div
       class="flex flex-column pb-8 px-6"
     >
@@ -76,8 +76,8 @@ const ourValues = [
         class="flex flex-row flex-wrap justify-content-center gap-2 mt-6"
       >
         <ReCard
-          v-for="value in ourValues"
-          :key="value.title"
+          v-for="(value, index) in ourValues"
+          :key="index"
           :value="value"
         />
       </div>
