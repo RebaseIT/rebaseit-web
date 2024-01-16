@@ -1,4 +1,7 @@
 <template>
+  <Head>
+    <Title>Muchas gracias!</Title>
+  </Head>
   <ReSectionContainer
     class="py-8"
     background="/images/background/background-2.png"

@@ -79,6 +79,9 @@
 
 .p-disabled, .p-component:disabled {
   opacity: 0.6;
+  svg {
+    color: var(--gray-400) !important;
+  }
 }
 
 .p-error {
@@ -260,7 +263,7 @@
   --primary-800:#204887;
   --primary-900:#183462;
   /* Font */
-  --font-size-xs: 12px;
+  --font-size-xs: 14px;
   --font-size-sm: 15px;
   --font-size-md: 18px;
   --font-size-base: 20px;

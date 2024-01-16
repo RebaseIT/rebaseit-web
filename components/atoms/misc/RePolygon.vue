@@ -34,21 +34,30 @@ const props = defineProps({
 <style lang="scss" scoped>
 .floating-image {
   z-index: 99;
-  animation: float 1.5s ease-in-out forwards;
+  animation: float 1s ease-in-out forwards, fadeIn 1s ease-in-out forwards;
   position: absolute;
   width: v-bind(width);
   height: v-bind(height);
   top: v-bind(top);
   left: v-bind(left);
   right: v-bind(right);
+  opacity: 0;
 }
-
 @keyframes float {
   0% {
-    transform: translateY(100vh);
+    transform: translateY(10vh);
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 </style>

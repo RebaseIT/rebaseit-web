@@ -34,7 +34,7 @@ const handleMouseOut = () => {
       />
       <ReTitleSpan
         class="p-gradient-card-content-title mt-3 font-bold text-center"
-        :color="!hovered ? 'var(--primary-color)' : 'white'"
+        :class="hovered ? 'text-white' : 'primary'"
       >
         {{ value.title }}
       </ReTitleSpan>

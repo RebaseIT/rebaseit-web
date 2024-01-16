@@ -109,10 +109,7 @@ const sendEmail = async (formData) => {
 </script>
 <template>
   <ReSectionContainer background="/images/background/background-2.png">
-    <div
-      class="row flex py-8 px-6 justify-space-between gap-4"
-      :class="{ 'flex-column align-items-center': isMobile }"
-    >
+    <div class="py-8 px-6">
       <div class="w-full">
         <ReTitleGradient> Contactanos </ReTitleGradient>
         <div class="py-4">
@@ -123,27 +120,35 @@ const sendEmail = async (formData) => {
             Nos comunicaremos en breve.
           </ReParagraphSpan>
         </div>
-        <div class="carrousel-container align-self-center">
+      </div>
+      <div
+        class="flex flex-row gap-4 justify-space-between"
+        :class="{ 'flex-column-reverse align-items-center': isMobile }"
+      >
+        <div
+          class="carrousel-container"
+          :class="{ 'align-self-center': isMobile }"
+        >
           <ReviewsCarousel />
         </div>
-      </div>
-      <div class="contact-card">
-        <Card>
-          <template #content>
-            <DynamicForm
-              :fields="fields"
-              @form="sendEmail"
-            />
-            <div class="pt-3">
-              <ReParagraphSpan class="primary">
-                <b>O envianos un mensaje a: </b>
-              </ReParagraphSpan>
-              <ReParagraphSpan color="black">
-                <b><a href="mailto:sales@rebaseit.tech">sales@rebaseit.tech</a></b>
-              </ReParagraphSpan>
-            </div>
-          </template>
-        </Card>
+        <div class="contact-card">
+          <Card>
+            <template #content>
+              <DynamicForm
+                :fields="fields"
+                @form="sendEmail"
+              />
+              <div class="pt-3">
+                <ReParagraphSpan class="primary">
+                  <b>O envianos un mensaje a: </b>
+                </ReParagraphSpan>
+                <ReParagraphSpan color="black">
+                  <b><a href="mailto:sales@rebaseit.tech">sales@rebaseit.tech</a></b>
+                </ReParagraphSpan>
+              </div>
+            </template>
+          </Card>
+        </div>
       </div>
     </div>
   </ReSectionContainer>
@@ -152,7 +157,7 @@ const sendEmail = async (formData) => {
 <style lang="scss" scoped>
 .contact-card {
   width: 100%;
-  max-width: 430px;
+  max-width: 900px;
   &:deep(.p-card){
     border: 2px solid var(--primary-color);
     background-color: var(--light-blue);

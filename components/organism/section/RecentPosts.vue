@@ -82,6 +82,7 @@ const recentPosts = ref([
             :src="value.image.src"
             :alt="value.title"
             :max-width="isMobile ? '80px' : '140px'"
+            :height="isMobile ? '80px' : 'auto'"
           />
         </a>
       </div>
