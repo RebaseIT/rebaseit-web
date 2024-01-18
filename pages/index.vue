@@ -2,6 +2,12 @@
 import { useViewport } from "~/composables/useViewport";
 
 const { isSmaller: isMobile } = useViewport('xl');
+
+const contact = ref<any>(null);
+
+const scrollToSection = () => {
+  contact.value.$el.scrollIntoView({ behavior: 'smooth' });
+}
 </script>
 
 <template>
@@ -77,7 +83,10 @@ const { isSmaller: isMobile } = useViewport('xl');
         class="flex py-4"
         :class="{ 'justify-content-center': isMobile }"
       >
-        <ReButton label="Contactanos" />
+        <ReButton
+          @click="scrollToSection"
+          label="Contactanos"
+        />
       </div>
     </div>
   </ReSectionTop>
@@ -143,5 +152,5 @@ const { isSmaller: isMobile } = useViewport('xl');
       </div>
     </div>
   </ReSectionWhatWeDo>
-  <ContactUs />
+  <ContactUs ref="contact" />
 </template>
