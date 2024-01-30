@@ -4,7 +4,7 @@ import { useViewport } from '~/composables/useViewport';
 const { isSmaller: isMobile } = useViewport('lg');
 const { isGreaterOrEqual: showPolygon } = useViewport('xl');
 
-const title = 'Somos RebaseIT.';
+const title = 'Somos RebaseIT';
 const subtitle = 'Conectamos a cada uno de nuestros clientes con la solución más adecuada para sus necesidades, garantizando siempre calidad y rentabilidad.';
 const image = {
   src: '/images/id.png',

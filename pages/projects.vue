@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const title = 'Nuestros Proyectos.';
+const title = 'Nuestros Proyectos';
 const subtitle = 'Desde Rebase IT, acompañamos a nuestros clientes en todo el ciclo de vida del proyecto, brindándoles soluciones superadoras y ajustadas a sus necesidades particulares.';
 const image = {
   src: '/images/folder.png',

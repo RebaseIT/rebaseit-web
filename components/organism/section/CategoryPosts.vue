@@ -55,7 +55,7 @@ const recentPosts = ref([
     },
     items: [
       {
-        text: '- Desde nuestro equipo te deseamos, ¡FELICES FIESTAS',
+        text: '- Desde nuestro equipo te deseamos, ¡FELICES FIESTAS!',
         route: 'https://www.linkedin.com/posts/rebase-it_estamos-llegando-a-fin-de-a%C3%B1o-y-con-el-equipo-activity-7012159369505062912-0zSQ'
       }
     ]
