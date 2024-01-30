@@ -1,6 +1,6 @@
 <template>
   <Head>
-    <Title>Muchas gracias!</Title>
+    <Title>¡Muchas gracias!</Title>
   </Head>
   <ReSectionContainer
     class="py-8"

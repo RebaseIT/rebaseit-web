@@ -37,7 +37,7 @@ const scrollToSection = () => {
           font-size="xl-2"
           font-weight="500"
         >
-          version <span class="font-bold">better.</span>
+          version <span class="font-bold">better</span>
         </ReTitleGradient>
       </div>
       <template v-if="!isMobile">
