@@ -148,10 +148,11 @@ const { isSmaller: isMobile } = useViewport('sm');
       </div>
       <div
         class="w-full gap-3 flex md:justify-content-evenly flex-wrap"
-        :class="{ 'justify-content-start': isMobile }"
+        :class="{ 'justify-content-start flex-column': isMobile }"
       >
         <div
-          class="py-4 gap-3 flex flex-column"
+          class="gap-3 flex flex-column"
+          :class="{ 'py-2': isMobile, 'py-4': !isMobile }"
           :key="`menu-${index}`"
           v-for="(menu, index) in menus"
         >
@@ -163,17 +164,19 @@ const { isSmaller: isMobile } = useViewport('sm');
               {{ menu.title }}
             </ReTitle>
           </NuxtLink>
-          <div
-            class="py-1"
-            v-for="(submenu, idx) in menu.menus"
-            :key="`submenu-${idx}`"
-          >
-            <div>
-              <ReSubtitle>
-                {{ submenu.title }}
-              </ReSubtitle>
+          <template v-if="!isMobile">
+            <div
+                class="py-1"
+                v-for="(submenu, idx) in menu.menus"
+                :key="`submenu-${idx}`"
+            >
+              <div>
+                <ReSubtitle>
+                  {{ submenu.title }}
+                </ReSubtitle>
+              </div>
             </div>
-          </div>
+          </template>
         </div>
       </div>
     </div>

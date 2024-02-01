@@ -2575,8 +2575,8 @@
 
 .p-carousel .p-carousel-content .p-carousel-prev,
 .p-carousel .p-carousel-content .p-carousel-next {
-  width: 3rem;
-  height: 3rem;
+  width: 2rem;
+  height: 2rem;
   color: #6c757d;
   border: 0 none;
   background: transparent;
@@ -2585,10 +2585,19 @@
   margin: 0.5rem;
   .p-carousel-next-icon,
   .p-carousel-prev-icon {
-     width: 34px;
-     height: 34px;
+     width: 24px;
+     height: 24px;
      color: #0470B8;
    }
+  @media (min-width: 640px) {
+    width: 3rem;
+    height: 3rem;
+    .p-carousel-next-icon,
+    .p-carousel-prev-icon {
+      width: 32px;
+      height: 32px;
+    }
+  }
 }
 .p-carousel .p-carousel-content .p-carousel-prev:enabled:hover,
 .p-carousel .p-carousel-content .p-carousel-next:enabled:hover {
