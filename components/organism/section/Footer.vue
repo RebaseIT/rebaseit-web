@@ -166,9 +166,9 @@ const { isSmaller: isMobile } = useViewport('sm');
           </NuxtLink>
           <template v-if="!isMobile">
             <div
-                class="py-1"
-                v-for="(submenu, idx) in menu.menus"
-                :key="`submenu-${idx}`"
+              class="py-1"
+              v-for="(submenu, idx) in menu.menus"
+              :key="`submenu-${idx}`"
             >
               <div>
                 <ReSubtitle>
