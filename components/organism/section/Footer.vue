@@ -152,7 +152,7 @@ const { isSmaller: isMobile } = useViewport('sm');
       >
         <div
           class="gap-3 flex flex-column"
-          :class="{ 'py-2': isMobile, 'py-4': !isMobile }"
+          :class="isMobile ? 'py-2' : 'py-4'"
           :key="`menu-${index}`"
           v-for="(menu, index) in menus"
         >
