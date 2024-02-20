@@ -35,7 +35,7 @@ const items = ref([
             class="cursor-pointer"
             alt="logo"
             src="/images/logo-header.png"
-            max-width="130px"
+            max-width="110px"
           />
         </NuxtLink>
       </template>
@@ -71,6 +71,7 @@ const items = ref([
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(4px);
   z-index: 100;
+  height: 82px;
 }
 .menu-bar {
   display: flex;
@@ -108,9 +109,6 @@ const items = ref([
       border-radius: 8px;
       background: var(--third-color) !important;
     }
-  }
-  &:deep(.p-menuitem-link) {
-    min-height: 65px;
   }
   &:deep(.p-focus) {
     > .p-menuitem-content {
