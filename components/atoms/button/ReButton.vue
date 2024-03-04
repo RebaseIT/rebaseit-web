@@ -18,11 +18,13 @@ defineProps({
 <style  lang="scss" scoped>
 .re-button {
   background-color: var(--primary-color);
-  border: 0px;
+  border: 0;
+  &:hover {
+    background-color: var(--secondary-color) !important;
+  }
   &:deep(.p-button){
     background-color: var(--primary-color);
     color: var(--primary-color);
   }
 }
-
 </style>

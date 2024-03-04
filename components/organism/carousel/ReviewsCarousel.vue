@@ -13,6 +13,7 @@ const images = ref([
       :num-visible="1"
       :num-scroll="1"
       class="carousel-color"
+      circular
     >
       <template #item="slotProps">
         <div class="border surface-border border-round p-5">
