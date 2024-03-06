@@ -9,6 +9,9 @@
     "postinstall": "nuxt prepare",
     "lint": "eslint --ext .js,.ts,.vue --fix"
   },
+  "resolutions": {
+    "string-width": "4.2.3"
+ },
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@nuxtjs/eslint-module": "^4.1.0",
