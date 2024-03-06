@@ -69,9 +69,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nuxt-build-
       - name: Install dependencies
-        run: nuxt install
+        run: yarn
       - name: Static HTML export with Nuxt
-        run: nuxt generate
+        run: yarn generate
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
