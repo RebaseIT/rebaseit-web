@@ -71,7 +71,7 @@ jobs:
       - name: Install dependencies
         run: yarn
       - name: Static HTML export with Nuxt
-        run: yarn generate
+        run: yarn build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
