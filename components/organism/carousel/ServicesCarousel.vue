@@ -1,27 +1,27 @@
 <script setup lang="ts">
 const images = ref([
   {
-    src: '/images/services/service_1.png',
+    src: '/images/service_1.png',
     maxWidth: '700px'
   },
   {
-    src: '/images/services/service_2.png',
+    src: '/images/service_2.png',
     maxWidth: '700px'
   },
   {
-    src: '/images/services/service_3.png',
+    src: '/images/service_3.png',
     maxWidth: '700px'
   },
   {
-    src: '/images/services/service_4.png',
+    src: '/images/service_4.png',
     maxWidth: '700px'
   },
   {
-    src: '/images/services/service_5.png',
+    src: '/images/service_5.png',
     maxWidth: '700px'
   },
   {
-    src: '/images/services/service_6.png',
+    src: '/images/service_6.png',
     maxWidth: '700px'
   },
 ]);

@@ -6,7 +6,7 @@ const projects = [
   {
     content: 'Realizamos el proceso de configuración del sistema de administración digital de iluminación LED de nuestro cliente Nine Shopping, para que puedan celebrar las fiestas de la mejor manera.',
     image: {
-      src: '/images/clients/nineAzul.png',
+      src: '/images/nineAzul.png',
       maxWidth: '130px'
     },
     route: 'https://www.linkedin.com/posts/rebase-it_tech-sales-project-activity-7002987786941181952-cAVt'

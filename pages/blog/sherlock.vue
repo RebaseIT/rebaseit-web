@@ -8,13 +8,13 @@ const goBack = () => {
 }
 const images = [
   {
-    src: '/images/sherlock/sherlock-1.png'
+    src: '/images/sherlock-1.png'
   },
   {
-    src: '/images/sherlock/sherlock-2.png'
+    src: '/images/sherlock-2.png'
   },
   {
-    src: '/images/sherlock/sherlock-3.png'
+    src: '/images/sherlock-3.png'
   },
 ]
 </script>
@@ -23,7 +23,7 @@ const images = [
     <Title>Sherlock</Title>
   </Head>
   <ReSectionContainer
-    background="/images/background/background-1.png"
+    background="/images/background-1.png"
     class="pt-8"
   >
     <div

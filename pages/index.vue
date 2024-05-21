@@ -110,12 +110,12 @@ const scrollToSection = () => {
         :class="{ 'flex-column align-items-center': isMobile }"
       >
         <ReImage
-          src="/images/clients/nineAzul.png"
+          src="/images/nineAzul.png"
           alt="nineAzul"
           max-width="158px"
         />
         <ReImage
-          src="/images/clients/pillmaykenAzul.png"
+          src="/images/pillmaykenAzul.png"
           alt="pillmaykenAzul"
           max-width="374px"
         />
