@@ -3,7 +3,7 @@ const recentPosts = ref([
   {
     title: 'Noticias',
     image: {
-      src: '/images/news.png',
+      src: '/images/posts/news.png',
       maxWidth: '110px',
       height: '100px'
     },
@@ -17,7 +17,7 @@ const recentPosts = ref([
   {
     title: 'Proyectos',
     image: {
-      src: '/images/helmet.png',
+      src: '/images/posts/helmet.png',
       maxWidth: '130px',
       height: '58px'
     },
@@ -35,7 +35,7 @@ const recentPosts = ref([
   {
     title: 'Trabajos particulares',
     image: {
-      src: '/images/hammer.png',
+      src: '/images/posts/hammer.png',
       maxWidth: '87px',
       height: '100px'
     },
@@ -49,7 +49,7 @@ const recentPosts = ref([
   {
     title: 'Eventos',
     image: {
-      src: '/images/star.png',
+      src: '/images/posts/star.png',
       maxWidth: '95px',
       height: '90px'
     },

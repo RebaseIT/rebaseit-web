@@ -15,31 +15,31 @@ const image = {
 const teamOptions = [
   {
     name: 'Juan Cueli',
-    image: '/images/juan-cueli.png',
+    image: '/images/team/juan-cueli.png',
     alt: 'juan-cueli',
     class: 'space-layout-sm'
   },
   {
     name: 'Ezequiel Díaz',
-    image: '/images/ezequiel-diaz.png',
+    image: '/images/team/ezequiel-diaz.png',
     alt: 'ezequiel-diaz',
     class: 'space-layout-md'
   },
   {
     name: 'Rodrigo Díaz',
-    image: '/images/rodrigo-diaz.png',
+    image: '/images/team/rodrigo-diaz.png',
     alt: 'rodrigo-diaz',
     class: 'space-layout-lg'
   },
   {
     name: 'Martín Urteaga',
-    image: '/images/martin-urteaga.png',
+    image: '/images/team/martin-urteaga.png',
     alt: 'martin-urteaga',
     class: 'space-layout-md'
   },
   {
     name: 'Jorge Covello',
-    image: '/images/jorge-covello.png',
+    image: '/images/team/jorge-covello.png',
     alt: 'jorge-covello',
     class: 'space-layout-smspace-layout-md'
   }
@@ -104,7 +104,7 @@ const polygons = [
     :subtitle="subtitle"
     :image="image"
   />
-  <ReSectionContainer background="/images/background-2.png">
+  <ReSectionContainer background="/images/background/background-2.png">
     <div class="flex flex-column py-8 px-6">
       <ReTitleGradient
         class="align-self-center"
@@ -150,7 +150,7 @@ const polygons = [
       </div>
     </div>
   </ReSectionContainer>
-  <ReSectionContainer background="/images/background-2.png">
+  <ReSectionContainer background="/images/background/background-2.png">
     <div
       class="flex flex-column pb-8 px-2"
       :class="{ 'px-6': isMobile }"
@@ -185,7 +185,7 @@ const polygons = [
     </div>
   </ReSectionContainer>
   <OurValues />
-  <ReSectionContainer background="/images/background-2.png">
+  <ReSectionContainer background="/images/background/background-2.png">
     <div
       class="flex p-6 gap-8 justify-space-between"
       :class="{ 'flex-column': isMobile }"

@@ -4,7 +4,7 @@
   </Head>
   <ReSectionContainer
     class="py-8"
-    background="/images/background-2.png"
+    background="/images/background/background-2.png"
   >
     <div class="h-full flex flex-column align-items-center justify-content-center">
       <ReTitleGradient class="my-8">

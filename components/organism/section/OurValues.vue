@@ -4,8 +4,8 @@ const ourValues = [
     title: 'Honestidad y Transparencia',
     description: 'Priorizamos la comunicación abierta y honesta en todas nuestras interacciones.',
     img: {
-      src: '/images/value-1.png',
-      srcAlt: '/images/value-alt-1.png',
+      src: '/images/values/value-1.png',
+      srcAlt: '/images/values/value-alt-1.png',
       width: '64px',
       height: '115px'
     }
@@ -14,8 +14,8 @@ const ourValues = [
     title: 'Excelencia Técnica',
     description: 'Nos esforzamos por alcanzar la máxima calidad en nuestras soluciones tecnológicas.',
     img: {
-      src: '/images/value-2.png',
-      srcAlt: '/images/value-alt-2.png',
+      src: '/images/values/value-2.png',
+      srcAlt: '/images/values/value-alt-2.png',
       width: '86px',
       height: '115px'
     }
@@ -24,8 +24,8 @@ const ourValues = [
     title: 'Compromiso',
     description: ' Cumplimos nuestros compromisos con responsabilidad y dedicación.',
     img: {
-      src: '/images/value-3.png',
-      srcAlt: '/images/value-alt-3.png',
+      src: '/images/values/value-3.png',
+      srcAlt: '/images/values/value-alt-3.png',
       width: '133px',
       height: '57px',
       class: 'space-layout-bottom'
@@ -35,8 +35,8 @@ const ourValues = [
     title: 'Proactividad',
     description: 'No esperamos a que las cosas sucedan, las hacemos suceder.',
     img: {
-      src: '/images/value-4.png',
-      srcAlt: '/images/value-alt-4.png',
+      src: '/images/values/value-4.png',
+      srcAlt: '/images/values/value-alt-4.png',
       width: '122px',
       height: '115px'
     }
@@ -45,8 +45,8 @@ const ourValues = [
     title: 'Innovación',
     description: 'Promovemos la creatividad y la originalidad para encontrar soluciones únicas y disruptivas.',
     img: {
-      src: '/images/value-6.png',
-      srcAlt: '/images/value-alt-6.png',
+      src: '/images/values/value-6.png',
+      srcAlt: '/images/values/value-alt-6.png',
       width: '80px',
       height: '115px'
     }
@@ -55,7 +55,7 @@ const ourValues = [
 </script>
 
 <template>
-  <ReSectionContainer background="/images/background-2.png">
+  <ReSectionContainer background="/images/background/background-2.png">
     <div
       class="flex flex-column pb-8 px-6"
     >

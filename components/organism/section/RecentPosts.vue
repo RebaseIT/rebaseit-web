@@ -7,7 +7,7 @@ const recentPosts = ref([
     title: 'Presentamos Shelock, la mejor respuesta para tu análisis de ciberseguridad',
     date: '23/03/23',
     image: {
-      src: '/images/sherlock-1.png'
+      src: '/images/posts/sherlock-1.png'
     },
     route: 'https://www.linkedin.com/posts/rebase-it_security-information-incidentresponse-activity-6994309011672068096-uj3V'
   },
@@ -15,7 +15,7 @@ const recentPosts = ref([
     title: 'Si trabajas en RRHH, te invitamos a rellenar una breve encuesta',
     date: '17/03/23',
     image: {
-      src: '/images/megaphone.png'
+      src: '/images/posts/megaphone.png'
     },
     route: 'https://www.linkedin.com/feed/update/urn:li:activity:7008800849233633280/'
   },
@@ -23,7 +23,7 @@ const recentPosts = ref([
     title: 'Programamos las luces de Nine Shopping en Moreno',
     date: '26/12/22',
     image: {
-      src: '/images/shopping.png'
+      src: '/images/posts/shopping.png'
     },
     route: 'https://www.linkedin.com/posts/rebase-it_tech-sales-project-activity-7002987786941181952-cAVt'
   },
@@ -31,7 +31,7 @@ const recentPosts = ref([
     title: 'Desde nuestro equipo te deseamos, ¡FELICES FIESTAS!',
     date: '25/12/22',
     image: {
-      src: '/images/xmas.png'
+      src: '/images/posts/xmas.png'
     },
     route: 'https://www.linkedin.com/posts/rebase-it_estamos-llegando-a-fin-de-a%C3%B1o-y-con-el-equipo-activity-7012159369505062912-0zSQ'
   },
@@ -39,7 +39,7 @@ const recentPosts = ref([
     title: 'Sherlock, TOP 6 mejores trabajos en Argentina!',
     date: '15/12/22',
     image: {
-      src: '/images/team.png'
+      src: '/images/posts/team.png'
     },
     route: 'https://www.linkedin.com/posts/rebase-it_security-information-incidentresponse-activity-6995398634041143296-kqQ7'
   }
@@ -47,7 +47,7 @@ const recentPosts = ref([
 </script>
 
 <template>
-  <ReSectionContainer background="/images/background-2.png">
+  <ReSectionContainer background="/images/background/background-2.png">
     <div class="px-6">
       <ReTitleGradient>
         Posteos recientes

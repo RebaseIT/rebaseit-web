@@ -18,7 +18,7 @@ const image = {
     :subtitle="subtitle"
     :image="image"
   />
-  <ReSectionContainer background="/images/background-3.png">
+  <ReSectionContainer background="/images/background/background-3.png">
     <ServicesCarousel />
   </ReSectionContainer>
   <ContactUs />

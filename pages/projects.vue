@@ -20,7 +20,7 @@ const image = {
   />
   <ReSectionContainer
     class="py-2 px-6"
-    background="/images/background-2.png"
+    background="/images/background/background-2.png"
   >
     <ProjectsCarousel />
   </ReSectionContainer>
