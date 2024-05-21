@@ -1,1 +1,0 @@
-import{_ as s,o as a,c as o,l as r,d as _,t as n}from"./entry.DK68rXWf.js";const c={class:"re-subtitle"},l={__name:"ReSubtitle",props:{text:{type:String,required:!1,default:""}},setup(e){return(t,p)=>(a(),o("span",c,[r(t.$slots,"default",{},()=>[_(n(e.text),1)],!0)]))}},d=s(l,[["__scopeId","data-v-62ae847f"]]);export{d as _};
