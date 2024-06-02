@@ -78,11 +78,7 @@ const images = ref([
     background-color: var(--primary-color);
   }
   &:deep(.p-carousel-item){
-    flex: 1 0 100% !important;
-  }
-  &:deep(.p-carousel-next),
-  &:deep(.p-carousel-prev) {
-    margin-top: 56px;
+    // flex: 1 0 100% !important;
   }
 }
 </style>

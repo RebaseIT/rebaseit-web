@@ -110,6 +110,9 @@ const updateMiddleIndex = (event) => {
 </template>
 
 <style lang="scss" scoped>
+.carousel .p-carousel-items-container {
+    align-items: center !important;
+}
 .carousel {
   &:deep(.p-carousel-items-container) {
     height: 100%;

@@ -2573,6 +2573,34 @@
   color: #EF4444;
 }
 
+.p-carousel {
+  & .p-carousel-content{
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+  }
+  & .p-carousel-container {
+    display: flex;
+    align-items: center;
+  }
+  & .p-carousel-items-content {
+    overflow: hidden;
+    width: 100%;
+  }
+  & .p-carousel-items-container {
+    display: flex;
+    flex-direction: row;
+  }
+  & .p-carousel-indicators {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    & li {
+      list-style-type: none;
+    }
+  }
+}
+
 .p-carousel .p-carousel-content .p-carousel-prev,
 .p-carousel .p-carousel-content .p-carousel-next {
   width: 2rem;
