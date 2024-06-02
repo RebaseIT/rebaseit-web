@@ -73,6 +73,10 @@ const items = ref([
   z-index: 100;
   height: 82px;
 }
+.menu-bar:deep(.p-menubar-root-list > .p-menuitem:not(.p-highlight):not(.p-disabled) .p-menuitem-link:hover) {
+  background: #e9ecef;
+  border-radius: 8px;
+}
 .menu-bar {
   display: flex;
   align-items: center;
