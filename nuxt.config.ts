@@ -30,7 +30,8 @@ export default defineNuxtConfig({
   },
   devtools: { enabled: true },
   css: [
-    "@/assets/css/main.scss"
+    "@/assets/css/main.scss",
+    'primevue/resources/themes/aura-light-green/theme.css'
   ],
   modules: [
     '@vueuse/nuxt',
