@@ -98,6 +98,7 @@ const updateMiddleIndex = (event) => {
                 target="_blank"
               >
                 <ReButton
+                  class="button-link"
                   label="Conocé más"
                 />
               </a>
@@ -110,6 +111,9 @@ const updateMiddleIndex = (event) => {
 </template>
 
 <style lang="scss" scoped>
+.button-link:deep(.p-button-label) {
+  text-decoration: underline;
+}
 .carousel .p-carousel-items-container {
     align-items: center !important;
 }
