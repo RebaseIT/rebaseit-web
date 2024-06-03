@@ -91,6 +91,9 @@ const selected = () => {
       padding: 0;
       list-style-type: none;
     }
+    &:deep(.p-tabview-ink-bar) {
+      position: absolute;
+    }
     &:deep(.p-tabview-nav-content){
       border-radius: 8px 8px 0 0;
       outline: none !important;
