@@ -129,7 +129,4 @@ hr {
   border: none;
   border-top: 1px solid var(--primary-color)
 }
-a {
-  text-decoration: none;
-}
 </style>
