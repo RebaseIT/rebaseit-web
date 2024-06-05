@@ -104,7 +104,7 @@ const scrollToSection = () => {
   </ReSectionProducts>
   <ReSectionClients>
     <div class="pb-8 px-6">
-      <ReTitleGradient class="flex justify-content-end pt-4">
+      <ReTitleGradient class="flex justify-content-end pt-4 mb-4">
         Nuestros Clientes
       </ReTitleGradient>
       <div

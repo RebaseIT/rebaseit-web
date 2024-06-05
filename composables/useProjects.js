@@ -15,7 +15,27 @@ export default () => {
       image: {
         src:"/images/clients/pillmaykenAzul.png",
         alt: "pillmaykenAzul",
-        maxWidth: "374px",
+        maxWidth: "324px",
+      },
+      route: '',
+      isInternalProject: false
+    },
+    {
+      content: null,
+      image: {
+        src:"/images/clients/verifarmaAzul.png",
+        alt: "verifarmaAzul",
+        maxWidth: "324px",
+      },
+      route: '',
+      isInternalProject: false
+    },
+    {
+      content: null,
+      image: {
+        src:"/images/clients/grupoSimpliAzul.png",
+        alt: "grupoSimpliAzul",
+        maxWidth: "334px",
       },
       route: '',
       isInternalProject: false
