@@ -2,6 +2,8 @@
 import { useViewport } from "~/composables/useViewport";
 
 const { isSmaller: isMobile } = useViewport('xl');
+const { projects } = useProjects()
+const externalProjectsLogos = projects.filter(project => !project.isInternalProject).map(projectLogo => projectLogo.image)
 
 const contact = ref<any>(null);
 
@@ -110,14 +112,11 @@ const scrollToSection = () => {
         :class="{ 'flex-column align-items-center': isMobile }"
       >
         <ReImage
-          src="/images/clients/nineAzul.png"
-          alt="nineAzul"
-          max-width="158px"
-        />
-        <ReImage
-          src="/images/clients/pillmaykenAzul.png"
-          alt="pillmaykenAzul"
-          max-width="374px"
+          v-for="externalProject in externalProjectsLogos"
+          :key="externalProject.alt"
+          :src="externalProject.src"
+          :alt="externalProject.alt"
+          :max-width="externalProject.maxWidth"
         />
       </div>
     </div>
