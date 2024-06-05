@@ -42,7 +42,7 @@ export default () => {
         src: '/images/sherlock_2_img.jpg'
       },
       route: 'https://www.linkedin.com/company/rebase-it/',
-      isInternalProject: false
+      isInternalProject: true
     }
   ]
   return {
