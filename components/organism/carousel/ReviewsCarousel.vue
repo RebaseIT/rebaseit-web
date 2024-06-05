@@ -4,12 +4,14 @@ const images = ref([
   {src: '/images/gatito2.jpeg'},
   {src: '/images/gatito3.jpeg'},
 ]);
+
+const { clientReviews } = useClientReviews()
 </script>
 
 <template>
   <div class="card">
     <Carousel
-      :value="images"
+      :value="clientReviews"
       :num-visible="1"
       :num-scroll="1"
       class="carousel-color"
@@ -21,9 +23,7 @@ const images = ref([
             color="black"
             font-weight
           >
-            Desde que adoptamos Sherlock en nuestro departamento de
-            Sistemas, hemos podido detectar cualquier brecha de seguridad
-            en tiempo record!
+            {{ slotProps.data.content }}
           </ReParagraphSpan>
 
           <div class="pt-4 row">
@@ -34,13 +34,13 @@ const images = ref([
               class="img-border"
             >
 
-            <div>
+            <div class="mt-2">
               <ReTitleSpan
                 font-weight="400"
                 color="black"
                 class="font-size-text"
               >
-                Eva López
+                {{ slotProps.data.name }}
               </ReTitleSpan>
             </div>
             <div>
@@ -48,7 +48,7 @@ const images = ref([
                 color="black"
                 class="font-size-text"
               >
-                CEO Smart Co.
+                {{ slotProps.data.jobTitle }} - {{ slotProps.data.company }}
               </ReTitleSpan>
             </div>
           </div>
