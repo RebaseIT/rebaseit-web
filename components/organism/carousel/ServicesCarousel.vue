@@ -42,7 +42,7 @@ const images = ref([
       circular
     >
       <template #item="slotProps">
-        <div class="flex py-6 h-full">
+        <div class="flex py-6 h-full px-1">
           <ReImage
             class="m-auto"
             :src="slotProps.data.src"
