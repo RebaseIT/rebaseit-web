@@ -1,6 +1,10 @@
 <script setup lang="ts">
 const images = ref([
   {
+    src: '/images/services/service_7.png',
+    maxWidth: '750px'
+  },  
+  {
     src: '/images/services/service_1.png',
     maxWidth: '700px'
   },
@@ -23,10 +27,6 @@ const images = ref([
   {
     src: '/images/services/service_6.png',
     maxWidth: '650px'
-  },
-  {
-    src: '/images/services/service_7.png',
-    maxWidth: '750px'
   },
 ]);
 </script>
