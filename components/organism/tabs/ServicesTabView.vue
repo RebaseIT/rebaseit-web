@@ -2,68 +2,42 @@
 import { useViewport } from '~/composables/useViewport';
 
 const { isSmaller: isMobile } = useViewport('md');
-const isSelected = ref(false);
-const selected = () => {
-  isSelected.value = !isSelected.value;
-};
 
+const { projects } = useProjects()
+const projectsToShow = projects.filter(project => project.content && project.isInternalProject)
 </script>
 
 <template>
   <div class="container">
-    <TabView class="card-tab-view">
-      <div @click="selected">
-        <TabPanel>
-          <template #header>
-            <div class="header-img">
-              <ReImage
-                src="/images/logo_sherlock_deg.png"
-                max-width="200px"
-              />
-            </div>
-          </template>
-          <div
-            class="flex justify-content-center align-items-center lg:p-6 gap-5"
-            :class="{ 'flex-column p-1': isMobile }"
-          >
-            <img
-              class="content-img"
-              src="/images/sherlock_img.jpg"
-              height="250"
-            >
-            <div class="max-w-24rem">
-              ¿Alguna vez te hackearon o intentaron hackear a alguien de tu organización?
-              Cuando se trata de ciberseguridad, podés optar por <b>Sherlock</b>: una solución que centraliza y automatiza las tareas de respuesta a incidentes realizadas por los analistas de ciberseguridad.
-            </div>
+    <TabView
+      class="card-tab-view"
+    >
+      <TabPanel
+        v-for="projectToShow in projectsToShow"
+        :key="projectToShow"
+      >
+        <template #header>
+          <div class="header-img">
+            <ReImage
+              :src="projectToShow.image.src"
+              max-width="200px"
+            />
           </div>
-        </TabPanel>
-      </div>
-      <div @click="selected">
-        <TabPanel>
-          <template #header>
-            <div class="header-img">
-              <ReImage
-                src="/images/reconnect.png"
-                max-width="165px"
-              />
-            </div>
-          </template>
-          <div
-            class="flex justify-content-center align-items-center lg:p-6 gap-5"
-            :class="{ 'flex-column p-1': isMobile }"
+        </template>
+        <div
+          class="flex justify-content-center align-items-center lg:p-6 gap-5"
+          :class="{ 'flex-column p-1': isMobile }"
+        >
+          <img
+            class="content-img"
+            :src="projectToShow.imageContent.src"
+            height="250"
           >
-            <img
-              class="content-img"
-              src="/images/sherlock_2_img.jpg"
-              height="250"
-            >
-            <div class="max-w-24rem">
-              El proceso de contratación y el manejo de datos de grandes sumas de candidatos puede ser desordenado y desorientador.
-              <b>Rebase Connect</b> es una aplicación de análisis de datos dedicada a los contratadores, encargándose de la <b>estandarización</b> de información, <b>seguimiento</b> de búsquedas, e <b>indicadores</b> de métricas.
-            </div>
+          <div class="max-w-24rem">
+            <span v-html="projectToShow.content" />
           </div>
-        </TabPanel>
-      </div>
+        </div>
+      </TabPanel>
     </TabView>
   </div>
 </template>

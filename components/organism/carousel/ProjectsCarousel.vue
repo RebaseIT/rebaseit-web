@@ -2,33 +2,8 @@
 import { useViewport } from '~/composables/useViewport';
 
 const { isSmaller: isMobile } = useViewport('lg');
-const projects = [
-  {
-    content: 'Realizamos el proceso de configuración del sistema de administración digital de iluminación LED de nuestro cliente Nine Shopping, para que puedan celebrar las fiestas de la mejor manera.',
-    image: {
-      src: '/images/clients/nineAzul.png',
-      maxWidth: '130px'
-    },
-    route: 'https://www.linkedin.com/posts/rebase-it_tech-sales-project-activity-7002987786941181952-cAVt'
-  },
-  {
-    content: '¿Alguna vez te hackearon o intentaron hackear a alguien de tu organización? Cuando se trata de ciberseguridad, podés optar por <b>Sherlock</b>: una solución que centraliza y automatiza las tareas de respuesta a incidentes realizadas por los analistas de ciberseguridad.',
-    image: {
-      src: '/images/logo_sherlock_deg.png',
-      maxWidth: '290px'
-    },
-    route: 'https://www.linkedin.com/posts/rebase-it_security-information-incidentresponse-activity-6994309011672068096-uj3V'
-  },
-  {
-    content: '<b>Rebase Connect</b> es una aplicación de análisis de datos dedicada a los contratadores, encargándose de la <b>estandarización</b> de información, <b>seguimiento</b> de búsquedas, e <b>indicadores</b> de métricas.',
-    image: {
-      src: '/images/reconnect.png',
-      maxWidth: '290px'
-    },
-
-    route: 'https://www.linkedin.com/company/rebase-it/'
-  }
-];
+const { projects } = useProjects()
+const projectsToShow = projects.filter(project => project.content)
 
 const responsiveOptions = ref([
   {
@@ -40,10 +15,10 @@ const responsiveOptions = ref([
 
 const carrouselItems = computed(() => {
   if (isMobile.value) {
-    return [...projects];
+    return [...projectsToShow];
   }
   // Add empty items to the start and end of the array to make the first and last items invisible in desktop
-  return [{}, ...projects, {}];
+  return [{}, ...projectsToShow, {}];
 });
 
 const middleIndex = ref(1);
