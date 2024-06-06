@@ -4,7 +4,7 @@ export default () => {
       content: 'Gracias al sistema de reservas desarrollado por Rebase IT, gestionamos sin complicaciones todas las solicitudes de nuestros clientes, quienes también nos agradecieron por la facilidad al reservar sus habitaciones en el hotel.',
       src: '/images/reviews/tomasGiancola.jpeg',
       name: 'Tomás Giancola',
-      jobTitle: 'Gerente de Ventas',
+      jobTitle: 'Gerente Comercial',
       company: 'Pillmayken'
     },
     {
