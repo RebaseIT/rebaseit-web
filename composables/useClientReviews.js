@@ -13,13 +13,6 @@ export default () => {
       name: 'Solange Flores Gourdy',
       jobTitle: 'Scrum Master',
       company: 'Verifarma'
-    },
-    {
-      content: 'To Do.',
-      src: '/images/gatito2.jpeg',
-      name: 'To Do.',
-      jobTitle: 'To Do.',
-      company: 'Grupo Simpli'
     }
   ]
   return {

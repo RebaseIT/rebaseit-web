@@ -1,10 +1,4 @@
 <script setup>
-const images = ref([
-  {src: '/images/gatito1.jpeg'},
-  {src: '/images/gatito2.jpeg'},
-  {src: '/images/gatito3.jpeg'},
-]);
-
 const { clientReviews } = useClientReviews()
 </script>
 
