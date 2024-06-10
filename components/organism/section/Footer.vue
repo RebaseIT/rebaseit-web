@@ -15,11 +15,11 @@ const menus = ref([
     menus: [
       {
         title: "Sherlock",
-        to: ""
+        to: "/projects"
       },
       {
         title: "Rebase Connect",
-        to: ""
+        to: "/projects"
       },
     ]
   },
@@ -29,27 +29,27 @@ const menus = ref([
     menus: [
       {
         title: "Frontend",
-        to: ""
+        to: "/services"
       },
       {
         title: "Backend",
-        to: ""
+        to: "/services"
       },
       {
         title: "Database",
-        to: ""
+        to: "/services"
       },
       {
         title: "Cloud Providers",
-        to: ""
+        to: "/services"
       },
       {
         title: "DevOps Tools",
-        to: ""
+        to: "/services"
       },
       {
         title: "Integration tech",
-        to: ""
+        to: "/services"
       },
     ]
   },  {
@@ -58,27 +58,26 @@ const menus = ref([
     menus: [
       {
         title: "Todos los artículos",
-        to: ""
+        to: "/blog"
       },
       {
         title: "Noticias",
-        to: ""
+        to: "/blog"
       },
       {
         title: "Proyectos",
-        to: ""
+        to: "/blog"
       },
       {
         title: "Trabajos particulares",
-        to: ""
+        to: "/blog"
       },
       {
         title: "Eventos",
-        to: ""
+        to: "/blog"
       },
     ]
   }
-
 ])
 const { isSmaller: isMobile } = useViewport('sm');
 </script>
@@ -170,11 +169,16 @@ const { isSmaller: isMobile } = useViewport('sm');
               v-for="(submenu, idx) in menu.menus"
               :key="`submenu-${idx}`"
             >
-              <div>
-                <ReSubtitle>
-                  {{ submenu.title }}
-                </ReSubtitle>
-              </div>
+              <NuxtLink
+                :to="submenu.to"
+                class="text-link"
+              >
+                <div>
+                  <ReSubtitle>
+                    {{ submenu.title }}
+                  </ReSubtitle>
+                </div>
+              </NuxtLink>
             </div>
           </template>
         </div>
