@@ -1,6 +1,10 @@
 <script setup lang="ts">
 const images = ref([
   {
+    src: '/images/services/service_7.png',
+    maxWidth: '750px'
+  },  
+  {
     src: '/images/services/service_1.png',
     maxWidth: '700px'
   },
@@ -18,11 +22,11 @@ const images = ref([
   },
   {
     src: '/images/services/service_5.png',
-    maxWidth: '700px'
+    maxWidth: '750px'
   },
   {
     src: '/images/services/service_6.png',
-    maxWidth: '700px'
+    maxWidth: '650px'
   },
 ]);
 </script>
@@ -38,7 +42,7 @@ const images = ref([
       circular
     >
       <template #item="slotProps">
-        <div class="flex py-6 h-full">
+        <div class="flex py-6 h-full px-1">
           <ReImage
             class="m-auto"
             :src="slotProps.data.src"
