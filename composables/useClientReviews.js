@@ -12,7 +12,7 @@ export default () => {
       src: '/images/reviews/solangeFlores.jpeg',
       name: 'Solange Flores Gourdy',
       jobTitle: 'Scrum Master',
-      company: 'Verifarma'
+      company: 'Integrated Solutions'
     }
   ]
   return {
