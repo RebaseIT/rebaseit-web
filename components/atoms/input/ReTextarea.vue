@@ -35,6 +35,7 @@ const { value: inputValue, errorMessage, handleBlur } = useField(props.id, value
     rows="4"
     cols="30"
     :class="{ 'p-invalid': errorMessage }"
+    style="resize: none;"
     @blur="handleBlur"
     @update:model-value="emit('update:modelValue', $event)"
   />

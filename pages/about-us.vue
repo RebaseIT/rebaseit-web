@@ -158,7 +158,7 @@ const polygons = [
         :class="{ 'mt-6': isMobile }"
       >
         <div
-          class="flex flex-column align-items-center w-fit mt-4"
+          class="flex flex-column align-items-center w-fit"
           v-for="(member, index) in teamOptions"
           :key="`member-${index}`"
         >
@@ -167,7 +167,7 @@ const polygons = [
             :src="member.image"
             width="150px"
             height="242px"
-            :class="isMobile ? 'mt-0' : member.class"
+            :class="isMobile ? 'mt-0' : 'mt-4'"
           />
           <ReTitleSpan
             class="primary mt-3 font-semibold"
