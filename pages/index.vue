@@ -108,6 +108,7 @@ const scrollToSection = () => {
         Nuestros Clientes
       </ReTitleGradient>
       <div
+        class="text-center"
         :class="{ 'flex justify-content-evenly gap-4 flex-column align-items-center': isMobile }"
       >
         <ReImage
