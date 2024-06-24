@@ -5,7 +5,7 @@ export default () => {
       image: {
         src: "/images/clients/nineAzul.png",
         alt: "nineAzul",
-        maxWidth: "158px",
+        maxWidth: "120px",
       },
       route: 'https://www.linkedin.com/posts/rebase-it_tech-sales-project-activity-7002987786941181952-cAVt',
       isInternalProject: false
@@ -15,7 +15,7 @@ export default () => {
       image: {
         src:"/images/clients/pillmaykenAzul.png",
         alt: "pillmaykenAzul",
-        maxWidth: "324px",
+        maxWidth: "270px",
       },
       route: '',
       isInternalProject: false
@@ -23,9 +23,19 @@ export default () => {
     {
       content: null,
       image: {
-        src:"/images/clients/verifarmaAzul.png",
-        alt: "verifarmaAzul",
-        maxWidth: "324px",
+        src:"/images/clients/integratedSolutionsAzul.png",
+        alt: "integratedSolutionsAzul",
+        maxWidth: "315px",
+      },
+      route: '',
+      isInternalProject: false
+    },
+    {
+      content: null,
+      image: {
+        src:"/images/clients/redDeFarmaciasAzul.png",
+        alt: "redDeFarmaciasAzul",
+        maxWidth: "300px",
       },
       route: '',
       isInternalProject: false
@@ -35,7 +45,7 @@ export default () => {
       image: {
         src:"/images/clients/grupoSimpliAzul.png",
         alt: "grupoSimpliAzul",
-        maxWidth: "334px",
+        maxWidth: "250px",
       },
       route: '',
       isInternalProject: false
