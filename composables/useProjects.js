@@ -15,7 +15,7 @@ export default () => {
       image: {
         src:"/images/clients/pillmaykenAzul.png",
         alt: "pillmaykenAzul",
-        maxWidth: "250px",
+        maxWidth: "270px",
       },
       route: '',
       isInternalProject: false
@@ -25,7 +25,7 @@ export default () => {
       image: {
         src:"/images/clients/integratedSolutionsAzul.png",
         alt: "integratedSolutionsAzul",
-        maxWidth: "250px",
+        maxWidth: "315px",
       },
       route: '',
       isInternalProject: false
@@ -35,7 +35,7 @@ export default () => {
       image: {
         src:"/images/clients/redDeFarmaciasAzul.png",
         alt: "redDeFarmaciasAzul",
-        maxWidth: "250px",
+        maxWidth: "300px",
       },
       route: '',
       isInternalProject: false
