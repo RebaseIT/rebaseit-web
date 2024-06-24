@@ -15,33 +15,28 @@ const image = {
 const teamOptions = [
   {
     name: 'Juan Cueli',
-    image: '/images/team/juan-cueli.png',
-    alt: 'juan-cueli',
-    class: 'space-layout-sm'
+    image: '/images/team/juan.png',
+    alt: 'juan',
   },
   {
     name: 'Ezequiel Díaz',
-    image: '/images/team/ezequiel-diaz.png',
-    alt: 'ezequiel-diaz',
-    class: 'space-layout-md'
+    image: '/images/team/ezequiel.png',
+    alt: 'ezequiel',
   },
   {
     name: 'Rodrigo Díaz',
-    image: '/images/team/rodrigo-diaz.png',
-    alt: 'rodrigo-diaz',
-    class: 'space-layout-lg'
+    image: '/images/team/rodrigo.png',
+    alt: 'rodrigo',
   },
   {
     name: 'Martín Urteaga',
-    image: '/images/team/martin-urteaga.png',
-    alt: 'martin-urteaga',
-    class: 'space-layout-md'
+    image: '/images/team/martin.png',
+    alt: 'martin'
   },
   {
     name: 'Jorge Covello',
-    image: '/images/team/jorge-covello.png',
-    alt: 'jorge-covello',
-    class: 'space-layout-smspace-layout-md'
+    image: '/images/team/jorge.png',
+    alt: 'jorge'
   }
 ];
 
@@ -170,9 +165,9 @@ const polygons = [
           <ReImage
             :alt="member.alt"
             :src="member.image"
-            width="178px"
-            height="205px"
-            :class="isMobile ? 'mt-0' : member.class"
+            width="150px"
+            height="242px"
+            :class="isMobile ? 'mt-0' : 'mt-4'"
           />
           <ReTitleSpan
             class="primary mt-3 font-semibold"
