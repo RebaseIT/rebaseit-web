@@ -15,33 +15,33 @@ const image = {
 const teamOptions = [
   {
     name: 'Juan Cueli',
-    image: '/images/team/juan-cueli.png',
-    alt: 'juan-cueli',
-    class: 'space-layout-sm'
+    image: '/images/team/juan.png',
+    alt: 'juan',
   },
   {
     name: 'Ezequiel Díaz',
-    image: '/images/team/ezequiel-diaz.png',
-    alt: 'ezequiel-diaz',
-    class: 'space-layout-md'
+    image: '/images/team/ezequiel.png',
+    alt: 'ezequiel',
   },
   {
     name: 'Rodrigo Díaz',
-    image: '/images/team/rodrigo-diaz.png',
-    alt: 'rodrigo-diaz',
-    class: 'space-layout-lg'
+    image: '/images/team/rodrigo.png',
+    alt: 'rodrigo',
   },
   {
     name: 'Martín Urteaga',
-    image: '/images/team/martin-urteaga.png',
-    alt: 'martin-urteaga',
-    class: 'space-layout-md'
+    image: '/images/team/martin.png',
+    alt: 'martin'
   },
   {
     name: 'Jorge Covello',
-    image: '/images/team/jorge-covello.png',
-    alt: 'jorge-covello',
-    class: 'space-layout-smspace-layout-md'
+    image: '/images/team/jorge.png',
+    alt: 'jorge'
+  },
+  {
+    name: 'Martín Lejman',
+    image: '/images/team/martinL.png',
+    alt: 'martinL'
   }
 ];
 
@@ -155,24 +155,25 @@ const polygons = [
       class="flex flex-column pb-8 px-2"
       :class="{ 'px-6': isMobile }"
     >
-      <ReTitleGradient class="align-self-center">
+      <ReTitleGradient class="align-self-center mb-4">
         Conocé a nuestro equipo
       </ReTitleGradient>
       <div
-        class="flex flex-row flex-wrap justify-content-center gap-4 xl:gap-8"
+        class="flex flex-row flex-wrap justify-content-center gap-4 xl:gap-4"
         :class="{ 'mt-6': isMobile }"
       >
         <div
           class="flex flex-column align-items-center w-fit"
+          :class="{ 'mx-8': !isMobile }"
           v-for="(member, index) in teamOptions"
           :key="`member-${index}`"
         >
           <ReImage
             :alt="member.alt"
             :src="member.image"
-            width="178px"
-            height="205px"
-            :class="isMobile ? 'mt-0' : member.class"
+            width="150px"
+            height="242px"
+            :class="isMobile ? 'mt-0' : 'mt-4'"
           />
           <ReTitleSpan
             class="primary mt-3 font-semibold"
