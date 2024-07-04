@@ -27,6 +27,12 @@ const { value: inputValue, errorMessage, handleBlur } = useField(props.id, value
 });
 </script>
 
+<style scoped>
+.resizable-none {
+  resize: none;
+}
+</style>
+
 <template>
   <label :for="id">{{ label }}</label>
   <Textarea
@@ -34,8 +40,8 @@ const { value: inputValue, errorMessage, handleBlur } = useField(props.id, value
     v-model="inputValue"
     rows="4"
     cols="30"
+    class="resizable-none"
     :class="{ 'p-invalid': errorMessage }"
-    style="resize: none;"
     @blur="handleBlur"
     @update:model-value="emit('update:modelValue', $event)"
   />
