@@ -159,7 +159,7 @@ const polygons = [
         Conocé a nuestro equipo
       </ReTitleGradient>
       <div
-        class="flex flex-row flex-wrap justify-content-center gap-4 xl:gap-8"
+        class="flex flex-row flex-wrap justify-content-center gap-4 xl:gap-4"
         :class="{ 'mt-6': isMobile }"
       >
         <div
