@@ -37,6 +37,11 @@ const teamOptions = [
     name: 'Jorge Covello',
     image: '/images/team/jorge.png',
     alt: 'jorge'
+  },
+  {
+    name: 'Martín Lejman',
+    image: '/images/team/martinL.png',
+    alt: 'martinL'
   }
 ];
 
@@ -150,7 +155,7 @@ const polygons = [
       class="flex flex-column pb-8 px-2"
       :class="{ 'px-6': isMobile }"
     >
-      <ReTitleGradient class="align-self-center">
+      <ReTitleGradient class="align-self-center mb-4">
         Conocé a nuestro equipo
       </ReTitleGradient>
       <div
@@ -159,6 +164,7 @@ const polygons = [
       >
         <div
           class="flex flex-column align-items-center w-fit"
+          :class="{ 'mx-8': !isMobile }"
           v-for="(member, index) in teamOptions"
           :key="`member-${index}`"
         >
