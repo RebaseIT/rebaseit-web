@@ -57,7 +57,7 @@ const ourValues = [
 <template>
   <ReSectionContainer background="/images/background/background-2.png">
     <div
-      class="flex flex-column pb-8 px-6"
+      class="flex flex-column pb-8 px-4"
     >
       <ReTitleGradient class="align-self-center">
         Valores que nos definen

@@ -27,7 +27,7 @@ const images = [
     class="pt-8"
   >
     <div
-      class="flex gap-4 py-8 px-6 justify-space-between align-items-center"
+      class="flex gap-4 py-8 px-4 justify-space-between align-items-center"
       :class="{ 'flex-column justify-content-center': isMobile }"
     >
       <div class="flex flex-column gap-4 align-self-start">
@@ -55,7 +55,7 @@ const images = [
   <ReSectionContainer
     bg-color="white"
   >
-    <div class="flex py-8 px-6">
+    <div class="flex py-8 px-4">
       <ReTitleSpan color="black">
         ¿Alguna vez te hackearon o intentaron hackear a alguien de tu organización? En ese caso, ¿qué tan rápido podrían responder? Así como cuando tenemos un auto, contratamos un seguro, en el mundo de la ciberseguridad podés optar por Sherlock: una solución que centraliza y automatiza las tareas de respuesta a incidentes realizadas por los analistas de ciberseguridad. Para más información, escribinos a
         <a href="mailto:sales@rebaseit.tech">
@@ -66,7 +66,7 @@ const images = [
   </ReSectionContainer>
   <ReSectionContainer class="bg-light-blue">
     <div
-      class="flex py-8 px-6 gap-4 flex-wrap justify-space-between"
+      class="flex py-8 px-4 gap-4 flex-wrap justify-space-between"
       :class="{ 'flex-column align-items-center': isMobile }"
     >
       <ReImage

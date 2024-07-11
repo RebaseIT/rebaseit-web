@@ -65,7 +65,7 @@ const recentPosts = ref([
 
 <template>
   <ReSectionContainer background="/images/background/background-2.png">
-    <div class="py-8 px-6">
+    <div class="py-8 px-4">
       <ReTitleGradient>
         Posteos por categoría
       </ReTitleGradient>

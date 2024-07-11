@@ -24,7 +24,7 @@ const items = ref([
   <div class="re-header">
     <Menubar
       :model="items"
-      class="menu-bar px-6"
+      class="menu-bar px-4"
     >
       <template #start>
         <NuxtLink

@@ -105,7 +105,7 @@ const polygons = [
     :image="image"
   />
   <ReSectionContainer background="/images/background/background-2.png">
-    <div class="flex flex-column py-8 px-6">
+    <div class="flex flex-column py-8 px-4">
       <ReTitleGradient
         class="align-self-center"
       >
@@ -188,7 +188,7 @@ const polygons = [
   <OurValues />
   <ReSectionContainer background="/images/background/background-2.png">
     <div
-      class="flex p-6 gap-8 justify-space-between"
+      class="flex p-4 gap-8 justify-space-between"
       :class="{ 'flex-column': isMobile }"
     >
       <div

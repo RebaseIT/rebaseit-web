@@ -17,7 +17,7 @@ const scrollToSection = () => {
     <Title>Home</Title>
   </Head>
   <ReSectionTop>
-    <div class="row px-6 py-8">
+    <div class="row px-4 py-8">
       <div
         class="col-8 pb-0"
         :class="{ 'col-12 text-center': isMobile }"
@@ -93,7 +93,7 @@ const scrollToSection = () => {
     </div>
   </ReSectionTop>
   <ReSectionProducts>
-    <div class="py-8 px-6">
+    <div class="py-8 px-4">
       <ReTitleGradient>
         Nuestros Productos
       </ReTitleGradient>
@@ -103,7 +103,7 @@ const scrollToSection = () => {
     </div>
   </ReSectionProducts>
   <ReSectionClients>
-    <div class="pb-8 px-6">
+    <div class="pb-8 px-4">
       <ReTitleGradient class="flex justify-content-end pt-4 mb-4">
         Nuestros Clientes
       </ReTitleGradient>
@@ -124,7 +124,7 @@ const scrollToSection = () => {
   </ReSectionClients>
   <ReSectionWhatWeDo>
     <div
-      class="row flex py-8 px-6 justify-space-between align-items-center gap-4"
+      class="row flex py-8 px-4 justify-space-between align-items-center gap-4"
       :class="{ 'flex-column justify-center': isMobile }"
     >
       <div

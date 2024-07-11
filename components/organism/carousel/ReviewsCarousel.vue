@@ -12,7 +12,9 @@ const { clientReviews } = useClientReviews()
       circular
     >
       <template #item="slotProps">
-        <div class="border surface-border border-round p-5">
+        <div
+          class="border surface-border border-round pt-6 px-2 pb-0"
+        >
           <ReParagraphSpan
             color="black"
             font-weight

@@ -23,7 +23,7 @@ const image = {
   />
   <ReSectionContainer class="bg-light-blue">
     <div
-      class="flex justify-content-between py-8 px-6 gap-8"
+      class="flex justify-content-between py-8 px-4 gap-8"
       :class="{ 'flex-column align-items-center': isMobile }"
     >
       <div class="flex flex-column justify-space-between gap-3">

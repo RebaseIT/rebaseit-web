@@ -84,7 +84,7 @@ const { isSmaller: isMobile } = useViewport('sm');
 <template>
   <div class="footer py-5">
     <div
-      class="footer-content row flex px-6 gap-4"
+      class="footer-content row flex px-4 gap-4"
       :class="{ 'flex-column': isMobile }"
     >
       <div class="w-full footer-logo-container">
