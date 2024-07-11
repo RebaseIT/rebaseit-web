@@ -109,7 +109,7 @@ const sendEmail = async (formData) => {
 </script>
 <template>
   <ReSectionContainer background="/images/background/background-2.png">
-    <div class="py-8 px-6">
+    <div class="py-8 px-4">
       <div class="w-full">
         <ReTitleGradient> Contactanos </ReTitleGradient>
         <div class="py-4">

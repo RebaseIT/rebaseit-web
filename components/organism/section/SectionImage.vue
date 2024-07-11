@@ -29,7 +29,7 @@ defineProps({
 <template>
   <ReSectionContainer background="/images/background/background-1.png">
     <div
-      class="row flex py-8 px-6 justify-space-between align-items-center gap-4"
+      class="row flex py-8 px-4 justify-space-between align-items-center gap-4"
       :class="{ 'flex-column justify-center': isMobile }"
     >
       <div
