@@ -91,6 +91,9 @@ const items = ref([
     transition: all .5s ease-in-out;
     z-index: 1 !important;
     animation: fadeIn .5s ease-in-out forwards;
+    @media (max-width: 960px) {
+      margin-top: 0px;
+    }
   }
   a {
     text-decoration: none;
@@ -106,6 +109,11 @@ const items = ref([
   &:deep(.p-menuitem-content) {
     border-radius: 8px;
     margin: 0 4px;
+    @media (max-width: 960px) {
+      margin-top: 16px;
+      margin-bottom: 16px;
+      margin-left: 16px;
+    }
     a {
       color: var(--primary-color) !important;
     }
