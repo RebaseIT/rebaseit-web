@@ -1,3 +1,9 @@
 {
-  "test": "Prueba"
+  "test": "Prueba",
+  "header": {
+    "aboutUs": "Conocenos",
+    "projects": "Proyectos",
+    "services": "Servicios",
+    "blog": "Blog"
+  }
 }

@@ -1,23 +1,37 @@
 <script setup>
+const { t, locale } = useI18n()
 const route = useRoute()
 const items = ref([
   {
-    label: 'Conocenos',
+    label: 'header.aboutUs',
     url: '/about-us'
   },
   {
-    label: 'Proyectos',
+    label: 'header.projects',
     url: '/projects'
   },
   {
-    label: 'Servicios',
+    label: 'header.services',
     url: '/services'
   },
   {
-    label: 'Blog',
+    label: 'header.blog',
     url: '/blog'
+  },
+  {
+    src: '/images/flags/Flag_EN.svg',
+    value: 'en'
   }
 ])
+const toggleLanguage = (item) => {
+  const languageMap = {
+    es: { src: '/images/flags/Flag_ES.svg', value: 'es' },
+    en: { src: '/images/flags/Flag_EN.svg', value: 'en' }
+  }
+  const newItems = items.value.filter(i => i.value !== item.value)
+  items.value = [...newItems, languageMap[item.value]]
+  locale.value = item.value
+}
 </script>
 
 <template>
@@ -52,9 +66,17 @@ const items = ref([
             v-bind="props.action"
             @click="navigate"
           >
-            <span>{{ item.label }}</span>
+            <span>{{ t(item.label) }}</span>
           </a>
         </NuxtLink>
+        <ReImage
+          v-else
+          class="cursor-pointer"
+          alt="flag"
+          :src="item.src"
+          max-width="25px"
+          @click="toggleLanguage(item)"
+        />
       </template>
     </Menubar>
   </div>

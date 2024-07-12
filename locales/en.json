@@ -1,3 +1,9 @@
 {
-  "test": "Test"
+  "test": "Test",
+  "header": {
+    "aboutUs": "About us",
+    "projects": "Projects",
+    "services": "Services",
+    "blog": "Blog"
+  }
 }
