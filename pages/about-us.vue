@@ -96,6 +96,24 @@ const polygons = [
     width: '225px',
     top: '280px',
     right: '-20px',
+  },
+  {
+    height: '170px',
+    width: '150px',
+    top: '600px',
+    right: '100px',
+  },
+  {
+    height: '100px',
+    width: '90px',
+    top: '700px',
+    right: '350px',
+  },
+  {
+    height: '90px',
+    width: '80px',
+    top: '840px',
+    right: '250px',
   }
 ]
 </script>
