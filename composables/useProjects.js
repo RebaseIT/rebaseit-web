@@ -69,7 +69,7 @@ export default () => {
         maxWidth: '290px'
       },
       imageContent: {
-        src: '/images/sherlock_2_img.jpg'
+        src: '/images/sherlock_2_img.png'
       },
       route: 'https://www.linkedin.com/company/rebase-it/',
       isInternalProject: true
