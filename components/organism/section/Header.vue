@@ -36,7 +36,15 @@ const items = computed(() => {
     }
   ].map(item => {
     if (item.items) {
-      return item
+      return {
+        ...item,
+        items: item.items.map(subItem => {
+          return {
+            ...subItem,
+            command: () => router.push(subItem.url)
+          }
+        })
+      }
     }
     return {
       ...item,
