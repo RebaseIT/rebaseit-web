@@ -23,7 +23,7 @@ const recentPosts = ref([
     },
     items: [
       {
-        text: '- Si trabajas en RRHH, te invitamos a rellenar una breve encuesta',
+        text: '- Si trabajás en RRHH, te invitamos a rellenar una breve encuesta',
         route: 'https://www.linkedin.com/feed/update/urn:li:activity:7008800849233633280/'
       },
       {

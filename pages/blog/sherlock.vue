@@ -57,7 +57,9 @@ const images = [
   >
     <div class="flex py-8 px-4">
       <ReTitleSpan color="black">
-        ¿Alguna vez te hackearon o intentaron hackear a alguien de tu organización? En ese caso, ¿qué tan rápido podrían responder? Así como cuando tenemos un auto, contratamos un seguro, en el mundo de la ciberseguridad podés optar por Sherlock: una solución que centraliza y automatiza las tareas de respuesta a incidentes realizadas por los analistas de ciberseguridad. Para más información, escribinos a
+        ¿Alguna vez te hackearon o intentaron hackear a alguien de tu organización? En ese caso, ¿qué tan rápido podrían responder? Así como cuando tenemos un auto, contratamos un seguro, en el mundo de la ciberseguridad podés optar por Sherlock: una solución que centraliza y automatiza las tareas de respuesta a incidentes realizadas por los analistas de ciberseguridad. 
+        <br><br>
+        Para más información, escribinos a
         <a href="mailto:sales@rebaseit.tech">
           sales@rebaseit.tech
         </a>

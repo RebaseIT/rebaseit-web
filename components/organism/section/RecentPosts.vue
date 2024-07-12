@@ -12,7 +12,7 @@ const recentPosts = ref([
     route: 'https://www.linkedin.com/posts/rebase-it_security-information-incidentresponse-activity-6994309011672068096-uj3V'
   },
   {
-    title: 'Si trabajas en RRHH, te invitamos a rellenar una breve encuesta',
+    title: 'Si trabajás en RRHH, te invitamos a rellenar una breve encuesta',
     date: '17/03/23',
     image: {
       src: '/images/posts/megaphone.png'

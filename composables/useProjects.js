@@ -51,7 +51,7 @@ export default () => {
       isInternalProject: false
     },
     {
-      content: '¿Alguna vez te han hackeado o has sufrido intentos de hackeo en tu organización?<br><br><b>Sherlock</b> centraliza y automatiza las tareas de respuesta a incidentes, permitiendo a tus analistas de ciberseguridad actuar de manera más rápida y eficiente. Asegura tu tranquilidad con la protección avanzada que solo <b>Sherlock</b> puede ofrecer.',
+      content: '¿Alguna vez te han hackeado o has sufrido intentos de hackeo en tu organización?<br><br><b>Sherlock</b> centraliza y automatiza las tareas de respuesta a incidentes, permitiendo a tus analistas de ciberseguridad actuar de manera más rápida y eficiente. Asegurá tu tranquilidad con la protección avanzada que sólo <b>Sherlock</b> puede ofrecer.',
       image: {
         src: '/images/logo_sherlock_deg.png',
         maxWidth: '290px'

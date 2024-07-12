@@ -54,7 +54,7 @@ const teamOptions = [
 const sectionOptions = [
   {
     title: 'Misión',
-    description: 'Conectar a cada uno de nuestros clientes con la solución mas adecuada para sus necesidades, garantizando la calidad y rentabilidad de las mismas.',
+    description: 'Conectar a cada uno de nuestros clientes con la solución más adecuada para sus necesidades, garantizando la calidad y rentabilidad de las mismas.',
     image: {
       src: '/images/puzzle.png',
       alt: 'puzzle-image',
@@ -63,7 +63,7 @@ const sectionOptions = [
   },
   {
     title: 'Visión',
-    description: 'Convertirnos en una empresa lider del mercado de software a medida, asegurando la calidad en cada uno de nuestros proyectos.',
+    description: 'Convertirnos en una empresa líder del mercado de software a medida, asegurando la calidad en cada uno de nuestros proyectos.',
     image: {
       src: '/images/brujula.png',
       alt: 'brujula-image',
