@@ -71,7 +71,7 @@ const toggleLanguage = (item) => {
         </NuxtLink>
         <ReImage
           v-else
-          class="cursor-pointer language"
+          class="cursor-pointer flag"
           alt="flag"
           :src="item.src"
           max-width="25px"
@@ -128,6 +128,14 @@ const toggleLanguage = (item) => {
   &:deep(.p-icon) {
     transform: scale(1.5);
   }
+  &:deep(.p-menuitem) {
+    .flag {
+      margin-top: 5px;
+      @media (max-width: 960px) {
+        margin-top: 0px;
+      }
+    }
+  }
   &:deep(.p-menuitem-content) {
     border-radius: 8px;
     margin: 0 4px;
@@ -143,7 +151,7 @@ const toggleLanguage = (item) => {
       border-radius: 8px;
       background: var(--third-color) !important;
     }
-    .language {
+    .flag {
       @media (max-width: 960px) {
         margin-left: 20px;
       }
