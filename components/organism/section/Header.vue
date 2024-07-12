@@ -1,28 +1,49 @@
 <script setup>
 const { t, locale } = useI18n()
 const route = useRoute()
-const items = ref([
-  {
-    label: 'header.aboutUs',
-    url: '/about-us'
-  },
-  {
-    label: 'header.projects',
-    url: '/projects'
-  },
-  {
-    label: 'header.services',
-    url: '/services'
-  },
-  {
-    label: 'header.blog',
-    url: '/blog'
-  },
-  {
-    src: '/images/flags/Flag_EN.svg',
-    value: 'en'
-  }
-])
+const router = useRouter()
+const items = computed(() => {
+  return [
+    {
+      label: 'header.aboutUs',
+      url: '/about-us',
+    },
+    {
+      label: 'header.projects',
+      url: '/projects'
+    },
+    {
+      label: 'header.services',
+      items: [
+        {
+          label: 'header.services.frontend',
+          url: '/services/frontend'
+        },
+        {
+          label: 'header.services.backend',
+          url: '/services/backend'
+        }
+      ]
+    },
+    {
+      label: 'header.blog',
+      url: '/blog'
+    },
+    {
+      src: '/images/flags/Flag_EN.svg',
+      isImage: true,
+      value: 'en'
+    }
+  ].map(item => {
+    if (item.items) {
+      return item
+    }
+    return {
+      ...item,
+      command: () => router.push(item.url)
+    }
+  })
+})
 const toggleLanguage = (item) => {
   const languageMap = {
     en: { src: '/images/flags/Flag_ES.svg', value: 'es' },
@@ -53,30 +74,30 @@ const toggleLanguage = (item) => {
           />
         </NuxtLink>
       </template>
-      <template #item="{ item, props }">
-        <NuxtLink
-          v-if="item.url"
-          v-slot="{ href, navigate }"
-          :to="item.url"
-          custom
-        >
-          <a
-            :class="{ 'current-page': item.url === route.path }"
-            :href="href"
-            v-bind="props.action"
-            @click="navigate"
-          >
-            <span>{{ t(item.label) }}</span>
-          </a>
-        </NuxtLink>
+      <template #item="{ item, hasSubmenu }">
         <ReImage
-          v-else
-          class="cursor-pointer flag"
+          v-if="item.isImage"
+          class="flag"
           alt="flag"
           :src="item.src"
           max-width="25px"
           @click="toggleLanguage(item)"
         />
+        <template v-else-if="hasSubmenu">
+          <div class="d-flex align-items-center">
+            <div>
+              {{ t(item.label) }}
+            </div>
+            <i class="pi menu-bar__dropdown-icon--down pi-angle-down ml-2" />
+            <i class="pi menu-bar__dropdown-icon--up pi-angle-up ml-2" />
+          </div>
+        </template>
+        <span
+          v-else
+          :class="{ 'current-page': item.url === route.path }"
+        >
+          <span>{{ t(item.label) }}</span>
+        </span>
       </template>
     </Menubar>
   </div>
@@ -95,10 +116,53 @@ const toggleLanguage = (item) => {
   z-index: 100;
   height: 82px;
 }
-.menu-bar:deep(.p-menubar-root-list > .p-menuitem:not(.p-highlight):not(.p-disabled) .p-menuitem-link:hover) {
-  background: #e9ecef;
-  border-radius: 8px;
+.menu-bar {
+  :deep(li) {
+    cursor: pointer;
+  }
+  :deep(.p-menuitem-link) {
+    padding: 0 !important;
+  }
+  :deep(.p-submenu-list) {
+    position: absolute;
+    background-color: var(--surface-b);
+    margin-top: 12px;
+    border-radius: 8px;
+    width: initial;
+    .p-menuitem {
+      list-style-type: none;
+    }
+    .p-menuitem-link {
+      padding: 0 !important;
+    }
+  }
+  &:deep(.p-menuitem-content) {
+    border-radius: 8px;
+    padding: 0.75rem 1.25rem;
+    color: var(--primary-color) !important;
+    & span {
+      color: var(--primary-color) !important;
+    }
+  }
+  &:deep(.p-menubar-root-list > .p-menuitem-content:hover) {
+    background: #e9ecef;
+  }
+  &:deep(.p-menubar-root-list > .p-menuitem:not(.p-highlight):not(.p-disabled) .p-menuitem-content:hover) {
+    background: #e9ecef;
+    border-radius: 8px;
+  }
+  &:deep(.p-menuitem-content:has(.current-page)) {
+    border-radius: 8px;
+    background: var(--third-color) !important;
+  }
+  &:deep(.p-menuitem-active .menu-bar__dropdown-icon--down){
+    display: none;
+  }
+  &:deep(.p-menuitem:not(.p-menuitem-active ) .menu-bar__dropdown-icon--up){
+    display: none;
+  }
 }
+
 .menu-bar {
   display: flex;
   align-items: center;
@@ -144,22 +208,10 @@ const toggleLanguage = (item) => {
       margin-bottom: 16px;
       margin-left: 16px;
     }
-    a {
-      color: var(--primary-color) !important;
-    }
-    .current-page {
-      border-radius: 8px;
-      background: var(--third-color) !important;
-    }
     .flag {
       @media (max-width: 960px) {
         margin-left: 20px;
       }
-    }
-  }
-  &:deep(.p-focus) {
-    > .p-menuitem-content {
-      background-color: white !important;
     }
   }
   &:deep(.p-menubar-button) {
