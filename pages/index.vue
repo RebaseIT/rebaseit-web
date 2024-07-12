@@ -76,9 +76,10 @@ const scrollToSection = () => {
           font-size="lg"
           font-weight="400"
         >
-          Rebase IT se especializa en software y servicios de consultoría.
-          Combinamos habilidades de diseño, ingeniería y operacionales
-          para dar a nuestros clientes el mejor servicio posible.
+          En Rebase IT nos especializamos en desarrollo e implementación de SW a medida 
+          y servicios de consultoría. Aprovechando nuestro amplio abanico de habilidades 
+          interdisciplinarias, recurrimos a nuestra experiencia en diseño, ingeniería y 
+          operaciones, para brindarles a nuestros clientes el servicio de calidad que merecen.
         </ReTitleSpan>
       </div>
       <div
