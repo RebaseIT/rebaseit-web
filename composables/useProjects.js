@@ -51,7 +51,7 @@ export default () => {
       isInternalProject: false
     },
     {
-      content: '¿Alguna vez te han hackeado o has sufrido intentos de hackeo en tu organización?<br><br>Protege tu información con <b>Sherlock</b>, la solución de vanguardia en ciberseguridad. <b>Sherlock</b> centraliza y automatiza las tareas de respuesta a incidentes, permitiendo a tus analistas de ciberseguridad actuar de manera más rápida y eficiente. Asegura tu tranquilidad con la protección avanzada que solo <b>Sherlock</b> puede ofrecer.',
+      content: '¿Alguna vez te han hackeado o has sufrido intentos de hackeo en tu organización?<br><br><b>Sherlock</b> centraliza y automatiza las tareas de respuesta a incidentes, permitiendo a tus analistas de ciberseguridad actuar de manera más rápida y eficiente. Asegura tu tranquilidad con la protección avanzada que solo <b>Sherlock</b> puede ofrecer.',
       image: {
         src: '/images/logo_sherlock_deg.png',
         maxWidth: '290px'
@@ -63,7 +63,7 @@ export default () => {
       isInternalProject: true
     },
     {
-      content: 'El proceso de contratación y la gestión de datos de un gran volumen de candidatos puede ser caótico y confuso.<br><br><b>Rebase Connect</b> es una aplicación de análisis de datos diseñada específicamente para reclutadores. Con nuestra solución podrás estandarizar la información, realizar un seguimiento de las búsquedas y generar indicadores de métricas clave. Simplifica tu proceso de contratación y toma decisiones más informadas con <b>Rebase Connect</b>.',
+      content: 'El proceso de contratación y la gestión de datos de un gran volumen de candidatos puede ser caótico y confuso.<br><br><b>Rebase Connect</b> es una aplicación de análisis de datos diseñada específicamente para reclutadores. Con nuestra solución podrás estandarizar la información, realizar un seguimiento de las búsquedas y generar indicadores de métricas clave.',
       image: {
         src: '/images/reconnect.png',
         maxWidth: '290px'

@@ -141,7 +141,7 @@ const scrollToSection = () => {
             font-weight="400"
           >
             En RebaseIT nos especializamos en múltiples frentes, manteniéndonos en la vanguardia
-            de la industria y ofreciendo así el más amplio abanico de soluciones para cada caso.
+            de la industria y ofreciendo el más amplio abanico de soluciones para cada caso.
           </ReTitleSpan>
         </div>
       </div>

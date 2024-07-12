@@ -25,14 +25,17 @@ const projectsToShow = projects.filter(project => project.content && project.isI
           </div>
         </template>
         <div
-          class="flex justify-content-center align-items-center lg:p-4 gap-5"
+          class="flex align-items-center lg:p-4"
           :class="{ 'flex-column p-1': isMobile }"
         >
           <img
-            class="content-img"
+            class="content-img gray-border"
             :src="projectToShow.imageContent.src"
           >
-          <div class="max-w-24rem">
+          <div
+            class="max-w-24rem"
+            :class="isMobile ? 'ml-0 mt-4' : 'ml-6'"
+          >
             <span v-html="projectToShow.content" />
           </div>
         </div>
@@ -43,6 +46,9 @@ const projectsToShow = projects.filter(project => project.content && project.isI
 
 
 <style scoped lang="scss">
+.gray-border {
+  border: 1px solid #E0E2F5;
+}
 .container {
   max-width: 1320px;
   margin: 0 auto;

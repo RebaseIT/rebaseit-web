@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const title = 'Nuestros servicios';
-const subtitle = '<b>Rebase IT</b> cuenta con un amplio repertorio de especialidades, dando así la atención más completa y la solución indicada para tus necesidades.';
+const subtitle = 'Contamos con un amplio repertorio de especialidades, garantizando una atención integral y soluciones precisas para todas tus necesidades. Tenemos experiencia en diversas áreas del mundo de la tecnología: diseño y desarrollo web y mobile, infraestructura, ciberseguridad, inteligencia artificial, gestión de proyectos y staff augmentation recruitment.';
 const image = {
   src: '/images/gears.png',
   alt: 'gears-image',
