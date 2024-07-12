@@ -25,12 +25,12 @@ const items = ref([
 ])
 const toggleLanguage = (item) => {
   const languageMap = {
-    es: { src: '/images/flags/Flag_ES.svg', value: 'es' },
-    en: { src: '/images/flags/Flag_EN.svg', value: 'en' }
+    en: { src: '/images/flags/Flag_ES.svg', value: 'es' },
+    es: { src: '/images/flags/Flag_EN.svg', value: 'en' }
   }
   const newItems = items.value.filter(i => i.value !== item.value)
   items.value = [...newItems, languageMap[item.value]]
-  locale.value = item.value
+  locale.value = languageMap[item.value].value
 }
 </script>
 
