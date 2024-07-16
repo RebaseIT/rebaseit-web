@@ -15,18 +15,20 @@ const menuItems = ref([
   },
   {
     label: 'header.services',
-    items: [
-      {
-        label: 'header.servicesSubTitles.frontend',
-        url: '/services/frontend',
-        command: () => router.push('/services/frontend')
-      },
-      {
-        label: 'header.servicesSubTitles.backend',
-        url: '/services/backend',
-        command: () => router.push('/services/backend')
-      }
-    ]
+    url: '/services',
+    command: () => router.push('/services')
+    // items: [
+    //   {
+    //     label: 'header.servicesSubTitles.frontend',
+    //     url: '/services/frontend',
+    //     command: () => router.push('/services/frontend')
+    //   },
+    //   {
+    //     label: 'header.servicesSubTitles.backend',
+    //     url: '/services/backend',
+    //     command: () => router.push('/services/backend')
+    //   }
+    // ]
   },
   {
     label: 'header.blog',
