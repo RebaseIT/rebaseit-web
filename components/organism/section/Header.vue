@@ -137,6 +137,13 @@ const toggleLanguage = (item) => {
     margin-top: 12px;
     border-radius: 8px;
     width: initial;
+    @media (max-width: 960px) {
+      position: relative;
+      margin-top: 0px;
+      margin-bottom: 16px;
+      margin-left: 16px;
+      margin-right: 16px;
+    }
     .p-menuitem {
       list-style-type: none;
     }
@@ -215,6 +222,7 @@ const toggleLanguage = (item) => {
       margin-top: 16px;
       margin-bottom: 16px;
       margin-left: 16px;
+      margin-right: 16px;
     }
     .flag {
       @media (max-width: 960px) {
