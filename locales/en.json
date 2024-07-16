@@ -4,6 +4,10 @@
     "aboutUs": "About us",
     "projects": "Projects",
     "services": "Services",
+    "servicesSubTitles": {
+      "frontend": "Frontend",
+      "backend": "Backend"
+    },
     "blog": "Blog"
   }
 }

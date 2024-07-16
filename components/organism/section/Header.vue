@@ -2,63 +2,50 @@
 const { t, locale } = useI18n()
 const route = useRoute()
 const router = useRouter()
-const items = computed(() => {
-  return [
-    {
-      label: 'header.aboutUs',
-      url: '/about-us',
-    },
-    {
-      label: 'header.projects',
-      url: '/projects'
-    },
-    {
-      label: 'header.services',
-      items: [
-        {
-          label: 'header.services.frontend',
-          url: '/services/frontend'
-        },
-        {
-          label: 'header.services.backend',
-          url: '/services/backend'
-        }
-      ]
-    },
-    {
-      label: 'header.blog',
-      url: '/blog'
-    },
-    {
-      src: '/images/flags/Flag_EN.svg',
-      isImage: true,
-      value: 'en'
-    }
-  ].map(item => {
-    if (item.items) {
-      return {
-        ...item,
-        items: item.items.map(subItem => {
-          return {
-            ...subItem,
-            command: () => router.push(subItem.url)
-          }
-        })
+const menuItems = ref([
+  {
+    label: 'header.aboutUs',
+    url: '/about-us',
+    command: () => router.push('/about-us')
+  },
+  {
+    label: 'header.projects',
+    url: '/projects',
+    command: () => router.push('/projects')
+  },
+  {
+    label: 'header.services',
+    items: [
+      {
+        label: 'header.servicesSubTitles.frontend',
+        url: '/services/frontend',
+        command: () => router.push('/services/frontend')
+      },
+      {
+        label: 'header.servicesSubTitles.backend',
+        url: '/services/backend',
+        command: () => router.push('/services/backend')
       }
-    }
-    return {
-      ...item,
-      command: () => router.push(item.url)
-    }
-  })
-})
+    ]
+  },
+  {
+    label: 'header.blog',
+    url: '/blog',
+    command: () => router.push('/blog')
+  },
+  {
+    src: '/images/flags/Flag_EN.svg',
+    isImage: true,
+    value: 'en'
+  }
+])
 const toggleLanguage = (item) => {
   const languageMap = {
-    en: { src: '/images/flags/Flag_ES.svg', value: 'es' },
-    es: { src: '/images/flags/Flag_EN.svg', value: 'en' }
+    en: { src: '/images/flags/Flag_ES.svg', value: 'es', isImage: true },
+    es: { src: '/images/flags/Flag_EN.svg', value: 'en', isImage: true }
   }
-  const newItems = items.value.filter(i => i.value !== item.value)
-  items.value = [...newItems, languageMap[item.value]]
+  const newItems = menuItems.value.filter(i => i.value !== item.value)
+  menuItems.value = [...newItems, languageMap[item.value]]
   locale.value = languageMap[item.value].value
 }
 </script>
@@ -66,7 +53,7 @@ const toggleLanguage = (item) => {
 <template>
   <div class="re-header">
     <Menubar
-      :model="items"
+      :model="menuItems"
       class="menu-bar px-4"
     >
       <template #start>

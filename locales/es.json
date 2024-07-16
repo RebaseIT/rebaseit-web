@@ -4,6 +4,10 @@
     "aboutUs": "Conocenos",
     "projects": "Proyectos",
     "services": "Servicios",
+    "servicesSubTitles": {
+      "frontend": "Frontend",
+      "backend": "Backend"
+    },
     "blog": "Blog"
   }
 }
