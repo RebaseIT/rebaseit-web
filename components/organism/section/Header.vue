@@ -79,12 +79,14 @@ const toggleLanguage = (item) => {
           @click="toggleLanguage(item)"
         />
         <template v-else-if="hasSubmenu">
-          <div class="d-flex align-items-center">
+          <div class="d-flex align-items-center justify-space-between">
             <div>
               {{ t(item.label) }}
             </div>
-            <i class="pi menu-bar__dropdown-icon--down pi-angle-down ml-2" />
-            <i class="pi menu-bar__dropdown-icon--up pi-angle-up ml-2" />
+            <div>
+              <i class="pi menu-bar__dropdown-icon--down pi-angle-down ml-2" />
+              <i class="pi menu-bar__dropdown-icon--up pi-angle-up ml-2" />
+            </div>
           </div>
         </template>
         <span
@@ -210,11 +212,6 @@ const toggleLanguage = (item) => {
       margin-bottom: 16px;
       margin-left: 16px;
       margin-right: 16px;
-    }
-    .flag {
-      @media (max-width: 960px) {
-        margin-left: 20px;
-      }
     }
   }
   &:deep(.p-menubar-button) {
