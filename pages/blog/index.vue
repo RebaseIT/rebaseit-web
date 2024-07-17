@@ -13,7 +13,7 @@ const image = {
 
 <template>
   <Head>
-    <Title>Blog</Title>
+    <Title>Blog | Rebase IT</Title>
   </Head>
   <SectionImage
     class="pt-8"

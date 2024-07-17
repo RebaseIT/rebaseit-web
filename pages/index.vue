@@ -14,7 +14,7 @@ const scrollToSection = () => {
 
 <template>
   <Head>
-    <Title>Home</Title>
+    <Title>Home | Rebase IT</Title>
   </Head>
   <ReSectionTop>
     <div class="row px-4 py-8">

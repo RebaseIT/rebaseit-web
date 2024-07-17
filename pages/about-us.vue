@@ -120,7 +120,7 @@ const polygons = [
 
 <template>
   <Head>
-    <Title>Nosotros</Title>
+    <Title>Nosotros | Rebase IT</Title>
   </Head>
   <SectionImage
     class="pt-8"

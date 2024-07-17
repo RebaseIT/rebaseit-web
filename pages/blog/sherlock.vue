@@ -20,7 +20,7 @@ const images = [
 </script>
 <template>
   <Head>
-    <Title>Sherlock</Title>
+    <Title>Sherlock | Rebase IT</Title>
   </Head>
   <ReSectionContainer
     background="/images/background/background-1.png"
