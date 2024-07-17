@@ -1,6 +1,6 @@
 <script setup>
 import { useViewport } from '~/composables/useViewport';
-
+const { t } = useI18n()
 const { isSmaller: isMobile } = useViewport('lg');
 const { projects } = useProjects()
 const projectsToShow = projects.filter(project => project.content)
@@ -63,7 +63,9 @@ const updateMiddleIndex = (event) => {
               font-weight
               class="flex justify-content-center"
             >
-              <span v-html="slotProps.data.content" />
+              <span class="add-white-spaces">
+                {{ t(slotProps.data.content) }}
+              </span>
             </ReParagraphSpan>
           </template>
           <template #footer>
@@ -86,6 +88,9 @@ const updateMiddleIndex = (event) => {
 </template>
 
 <style lang="scss" scoped>
+.add-white-spaces{
+  white-space: pre-line;
+}
 .button-link:deep(.p-button-label) {
   text-decoration: underline;
 }
