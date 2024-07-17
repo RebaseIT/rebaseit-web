@@ -90,6 +90,15 @@ const scrollToSection = () => {
           @click="scrollToSection"
           label="Contactanos"
         />
+        <NuxtLink to="/services">
+          <ReButton
+            severity="info"
+            outlined
+            type="text"
+            label="Conocé nuestros servicios"
+            class="ml-2"
+          />
+        </NuxtLink>
       </div>
     </div>
   </ReSectionTop>
@@ -143,6 +152,15 @@ const scrollToSection = () => {
             En RebaseIT nos especializamos en múltiples frentes, manteniéndonos en la vanguardia
             de la industria y ofreciendo el más amplio abanico de soluciones para cada caso.
           </ReTitleSpan>
+          <div>
+            <NuxtLink to="/services">
+              <ReButton
+                type="text"
+                label="Conocé nuestros servicios"
+                class="mt-4 mb-8"
+              />
+            </NuxtLink>
+          </div>
         </div>
       </div>
       <div class="flex">
