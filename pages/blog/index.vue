@@ -3,7 +3,7 @@ import { useViewport } from "~/composables/useViewport";
 
 const { isSmaller: isMobile } = useViewport('lg');
 const title = 'Publicaciones';
-const subtitle = 'Enterate de todas las noticias que Rebase IT tiene para vos.';
+const subtitle = 'Enterate de todas las noticias y artículos que Rebase IT tiene para vos.';
 const image = {
   src: '/images/news.png',
   alt: 'news-image',
@@ -13,7 +13,7 @@ const image = {
 
 <template>
   <Head>
-    <Title>Blog</Title>
+    <Title>Blog | Rebase IT</Title>
   </Head>
   <SectionImage
     class="pt-8"
