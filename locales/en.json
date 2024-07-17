@@ -17,12 +17,27 @@
     "ourProducts": "Our Products",
     "ourClients": "Our Clients",
     "whatWeDo": "What we do?",
-    "whatWeDoDetails": "At Rebase IT we specialize on multiple fronts, staying at the forefront of the industry and offering the widest range of solutions for each case.",
-    "getInTouchShortly": "We will get in touch shortly."
+    "whatWeDoDetails": "At Rebase IT we specialize on multiple fronts, staying at the forefront of the industry and offering the widest range of solutions for each case."
   },
   "products": {
     "nineContent": "We carried out the configuration process of our client Nine Shopping's digital LED lighting management system, so that they could celebrate the holidays in the best way.",
     "sherlockContent": "Have you ever been hacked or suffered hacking attempts in your organization?<br><br><b>Sherlock</b> centralizes and automates incident response tasks, allowing your cybersecurity analysts to faster and more efficiently. Ensure your peace of mind with the advanced protection that only <b>Sherlock</b> can offer.",
     "reconnectContent": "The hiring process and data management of a high volume of candidates can be chaotic and confusing.<br><br><b>Rebase Connect</b> is a data analytics application designed specifically for recruiters. With our solution you will be able to standardize information, track searches and generate key metrics indicators."
+  },
+  "contactUs": {
+    "name": "Name *",
+    "lastName": "Last name *",
+    "email": "E-mail *",
+    "phone": "Phone number",
+    "message": "Leave a message *",
+    "send": "Send",
+    "orMessageTo": "Or send us a message to: ",
+    "getInTouchShortly": "We will get in touch shortly."
+  },
+  "clientReviews": {
+    "giancolaContent": "Thanks to the reservation system developed by Rebase IT, we manage all the requests of our clients without complications. Our clients even thank us for the ease when reserving their rooms at the hotel.",
+    "giancolaTitle": "Sales Manager",
+    "solangeContent": "They did an excellent job! They are super committed professionals, with a strong orientation towards resolution and adaptation to changes in order to meet their client.",
+    "solangeTitle": "Scrum Master"
   }
 }

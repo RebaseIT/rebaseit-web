@@ -3,16 +3,17 @@ import { useViewport } from '~/composables/useViewport';
 import { useToast } from 'primevue/usetoast';
 import { isRequired, biggerThan, isValidEmail, isValidPhone } from '~/constants/fieldErrors';
 
+const { t } = useI18n()
 const { isSmaller: isMobile } = useViewport('lg');
 const router = useRouter();
 const toast = useToast();
 
-const fields = [
+const fields = ref([
   {
     model: 'name',
     id: 'name',
     type: 'text',
-    label: 'Nombre *',
+    label: 'contactUs.name',
     validators: [
       isRequired,
       biggerThan(3)
@@ -22,7 +23,7 @@ const fields = [
     model: 'lastName',
     id: 'lastName',
     type: 'text',
-    label: 'Apellido *',
+    label: 'contactUs.lastName',
     validators: [
       isRequired,
       biggerThan(3)
@@ -32,7 +33,7 @@ const fields = [
     model: 'email',
     id: 'email',
     type: 'text',
-    label: 'Dirección de E-mail *',
+    label: 'contactUs.email',
     validators: [
       isRequired,
       isValidEmail
@@ -42,7 +43,7 @@ const fields = [
     model: 'phone',
     id: 'phone',
     type: 'text',
-    label: 'Número de Teléfono',
+    label: 'contactUs.phone',
     validators: [
       isValidPhone
     ]
@@ -51,13 +52,13 @@ const fields = [
     model: 'message',
     id: 'message',
     type: 'textarea',
-    label: 'Deja tu mensaje *',
+    label: 'contactUs.message',
     validators: [
       isRequired,
       biggerThan(10)
     ]
   }
-];
+]);
 const sendEmail = async (formData) => {
   const template = `
     <div>
@@ -111,13 +112,13 @@ const sendEmail = async (formData) => {
   <ReSectionContainer background="/images/background/background-2.png">
     <div class="py-8 px-4">
       <div class="w-full">
-        <ReTitleGradient> Contactanos </ReTitleGradient>
+        <ReTitleGradient> {{ t('homePage.contactUs') }} </ReTitleGradient>
         <div class="py-4">
           <ReParagraphSpan
             big-text
             color="black"
           >
-            Nos comunicaremos en breve.
+            {{ t('contactUs.getInTouchShortly') }}
           </ReParagraphSpan>
         </div>
       </div>
@@ -140,7 +141,7 @@ const sendEmail = async (formData) => {
               />
               <div class="pt-3">
                 <ReParagraphSpan class="primary">
-                  <b>O envianos un mensaje a: </b>
+                  <b>{{ t('contactUs.orMessageTo') }}</b>
                 </ReParagraphSpan>
                 <ReParagraphSpan color="black">
                   <b><a href="mailto:sales@rebaseit.tech">sales@rebaseit.tech</a></b>
