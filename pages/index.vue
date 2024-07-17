@@ -94,7 +94,6 @@ const scrollToSection = () => {
           <ReButton
             severity="info"
             outlined
-            type="text"
             label="Conocé nuestros servicios"
             class="ml-2"
           />
@@ -155,7 +154,6 @@ const scrollToSection = () => {
           <div>
             <NuxtLink to="/services">
               <ReButton
-                type="text"
                 label="Conocé nuestros servicios"
                 class="mt-4 mb-8"
               />
