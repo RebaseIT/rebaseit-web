@@ -1,7 +1,7 @@
 export default () => {
   const projects = [
     {
-      content: 'Realizamos el proceso de configuración del sistema de administración digital de iluminación LED de nuestro cliente Nine Shopping, para que puedan celebrar las fiestas de la mejor manera.',
+      content: 'products.nineContent',
       image: {
         src: "/images/clients/nineAzul.png",
         alt: "nineAzul",
@@ -51,7 +51,7 @@ export default () => {
       isInternalProject: false
     },
     {
-      content: '¿Alguna vez te han hackeado o has sufrido intentos de hackeo en tu organización?<br><br><b>Sherlock</b> centraliza y automatiza las tareas de respuesta a incidentes, permitiendo a tus analistas de ciberseguridad actuar de manera más rápida y eficiente. Asegurá tu tranquilidad con la protección avanzada que sólo <b>Sherlock</b> puede ofrecer.',
+      content: 'products.sherlockContent',
       image: {
         src: '/images/logo_sherlock_deg.png',
         maxWidth: '290px'
@@ -63,7 +63,7 @@ export default () => {
       isInternalProject: true
     },
     {
-      content: 'El proceso de contratación y la gestión de datos de un gran volumen de candidatos puede ser caótico y confuso.<br><br><b>Rebase Connect</b> es una aplicación de análisis de datos diseñada específicamente para reclutadores. Con nuestra solución podrás estandarizar la información, realizar un seguimiento de las búsquedas y generar indicadores de métricas clave.',
+      content: 'products.reconnectContent',
       image: {
         src: '/images/reconnect.png',
         maxWidth: '290px'

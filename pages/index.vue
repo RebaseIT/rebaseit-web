@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useViewport } from "~/composables/useViewport";
 
+const { t } = useI18n()
 const { isSmaller: isMobile } = useViewport('xl');
 const { projects } = useProjects()
 const externalProjectsLogos = projects.filter(project => !project.isInternalProject).map(projectLogo => projectLogo.image)
@@ -76,10 +77,7 @@ const scrollToSection = () => {
           font-size="lg"
           font-weight="400"
         >
-          En Rebase IT nos especializamos en desarrollo e implementación de SW a medida 
-          y servicios de consultoría. Aprovechando nuestro amplio abanico de habilidades 
-          interdisciplinarias, recurrimos a nuestra experiencia en diseño, ingeniería y 
-          operaciones, para brindarles a nuestros clientes el servicio de calidad que merecen.
+          {{ t('homePage.welcomeMessage') }}
         </ReTitleSpan>
       </div>
       <div
@@ -88,14 +86,14 @@ const scrollToSection = () => {
       >
         <ReButton
           @click="scrollToSection"
-          label="Contactanos"
+          :label="t('homePage.contactUs')"
         />
         <NuxtLink to="/services">
           <ReButton
             severity="info"
             outlined
             type="text"
-            label="Conocé nuestros servicios"
+            :label="t('homePage.knowOurServices')"
             class="ml-2"
           />
         </NuxtLink>
@@ -105,7 +103,7 @@ const scrollToSection = () => {
   <ReSectionProducts>
     <div class="py-8 px-4">
       <ReTitleGradient>
-        Nuestros Productos
+        {{ t('homePage.ourProducts') }}
       </ReTitleGradient>
       <div class="py-4">
         <ServicesTabView />
@@ -115,7 +113,7 @@ const scrollToSection = () => {
   <ReSectionClients>
     <div class="pb-8 px-4">
       <ReTitleGradient class="flex justify-content-end pt-4 mb-4">
-        Nuestros Clientes
+        {{ t('homePage.ourClients') }}
       </ReTitleGradient>
       <div
         class="text-center"
@@ -141,7 +139,7 @@ const scrollToSection = () => {
         :class="{ 'col-6': !isMobile, 'col-12': isMobile }"
       >
         <ReTitleGradient>
-          ¿Qué hacemos?
+          {{ t('homePage.whatWeDo') }}
         </ReTitleGradient>
         <div class="mt-3">
           <ReTitleSpan
@@ -149,14 +147,13 @@ const scrollToSection = () => {
             font-size="lg"
             font-weight="400"
           >
-            En RebaseIT nos especializamos en múltiples frentes, manteniéndonos en la vanguardia
-            de la industria y ofreciendo el más amplio abanico de soluciones para cada caso.
+            {{ t('homePage.whatWeDoDetails') }}
           </ReTitleSpan>
           <div>
             <NuxtLink to="/services">
               <ReButton
                 type="text"
-                label="Conocé nuestros servicios"
+                :label="t('homePage.knowOurServices')"
                 class="mt-4 mb-8"
               />
             </NuxtLink>

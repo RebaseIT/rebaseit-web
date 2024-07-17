@@ -2,7 +2,7 @@
 import { useViewport } from '~/composables/useViewport';
 
 const { isSmaller: isMobile } = useViewport('md');
-
+const { t } = useI18n()
 const { projects } = useProjects()
 const projectsToShow = projects.filter(project => project.content && project.isInternalProject)
 </script>
@@ -36,7 +36,7 @@ const projectsToShow = projects.filter(project => project.content && project.isI
             class="max-w-24rem"
             :class="isMobile ? 'ml-0 mt-4' : 'ml-6'"
           >
-            <span v-html="projectToShow.content" />
+            <span v-html="t(projectToShow.content)" />
           </div>
         </div>
       </TabPanel>

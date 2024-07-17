@@ -9,5 +9,20 @@
       "backend": "Backend"
     },
     "blog": "Blog"
+  },
+  "homePage": {
+    "welcomeMessage": "En Rebase IT nos especializamos en desarrollo e implementación de SW a medida y servicios de consultoría. Aprovechando nuestro amplio abanico de habilidades interdisciplinarias, recurrimos a nuestra experiencia en diseño, ingeniería y operaciones, para brindarles a nuestros clientes el servicio de calidad que merecen.",
+    "contactUs": "Contactanos",
+    "knowOurServices": "Conocé nuestros servicios",
+    "ourProducts": "Nuestros Productos",
+    "ourClients": "Nuestros Clientes",
+    "whatWeDo": "¿Qué hacemos?",
+    "whatWeDoDetails": "En RebaseIT nos especializamos en múltiples frentes, manteniéndonos en la vanguardia de la industria y ofreciendo el más amplio abanico de soluciones para cada caso.",
+    "getInTouchShortly": "Nos comunicaremos en breve."
+  },
+  "products": {
+    "nineContent": "Realizamos el proceso de configuración del sistema de administración digital de iluminación LED de nuestro cliente Nine Shopping, para que pudieran celebrar las fiestas de la mejor manera.",
+    "sherlockContent": "¿Alguna vez te han hackeado o has sufrido intentos de hackeo en tu organización?<br><br><b>Sherlock</b> centraliza y automatiza las tareas de respuesta a incidentes, permitiendo a tus analistas de ciberseguridad actuar de manera más rápida y eficiente. Asegurá tu tranquilidad con la protección avanzada que sólo <b>Sherlock</b> puede ofrecer.",
+    "reconnectContent": "El proceso de contratación y la gestión de datos de un gran volumen de candidatos puede ser caótico y confuso.<br><br><b>Rebase Connect</b> es una aplicación de análisis de datos diseñada específicamente para reclutadores. Con nuestra solución podrás estandarizar la información, realizar un seguimiento de las búsquedas y generar indicadores de métricas clave."
   }
 }
