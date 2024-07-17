@@ -89,10 +89,7 @@ const scrollToSection = () => {
           :label="t('homePage.contactUs')"
         />
         <NuxtLink to="/services">
-          <ReButton
-            severity="info"
-            outlined
-            type="text"
+          <ReSecondaryButton
             :label="t('homePage.knowOurServices')"
             class="ml-2"
           />
@@ -152,7 +149,6 @@ const scrollToSection = () => {
           <div>
             <NuxtLink to="/services">
               <ReButton
-                type="text"
                 :label="t('homePage.knowOurServices')"
                 class="mt-4 mb-8"
               />
