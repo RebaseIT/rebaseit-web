@@ -48,7 +48,9 @@ defineProps({
             font-size="lg"
             font-weight="400"
           >
-            <span v-html="subtitle" />
+            <span>
+              {{ subtitle }}
+            </span>
           </ReTitleSpan>
         </div>
       </div>
