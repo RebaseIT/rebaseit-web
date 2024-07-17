@@ -51,25 +51,25 @@ export default () => {
       isInternalProject: false
     },
     {
-      content: '¿Alguna vez te hackearon o intentaron hackear a alguien de tu organización? Cuando se trata de ciberseguridad, podés optar por <b>Sherlock</b>: una solución que centraliza y automatiza las tareas de respuesta a incidentes realizadas por los analistas de ciberseguridad.',
+      content: '¿Alguna vez te han hackeado o has sufrido intentos de hackeo en tu organización?<br><br><b>Sherlock</b> centraliza y automatiza las tareas de respuesta a incidentes, permitiendo a tus analistas de ciberseguridad actuar de manera más rápida y eficiente. Asegurá tu tranquilidad con la protección avanzada que sólo <b>Sherlock</b> puede ofrecer.',
       image: {
         src: '/images/logo_sherlock_deg.png',
         maxWidth: '290px'
       },
       imageContent: {
-        src: '/images/sherlock_img.jpg'
+        src: '/images/sherlock_img.png'
       },
       route: 'https://www.linkedin.com/posts/rebase-it_security-information-incidentresponse-activity-6994309011672068096-uj3V',
       isInternalProject: true
     },
     {
-      content: '<b>Rebase Connect</b> es una aplicación de análisis de datos dedicada a los contratadores, encargándose de la <b>estandarización</b> de información, <b>seguimiento</b> de búsquedas, e <b>indicadores</b> de métricas.',
+      content: 'El proceso de contratación y la gestión de datos de un gran volumen de candidatos puede ser caótico y confuso.<br><br><b>Rebase Connect</b> es una aplicación de análisis de datos diseñada específicamente para reclutadores. Con nuestra solución podrás estandarizar la información, realizar un seguimiento de las búsquedas y generar indicadores de métricas clave.',
       image: {
         src: '/images/reconnect.png',
         maxWidth: '290px'
       },
       imageContent: {
-        src: '/images/sherlock_2_img.jpg'
+        src: '/images/sherlock_2_img.png'
       },
       route: 'https://www.linkedin.com/company/rebase-it/',
       isInternalProject: true

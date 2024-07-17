@@ -5,7 +5,7 @@ const { isSmaller: isMobile } = useViewport('lg');
 const { isGreaterOrEqual: showPolygon } = useViewport('xl');
 
 const title = 'Somos RebaseIT';
-const subtitle = 'Conectamos a cada uno de nuestros clientes con la solución más adecuada para sus necesidades, garantizando siempre calidad y rentabilidad.';
+const subtitle = 'Nuestro equipo formado por profesionales dedicados y experimentados, combina talento, experiencia y creatividad para encontrar la solución perfecta para cada cliente.';
 const image = {
   src: '/images/id.png',
   alt: 'id-image',
@@ -15,31 +15,37 @@ const image = {
 const teamOptions = [
   {
     name: 'Juan Cueli',
+    role: 'Experto en aseguramiento de calidad',
     image: '/images/team/juan.png',
     alt: 'juan',
   },
   {
     name: 'Ezequiel Díaz',
+    role: 'Experto en lógicas de negocio complejas',
     image: '/images/team/ezequiel.png',
     alt: 'ezequiel',
   },
   {
     name: 'Rodrigo Díaz',
+    role: 'Especialista en dirección de equipos tecnológicos',
     image: '/images/team/rodrigo.png',
     alt: 'rodrigo',
   },
   {
     name: 'Martín Urteaga',
+    role: 'Experto en ciberseguridad',
     image: '/images/team/martin.png',
     alt: 'martin'
   },
   {
     name: 'Jorge Covello',
+    role: 'Especialista en infraestructura Cloud',
     image: '/images/team/jorge.png',
     alt: 'jorge'
   },
   {
     name: 'Martín Lejman',
+    role: 'Especialista en arquitectura de sistemas escalables',
     image: '/images/team/martinL.png',
     alt: 'martinL'
   }
@@ -48,7 +54,7 @@ const teamOptions = [
 const sectionOptions = [
   {
     title: 'Misión',
-    description: 'Conectar a cada uno de nuestros clientes con la solución mas adecuada para sus necesidades, garantizando la calidad y rentabilidad de las mismas.',
+    description: 'Conectar a cada uno de nuestros clientes con la solución más adecuada para sus necesidades, garantizando la calidad y rentabilidad de las mismas.',
     image: {
       src: '/images/puzzle.png',
       alt: 'puzzle-image',
@@ -57,7 +63,7 @@ const sectionOptions = [
   },
   {
     title: 'Visión',
-    description: 'Convertirnos en una empresa lider del mercado de software a medida, asegurando la calidad en cada uno de nuestros proyectos.',
+    description: 'Convertirnos en una empresa líder del mercado de software a medida, asegurando la calidad en cada uno de nuestros proyectos.',
     image: {
       src: '/images/brujula.png',
       alt: 'brujula-image',
@@ -90,13 +96,31 @@ const polygons = [
     width: '225px',
     top: '280px',
     right: '-20px',
+  },
+  {
+    height: '170px',
+    width: '150px',
+    top: '600px',
+    right: '100px',
+  },
+  {
+    height: '100px',
+    width: '90px',
+    top: '700px',
+    right: '350px',
+  },
+  {
+    height: '90px',
+    width: '80px',
+    top: '840px',
+    right: '250px',
   }
 ]
 </script>
 
 <template>
   <Head>
-    <Title>Nosotros</Title>
+    <Title>Nosotros | Rebase IT</Title>
   </Head>
   <SectionImage
     class="pt-8"
@@ -128,11 +152,19 @@ const polygons = [
                 v-for="index in 2"
                 :key="`${index}-id`"
               >
-              Uno de los hitos fundamentales en nuestra historia fue cuando los cofundadores de Rebase IT, fuimos invitados a participar en el CONAIISI (Congreso Nacional de Ingeniería Informática y Sistemas de Información). Este evento, promovido por la Red RIISIC, brinda un espacio para la difusión de actividades de investigación de docentes y estudiantes de las carreras de Ingeniería Informática y Sistemas de Información. En este contexto, nuestro proyecto, Sherlock, destacó al ser seleccionado como una de las siete soluciones académicas más prometedoras en Argentina. Este reconocimiento nos impulsó a continuar nuestro camino juntos y sentó las bases para la creación de Rebase IT.
+              Uno de los hitos fundamentales en nuestra historia fue la participación en el CONAIISI (Congreso Nacional de Ingeniería Informática y Sistemas de Información). En este contexto, nuestro proyecto, Sherlock, destacó al ser seleccionado como una de las siete soluciones académicas más prometedoras en Argentina. Este reconocimiento nos impulsó a continuar nuestro camino juntos y sentó las bases para la creación de Rebase IT.
               <br
                 v-for="index in 2"
                 :key="`${index}-alt`"
               >
+              <div class="text-center">
+                <ReImage
+                  src="/images/sherlock-conaiisi.jpeg"
+                  alt="sherlock-conaiisi"
+                  max-width="500px"
+                />
+              </div>
+              <br>
               Nuestro propósito es claro: promover y ayudar a distintas compañías a hacer realidad sus ideas y productos a través de soluciones innovadoras y tecnológicas. En Rebase IT, nos dedicamos a ofrecer servicios de consultoría y desarrollo de software a medida, siempre comprometidos con la excelencia y la satisfacción del cliente.
             </ReTitleSpan>
           </div>
@@ -175,12 +207,21 @@ const polygons = [
             height="242px"
             :class="isMobile ? 'mt-0' : 'mt-4'"
           />
-          <ReTitleSpan
-            class="primary mt-3 font-semibold"
-            text-transform="uppercase"
-          >
-            {{ member.name }}
-          </ReTitleSpan>
+          <div class="d-flex hex-width text-center mt-4">
+            <div>
+              <ReTitleSpan
+                class="primary mt-3 font-semibold"
+                text-transform="uppercase"
+              >
+                {{ member.name }}
+              </ReTitleSpan>
+            </div>
+            <div class="mt-2">
+              <ReParagraphSpan>
+                {{ member.role }}
+              </ReParagraphSpan>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -217,3 +258,9 @@ const polygons = [
   </ReSectionContainer>
   <ContactUs />
 </template>
+
+<style scoped>
+.hex-width {
+  max-width: 150px;
+}
+</style>

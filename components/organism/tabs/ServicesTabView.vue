@@ -25,15 +25,17 @@ const projectsToShow = projects.filter(project => project.content && project.isI
           </div>
         </template>
         <div
-          class="flex justify-content-center align-items-center lg:p-6 gap-5"
+          class="flex align-items-center lg:p-4"
           :class="{ 'flex-column p-1': isMobile }"
         >
           <img
-            class="content-img"
+            class="content-img gray-border"
             :src="projectToShow.imageContent.src"
-            height="250"
           >
-          <div class="max-w-24rem">
+          <div
+            class="max-w-24rem"
+            :class="isMobile ? 'ml-0 mt-4' : 'ml-6'"
+          >
             <span v-html="projectToShow.content" />
           </div>
         </div>
@@ -44,13 +46,16 @@ const projectsToShow = projects.filter(project => project.content && project.isI
 
 
 <style scoped lang="scss">
+.gray-border {
+  border: 1px solid #E0E2F5;
+}
 .container {
   max-width: 1320px;
   margin: 0 auto;
   .card-tab-view {
     position: relative;
     width: 100%;
-    max-width: 900px;
+    max-width: 1500px;
     margin: 0 auto;
     border-radius: 8px;
     padding: 2px;
@@ -101,7 +106,7 @@ const projectsToShow = projects.filter(project => project.content && project.isI
     .content-img {
       border-radius: 10px;
       width: 100%;
-      max-width: 300px
+      max-width: 700px
     }
     &:deep(.p-tabview-header){
       border-bottom: 2px solid var(--secondary-color);

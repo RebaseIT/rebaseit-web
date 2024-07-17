@@ -101,7 +101,7 @@ const updateMiddleIndex = (event) => {
     align-self: center;
   }
   &:deep(.p-carousel-items-content) {
-    height: 600px !important;
+    height: 750px !important;
     padding-top: 20px;
   }
   &:deep(.p-card-body){

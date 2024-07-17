@@ -14,7 +14,7 @@ const scrollToSection = () => {
 
 <template>
   <Head>
-    <Title>Home</Title>
+    <Title>Home | Rebase IT</Title>
   </Head>
   <ReSectionTop>
     <div class="row px-4 py-8">
@@ -76,9 +76,10 @@ const scrollToSection = () => {
           font-size="lg"
           font-weight="400"
         >
-          Rebase IT se especializa en software y servicios de consultoría.
-          Combinamos habilidades de diseño, ingeniería y operacionales
-          para dar a nuestros clientes el mejor servicio posible.
+          En Rebase IT nos especializamos en desarrollo e implementación de SW a medida 
+          y servicios de consultoría. Aprovechando nuestro amplio abanico de habilidades 
+          interdisciplinarias, recurrimos a nuestra experiencia en diseño, ingeniería y 
+          operaciones, para brindarles a nuestros clientes el servicio de calidad que merecen.
         </ReTitleSpan>
       </div>
       <div
@@ -89,6 +90,15 @@ const scrollToSection = () => {
           @click="scrollToSection"
           label="Contactanos"
         />
+        <NuxtLink to="/services">
+          <ReButton
+            severity="info"
+            outlined
+            type="text"
+            label="Conocé nuestros servicios"
+            class="ml-2"
+          />
+        </NuxtLink>
       </div>
     </div>
   </ReSectionTop>
@@ -140,8 +150,17 @@ const scrollToSection = () => {
             font-weight="400"
           >
             En RebaseIT nos especializamos en múltiples frentes, manteniéndonos en la vanguardia
-            de la industria y ofreciendo así el más amplio abanico de soluciones para cada caso.
+            de la industria y ofreciendo el más amplio abanico de soluciones para cada caso.
           </ReTitleSpan>
+          <div>
+            <NuxtLink to="/services">
+              <ReButton
+                type="text"
+                label="Conocé nuestros servicios"
+                class="mt-4 mb-8"
+              />
+            </NuxtLink>
+          </div>
         </div>
       </div>
       <div class="flex">

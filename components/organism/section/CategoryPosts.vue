@@ -23,7 +23,7 @@ const recentPosts = ref([
     },
     items: [
       {
-        text: '- Si trabajas en RRHH, te invitamos a rellenar una breve encuesta',
+        text: '- Si trabajás en RRHH, te invitamos a rellenar una breve encuesta',
         route: 'https://www.linkedin.com/feed/update/urn:li:activity:7008800849233633280/'
       },
       {
@@ -95,8 +95,9 @@ const recentPosts = ref([
               v-for="(item, idx) in value.items"
               :key="idx"
             >
-              <a
-                :href="item.route"
+              <NuxtLink
+                :to="item.route"
+                class="no-underline"
                 target="_blank"
               >
                 <ReParagraphSpan
@@ -105,7 +106,7 @@ const recentPosts = ref([
                 >
                   {{ item.text }}
                 </ReParagraphSpan>
-              </a>
+              </NuxtLink>
               <hr>
             </div>
           </div>
@@ -116,6 +117,9 @@ const recentPosts = ref([
 </template>
 
 <style lang="scss" scoped>
+.no-underline {
+  text-decoration: none
+}
 .p-gradient-card {
   .p-gradient-card-content {
     background-color: var(--light-blue);
