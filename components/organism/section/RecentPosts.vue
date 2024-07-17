@@ -4,44 +4,52 @@ import { useViewport } from "~/composables/useViewport";
 const { isSmaller: isMobile } = useViewport('sm');
 const recentPosts = ref([
   {
-    title: 'Presentamos Shelock, la mejor respuesta para tu análisis de ciberseguridad',
-    date: '23/03/23',
+    title: 'Integración de equipos remotos y on-site',
+    date: '15/07/2024',
     image: {
-      src: '/images/posts/sherlock-1.png'
+      src: '/images/posts/integracionDeEquiposRemotosOnsite.png'
     },
-    route: 'https://www.linkedin.com/posts/rebase-it_security-information-incidentresponse-activity-6994309011672068096-uj3V'
+    route: 'https://www.linkedin.com/feed/update/urn:li:activity:7218632141075599360/?actorCompanyId=89238225'
   },
   {
-    title: 'Si trabajás en RRHH, te invitamos a rellenar una breve encuesta',
-    date: '17/03/23',
+    title: 'Agile y su impacto positivo en el desarrollo de software',
+    date: '08/07/2024',
     image: {
-      src: '/images/posts/megaphone.png'
+      src: '/images/posts/agileSuImpactoPositivoEnElDesarrolloDeSW.png'
     },
-    route: 'https://www.linkedin.com/feed/update/urn:li:activity:7008800849233633280/'
+    route: 'https://www.linkedin.com/feed/update/urn:li:activity:7216094172334682114/?actorCompanyId=89238225'
   },
   {
-    title: 'Programamos las luces de Nine Shopping en Moreno',
-    date: '26/12/22',
+    title: 'Hosteando un sitio estático',
+    date: '01/07/2024',
     image: {
-      src: '/images/posts/shopping.png'
+      src: '/images/posts/hosteandoUnSitioEstatico.png'
     },
-    route: 'https://www.linkedin.com/posts/rebase-it_tech-sales-project-activity-7002987786941181952-cAVt'
+    route: 'https://www.linkedin.com/feed/update/urn:li:activity:7213558557256945666/'
   },
   {
-    title: 'Desde nuestro equipo te deseamos, ¡FELICES FIESTAS!',
-    date: '25/12/22',
+    title: 'Staff Augmentation',
+    date: '24/06/2024',
     image: {
-      src: '/images/posts/xmas.png'
+      src: '/images/posts/staffAugmentation.png'
     },
-    route: 'https://www.linkedin.com/posts/rebase-it_estamos-llegando-a-fin-de-a%C3%B1o-y-con-el-equipo-activity-7012159369505062912-0zSQ'
+    route: 'https://www.linkedin.com/feed/update/urn:li:activity:7211026648056418305/'
   },
   {
-    title: 'Sherlock, TOP 6 mejores trabajos en Argentina!',
-    date: '15/12/22',
+    title: 'Escalabilidad de Sistemas',
+    date: '17/06/2024',
     image: {
-      src: '/images/posts/team.png'
+      src: '/images/posts/escalabilidadDeSistemas.png'
     },
-    route: 'https://www.linkedin.com/posts/rebase-it_security-information-incidentresponse-activity-6995398634041143296-kqQ7'
+    route: 'https://www.linkedin.com/feed/update/urn:li:activity:7208482742165028867/'
+  },
+  {
+    title: 'Pruebas Funcionales Automatizadas',
+    date: '10/06/2024',
+    image: {
+      src: '/images/posts/pruebasFuncionalesAutomatizadas.png'
+    },
+    route: 'https://www.linkedin.com/feed/update/urn:li:activity:7205949532885442560/'
   }
 ])
 </script>
