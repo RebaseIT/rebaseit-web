@@ -91,9 +91,7 @@ const scrollToSection = () => {
           label="Contactanos"
         />
         <NuxtLink to="/services">
-          <ReButton
-            severity="info"
-            outlined
+          <ReSecondaryButton
             label="Conocé nuestros servicios"
             class="ml-2"
           />
