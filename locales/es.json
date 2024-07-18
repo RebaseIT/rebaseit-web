@@ -170,6 +170,12 @@
       "moreInfo": "Para más información, escribinos a"
     }
   },
+  "thankYou": {
+    "title": "¡Muchas gracias!",
+    "thanksForReaching": "Muchas gracias por contactarnos.",
+    "beInTouch": "Nos comunicaremos en breve.",
+    "goHome": "Ir a la página home"
+  },
   "footer": {
     "home": "Home",
     "aboutUs": "Conocenos",

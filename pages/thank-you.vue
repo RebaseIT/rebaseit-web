@@ -1,6 +1,9 @@
+<script setup lang="ts">
+const { t } = useI18n()
+</script>
 <template>
   <Head>
-    <Title>¡Muchas gracias!</Title>
+    <Title>{{ t('thankYou.title') }}</Title>
   </Head>
   <ReSectionContainer
     class="py-8"
@@ -8,15 +11,15 @@
   >
     <div class="h-full flex flex-column align-items-center justify-content-center">
       <ReTitleGradient class="my-8">
-        Muchas gracias por contactarnos.
+        {{ t('thankYou.thanksForReaching') }}
       </ReTitleGradient>
       <ReTitleSpan color="black">
-        Nos comunicaremos en breve.
+        {{ t('thankYou.beInTouch') }}
       </ReTitleSpan>
       <NuxtLink to="/">
         <ReButton
           class="my-8"
-          label="Ir al home"
+          :label="t('thankYou.goHome')"
         />
       </NuxtLink>
     </div>
