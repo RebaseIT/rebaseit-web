@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import { useViewport } from "~/composables/useViewport";
 
+const { t } = useI18n()
 const { isSmaller: isMobile } = useViewport('sm');
 const recentPosts = ref([
   {
-    title: 'Integración de equipos remotos y on-site',
+    title: 'blog.recentPosts.remoteOnsiteIntegration',
     date: '15/07/2024',
     image: {
       src: '/images/posts/integracionDeEquiposRemotosOnsite.png'
@@ -12,7 +13,7 @@ const recentPosts = ref([
     route: 'https://www.linkedin.com/feed/update/urn:li:activity:7218632141075599360/?actorCompanyId=89238225'
   },
   {
-    title: 'Agile y su impacto positivo en el desarrollo de software',
+    title: 'blog.recentPosts.agilePositiveImpact',
     date: '08/07/2024',
     image: {
       src: '/images/posts/agileSuImpactoPositivoEnElDesarrolloDeSW.png'
@@ -20,7 +21,7 @@ const recentPosts = ref([
     route: 'https://www.linkedin.com/feed/update/urn:li:activity:7216094172334682114/?actorCompanyId=89238225'
   },
   {
-    title: 'Hosteando un sitio estático',
+    title: 'blog.recentPosts.staticSiteHosting',
     date: '01/07/2024',
     image: {
       src: '/images/posts/hosteandoUnSitioEstatico.png'
@@ -28,7 +29,7 @@ const recentPosts = ref([
     route: 'https://www.linkedin.com/feed/update/urn:li:activity:7213558557256945666/'
   },
   {
-    title: 'Staff Augmentation',
+    title: 'blog.recentPosts.staffAugmentation',
     date: '24/06/2024',
     image: {
       src: '/images/posts/staffAugmentation.png'
@@ -36,7 +37,7 @@ const recentPosts = ref([
     route: 'https://www.linkedin.com/feed/update/urn:li:activity:7211026648056418305/'
   },
   {
-    title: 'Escalabilidad de Sistemas',
+    title: 'blog.recentPosts.systemScalability',
     date: '17/06/2024',
     image: {
       src: '/images/posts/escalabilidadDeSistemas.png'
@@ -44,7 +45,7 @@ const recentPosts = ref([
     route: 'https://www.linkedin.com/feed/update/urn:li:activity:7208482742165028867/'
   },
   {
-    title: 'Pruebas Funcionales Automatizadas',
+    title: 'blog.recentPosts.automatedFunctionalTests',
     date: '10/06/2024',
     image: {
       src: '/images/posts/pruebasFuncionalesAutomatizadas.png'
@@ -58,7 +59,7 @@ const recentPosts = ref([
   <ReSectionContainer background="/images/background/background-2.png">
     <div class="px-4">
       <ReTitleGradient>
-        Posteos recientes
+        {{ t('blog.recentPosts.title') }}
       </ReTitleGradient>
       <div class="card-container flex flex-wrap gap-3 mt-4">
         <a
@@ -83,7 +84,7 @@ const recentPosts = ref([
               font-size="xs"
               font-weight="700"
             >
-              {{ value.title }}
+              {{ t(value.title) }}
             </ReTitleSpan>
           </div>
           <ReImage

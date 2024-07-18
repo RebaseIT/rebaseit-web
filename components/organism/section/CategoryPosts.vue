@@ -1,7 +1,8 @@
 <script setup lang="ts">
+const { t } = useI18n()
 const recentPosts = ref([
   {
-    title: 'Noticias',
+    title: 'blog.news.title',
     image: {
       src: '/images/posts/news.png',
       maxWidth: '110px',
@@ -9,13 +10,13 @@ const recentPosts = ref([
     },
     items: [
       {
-        text: '- Sherlock, TOP 6 mejores trabajos en Argentina!',
+        text: 'blog.news.sherlock',
         route: 'https://www.linkedin.com/posts/rebase-it_security-information-incidentresponse-activity-6995398634041143296-kqQ7'
       }
     ]
   },
   {
-    title: 'Proyectos',
+    title: 'blog.projects.title',
     image: {
       src: '/images/posts/helmet.png',
       maxWidth: '130px',
@@ -23,17 +24,17 @@ const recentPosts = ref([
     },
     items: [
       {
-        text: '- Si trabajás en RRHH, te invitamos a rellenar una breve encuesta',
+        text: 'blog.projects.hr',
         route: 'https://www.linkedin.com/feed/update/urn:li:activity:7008800849233633280/'
       },
       {
-        text: '- Presentamos Sherlock, la mejor respuesta para tu análisis de ciberseguridad',
+        text: 'blog.projects.sherlock',
         route: 'https://www.linkedin.com/posts/rebase-it_security-information-incidentresponse-activity-6994309011672068096-uj3V'
       }
     ]
   },
   {
-    title: 'Trabajos particulares',
+    title: 'blog.individualJobs.title',
     image: {
       src: '/images/posts/hammer.png',
       maxWidth: '87px',
@@ -41,13 +42,13 @@ const recentPosts = ref([
     },
     items: [
       {
-        text: '- Programamos las luces de Nine Shopping en Moreno',
+        text: 'blog.individualJobs.nine',
         route: 'https://www.linkedin.com/posts/rebase-it_tech-sales-project-activity-7002987786941181952-cAVt'
       }
     ]
   },
   {
-    title: 'Eventos',
+    title: 'blog.events.title',
     image: {
       src: '/images/posts/star.png',
       maxWidth: '95px',
@@ -55,7 +56,7 @@ const recentPosts = ref([
     },
     items: [
       {
-        text: '- Desde nuestro equipo te deseamos, ¡FELICES FIESTAS!',
+        text: 'blog.events.holidays',
         route: 'https://www.linkedin.com/posts/rebase-it_estamos-llegando-a-fin-de-a%C3%B1o-y-con-el-equipo-activity-7012159369505062912-0zSQ'
       }
     ]
@@ -67,7 +68,7 @@ const recentPosts = ref([
   <ReSectionContainer background="/images/background/background-2.png">
     <div class="py-8 px-4">
       <ReTitleGradient>
-        Posteos por categoría
+        {{ t('blog.postsByCategory') }}
       </ReTitleGradient>
       <div class="flex flex-wrap justify-content-center gap-4 mt-4">
         <div
@@ -80,7 +81,7 @@ const recentPosts = ref([
               class="text-center"
               font-size="lg"
             >
-              {{ value.title }}
+              {{ t(value.title) }}
             </ReTitleGradient>
             <div class="flex min-h-7">
               <ReImage
@@ -104,7 +105,7 @@ const recentPosts = ref([
                   class="primary p-gradient-card-content-span"
                   bold
                 >
-                  {{ item.text }}
+                  {{ t(item.text) }}
                 </ReParagraphSpan>
               </NuxtLink>
               <hr>

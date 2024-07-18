@@ -1,6 +1,7 @@
 <script setup>
 import { useForm } from 'vee-validate';
 
+const { t } = useI18n()
 const { handleSubmit } = useForm();
 const emit = defineEmits(['form']);
 const props = defineProps({
@@ -32,14 +33,14 @@ const submitAfterValidateForm = handleSubmit((form) => {
         v-if="field.type === 'text'"
         v-model="form[field.model]"
         :id="field.id"
-        :label="field.label"
+        :label="t(field.label)"
         :validators="field.validators"
       />
       <ReTextarea
         v-if="field.type === 'textarea'"
         v-model="form[field.model]"
         :id="field.id"
-        :label="field.label"
+        :label="t(field.label)"
         :validators="field.validators"
       />
     </template>

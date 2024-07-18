@@ -1,8 +1,9 @@
 <script setup lang="ts">
+const { t } = useI18n()
 const ourValues = [
   {
-    title: 'Honestidad y Transparencia',
-    description: 'Priorizamos la comunicación abierta y honesta en todas nuestras interacciones.',
+    title: 'aboutUs.honestyTitle',
+    description: 'aboutUs.honestyDetail',
     img: {
       src: '/images/values/value-1.png',
       srcAlt: '/images/values/value-alt-1.png',
@@ -11,8 +12,8 @@ const ourValues = [
     }
   },
   {
-    title: 'Excelencia Técnica',
-    description: 'Nos esforzamos por alcanzar la máxima calidad en nuestras soluciones tecnológicas.',
+    title: 'aboutUs.excellenceTitle',
+    description: 'aboutUs.excellenceDetail',
     img: {
       src: '/images/values/value-2.png',
       srcAlt: '/images/values/value-alt-2.png',
@@ -21,8 +22,8 @@ const ourValues = [
     }
   },
   {
-    title: 'Compromiso',
-    description: ' Cumplimos nuestros compromisos con responsabilidad y dedicación.',
+    title: 'aboutUs.commitmentTitle',
+    description: 'aboutUs.commitmentDetail',
     img: {
       src: '/images/values/value-3.png',
       srcAlt: '/images/values/value-alt-3.png',
@@ -32,8 +33,8 @@ const ourValues = [
     }
   },
   {
-    title: 'Proactividad',
-    description: 'No esperamos a que las cosas sucedan, las hacemos suceder.',
+    title: 'aboutUs.proactivityTitle',
+    description: 'aboutUs.proactivityDetail',
     img: {
       src: '/images/values/value-4.png',
       srcAlt: '/images/values/value-alt-4.png',
@@ -42,8 +43,8 @@ const ourValues = [
     }
   },
   {
-    title: 'Innovación',
-    description: 'Promovemos la creatividad y la originalidad para encontrar soluciones únicas y disruptivas.',
+    title: 'aboutUs.innovationTitle',
+    description: 'aboutUs.innovationDetail',
     img: {
       src: '/images/values/value-6.png',
       srcAlt: '/images/values/value-alt-6.png',
@@ -60,7 +61,7 @@ const ourValues = [
       class="flex flex-column pb-8 px-4"
     >
       <ReTitleGradient class="align-self-center">
-        Valores que nos definen
+        {{ t('aboutUs.valuesThatDefineUs') }}
       </ReTitleGradient>
       <div
         class="flex flex-row flex-wrap justify-content-center gap-2 mt-6"

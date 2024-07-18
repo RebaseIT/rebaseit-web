@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useViewport } from '~/composables/useViewport';
 
+const { t } = useI18n()
 const { isSmaller: isMobile } = useViewport('lg');
 const router = useRouter()
 const goBack = () => {
@@ -36,13 +37,13 @@ const images = [
           font-weight="600"
           class="primary cursor-pointer"
         >
-          &lt; Volver
+          &lt; {{ t('goBack') }}
         </ReTitleSpan>
         <ReTitleGradient
           text-transform="uppercase"
           font-weight="600"
         >
-          Presentamos Sherlock, la mejor respuesta para tu análisis de ciberseguridad
+          {{ t('blog.sherlock.title') }}
         </ReTitleGradient>
       </div>
       <ReImage
@@ -57,9 +58,9 @@ const images = [
   >
     <div class="flex py-8 px-4">
       <ReTitleSpan color="black">
-        ¿Alguna vez te hackearon o intentaron hackear a alguien de tu organización? En ese caso, ¿qué tan rápido podrían responder? Así como cuando tenemos un auto, contratamos un seguro, en el mundo de la ciberseguridad podés optar por Sherlock: una solución que centraliza y automatiza las tareas de respuesta a incidentes realizadas por los analistas de ciberseguridad. 
+        {{ t('blog.sherlock.subtitle') }}
         <br><br>
-        Para más información, escribinos a
+        {{ t('blog.sherlock.moreInfo') }}
         <a href="mailto:sales@rebaseit.tech">
           sales@rebaseit.tech
         </a>

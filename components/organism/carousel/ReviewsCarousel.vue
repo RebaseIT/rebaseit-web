@@ -1,4 +1,5 @@
 <script setup>
+const { t } = useI18n()
 const { clientReviews } = useClientReviews()
 </script>
 
@@ -19,7 +20,7 @@ const { clientReviews } = useClientReviews()
             color="black"
             font-weight
           >
-            {{ slotProps.data.content }}
+            {{ t(slotProps.data.content) }}
           </ReParagraphSpan>
 
           <div class="pt-4 row">
@@ -44,7 +45,7 @@ const { clientReviews } = useClientReviews()
                 color="black"
                 class="font-size-text"
               >
-                {{ slotProps.data.jobTitle }} - {{ slotProps.data.company }}
+                {{ t(slotProps.data.jobTitle) }} - {{ slotProps.data.company }}
               </ReTitleSpan>
             </div>
           </div>

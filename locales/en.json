@@ -1,0 +1,206 @@
+{
+  "test": "Test",
+  "goBack": "Go back",
+  "header": {
+    "aboutUs": "About us",
+    "projects": "Projects",
+    "services": "Services",
+    "servicesSubTitles": {
+      "frontend": "Frontend",
+      "backend": "Backend"
+    },
+    "blog": "Blog"
+  },
+  "pages": {
+    "home": "Home - Rebase IT",
+    "aboutUs": "About us - Rebase IT",
+    "projects": "Projects - Rebase IT",
+    "services": "Services - Rebase IT",
+    "blog": "Blog - Rebase IT"
+  },
+  "homePage": {
+    "welcomeMessage": "At Rebase IT we specialize in development and implementation of custom SW and consulting services. Leveraging our broad range of interdisciplinary skills, we draw on our expertise in design, engineering and operations to provide our clients with the quality service they deserve.",
+    "contactUs": "Contact us",
+    "knowOurServices": "Our services",
+    "ourProducts": "Our Products",
+    "ourClients": "Our Clients",
+    "whatWeDo": "What we do?",
+    "whatWeDoDetails": "At Rebase IT we specialize on multiple fronts, staying at the forefront of the industry and offering the widest range of solutions for each case."
+  },
+  "products": {
+    "nineContent": "We carried out the configuration process of our client Nine Shopping's digital LED lighting management system, so that they could celebrate the holidays in the best way.",
+    "sherlockContent": "Have you ever been hacked or suffered hacking attempts in your organization?\n\nSherlock centralizes and automates incident response tasks, allowing your cybersecurity analysts to faster and more efficiently. Ensure your peace of mind with the advanced protection that only Sherlock can offer.",
+    "reconnectContent": "The hiring process and data management of a high volume of candidates can be chaotic and confusing.\n\nRebase Connect is a data analytics application designed specifically for recruiters. With our solution you will be able to standardize information, track searches and generate key metrics indicators."
+  },
+  "contactUs": {
+    "name": "Name *",
+    "lastName": "Last name *",
+    "email": "E-mail *",
+    "phone": "Phone number",
+    "message": "Leave a message *",
+    "send": "Send",
+    "orMessageTo": "Or send us a message to: ",
+    "getInTouchShortly": "We will get in touch shortly."
+  },
+  "clientReviews": {
+    "giancolaContent": "Thanks to the reservation system developed by Rebase IT, we manage all the requests of our clients without complications. Our clients even thank us for the ease when reserving their rooms at the hotel.",
+    "giancolaTitle": "Sales Manager",
+    "solangeContent": "They did an excellent job! They are super committed professionals, with a strong orientation towards resolution and adaptation to changes in order to meet their client.",
+    "solangeTitle": "Scrum Master"
+  },
+  "aboutUs": {
+    "title": "We are Rebase IT",
+    "subtitle": "Our team of dedicated and experienced professionals combines talent, experience and creativity to find the perfect solution for each client.",
+    "ourStory": "Our Story",
+    "ourStoryDetail1": "Rebase IT is the result of the meeting of five systems engineers who met and graduated from the Universidad Tecnológica Nacional Regional Buenos Aires. Sharing a passion for technology and innovation, we decided to come together to create a significant impact in the world of software development.",
+    "ourStoryDetail2": "One of the fundamental milestones in our history was participation in the CONAIISI (National Congress of Computer Engineering and Information Systems). In this context, our project, Sherlock, stood out by being selected as one of the seven most promising academic solutions in Argentina. This recognition encouraged us to continue our journey together and laid the foundation for the creation of Rebase IT.",
+    "ourStoryDetail3": "Our purpose is clear: to promote and help different companies make their ideas and products a reality through innovative and technological solutions. At Rebase IT, we are dedicated to offering custom software development and consulting services, always committed to excellence and customer satisfaction.",
+    "meetOurTeam": "Meet our team",
+    "juanRole": "Quality assurance expert",
+    "ezequielRole": "Complex business logics expert",
+    "rodrigoRole": "Tech team direction specialist",
+    "martinURole": "Cybersecurity expert",
+    "jorgeRole": "Cloud infrastructure specialist",
+    "martinLRole": "Scalable architectures specialist",
+    "valuesThatDefineUs": "Values that define us",
+    "honestyTitle": "Honesty and transparency",
+    "honestyDetail": "We prioritize open and honest communication in all our interactions.",
+    "excellenceTitle": "Technical excellence",
+    "excellenceDetail": "We strive to achieve the highest quality in our technological solutions.",
+    "commitmentTitle": "Commitment",
+    "commitmentDetail": " We fulfill our commitments with responsibility and dedication.",
+    "proactivityTitle": "Proactivity",
+    "proactivityDetail": "We don't wait for things to happen, we make them happen.",
+    "innovationTitle": "Innovation",
+    "innovationDetail": "We promote creativity and originality to find unique and disruptive solutions.",
+    "missionTitle": "Mission",
+    "missionDetail": "To connect each of our clients with the most appropriate solution for their needs, guaranteeing their quality and profitability.",
+    "valueTitle": "Vision",
+    "valueDetail": "To become a leading company in the custom software market, ensuring quality in each of our projects."
+  },
+  "projects": {
+    "title": "Our Projects",
+    "subtitle": "At Rebase IT, we accompany our clients throughout the project life cycle, providing them with superior solutions tailored to their particular needs.",
+    "knowMore": "Know more"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "We offer a wide range of specialties, ensuring comprehensive care and precise solutions for all your needs. We have experience in various areas of the technology world: web and mobile design and development, infrastructure, cybersecurity, artificial intelligence, and project management.\n\nOn the other hand, among our main consulting services is staff augmentation where we connect organizations with great talents.",
+    "staffTitle": "Staff Augmentation Services",
+    "staffSub1": "Access to Specialized Talent",
+    "staffSub2": "Flexible Scalability",
+    "staffSub3": "Efficiency and Agility",
+    "staffImage": "/images/services/service_7.png",
+    "staffText1": "We have a team of experts in technologies and development methodologies who can easily integrate into your project. This allows you to access specialized skills without having to hire permanent staff.",
+    "staffText2": "We can expand or reduce the size of your development team according to your needs, providing you with the necessary flexibility to adapt to project and market changes.",
+    "staffText3": "Our consultants quickly integrate into your team and use agile methodologies to accelerate the development and implementation of your technological solutions.",
+    "frontTitle": "Frontend Development Services",
+    "frontSub1": "Responsive and Accessible Design",
+    "frontSub2": "User Experience",
+    "frontSub3": "Optimization and Performance",
+    "frontImage": "/images/services/service_1.png",
+    "frontText1": "We create attractive and adaptable user interfaces for different devices and screen sizes. We design with a 'users first' mindset.",
+    "frontText2": "We focus on providing a smooth and pleasant user experience. We apply best UX practices to achieve intuitive and easy-to-use interfaces.",
+    "frontText3": "We optimize the performance of our frontend solutions, ensuring fast loading and a satisfying user experience.",
+    "backTitle": "Backend Development Services",
+    "backSub1": "Application Architecture",
+    "backSub2": "APIs and Microservices",
+    "backSub3": "Automation and DevOps",
+    "backImage": "/images/services/service_2.png",
+    "backText1": "We design scalable and efficient backend solutions, using the latest technologies and best practices. We take care of the infrastructure, security, and integration with existing systems.",
+    "backText2": "We develop RESTful APIs and microservices that enable smooth integration between different components of your system. We ensure secure and high-performance communication.",
+    "backText3": "We implement automation processes and DevOps best practices to streamline the development, deployment, and monitoring of your applications.",
+    "dbTitle": "Database Services",
+    "dbSub1": "Design and Architecture",
+    "dbSub2": "Implementation and Administration",
+    "dbSub3": "Optimization and Performance",
+    "dbSub4": "Security and Compliance",
+    "dbImage": "/images/services/service_3.png",
+    "dbText1": "We design the most suitable structure for your database system, considering factors such as data volume, scalability, performance, and availability.",
+    "dbText2": "We install, configure, and manage your databases, ensuring optimal operation, backups, and failure recovery.",
+    "dbText3": "We apply optimization techniques to improve query execution speed, indexing, and data partitioning.",
+    "dbText4": "We implement security measures and comply with regulatory requirements applicable to your data, protecting the integrity and confidentiality of the information.",
+    "infraTitle": "Infrastructure and Systems Architecture",
+    "infraSub1": "Planning",
+    "infraSub2": "Design and Implementation",
+    "infraSub3": "Monitoring and Optimization",
+    "infraImage": "/images/services/service_5.png",
+    "infraText1": "We analyze your needs and develop an infrastructure strategy that fits your business objectives and technical requirements.",
+    "infraText2": "We design and deploy a robust and scalable systems architecture, using cutting-edge technologies.",
+    "infraText3": "We implement monitoring and analysis solutions that allow us to have greater visibility of the deployed architecture.",
+    "integrationTitle": "Integration Tools",
+    "integrationSub1": "Connectivity",
+    "integrationSub2": "Flow Orchestration",
+    "integrationSub3": "Process Automation",
+    "integrationImage": "/images/services/service_4.png",
+    "integrationText1": "We integrate your systems and applications using APIs, webhooks, and other communication mechanisms. This allows for a seamless flow of information between your different tools.",
+    "integrationText2": "We design optimized workflows that coordinate the different applications and systems, ensuring smooth integration and increased productivity.",
+    "integrationText3": "We implement automation solutions that eliminate repetitive and manual tasks, increasing the efficiency of your business processes."
+  },
+  "blog": {
+    "title": "Posts",
+    "subtitle": "Find out all the news and articles that Rebase IT has for you.",
+    "breakingNews": "Latest news:",
+    "sherlockPresented": "Introducing Sherlock, the best response for your cybersecurity analysis",
+    "publishedOn": "Published on 03/23/23",
+    "postsByCategory": "Posts by category",
+    "news": {
+      "title": "News",
+      "sherlock": "- Sherlock, TOP 6 best papers in Argentina!"
+    },
+    "projects": {
+      "title": "Projects",
+      "hr": "- If you work in HR, we invite you to fill out a brief survey",
+      "sherlock": "- Introducing Sherlock, the best response for your cybersecurity analysis"
+    }, 
+    "individualJobs": {
+      "title": "Individual Jobs",
+      "nine": "- We programmed the lights of Nine Shopping in Moreno"
+    },
+    "events": {
+      "title": "Events",
+      "holidays": "- From our team, we wish you HAPPY HOLIDAYS!"
+    },
+    "recentPosts": {
+      "title": "Recent Posts",
+      "remoteOnsiteIntegration": "Integration of Remote and On-Site Teams",
+      "agilePositiveImpact": "Agile and its Positive Impact on Software Development",
+      "staticSiteHosting": "Hosting a Static Site",
+      "staffAugmentation": "Staff Augmentation",
+      "systemScalability": "System Scalability",
+      "automatedFunctionalTests": "Automated Functional Testing"
+    },
+    "sherlock": {
+      "title": "Introducing Sherlock, the best response for your cybersecurity analysis",
+      "subtitle": "Have you ever been hacked or has someone in your organization been hacked? In that case, how quickly could they respond? Just as when we have a car, we take out insurance, in the world of cybersecurity you can opt for Sherlock: a solution that centralizes and automates the incident response tasks performed by cybersecurity analysts.",
+      "moreInfo": "For more information, write to us at"
+    }
+  },
+  "thankYou": {
+    "title": "Thank you very much!",
+    "thanksForReaching": "Thank you very much for reaching out to us.",
+    "beInTouch": "We will be in touch shortly.",
+    "goHome": "Go to home page"
+  },
+  "footer": {
+    "home": "Home",
+    "aboutUs": "About Us",
+    "projects": "Projects",
+    "services": "Services",
+    "blog": "Blog",
+    "allArticles": "All Articles",
+    "news": "News",
+    "individualJobs": "Individual Jobs",
+    "events": "Events",
+    "gotAProject": "Got a project?",
+    "letsTalk": "Let's Talk",
+    "sherlock": "Sherlock",
+    "rebaseConnect": "Rebase Connect",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "database": "Database",
+    "cloudProviders": "Cloud Providers",
+    "devOpsTools": "DevOps Tools",
+    "integrationTech": "Integration tech"
+  }
+}

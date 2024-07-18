@@ -2,7 +2,7 @@
 import { useViewport } from '~/composables/useViewport';
 
 const { isSmaller: isMobile } = useViewport('md');
-
+const { t } = useI18n()
 const { projects } = useProjects()
 const projectsToShow = projects.filter(project => project.content && project.isInternalProject)
 </script>
@@ -36,7 +36,9 @@ const projectsToShow = projects.filter(project => project.content && project.isI
             class="max-w-24rem"
             :class="isMobile ? 'ml-0 mt-4' : 'ml-6'"
           >
-            <span v-html="projectToShow.content" />
+            <span class="add-white-spaces">
+              {{ t(projectToShow.content) }}
+            </span>
           </div>
         </div>
       </TabPanel>
@@ -46,6 +48,9 @@ const projectsToShow = projects.filter(project => project.content && project.isI
 
 
 <style scoped lang="scss">
+.add-white-spaces{
+  white-space: pre-line;
+}
 .gray-border {
   border: 1px solid #E0E2F5;
 }

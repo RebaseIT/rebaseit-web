@@ -48,7 +48,9 @@ defineProps({
             font-size="lg"
             font-weight="400"
           >
-            <span v-html="subtitle" />
+            <span class="add-white-spaces">
+              {{ subtitle }}
+            </span>
           </ReTitleSpan>
         </div>
       </div>
@@ -62,3 +64,9 @@ defineProps({
     </div>
   </ReSectionContainer>
 </template>
+
+<style scoped lang="scss">
+.add-white-spaces{
+  white-space: pre-line;
+}
+</style>

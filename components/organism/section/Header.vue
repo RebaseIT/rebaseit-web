@@ -1,29 +1,61 @@
 <script setup>
+const { t, locale } = useI18n()
 const route = useRoute()
-const items = ref([
+const router = useRouter()
+const menuItems = ref([
   {
-    label: 'Conocenos',
-    url: '/about-us'
+    label: 'header.aboutUs',
+    url: '/about-us',
+    command: () => router.push('/about-us')
   },
   {
-    label: 'Proyectos',
-    url: '/projects'
+    label: 'header.projects',
+    url: '/projects',
+    command: () => router.push('/projects')
   },
   {
-    label: 'Servicios',
-    url: '/services'
+    label: 'header.services',
+    url: '/services',
+    command: () => router.push('/services')
+    // items: [
+    //   {
+    //     label: 'header.servicesSubTitles.frontend',
+    //     url: '/services/frontend',
+    //     command: () => router.push('/services/frontend')
+    //   },
+    //   {
+    //     label: 'header.servicesSubTitles.backend',
+    //     url: '/services/backend',
+    //     command: () => router.push('/services/backend')
+    //   }
+    // ]
   },
   {
-    label: 'Blog',
-    url: '/blog'
+    label: 'header.blog',
+    url: '/blog',
+    command: () => router.push('/blog')
+  },
+  {
+    src: '/images/flags/Flag_EN.svg',
+    isImage: true,
+    value: 'en'
   }
 ])
+const toggleLanguage = (item) => {
+  const languageMap = {
+    en: { src: '/images/flags/Flag_ES.svg', value: 'es', isImage: true },
+    es: { src: '/images/flags/Flag_EN.svg', value: 'en', isImage: true }
+  }
+  const newItems = menuItems.value.filter(i => i.value !== item.value)
+  menuItems.value = [...newItems, languageMap[item.value]]
+  locale.value = languageMap[item.value].value
+}
 </script>
 
 <template>
   <div class="re-header">
     <Menubar
-      :model="items"
+      :model="menuItems"
       class="menu-bar px-4"
     >
       <template #start>
@@ -39,22 +71,32 @@ const items = ref([
           />
         </NuxtLink>
       </template>
-      <template #item="{ item, props }">
-        <NuxtLink
-          v-if="item.url"
-          v-slot="{ href, navigate }"
-          :to="item.url"
-          custom
+      <template #item="{ item, hasSubmenu }">
+        <ReImage
+          v-if="item.isImage"
+          class="flag"
+          alt="flag"
+          :src="item.src"
+          max-width="25px"
+          @click="toggleLanguage(item)"
+        />
+        <template v-else-if="hasSubmenu">
+          <div class="d-flex align-items-center justify-space-between">
+            <div>
+              {{ t(item.label) }}
+            </div>
+            <div>
+              <i class="pi menu-bar__dropdown-icon--down pi-angle-down ml-2" />
+              <i class="pi menu-bar__dropdown-icon--up pi-angle-up ml-2" />
+            </div>
+          </div>
+        </template>
+        <span
+          v-else
+          :class="{ 'current-page': item.url === route.path }"
         >
-          <a
-            :class="{ 'current-page': item.url === route.path }"
-            :href="href"
-            v-bind="props.action"
-            @click="navigate"
-          >
-            <span>{{ item.label }}</span>
-          </a>
-        </NuxtLink>
+          <span>{{ t(item.label) }}</span>
+        </span>
       </template>
     </Menubar>
   </div>
@@ -73,10 +115,60 @@ const items = ref([
   z-index: 100;
   height: 82px;
 }
-.menu-bar:deep(.p-menubar-root-list > .p-menuitem:not(.p-highlight):not(.p-disabled) .p-menuitem-link:hover) {
-  background: #e9ecef;
-  border-radius: 8px;
+.menu-bar {
+  :deep(li) {
+    cursor: pointer;
+  }
+  :deep(.p-menuitem-link) {
+    padding: 0 !important;
+  }
+  :deep(.p-submenu-list) {
+    position: absolute;
+    background-color: var(--surface-b);
+    margin-top: 12px;
+    border-radius: 8px;
+    width: initial;
+    @media (max-width: 960px) {
+      position: relative;
+      margin-top: 0px;
+      margin-bottom: 16px;
+      margin-left: 16px;
+      margin-right: 16px;
+    }
+    .p-menuitem {
+      list-style-type: none;
+    }
+    .p-menuitem-link {
+      padding: 0 !important;
+    }
+  }
+  &:deep(.p-menuitem-content) {
+    border-radius: 8px;
+    padding: 0.75rem 1.25rem;
+    color: var(--primary-color) !important;
+    & span {
+      color: var(--primary-color) !important;
+    }
+  }
+  &:deep(.p-menubar-root-list > .p-menuitem-content:hover) {
+    background: #e9ecef;
+  }
+  &:deep(.p-menubar-root-list > .p-menuitem:not(.p-highlight):not(.p-disabled) .p-menuitem-content:hover) {
+    background: #e9ecef;
+    border-radius: 8px;
+  }
+  &:deep(.p-menuitem-content:has(.current-page)) {
+    border-radius: 8px;
+    background: var(--third-color) !important;
+  }
+  &:deep(.p-menuitem-active .menu-bar__dropdown-icon--down){
+    display: none;
+  }
+  &:deep(.p-menuitem:not(.p-menuitem-active ) .menu-bar__dropdown-icon--up){
+    display: none;
+  }
 }
+
 .menu-bar {
   display: flex;
   align-items: center;
@@ -106,6 +198,14 @@ const items = ref([
   &:deep(.p-icon) {
     transform: scale(1.5);
   }
+  &:deep(.p-menuitem) {
+    .flag {
+      margin-top: 5px;
+      @media (max-width: 960px) {
+        margin-top: 0px;
+      }
+    }
+  }
   &:deep(.p-menuitem-content) {
     border-radius: 8px;
     margin: 0 4px;
@@ -113,18 +213,7 @@ const items = ref([
       margin-top: 16px;
       margin-bottom: 16px;
       margin-left: 16px;
-    }
-    a {
-      color: var(--primary-color) !important;
-    }
-    .current-page {
-      border-radius: 8px;
-      background: var(--third-color) !important;
-    }
-  }
-  &:deep(.p-focus) {
-    > .p-menuitem-content {
-      background-color: white !important;
+      margin-right: 16px;
     }
   }
   &:deep(.p-menubar-button) {

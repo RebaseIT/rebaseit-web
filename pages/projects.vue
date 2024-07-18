@@ -1,6 +1,5 @@
 <script setup lang="ts">
-const title = 'Nuestros Proyectos';
-const subtitle = 'Desde Rebase IT, acompañamos a nuestros clientes en todo el ciclo de vida del proyecto, brindándoles soluciones superadoras y ajustadas a sus necesidades particulares.';
+const { t } = useI18n()
 const image = {
   src: '/images/folder.png',
   alt: 'folder-image',
@@ -10,12 +9,12 @@ const image = {
 
 <template>
   <Head>
-    <Title>Proyectos | Rebase IT</Title>
+    <Title>{{ t('pages.projects') }}</Title>
   </Head>
   <SectionImage
     class="pt-8"
-    :title="title"
-    :subtitle="subtitle"
+    :title="t('projects.title')"
+    :subtitle="t('projects.subtitle')"
     :image="image"
   />
   <ReSectionContainer

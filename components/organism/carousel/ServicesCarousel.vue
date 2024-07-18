@@ -1,122 +1,123 @@
 <script setup lang="ts">
+const { t } = useI18n()
 const { isSmaller: isMobile } = useViewport('lg');
 const images = ref([
   {
-    title: 'Servicios de Staff Augmentation',
+    title: 'services.staffTitle',
     subtitles: [
       {
-        title: 'Acceso a talento especializado',
-        text: 'Contamos con un equipo de expertos en tecnologías y metodologías de desarrollo que pueden integrarse fácilmente a tu proyecto. Esto te permite acceder a habilidades especializadas sin tener que contratar personal de manera permanente.'
+        title: 'services.staffSub1',
+        text: 'services.staffText1'
       },
       {
-        title: 'Escalabilidad flexible',
-        text: 'Podemos expandir o reducir el tamaño de tu equipo de desarrollo según tus necesidades, brindándote la flexibilidad necesaria para adaptarte a los cambios del proyecto y del mercado.'
+        title: 'services.staffSub2',
+        text: 'services.staffText2'
       },
       {
-        title: 'Eficiencia y Agilidad',
-        text: 'Nuestros consultores se integran rápidamente a tu equipo y utilizan metodologías ágiles para acelerar el desarrollo e implementación de tus soluciones tecnológicas.'
+        title: 'services.staffSub3',
+        text: 'services.staffText3'
       }
     ],
-    src: '/images/services/service_7.png',
+    src: 'services.staffImage',
     maxWidth: '750px'
   },
   {
-    title: 'Servicios de Desarrollo Frontend',
+    title: 'services.frontTitle',
     subtitles: [
       {
-        title: 'Diseño Responsive y Accesible',
-        text: 'Creamos interfaces de usuario atractivas y adaptables a diferentes dispositivos, tamaños de pantalla. Diseñamos con el mindset "users first".'
+        title: 'services.frontSub1',
+        text: 'services.frontText1'
       },
       {
-        title: 'Experiencia de Usuario',
-        text: 'Nos enfocamos en brindar una experiencia de usuario fluida y agradable. Aplicamos las mejores prácticas de UX para lograr interfaces intuitivas y fáciles de usar.'
+        title: 'services.frontSub2',
+        text: 'services.frontText2'
       },
       {
-        title: 'Optimización y Rendimiento',
-        text: 'Optimizamos el rendimiento de nuestras soluciones frontend, asegurando una carga rápida y una experiencia satisfactoria para los usuarios.'
+        title: 'services.frontSub3',
+        text: 'services.frontText3'
       }
     ],
-    src: '/images/services/service_1.png',
+    src: 'services.frontImage',
     maxWidth: '700px'
   },
   {
-    title: 'Servicios de Desarrollo Backend',
+    title: 'services.backTitle',
     subtitles: [
       {
-        title: 'Arquitectura de Aplicaciones',
-        text: 'Diseñamos soluciones backend escalables y eficientes, utilizando las últimas tecnologías y mejores prácticas. Nos encargamos de la infraestructura, la seguridad y la integración con sistemas existentes.'
+        title: 'services.backSub1',
+        text: 'services.backText1'
       },
       {
-        title: 'APIs y Microservicios',
-        text: 'Desarrollamos APIs RESTful y microservicios que permiten una integración fluida entre diferentes componentes de tu sistema. Garantizamos una comunicación segura y de alto rendimiento.'
+        title: 'services.backSub2',
+        text: 'services.backText2'
       },
       {
-        title: 'Automatización y DevOps',
-        text: 'Implementamos procesos de automatización y buenas prácticas DevOps para agilizar el desarrollo, despliegue y monitoreo de tus aplicaciones.'
+        title: 'services.backSub3',
+        text: 'services.backText3'
       }
     ],
-    src: '/images/services/service_2.png',
+    src: 'services.backImage',
     maxWidth: '700px'
   },
   {
-    title: 'Servicios de Bases de Datos',
+    title: 'services.dbTitle',
     subtitles: [
       {
-        title: 'Diseño y Arquitectura',
-        text: 'Diseñamos la estructura más adecuada de tu sistema de base de datos, considerando factores como volumen de datos, escalabilidad, rendimiento y disponibilidad.'
+        title: 'services.dbSub1',
+        text: 'services.dbText1'
       },
       {
-        title: 'Implementación y Administración',
-        text: 'Instalamos, configuramos y administramos tus bases de datos, asegurando un funcionamiento óptimo, respaldos y recuperación ante fallos.'
+        title: 'services.dbSub2',
+        text: 'services.dbText2'
       },
       {
-        title: 'Optimización y Rendimiento',
-        text: 'Aplicamos técnicas de optimización para mejorar la velocidad de ejecución de consultas, indexación y particionamiento de datos.'
+        title: 'services.dbSub3',
+        text: 'services.dbText3'
       },
       {
-        title: 'Seguridad y Cumplimiento',
-        text: 'Implementamos medidas de seguridad y cumplimos con los requisitos normativos aplicables a tus datos, protegiendo la integridad y confidencialidad de la información.'
+        title: 'services.dbSub4',
+        text: 'services.dbText4'
       }
     ],
-    src: '/images/services/service_3.png',
+    src: 'services.dbImage',
     maxWidth: '700px'
   },
   {
-    title: 'Infraestructura y Arquitectura de Sistemas',
+    title: 'services.infraTitle',
     subtitles: [
       {
-        title: 'Planificación',
-        text: 'Analizamos tus necesidades y elaboramos una estrategia de infraestructura que se adapte a tus objetivos de negocio y requisitos técnicos.'
+        title: 'services.infraSub1',
+        text: 'services.infraText1'
       },
       {
-        title: 'Diseño e Implementación',
-        text: 'Diseñamos y desplegamos una arquitectura de sistemas robusta y escalable, utilizando tecnologías de vanguardia.'
+        title: 'services.infraSub2',
+        text: 'services.infraText2'
       },
       {
-        title: 'Monitoreo y Optimización',
-        text: 'Implementamos soluciones de monitoreo y análisis que nos permiten tener una mayor visibilidad de la arquitectura desplegada.'
+        title: 'services.infraSub3',
+        text: 'services.infraText3'
       }
     ],
-    src: '/images/services/service_5.png',
+    src: 'services.infraImage',
     maxWidth: '750px'
   },
   {
-    title: 'Herramientas de Integración',
+    title: 'services.integrationTitle',
     subtitles: [
       {
-        title: 'Conectividad',
-        text: 'Integramos tus sistemas y aplicaciones utilizando APIs, webhooks y otros mecanismos de comunicación. Esto permite un flujo de información sin interrupciones entre tus diferentes herramientas.'
+        title: 'services.integrationSub1',
+        text: 'services.integrationText1'
       },
       {
-        title: 'Orquestación de Flujos',
-        text: 'Diseñamos flujos de trabajo optimizados que coordinan las diferentes aplicaciones y sistemas, asegurando una integración fluida y una mayor productividad.'
+        title: 'services.integrationSub2',
+        text: 'services.integrationText2'
       },
       {
-        title: 'Automatización de Procesos',
-        text: 'Implementamos soluciones de automatización que eliminan tareas repetitivas y manuales, aumentando la eficiencia de tus procesos de negocio.'
+        title: 'services.integrationSub3',
+        text: 'services.integrationText3'
       }
     ],
-    src: '/images/services/service_4.png',
+    src: 'services.integrationImage',
     maxWidth: '650px'
   },
 ]);
@@ -136,7 +137,7 @@ const images = ref([
         <div>
           <div>
             <ReTitleGradient :font-size="isMobile ? 'md' : 'xl'">
-              {{ slotProps.data.title }}
+              {{ t(slotProps.data.title) }}
             </ReTitleGradient>
           </div>
           <div
@@ -150,7 +151,7 @@ const images = ref([
             >
               <div class="mt-2">
                 <ReTitleGradient :font-size="isMobile ? 'sm' : 'lg'">
-                  {{ subtitle.title }}
+                  {{ t(subtitle.title) }}
                 </ReTitleGradient>
               </div>
               <div class="py-2">
@@ -158,7 +159,7 @@ const images = ref([
                   big-text
                   color="black"
                 >
-                  {{ subtitle.text }}
+                  {{ t(subtitle.text) }}
                 </ReParagraphSpan>
               </div>
             </div>
@@ -166,7 +167,7 @@ const images = ref([
           <div class="flex py-4 px-1">
             <ReImage
               class="m-auto"
-              :src="slotProps.data.src"
+              :src="t(slotProps.data.src)"
               :max-width="slotProps.data.maxWidth"
             />
           </div>

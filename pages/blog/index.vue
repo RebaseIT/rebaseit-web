@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import { useViewport } from "~/composables/useViewport";
 
+const { t } = useI18n()
 const { isSmaller: isMobile } = useViewport('lg');
-const title = 'Publicaciones';
-const subtitle = 'Enterate de todas las noticias y artículos que Rebase IT tiene para vos.';
 const image = {
   src: '/images/news.png',
   alt: 'news-image',
@@ -13,12 +12,12 @@ const image = {
 
 <template>
   <Head>
-    <Title>Blog | Rebase IT</Title>
+    <Title>{{ t('pages.blog') }}</Title>
   </Head>
   <SectionImage
     class="pt-8"
-    :title="title"
-    :subtitle="subtitle"
+    :title="t('blog.title')"
+    :subtitle="t('blog.subtitle')"
     :image="image"
   />
   <ReSectionContainer class="bg-light-blue">
@@ -31,21 +30,21 @@ const image = {
           font-family="IBM Plex Mono"
           font-weight="600"
         >
-          Última noticia:
+          {{ t('blog.breakingNews') }}
         </ReTitleGradient>
         <ReTitleGradient>
-          Presentamos Sherlock, la mejor respuesta para tu análisis de ciberseguridad
+          {{ t('blog.sherlockPresented') }}
         </ReTitleGradient>
         <ReTitleGradient
           font-weight="600"
           font-size="sm"
           class="align-self-end"
         >
-          Publicado el 23/03/23
+          {{ t('blog.publishedOn') }}
         </ReTitleGradient>
         <NuxtLink to="/blog/sherlock">
           <ReButton
-            label="Conocé más"
+            :label="t('projects.knowMore')"
             class="max-w-12rem"
           />
         </NuxtLink>
