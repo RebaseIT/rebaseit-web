@@ -90,6 +90,7 @@
     "staffSub1": "Acceso a talento especializado",
     "staffSub2": "Escalabilidad flexible",
     "staffSub3": "Eficiencia y Agilidad",
+    "staffImage": "/images/services/service_7_ES.png",
     "staffText1": "Contamos con un equipo de expertos en tecnologías y metodologías de desarrollo que pueden integrarse fácilmente a tu proyecto. Esto te permite acceder a habilidades especializadas sin tener que contratar personal de manera permanente.",
     "staffText2": "Podemos expandir o reducir el tamaño de tu equipo de desarrollo según tus necesidades, brindándote la flexibilidad necesaria para adaptarte a los cambios del proyecto y del mercado.",
     "staffText3": "Nuestros consultores se integran rápidamente a tu equipo y utilizan metodologías ágiles para acelerar el desarrollo e implementación de tus soluciones tecnológicas.",
@@ -97,6 +98,7 @@
     "frontSub1": "Diseño Responsive y Accesible",
     "frontSub2": "Experiencia de Usuario",
     "frontSub3": "Optimización y Rendimiento",
+    "frontImage": "/images/services/service_1.png",
     "frontText1": "Creamos interfaces de usuario atractivas y adaptables a diferentes dispositivos, tamaños de pantalla. Diseñamos con el mindset 'users first'.",
     "frontText2": "Nos enfocamos en brindar una experiencia de usuario fluida y agradable. Aplicamos las mejores prácticas de UX para lograr interfaces intuitivas y fáciles de usar.",
     "frontText3": "Optimizamos el rendimiento de nuestras soluciones frontend, asegurando una carga rápida y una experiencia satisfactoria para los usuarios.",
@@ -104,6 +106,7 @@
     "backSub1": "Arquitectura de Aplicaciones",
     "backSub2": "APIs y Microservicios",
     "backSub3": "Automatización y DevOps",
+    "backImage": "/images/services/service_2.png",
     "backText1": "Diseñamos soluciones backend escalables y eficientes, utilizando las últimas tecnologías y mejores prácticas. Nos encargamos de la infraestructura, la seguridad y la integración con sistemas existentes.",
     "backText2": "Desarrollamos APIs RESTful y microservicios que permiten una integración fluida entre diferentes componentes de tu sistema. Garantizamos una comunicación segura y de alto rendimiento.",
     "backText3": "Implementamos procesos de automatización y buenas prácticas DevOps para agilizar el desarrollo, despliegue y monitoreo de tus aplicaciones.",
@@ -112,6 +115,7 @@
     "dbSub2": "Implementación y Administración",
     "dbSub3": "Optimización y Rendimiento",
     "dbSub4": "Seguridad y Cumplimiento",
+    "dbImage": "/images/services/service_3_ES.png",
     "dbText1": "Diseñamos la estructura más adecuada de tu sistema de base de datos, considerando factores como volumen de datos, escalabilidad, rendimiento y disponibilidad.",
     "dbText2": "Instalamos, configuramos y administramos tus bases de datos, asegurando un funcionamiento óptimo, respaldos y recuperación ante fallos.",
     "dbText3": "Aplicamos técnicas de optimización para mejorar la velocidad de ejecución de consultas, indexación y particionamiento de datos.",
@@ -120,6 +124,7 @@
     "infraSub1": "Planificación",
     "infraSub2": "Diseño e Implementación",
     "infraSub3": "Monitoreo y Optimización",
+    "infraImage": "/images/services/service_5_ES.png",
     "infraText1": "Analizamos tus necesidades y elaboramos una estrategia de infraestructura que se adapte a tus objetivos de negocio y requisitos técnicos.",
     "infraText2": "Diseñamos y desplegamos una arquitectura de sistemas robusta y escalable, utilizando tecnologías de vanguardia.",
     "infraText3": "Implementamos soluciones de monitoreo y análisis que nos permiten tener una mayor visibilidad de la arquitectura desplegada.",
@@ -127,6 +132,7 @@
     "integrationSub1": "Conectividad",
     "integrationSub2": "Orquestación de Flujos",
     "integrationSub3": "Automatización de Procesos",
+    "integrationImage": "/images/services/service_4_ES.png",
     "integrationText1": "Integramos tus sistemas y aplicaciones utilizando APIs, webhooks y otros mecanismos de comunicación. Esto permite un flujo de información sin interrupciones entre tus diferentes herramientas.",
     "integrationText2": "Diseñamos flujos de trabajo optimizados que coordinan las diferentes aplicaciones y sistemas, asegurando una integración fluida y una mayor productividad.",
     "integrationText3": "Implementamos soluciones de automatización que eliminan tareas repetitivas y manuales, aumentando la eficiencia de tus procesos de negocio."
@@ -187,6 +193,14 @@
     "individualJobs": "Trabajos particulares",
     "events": "Eventos",
     "gotAProject": "¿Tenés un proyecto?",
-    "letsTalk": "Hablemos"
+    "letsTalk": "Hablemos",
+    "sherlock": "Sherlock",
+    "rebaseConnect": "Rebase Connect",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "database": "Base de datos",
+    "cloudProviders": "Proveedores Cloud",
+    "devOpsTools": "Herramientas DevOps",
+    "integrationTech": "Tecnologías de Integración"
   }
 }

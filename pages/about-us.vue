@@ -206,7 +206,7 @@ const polygons = [
             height="242px"
             :class="isMobile ? 'mt-0' : 'mt-4'"
           />
-          <div class="d-flex hex-width text-center mt-4">
+          <div class="hex-width text-center mt-4">
             <div>
               <ReTitleSpan
                 class="primary mt-3 font-semibold"

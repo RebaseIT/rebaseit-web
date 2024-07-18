@@ -18,7 +18,7 @@ const images = ref([
         text: 'services.staffText3'
       }
     ],
-    src: '/images/services/service_7.png',
+    src: 'services.staffImage',
     maxWidth: '750px'
   },
   {
@@ -37,7 +37,7 @@ const images = ref([
         text: 'services.frontText3'
       }
     ],
-    src: '/images/services/service_1.png',
+    src: 'services.frontImage',
     maxWidth: '700px'
   },
   {
@@ -56,7 +56,7 @@ const images = ref([
         text: 'services.backText3'
       }
     ],
-    src: '/images/services/service_2.png',
+    src: 'services.backImage',
     maxWidth: '700px'
   },
   {
@@ -79,7 +79,7 @@ const images = ref([
         text: 'services.dbText4'
       }
     ],
-    src: '/images/services/service_3.png',
+    src: 'services.dbImage',
     maxWidth: '700px'
   },
   {
@@ -98,7 +98,7 @@ const images = ref([
         text: 'services.infraText3'
       }
     ],
-    src: '/images/services/service_5.png',
+    src: 'services.infraImage',
     maxWidth: '750px'
   },
   {
@@ -117,7 +117,7 @@ const images = ref([
         text: 'services.integrationText3'
       }
     ],
-    src: '/images/services/service_4.png',
+    src: 'services.integrationImage',
     maxWidth: '650px'
   },
 ]);
@@ -167,7 +167,7 @@ const images = ref([
           <div class="flex py-4 px-1">
             <ReImage
               class="m-auto"
-              :src="slotProps.data.src"
+              :src="t(slotProps.data.src)"
               :max-width="slotProps.data.maxWidth"
             />
           </div>

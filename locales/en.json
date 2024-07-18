@@ -21,7 +21,7 @@
   "homePage": {
     "welcomeMessage": "At Rebase IT we specialize in development and implementation of custom SW and consulting services. Leveraging our broad range of interdisciplinary skills, we draw on our expertise in design, engineering and operations to provide our clients with the quality service they deserve.",
     "contactUs": "Contact us",
-    "knowOurServices": "Know our services",
+    "knowOurServices": "Our services",
     "ourProducts": "Our Products",
     "ourClients": "Our Clients",
     "whatWeDo": "What we do?",
@@ -90,6 +90,7 @@
     "staffSub1": "Access to Specialized Talent",
     "staffSub2": "Flexible Scalability",
     "staffSub3": "Efficiency and Agility",
+    "staffImage": "/images/services/service_7.png",
     "staffText1": "We have a team of experts in technologies and development methodologies who can easily integrate into your project. This allows you to access specialized skills without having to hire permanent staff.",
     "staffText2": "We can expand or reduce the size of your development team according to your needs, providing you with the necessary flexibility to adapt to project and market changes.",
     "staffText3": "Our consultants quickly integrate into your team and use agile methodologies to accelerate the development and implementation of your technological solutions.",
@@ -97,6 +98,7 @@
     "frontSub1": "Responsive and Accessible Design",
     "frontSub2": "User Experience",
     "frontSub3": "Optimization and Performance",
+    "frontImage": "/images/services/service_1.png",
     "frontText1": "We create attractive and adaptable user interfaces for different devices and screen sizes. We design with a 'users first' mindset.",
     "frontText2": "We focus on providing a smooth and pleasant user experience. We apply best UX practices to achieve intuitive and easy-to-use interfaces.",
     "frontText3": "We optimize the performance of our frontend solutions, ensuring fast loading and a satisfying user experience.",
@@ -104,6 +106,7 @@
     "backSub1": "Application Architecture",
     "backSub2": "APIs and Microservices",
     "backSub3": "Automation and DevOps",
+    "backImage": "/images/services/service_2.png",
     "backText1": "We design scalable and efficient backend solutions, using the latest technologies and best practices. We take care of the infrastructure, security, and integration with existing systems.",
     "backText2": "We develop RESTful APIs and microservices that enable smooth integration between different components of your system. We ensure secure and high-performance communication.",
     "backText3": "We implement automation processes and DevOps best practices to streamline the development, deployment, and monitoring of your applications.",
@@ -112,6 +115,7 @@
     "dbSub2": "Implementation and Administration",
     "dbSub3": "Optimization and Performance",
     "dbSub4": "Security and Compliance",
+    "dbImage": "/images/services/service_3.png",
     "dbText1": "We design the most suitable structure for your database system, considering factors such as data volume, scalability, performance, and availability.",
     "dbText2": "We install, configure, and manage your databases, ensuring optimal operation, backups, and failure recovery.",
     "dbText3": "We apply optimization techniques to improve query execution speed, indexing, and data partitioning.",
@@ -120,6 +124,7 @@
     "infraSub1": "Planning",
     "infraSub2": "Design and Implementation",
     "infraSub3": "Monitoring and Optimization",
+    "infraImage": "/images/services/service_5.png",
     "infraText1": "We analyze your needs and develop an infrastructure strategy that fits your business objectives and technical requirements.",
     "infraText2": "We design and deploy a robust and scalable systems architecture, using cutting-edge technologies.",
     "infraText3": "We implement monitoring and analysis solutions that allow us to have greater visibility of the deployed architecture.",
@@ -127,6 +132,7 @@
     "integrationSub1": "Connectivity",
     "integrationSub2": "Flow Orchestration",
     "integrationSub3": "Process Automation",
+    "integrationImage": "/images/services/service_4.png",
     "integrationText1": "We integrate your systems and applications using APIs, webhooks, and other communication mechanisms. This allows for a seamless flow of information between your different tools.",
     "integrationText2": "We design optimized workflows that coordinate the different applications and systems, ensuring smooth integration and increased productivity.",
     "integrationText3": "We implement automation solutions that eliminate repetitive and manual tasks, increasing the efficiency of your business processes."
@@ -187,6 +193,14 @@
     "individualJobs": "Individual Jobs",
     "events": "Events",
     "gotAProject": "Got a project?",
-    "letsTalk": "Let's Talk"
+    "letsTalk": "Let's Talk",
+    "sherlock": "Sherlock",
+    "rebaseConnect": "Rebase Connect",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "database": "Database",
+    "cloudProviders": "Cloud Providers",
+    "devOpsTools": "DevOps Tools",
+    "integrationTech": "Integration tech"
   }
 }

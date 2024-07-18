@@ -3,7 +3,7 @@ const { t } = useI18n()
 import { useViewport } from '~/composables/useViewport';
 const menus = ref([
   {
-    title: "Home",
+    title: "footer.home",
     to: "/"
   },
   {
@@ -15,11 +15,11 @@ const menus = ref([
     to: "/projects",
     menus: [
       {
-        title: "Sherlock",
+        title: "footer.sherlock",
         to: "/projects"
       },
       {
-        title: "Rebase Connect",
+        title: "footer.rebaseConnect",
         to: "/projects"
       },
     ]
@@ -29,32 +29,32 @@ const menus = ref([
     to: "/services",
     menus: [
       {
-        title: "Frontend",
+        title: "footer.frontend",
         to: "/services"
       },
       {
-        title: "Backend",
+        title: "footer.backend",
         to: "/services"
       },
       {
-        title: "Database",
+        title: "footer.database",
         to: "/services"
       },
       {
-        title: "Cloud Providers",
+        title: "footer.cloudProviders",
         to: "/services"
       },
       {
-        title: "DevOps Tools",
+        title: "footer.devOpsTools",
         to: "/services"
       },
       {
-        title: "Integration tech",
+        title: "footer.integrationTech",
         to: "/services"
       },
     ]
   },  {
-    title: "Blog",
+    title: "footer.blog",
     to: "/blog",
     menus: [
       {
