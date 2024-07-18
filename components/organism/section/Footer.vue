@@ -1,4 +1,5 @@
 <script setup>
+const { t } = useI18n()
 import { useViewport } from '~/composables/useViewport';
 const menus = ref([
   {
@@ -6,11 +7,11 @@ const menus = ref([
     to: "/"
   },
   {
-    title: "Conocenos",
+    title: "footer.aboutUs",
     to: "/about-us",
   },
   {
-    title: "Proyectos",
+    title: "footer.projects",
     to: "/projects",
     menus: [
       {
@@ -24,7 +25,7 @@ const menus = ref([
     ]
   },
   {
-    title: "Servicios",
+    title: "footer.services",
     to: "/services",
     menus: [
       {
@@ -57,23 +58,23 @@ const menus = ref([
     to: "/blog",
     menus: [
       {
-        title: "Todos los artículos",
+        title: "footer.allArticles",
         to: "/blog"
       },
       {
-        title: "Noticias",
+        title: "footer.news",
         to: "/blog"
       },
       {
-        title: "Proyectos",
+        title: "footer.projects",
         to: "/blog"
       },
       {
-        title: "Trabajos particulares",
+        title: "footer.individualJobs",
         to: "/blog"
       },
       {
-        title: "Eventos",
+        title: "footer.events",
         to: "/blog"
       },
     ]
@@ -109,7 +110,7 @@ const { isSmaller: isMobile } = useViewport('sm');
               class="text-white"
               font-size="lg"
             >
-              ¿Tenés un proyecto?
+              {{ t('footer.gotAProject') }}
             </ReTitleSpan>
             <br>
             <ReTitleSpan
@@ -117,7 +118,7 @@ const { isSmaller: isMobile } = useViewport('sm');
               font-size="lg"
               font-weight="400"
             >
-              Hablemos
+              {{ t('footer.letsTalk') }}
             </ReTitleSpan>
           </div>
           <div
@@ -160,7 +161,7 @@ const { isSmaller: isMobile } = useViewport('sm');
             class="text-link"
           >
             <ReTitle class="text-white">
-              {{ menu.title }}
+              {{ t(menu.title) }}
             </ReTitle>
           </NuxtLink>
           <template v-if="!isMobile">
@@ -175,7 +176,7 @@ const { isSmaller: isMobile } = useViewport('sm');
               >
                 <div>
                   <ReSubtitle>
-                    {{ submenu.title }}
+                    {{ t(submenu.title) }}
                   </ReSubtitle>
                 </div>
               </NuxtLink>

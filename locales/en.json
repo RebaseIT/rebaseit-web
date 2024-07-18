@@ -162,5 +162,18 @@
       "subtitle": "Have you ever been hacked or has someone in your organization been hacked? In that case, how quickly could they respond? Just as when we have a car, we take out insurance, in the world of cybersecurity you can opt for Sherlock: a solution that centralizes and automates the incident response tasks performed by cybersecurity analysts.",
       "moreInfo": "For more information, write to us at"
     }
+  },
+  "footer": {
+    "home": "Home",
+    "aboutUs": "About Us",
+    "projects": "Projects",
+    "services": "Services",
+    "blog": "Blog",
+    "allArticles": "All Articles",
+    "news": "News",
+    "individualJobs": "Individual Jobs",
+    "events": "Events",
+    "gotAProject": "Got a project?",
+    "letsTalk": "Let's Talk"
   }
 }
