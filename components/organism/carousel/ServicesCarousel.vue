@@ -134,7 +134,7 @@ const images = ref([
       circular
     >
       <template #item="slotProps">
-        <div>
+        <div class="mt-4">
           <div>
             <ReTitleGradient :font-size="isMobile ? 'md' : 'xl'">
               {{ t(slotProps.data.title) }}
