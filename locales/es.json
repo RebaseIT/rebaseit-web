@@ -1,5 +1,6 @@
 {
   "test": "Prueba",
+  "goBack": "Volver",
   "header": {
     "aboutUs": "Conocenos",
     "projects": "Proyectos",
@@ -122,5 +123,44 @@
     "integrationText1": "Integramos tus sistemas y aplicaciones utilizando APIs, webhooks y otros mecanismos de comunicación. Esto permite un flujo de información sin interrupciones entre tus diferentes herramientas.",
     "integrationText2": "Diseñamos flujos de trabajo optimizados que coordinan las diferentes aplicaciones y sistemas, asegurando una integración fluida y una mayor productividad.",
     "integrationText3": "Implementamos soluciones de automatización que eliminan tareas repetitivas y manuales, aumentando la eficiencia de tus procesos de negocio."
+  },
+  "blog": {
+    "title": "Publicaciones",
+    "subtitle": "Enterate de todas las noticias y artículos que Rebase IT tiene para vos.",
+    "breakingNews": "Última noticia:",
+    "sherlockPresented": "Presentamos Sherlock, la mejor respuesta para tu análisis de ciberseguridad",
+    "publishedOn": "Publicado el 23/03/23",
+    "postsByCategory": "Posteos por categoría",
+    "news": {
+      "title": "Noticias",
+      "sherlock": "- Sherlock, TOP 6 mejores trabajos en Argentina!"
+    },
+    "projects": {
+      "title": "Proyectos",
+      "hr": "- Si trabajás en RRHH, te invitamos a rellenar una breve encuesta",
+      "sherlock": "- Presentamos Sherlock, la mejor respuesta para tu análisis de ciberseguridad"
+    }, 
+    "individualJobs": {
+      "title": "Trabajos particulares",
+      "nine": "- Programamos las luces de Nine Shopping en Moreno"
+    },
+    "events": {
+      "title": "Eventos",
+      "holidays": "- Desde nuestro equipo te deseamos, ¡FELICES FIESTAS!"
+    },
+    "recentPosts": {
+      "title": "Posteos recientes",
+      "remoteOnsiteIntegration": "Integración de equipos remotos y on-site",
+      "agilePositiveImpact": "Agile y su impacto positivo en el desarrollo de software",
+      "staticSiteHosting": "Hosteando un sitio estático",
+      "staffAugmentation": "Staff Augmentation",
+      "systemScalability": "Escalabilidad de Sistemas",
+      "automatedFunctionalTests": "Pruebas Funcionales Automatizadas"
+    },
+    "sherlock": {
+      "title": "Presentamos Sherlock, la mejor respuesta para tu análisis de ciberseguridad",
+      "subtitle": "¿Alguna vez te hackearon o intentaron hackear a alguien de tu organización? En ese caso, ¿qué tan rápido podrían responder? Así como cuando tenemos un auto, contratamos un seguro, en el mundo de la ciberseguridad podés optar por Sherlock: una solución que centraliza y automatiza las tareas de respuesta a incidentes realizadas por los analistas de ciberseguridad.",
+      "moreInfo": "Para más información, escribinos a"
+    }
   }
 }

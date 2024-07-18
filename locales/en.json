@@ -1,5 +1,6 @@
 {
   "test": "Test",
+  "goBack": "Go back",
   "header": {
     "aboutUs": "About us",
     "projects": "Projects",
@@ -122,5 +123,44 @@
     "integrationText1": "We integrate your systems and applications using APIs, webhooks, and other communication mechanisms. This allows for a seamless flow of information between your different tools.",
     "integrationText2": "We design optimized workflows that coordinate the different applications and systems, ensuring smooth integration and increased productivity.",
     "integrationText3": "We implement automation solutions that eliminate repetitive and manual tasks, increasing the efficiency of your business processes."
+  },
+  "blog": {
+    "title": "Posts",
+    "subtitle": "Find out all the news and articles that Rebase IT has for you.",
+    "breakingNews": "Latest news:",
+    "sherlockPresented": "Introducing Sherlock, the best response for your cybersecurity analysis",
+    "publishedOn": "Published on 03/23/23",
+    "postsByCategory": "Posts by category",
+    "news": {
+      "title": "News",
+      "sherlock": "- Sherlock, TOP 6 best papers in Argentina!"
+    },
+    "projects": {
+      "title": "Projects",
+      "hr": "- If you work in HR, we invite you to fill out a brief survey",
+      "sherlock": "- Introducing Sherlock, the best response for your cybersecurity analysis"
+    }, 
+    "individualJobs": {
+      "title": "Individual Jobs",
+      "nine": "- We programmed the lights of Nine Shopping in Moreno"
+    },
+    "events": {
+      "title": "Events",
+      "holidays": "- From our team, we wish you HAPPY HOLIDAYS!"
+    },
+    "recentPosts": {
+      "title": "Recent Posts",
+      "remoteOnsiteIntegration": "Integration of Remote and On-Site Teams",
+      "agilePositiveImpact": "Agile and its Positive Impact on Software Development",
+      "staticSiteHosting": "Hosting a Static Site",
+      "staffAugmentation": "Staff Augmentation",
+      "systemScalability": "System Scalability",
+      "automatedFunctionalTests": "Automated Functional Testing"
+    },
+    "sherlock": {
+      "title": "Introducing Sherlock, the best response for your cybersecurity analysis",
+      "subtitle": "Have you ever been hacked or has someone in your organization been hacked? In that case, how quickly could they respond? Just as when we have a car, we take out insurance, in the world of cybersecurity you can opt for Sherlock: a solution that centralizes and automates the incident response tasks performed by cybersecurity analysts.",
+      "moreInfo": "For more information, write to us at"
+    }
   }
 }
