@@ -69,5 +69,10 @@
     "missionDetail": "To connect each of our clients with the most appropriate solution for their needs, guaranteeing their quality and profitability.",
     "valueTitle": "Vision",
     "valueDetail": "To become a leading company in the custom software market, ensuring quality in each of our projects."
+  },
+  "projects": {
+    "title": "Our Projects",
+    "subtitle": "At Rebase IT, we accompany our clients throughout the project life cycle, providing them with superior solutions tailored to their particular needs.",
+    "knowMore": "Know more"
   }
 }

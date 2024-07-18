@@ -76,7 +76,7 @@ const updateMiddleIndex = (event) => {
               >
                 <ReButton
                   class="button-link"
-                  label="Conocé más"
+                  :label="t('projects.knowMore')"
                 />
               </a>
             </div>
