@@ -119,7 +119,7 @@ const polygons = [
 
 <template>
   <Head>
-    <Title>Nosotros | Rebase IT</Title>
+    <Title>{{ t('pages.aboutUs') }}</Title>
   </Head>
   <SectionImage
     class="pt-8"

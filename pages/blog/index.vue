@@ -12,7 +12,7 @@ const image = {
 
 <template>
   <Head>
-    <Title>Blog | Rebase IT</Title>
+    <Title>{{ t('pages.blog') }}</Title>
   </Head>
   <SectionImage
     class="pt-8"

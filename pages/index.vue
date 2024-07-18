@@ -15,7 +15,7 @@ const scrollToSection = () => {
 
 <template>
   <Head>
-    <Title>Home | Rebase IT</Title>
+    <Title>{{ t('pages.home') }}</Title>
   </Head>
   <ReSectionTop>
     <div class="row px-4 py-8">

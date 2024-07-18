@@ -9,7 +9,7 @@ const image = {
 
 <template>
   <Head>
-    <Title>Proyectos | Rebase IT</Title>
+    <Title>{{ t('pages.projects') }}</Title>
   </Head>
   <SectionImage
     class="pt-8"

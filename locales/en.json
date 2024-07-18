@@ -11,6 +11,13 @@
     },
     "blog": "Blog"
   },
+  "pages": {
+    "home": "Home - Rebase IT",
+    "aboutUs": "About us - Rebase IT",
+    "projects": "Projects - Rebase IT",
+    "services": "Services - Rebase IT",
+    "blog": "Blog - Rebase IT"
+  },
   "homePage": {
     "welcomeMessage": "At Rebase IT we specialize in development and implementation of custom SW and consulting services. Leveraging our broad range of interdisciplinary skills, we draw on our expertise in design, engineering and operations to provide our clients with the quality service they deserve.",
     "contactUs": "Contact us",
