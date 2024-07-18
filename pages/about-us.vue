@@ -41,13 +41,13 @@ const teamOptions = [
     role: 'aboutUs.jorgeRole',
     image: '/images/team/jorge.png',
     alt: 'jorge'
-  },
-  {
-    name: 'Martín Lejman',
-    role: 'aboutUs.martinLRole',
-    image: '/images/team/martinL.png',
-    alt: 'martinL'
   }
+  // {
+  //   name: 'Martín Lejman',
+  //   role: 'aboutUs.martinLRole',
+  //   image: '/images/team/martinL.png',
+  //   alt: 'martinL'
+  // }
 ];
 
 const sectionOptions = [
