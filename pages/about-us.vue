@@ -1,11 +1,10 @@
 <script setup lang="ts">
 import { useViewport } from '~/composables/useViewport';
 
+const { t } = useI18n()
 const { isSmaller: isMobile } = useViewport('lg');
 const { isGreaterOrEqual: showPolygon } = useViewport('xl');
 
-const title = 'Somos RebaseIT';
-const subtitle = 'Nuestro equipo formado por profesionales dedicados y experimentados, combina talento, experiencia y creatividad para encontrar la solución perfecta para cada cliente.';
 const image = {
   src: '/images/id.png',
   alt: 'id-image',
@@ -15,37 +14,37 @@ const image = {
 const teamOptions = [
   {
     name: 'Juan Cueli',
-    role: 'Experto en aseguramiento de calidad',
+    role: 'aboutUs.juanRole',
     image: '/images/team/juan.png',
     alt: 'juan',
   },
   {
     name: 'Ezequiel Díaz',
-    role: 'Experto en lógicas de negocio complejas',
+    role: 'aboutUs.ezequielRole',
     image: '/images/team/ezequiel.png',
     alt: 'ezequiel',
   },
   {
     name: 'Rodrigo Díaz',
-    role: 'Especialista en dirección de equipos tecnológicos',
+    role: 'aboutUs.rodrigoRole',
     image: '/images/team/rodrigo.png',
     alt: 'rodrigo',
   },
   {
     name: 'Martín Urteaga',
-    role: 'Experto en ciberseguridad',
+    role: 'aboutUs.martinURole',
     image: '/images/team/martin.png',
     alt: 'martin'
   },
   {
     name: 'Jorge Covello',
-    role: 'Especialista en infraestructura Cloud',
+    role: 'aboutUs.jorgeRole',
     image: '/images/team/jorge.png',
     alt: 'jorge'
   },
   {
     name: 'Martín Lejman',
-    role: 'Especialista en arquitectura de sistemas escalables',
+    role: 'aboutUs.martinLRole',
     image: '/images/team/martinL.png',
     alt: 'martinL'
   }
@@ -53,8 +52,8 @@ const teamOptions = [
 
 const sectionOptions = [
   {
-    title: 'Misión',
-    description: 'Conectar a cada uno de nuestros clientes con la solución más adecuada para sus necesidades, garantizando la calidad y rentabilidad de las mismas.',
+    title: 'aboutUs.missionTitle',
+    description: 'aboutUs.missionDetail',
     image: {
       src: '/images/puzzle.png',
       alt: 'puzzle-image',
@@ -62,8 +61,8 @@ const sectionOptions = [
     }
   },
   {
-    title: 'Visión',
-    description: 'Convertirnos en una empresa líder del mercado de software a medida, asegurando la calidad en cada uno de nuestros proyectos.',
+    title: 'aboutUs.valueTitle',
+    description: 'aboutUs.valueDetail',
     image: {
       src: '/images/brujula.png',
       alt: 'brujula-image',
@@ -124,8 +123,8 @@ const polygons = [
   </Head>
   <SectionImage
     class="pt-8"
-    :title="title"
-    :subtitle="subtitle"
+    :title="t('aboutUs.title')"
+    :subtitle="t('aboutUs.subtitle')"
     :image="image"
   />
   <ReSectionContainer background="/images/background/background-2.png">
@@ -133,7 +132,7 @@ const polygons = [
       <ReTitleGradient
         class="align-self-center"
       >
-        Nuestra Historia
+        {{ t('aboutUs.ourStory') }}
       </ReTitleGradient>
       <div class="p-gradient-card mt-4">
         <div
@@ -147,12 +146,12 @@ const polygons = [
               color="black"
               font-weight="400"
             >
-              Rebase IT es el resultado del encuentro de cinco ingenieros en sistemas que se conocieron y se graduaron de la Universidad Tecnológica Nacional Regional Buenos Aires. Compartiendo una pasión por la tecnología y la innovación, decidimos unirnos para crear un impacto significativo en el mundo del desarrollo de software.
+              {{ t('aboutUs.ourStoryDetail1') }}
               <br
                 v-for="index in 2"
                 :key="`${index}-id`"
               >
-              Uno de los hitos fundamentales en nuestra historia fue la participación en el CONAIISI (Congreso Nacional de Ingeniería Informática y Sistemas de Información). En este contexto, nuestro proyecto, Sherlock, destacó al ser seleccionado como una de las siete soluciones académicas más prometedoras en Argentina. Este reconocimiento nos impulsó a continuar nuestro camino juntos y sentó las bases para la creación de Rebase IT.
+              {{ t('aboutUs.ourStoryDetail2') }}
               <br
                 v-for="index in 2"
                 :key="`${index}-alt`"
@@ -165,7 +164,7 @@ const polygons = [
                 />
               </div>
               <br>
-              Nuestro propósito es claro: promover y ayudar a distintas compañías a hacer realidad sus ideas y productos a través de soluciones innovadoras y tecnológicas. En Rebase IT, nos dedicamos a ofrecer servicios de consultoría y desarrollo de software a medida, siempre comprometidos con la excelencia y la satisfacción del cliente.
+              {{ t('aboutUs.ourStoryDetail3') }}  
             </ReTitleSpan>
           </div>
           <template v-if="showPolygon">
@@ -188,7 +187,7 @@ const polygons = [
       :class="{ 'px-6': isMobile }"
     >
       <ReTitleGradient class="align-self-center mb-4">
-        Conocé a nuestro equipo
+        {{ t('aboutUs.meetOurTeam') }}
       </ReTitleGradient>
       <div
         class="flex flex-row flex-wrap justify-content-center gap-4 xl:gap-4"
@@ -218,7 +217,7 @@ const polygons = [
             </div>
             <div class="mt-2">
               <ReParagraphSpan>
-                {{ member.role }}
+                {{ t(member.role) }}
               </ReParagraphSpan>
             </div>
           </div>
@@ -239,13 +238,13 @@ const polygons = [
       >
         <div class="p-gradient-card-content-hovered flex flex-column justify-center align-items-center">
           <ReTitleGradient class="align-self-center">
-            {{ section.title }}
+            {{ t(section.title) }}
           </ReTitleGradient>
           <ReTitleSpan
             class="my-4"
             color="black"
           >
-            {{ section.description }}
+            {{ t(section.description) }}
           </ReTitleSpan>
           <ReImage
             :alt="section.image.alt"

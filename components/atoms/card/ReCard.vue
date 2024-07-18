@@ -1,4 +1,5 @@
 <script setup>
+const { t } = useI18n()
 const props = defineProps({
   value: {
     type: Object,
@@ -36,13 +37,13 @@ const handleMouseOut = () => {
         class="p-gradient-card-content-title mt-3 font-bold text-center"
         :class="hovered ? 'text-white' : 'primary'"
       >
-        {{ value.title }}
+        {{ t(value.title) }}
       </ReTitleSpan>
       <ReSubtitle
         class="text-white text-center mt-4"
         v-show="hovered"
       >
-        {{ value.description }}
+        {{ t(value.description) }}
       </ReSubtitle>
     </div>
   </div>
