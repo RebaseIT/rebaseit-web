@@ -202,5 +202,11 @@
     "cloudProviders": "Cloud Providers",
     "devOpsTools": "DevOps Tools",
     "integrationTech": "Integration tech"
+  },
+  "rules": {
+    "email": "Please enter a valid e-mail address",
+    "required": "This field is required",
+    "phone": "Please enter a valid phone number",
+    "minLength": "This field must be at least {min} characters long"
   }
 }
