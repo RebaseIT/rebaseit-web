@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import { useViewport } from "~/composables/useViewport";
 
 const { t } = useI18n()
@@ -6,10 +6,8 @@ const { isSmaller: isMobile } = useViewport('xl');
 const { projects } = useProjects()
 const externalProjectsLogos = projects.filter(project => !project.isInternalProject).map(projectLogo => projectLogo.image)
 
-const contact = ref<any>(null);
-
 const scrollToSection = () => {
-  contact.value.$el.scrollIntoView({ behavior: 'smooth' });
+  document.getElementById('contact-us-section').scrollIntoView({ behavior: 'smooth' })
 }
 </script>
 
@@ -164,5 +162,5 @@ const scrollToSection = () => {
       </div>
     </div>
   </ReSectionWhatWeDo>
-  <ContactUs ref="contact" />
+  <ContactUs />
 </template>
