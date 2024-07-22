@@ -1,5 +1,6 @@
 <script setup>
 import { useField } from 'vee-validate'
+import { isString } from 'lodash'
 
 const emit = defineEmits(['update:modelValue'])
 const props = defineProps({
@@ -22,7 +23,7 @@ const props = defineProps({
 })
 
 const { value: inputValue, errorMessage, handleBlur } = useField(props.id, value => {
-  return props.validators.map(validator => validator(value)).find(element => typeof element === 'string') || true
+  return props.validators.map(validator => validator(value)).find(element => isString(element)) || true
 })
 </script>
 
