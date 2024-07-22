@@ -34,7 +34,7 @@ const cssFontSize = computed(() => {
 <template>
   <span
     class="re-title-span"
-    :class="{'is-clickable': isClickable}"
+    :class="{'clickable': isClickable}"
   >
     <slot>{{ text }}</slot>
   </span>
@@ -48,7 +48,7 @@ const cssFontSize = computed(() => {
   font-weight: v-bind(fontWeight);
   text-transform: v-bind(textTransform);
 }
-.is-clickable:hover {
+.clickable:hover {
   color: var(--secondary-color) !important;
 }
 </style>
