@@ -26,7 +26,7 @@ const selectedLanguage = computed({
     <template #value="{ value }">
       <ReImage
         :src="value.optionLabel"
-        class="cursor-pointer re-language-selector--image"
+        class="cursor-pointer re-language-selector--image ml-1"
         alt="language"
       />
     </template>

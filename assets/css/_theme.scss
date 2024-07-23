@@ -874,6 +874,7 @@
   color: #6c757d;
 }
 .p-dropdown-panel .p-dropdown-items {
+  margin: 0;
   padding: 0.75rem 0;
 }
 .p-dropdown-panel .p-dropdown-items .p-dropdown-item {
@@ -1146,7 +1147,7 @@
   font-size: 1rem;
   color: #495057;
   background: #ffffff;
-  padding: 0.75rem 0.75rem;
+  padding: 0.5rem 0.5rem;
   border: 1px solid #ced4da;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
   appearance: none;
