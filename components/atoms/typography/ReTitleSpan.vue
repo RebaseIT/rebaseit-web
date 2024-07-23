@@ -20,6 +20,10 @@ const props = defineProps({
   fontWeight: {
     type: String,
     default: '200'
+  },
+  isClickable: {
+    type: Boolean,
+    default: false
   }
 })
 const cssFontSize = computed(() => {
@@ -28,7 +32,10 @@ const cssFontSize = computed(() => {
 </script>
 
 <template>
-  <span class="re-title-span">
+  <span
+    class="re-title-span"
+    :class="{'clickable': isClickable}"
+  >
     <slot>{{ text }}</slot>
   </span>
 </template>
@@ -40,5 +47,8 @@ const cssFontSize = computed(() => {
   line-height: normal;
   font-weight: v-bind(fontWeight);
   text-transform: v-bind(textTransform);
+}
+.clickable:hover {
+  color: var(--secondary-color) !important;
 }
 </style>

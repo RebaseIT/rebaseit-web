@@ -80,7 +80,10 @@ const menus = ref([
     ]
   }
 ])
-const { isSmaller: isMobile } = useViewport('sm');
+const { isSmaller: isMobile } = useViewport('sm')
+const scrollToSection = () => {
+  document.getElementById('contact-us-section').scrollIntoView({ behavior: 'smooth' })
+}
 </script>
 <template>
   <div class="footer py-5">
@@ -117,6 +120,8 @@ const { isSmaller: isMobile } = useViewport('sm');
               class="text-white"
               font-size="lg"
               font-weight="400"
+              is-clickable
+              @click="scrollToSection"
             >
               {{ t('footer.letsTalk') }}
             </ReTitleSpan>
