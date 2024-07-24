@@ -51,6 +51,18 @@ export default () => {
       isInternalProject: false
     },
     {
+      content: 'products.trackAndTraceContent',
+      image: {
+        src: '/images/logo-track-and-trace.png',
+        maxWidth: '290px'
+      },
+      imageContent: {
+        src: '/images/track-and-trace-img.png'
+      },
+      route: 'https://www.linkedin.com/posts/rebase-it_security-information-incidentresponse-activity-6994309011672068096-uj3V',
+      isInternalProject: true
+    },
+    {
       content: 'products.sherlockContent',
       image: {
         src: '/images/logo_sherlock_deg.png',
