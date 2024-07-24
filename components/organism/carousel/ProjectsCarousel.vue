@@ -74,10 +74,10 @@ const updateMiddleIndex = (event) => {
                 :href="slotProps.data.route"
                 target="_blank"
               >
-                <ReButton
+                <!-- <ReButton
                   class="button-link"
                   :label="t('projects.knowMore')"
-                />
+                /> -->
               </a>
             </div>
           </template>

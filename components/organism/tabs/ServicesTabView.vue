@@ -129,6 +129,13 @@ const projectsToShow = projects.filter(project => project.content && project.isI
     &:deep(.p-highlight[data-pc-index="1"][data-pc-section="header"]){
       border-bottom: 0;
       border-left: 2px solid var(--secondary-color);
+      border-right: 2px solid var(--secondary-color);
+      border-radius: 6px 6px 0 0;
+      background-color: var(--surface-a);
+    }
+    &:deep(.p-highlight[data-pc-index="2"][data-pc-section="header"]){
+      border-bottom: 0;
+      border-left: 2px solid var(--secondary-color);
       border-radius: 6px 0 0 0;
       background-color: var(--surface-a);
     }
