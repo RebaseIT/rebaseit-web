@@ -11,6 +11,7 @@ import Carousel from "primevue/carousel";
 import Card from "primevue/card";
 import TabView from 'primevue/tabview';
 import TabPanel from 'primevue/tabpanel';
+import Dropdown from 'primevue/dropdown';
 
 export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.use(PrimeVue, { ripple: true });
@@ -24,4 +25,5 @@ export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.component("Card", Card);
   nuxtApp.vueApp.component("TabView", TabView);
   nuxtApp.vueApp.component("TabPanel", TabPanel);
+  nuxtApp.vueApp.component("Dropdown", Dropdown);
 });

@@ -1,5 +1,5 @@
 <script setup>
-const { t, locale } = useI18n()
+const { t } = useI18n()
 const route = useRoute()
 const router = useRouter()
 const menuItems = ref([
@@ -37,19 +37,11 @@ const menuItems = ref([
   },
   {
     src: '/images/flags/Flag_EN.svg',
-    isImage: true,
+    isLanguage: true,
     value: 'en'
   }
 ])
-const toggleLanguage = (item) => {
-  const languageMap = {
-    en: { src: '/images/flags/Flag_ES.svg', value: 'es', isImage: true },
-    es: { src: '/images/flags/Flag_EN.svg', value: 'en', isImage: true }
-  }
-  const newItems = menuItems.value.filter(i => i.value !== item.value)
-  menuItems.value = [...newItems, languageMap[item.value]]
-  locale.value = languageMap[item.value].value
-}
+
 </script>
 
 <template>
@@ -72,14 +64,11 @@ const toggleLanguage = (item) => {
         </NuxtLink>
       </template>
       <template #item="{ item, hasSubmenu }">
-        <ReImage
-          v-if="item.isImage"
-          class="flag"
-          alt="flag"
-          :src="item.src"
-          max-width="25px"
-          @click="toggleLanguage(item)"
-        />
+        <template v-if="item.isLanguage">
+          <LanguageSelector 
+            @click.stop="() => {}"
+          />
+        </template>
         <template v-else-if="hasSubmenu">
           <div class="d-flex align-items-center justify-space-between">
             <div>
@@ -148,6 +137,9 @@ const toggleLanguage = (item) => {
     color: var(--primary-color) !important;
     & span {
       color: var(--primary-color) !important;
+    }
+    &:has(.re-language-selector){
+      padding: 0;
     }
   }
   &:deep(.p-menubar-root-list > .p-menuitem-content:hover) {
