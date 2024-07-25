@@ -1,7 +1,8 @@
 <script setup>
-import { useField } from 'vee-validate';
+import { useField } from 'vee-validate'
+import { isString } from 'lodash'
 
-const emit = defineEmits(['update:modelValue']);
+const emit = defineEmits(['update:modelValue'])
 const props = defineProps({
   id: {
     type: String,
@@ -19,12 +20,11 @@ const props = defineProps({
     type: Array,
     default: () => []
   }
-});
+})
 
 const { value: inputValue, errorMessage, handleBlur } = useField(props.id, value => {
-  const error = props.validators.map(validator => validator(value)).find(Boolean);
-  return error || true;
-});
+  return props.validators.map(validator => validator(value)).find(element => isString(element)) || true
+})
 </script>
 
 <style scoped>

@@ -46,7 +46,7 @@ const submitAfterValidateForm = handleSubmit((form) => {
     </template>
     <ReButton
       type="submit"
-      label="Enviar"
+      :label="t('contactUs.send')"
     />
   </form>
 </template>

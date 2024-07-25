@@ -1,7 +1,7 @@
 <script setup>
 import { useViewport } from '~/composables/useViewport';
 import { useToast } from 'primevue/usetoast';
-import { isRequired, biggerThan, isValidEmail, isValidPhone } from '~/constants/fieldErrors';
+import { isRequired, isValidEmail, isValidPhone, minLength } from '~/constants/fieldErrors';
 
 const { t } = useI18n()
 const { isSmaller: isMobile } = useViewport('lg');
@@ -15,8 +15,7 @@ const fields = ref([
     type: 'text',
     label: 'contactUs.name',
     validators: [
-      isRequired,
-      biggerThan(3)
+      (v) => isRequired(v, t('rules.required'))
     ]
   },
   {
@@ -25,8 +24,7 @@ const fields = ref([
     type: 'text',
     label: 'contactUs.lastName',
     validators: [
-      isRequired,
-      biggerThan(3)
+      (v) => isRequired(v, t('rules.required'))
     ]
   },
   {
@@ -35,8 +33,8 @@ const fields = ref([
     type: 'text',
     label: 'contactUs.email',
     validators: [
-      isRequired,
-      isValidEmail
+      (v) => isRequired(v, t('rules.required')),
+      (v) => isValidEmail(v, t('rules.email')),
     ]
   },
   {
@@ -45,7 +43,7 @@ const fields = ref([
     type: 'text',
     label: 'contactUs.phone',
     validators: [
-      isValidPhone
+      (v) => isValidPhone(v, t('rules.phone'))
     ]
   },
   {
@@ -54,8 +52,8 @@ const fields = ref([
     type: 'textarea',
     label: 'contactUs.message',
     validators: [
-      isRequired,
-      biggerThan(10)
+      (v) => isRequired(v, t('rules.required')),
+      (v) => minLength(v, 10, t('rules.minLength', {min: 10}))
     ]
   }
 ]);
