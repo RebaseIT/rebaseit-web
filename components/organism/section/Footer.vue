@@ -4,85 +4,103 @@ import { useViewport } from '~/composables/useViewport';
 const menus = ref([
   {
     title: "footer.home",
-    to: "/"
+    to: "/",
+    anchor: "home-section"
   },
   {
     title: "footer.aboutUs",
     to: "/about-us",
+    anchor: "about-us-section"
   },
   {
     title: "footer.projects",
     to: "/projects",
+    anchor: "our-projects-section",
     menus: [
       {
         title: "footer.sherlock",
-        to: "/projects"
+        to: "/projects",
+        anchor: "projects-carousel"
       },
       {
         title: "footer.rebaseConnect",
-        to: "/projects"
+        to: "/projects",
+        anchor: "projects-carousel"
       },
     ]
   },
   {
     title: "footer.services",
     to: "/services",
+    anchor: "our-services-section",
     menus: [
       {
         title: "footer.frontend",
-        to: "/services"
+        to: "/services",
+        anchor: "services-carousel"
       },
       {
         title: "footer.backend",
-        to: "/services"
+        to: "/services",
+        anchor: "services-carousel"
       },
       {
         title: "footer.database",
-        to: "/services"
+        to: "/services",
+        anchor: "services-carousel"
       },
       {
         title: "footer.cloudProviders",
-        to: "/services"
+        to: "/services",
+        anchor: "services-carousel"
       },
       {
         title: "footer.devOpsTools",
-        to: "/services"
+        to: "/services",
+        anchor: "services-carousel"
       },
       {
         title: "footer.integrationTech",
-        to: "/services"
+        to: "/services",
+        anchor: "services-carousel"
       },
     ]
   },  {
     title: "footer.blog",
+    anchor: "blog-section",
     to: "/blog",
     menus: [
       {
         title: "footer.allArticles",
-        to: "/blog"
+        to: "/blog",
+        anchor: "recent-posts"
       },
       {
         title: "footer.news",
-        to: "/blog"
+        to: "/blog",
+        anchor: "post-by-category"
       },
       {
         title: "footer.projects",
-        to: "/blog"
+        to: "/blog",
+        anchor: "post-by-category"
       },
       {
         title: "footer.individualJobs",
-        to: "/blog"
+        to: "/blog",
+        anchor: "post-by-category"
       },
       {
         title: "footer.events",
-        to: "/blog"
+        to: "/blog",
+        anchor: "post-by-category"
       },
     ]
   }
 ])
 const { isSmaller: isMobile } = useViewport('sm')
-const scrollToSection = () => {
-  document.getElementById('contact-us-section').scrollIntoView({ behavior: 'smooth' })
+const scrollToSection = (id) => {
+  document.getElementById(id).scrollIntoView({ behavior: 'smooth' })
 }
 </script>
 <template>
@@ -121,7 +139,7 @@ const scrollToSection = () => {
               font-size="lg"
               font-weight="400"
               is-clickable
-              @click="scrollToSection"
+              @click="scrollToSection('contact-us-section')"
             >
               {{ t('footer.letsTalk') }}
             </ReTitleSpan>
@@ -168,6 +186,7 @@ const scrollToSection = () => {
             <ReTitle
               class="text-white"
               is-clickable
+              @click="scrollToSection(menu.anchor)"
             >
               {{ t(menu.title) }}
             </ReTitle>
@@ -183,7 +202,10 @@ const scrollToSection = () => {
                 class="text-link"
               >
                 <div>
-                  <ReSubtitle is-clickable>
+                  <ReSubtitle
+                    is-clickable
+                    @click="scrollToSection(submenu.anchor)"
+                  >
                     {{ t(submenu.title) }}
                   </ReSubtitle>
                 </div>

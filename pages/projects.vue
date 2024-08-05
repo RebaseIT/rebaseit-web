@@ -14,6 +14,7 @@ const image = {
   <SectionImage
     class="pt-8"
     :title="t('projects.title')"
+    id="our-projects-section"
     :subtitle="t('projects.subtitle')"
     :image="image"
   />

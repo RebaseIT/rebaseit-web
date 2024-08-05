@@ -6,8 +6,8 @@ const { isSmaller: isMobile } = useViewport('xl');
 const { projects } = useProjects()
 const externalProjectsLogos = projects.filter(project => !project.isInternalProject).map(projectLogo => projectLogo.image)
 
-const scrollToSection = () => {
-  document.getElementById('contact-us-section').scrollIntoView({ behavior: 'smooth' })
+const scrollToSection = (id) => {
+  document.getElementById(id).scrollIntoView({ behavior: 'smooth' })
 }
 </script>
 
@@ -16,7 +16,10 @@ const scrollToSection = () => {
     <Title>{{ t('pages.home') }}</Title>
   </Head>
   <ReSectionTop>
-    <div class="row px-4 py-8">
+    <div
+      class="row px-4 py-8"
+      id="home-section"
+    >
       <div
         class="col-8 pb-0"
         :class="{ 'col-12 text-center': isMobile }"
@@ -83,7 +86,7 @@ const scrollToSection = () => {
         :class="{ 'justify-content-center': isMobile }"
       >
         <ReButton
-          @click="scrollToSection"
+          @click="scrollToSection('contact-us-section')"
           :label="t('homePage.contactUs')"
         />
         <NuxtLink to="/services">

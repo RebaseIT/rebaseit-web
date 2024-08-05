@@ -35,6 +35,7 @@ const updateMiddleIndex = (event) => {
 <template>
   <Carousel
     class="carousel"
+    id="projects-carousel"
     :value="carrouselItems"
     :num-visible="3"
     :num-scroll="1"

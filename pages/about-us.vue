@@ -125,6 +125,7 @@ const polygons = [
     class="pt-8"
     :title="t('aboutUs.title')"
     :subtitle="t('aboutUs.subtitle')"
+    id="about-us-section"
     :image="image"
   />
   <ReSectionContainer background="/images/background/background-2.png">
