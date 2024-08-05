@@ -165,7 +165,10 @@ const scrollToSection = () => {
             :to="menu.to"
             class="text-link"
           >
-            <ReTitle class="text-white">
+            <ReTitle
+              class="text-white"
+              is-clickable
+            >
               {{ t(menu.title) }}
             </ReTitle>
           </NuxtLink>
@@ -180,7 +183,7 @@ const scrollToSection = () => {
                 class="text-link"
               >
                 <div>
-                  <ReSubtitle>
+                  <ReSubtitle is-clickable>
                     {{ t(submenu.title) }}
                   </ReSubtitle>
                 </div>
