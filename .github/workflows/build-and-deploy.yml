@@ -28,6 +28,7 @@ jobs:
         npm run generate
       env:
         NUXT_APP_BASE_URL: ${{ vars.NUXT_APP_BASE_URL  }}
+        SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
 
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@v4
