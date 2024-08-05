@@ -21,14 +21,17 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-
+    - name: set variables
+      run: |
+        touch .env
+        echo "SENDGRID_API_KEY=${{secrets.SENDGRID_API_KEY}}" >> .env
+        echo >> .env
     - name: Install & Generate 🔧
       run: |
         npm i
         npm run generate
       env:
         NUXT_APP_BASE_URL: ${{ vars.NUXT_APP_BASE_URL  }}
-        SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
 
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@v4
