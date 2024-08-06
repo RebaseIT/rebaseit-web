@@ -5,12 +5,19 @@ defineProps({
     required: false,
     default: ''
   },
+  isClickable: {
+    type: Boolean,
+    default: false
+  }
 })
 </script>
 
 
 <template>
-  <span class="re-subtitle">
+  <span
+    class="re-subtitle"
+    :class="{'clickable': isClickable}"
+  >
     <slot>{{ text }}</slot>
   </span>
 </template>
@@ -24,6 +31,9 @@ defineProps({
   line-height: normal;
   text-decoration: none;
   cursor: default;
+}
+.clickable:hover {
+  color: var(--secondary-color) !important;
 }
 </style>
 

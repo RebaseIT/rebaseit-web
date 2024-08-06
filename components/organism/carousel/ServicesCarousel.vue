@@ -124,7 +124,10 @@ const images = ref([
 </script>
 
 <template>
-  <div class="card">
+  <div
+    class="card"
+    id="services-carousel"
+  >
     <Carousel
       :value="images"
       :num-visible="1"

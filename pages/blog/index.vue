@@ -17,6 +17,7 @@ const image = {
   <SectionImage
     class="pt-8"
     :title="t('blog.title')"
+    id="blog-section"
     :subtitle="t('blog.subtitle')"
     :image="image"
   />

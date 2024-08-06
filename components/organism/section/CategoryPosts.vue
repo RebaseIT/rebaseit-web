@@ -67,7 +67,7 @@ const recentPosts = ref([
 <template>
   <ReSectionContainer background="/images/background/background-2.png">
     <div class="py-8 px-4">
-      <ReTitleGradient>
+      <ReTitleGradient id="post-by-category">
         {{ t('blog.postsByCategory') }}
       </ReTitleGradient>
       <div class="flex flex-wrap justify-content-center gap-4 mt-4">
