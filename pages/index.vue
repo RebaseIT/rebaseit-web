@@ -7,7 +7,9 @@ const { projects } = useProjects()
 const externalProjectsLogos = projects.filter(project => !project.isInternalProject).map(projectLogo => projectLogo.image)
 
 const scrollToSection = (id) => {
-  document.getElementById(id).scrollIntoView({ behavior: 'smooth' })
+  if (document.getElementById(id)) {
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' })
+  }
 }
 </script>
 

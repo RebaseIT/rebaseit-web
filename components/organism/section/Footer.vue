@@ -100,7 +100,9 @@ const menus = ref([
 ])
 const { isSmaller: isMobile } = useViewport('sm')
 const scrollToSection = (id) => {
-  document.getElementById(id).scrollIntoView({ behavior: 'smooth' })
+  if (document.getElementById(id)) {
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' })
+  }
 }
 </script>
 <template>
