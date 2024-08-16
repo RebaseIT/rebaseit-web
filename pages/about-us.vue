@@ -96,24 +96,24 @@ const polygons = [
     top: '280px',
     right: '-20px',
   },
-  {
-    height: '170px',
-    width: '150px',
-    top: '600px',
-    right: '100px',
-  },
-  {
-    height: '100px',
-    width: '90px',
-    top: '700px',
-    right: '350px',
-  },
-  {
-    height: '90px',
-    width: '80px',
-    top: '840px',
-    right: '250px',
-  }
+  // {
+  //   height: '170px',
+  //   width: '150px',
+  //   top: '600px',
+  //   right: '100px',
+  // },
+  // {
+  //   height: '100px',
+  //   width: '90px',
+  //   top: '700px',
+  //   right: '350px',
+  // },
+  // {
+  //   height: '90px',
+  //   width: '80px',
+  //   top: '840px',
+  //   right: '250px',
+  // }
 ]
 </script>
 
@@ -157,14 +157,14 @@ const polygons = [
                 v-for="index in 2"
                 :key="`${index}-alt`"
               >
-              <div class="text-center">
+              <!-- <div class="text-center">
                 <ReImage
                   src="/images/sherlock-conaiisi.jpeg"
                   alt="sherlock-conaiisi"
                   max-width="500px"
                 />
-              </div>
-              <br>
+              </div> 
+              <br> -->
               {{ t('aboutUs.ourStoryDetail3') }}  
             </ReTitleSpan>
           </div>
@@ -182,7 +182,7 @@ const polygons = [
       </div>
     </div>
   </ReSectionContainer>
-  <ReSectionContainer background="/images/background/background-2.png">
+  <!-- <ReSectionContainer background="/images/background/background-2.png">
     <div
       class="flex flex-column pb-8 px-2"
       :class="{ 'px-6': isMobile }"
@@ -225,7 +225,7 @@ const polygons = [
         </div>
       </div>
     </div>
-  </ReSectionContainer>
+  </ReSectionContainer> -->
   <OurValues />
   <ReSectionContainer background="/images/background/background-2.png">
     <div
