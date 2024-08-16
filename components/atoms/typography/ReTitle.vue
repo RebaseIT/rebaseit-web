@@ -34,7 +34,7 @@ const fontWeight = computed(() => props.bold ? 600 : 400)
   font-weight: v-bind(fontWeight);
 }
 .clickable:hover {
-  color: var(--secondary-color) !important;
+  color: var(--surface-200) !important;
 }
 </style>
 

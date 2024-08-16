@@ -33,7 +33,7 @@ defineProps({
   cursor: default;
 }
 .clickable:hover {
-  color: var(--secondary-color) !important;
+  color: var(--surface-200) !important;
 }
 </style>
 

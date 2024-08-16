@@ -206,6 +206,7 @@ const scrollToSection = (id) => {
                 <div>
                   <ReSubtitle
                     is-clickable
+                    class="text-white"
                     @click="scrollToSection(submenu.anchor)"
                   >
                     {{ t(submenu.title) }}

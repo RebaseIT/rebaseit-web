@@ -49,6 +49,6 @@ const cssFontSize = computed(() => {
   text-transform: v-bind(textTransform);
 }
 .clickable:hover {
-  color: var(--secondary-color) !important;
+  color: var(--surface-200) !important;
 }
 </style>
