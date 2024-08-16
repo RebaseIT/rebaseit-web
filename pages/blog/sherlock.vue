@@ -40,7 +40,6 @@ const images = [
           &lt; {{ t('goBack') }}
         </ReTitleSpan>
         <ReTitleGradient
-          text-transform="uppercase"
           font-weight="600"
         >
           {{ t('blog.sherlock.title') }}

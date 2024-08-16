@@ -72,7 +72,6 @@ const recentPosts = ref([
           <div class="flex flex-column">
             <ReTitleSpan
               class="primary"
-              text-transform="uppercase"
               font-size="xs"
               font-weight="600"
             >
