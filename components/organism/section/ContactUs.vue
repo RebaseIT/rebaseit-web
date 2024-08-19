@@ -95,13 +95,12 @@ const sendEmail = async (formData) => {
   }
   await useFetch("https://api.sendgrid.com/v3/mail/send",
     {
-      mode: 'no-cors',
-      method: "POST",
       headers: {
-        Authorization: "Bearer " + import.meta.env.VITE_SENDGRID_API_KEY,
+        'Authorization': `Bearer ${import.meta.env.VITE_SENDGRID_API_KEY}`,
         "Content-Type": "application/json",
-        Accept: "application/json",
+        'Accept': "application/json",
       },
+      method: "POST",
       body: msg
     })
     .then(() => {
