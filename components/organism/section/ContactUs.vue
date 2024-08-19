@@ -57,7 +57,9 @@ const fields = ref([
     ]
   }
 ]);
+
 const sendEmail = async (formData) => {
+  const config = useRuntimeConfig();
   const template = `
     <div>
       <h1>¡Hola!</h1>
@@ -74,7 +76,7 @@ const sendEmail = async (formData) => {
       {
         to: [
           {
-            email: "sales@rebaseit.tech",
+            email: "jorge.covello@rebaseit.tech",
             name: "Rebase IT"
           }
         ]
@@ -92,18 +94,29 @@ const sendEmail = async (formData) => {
       }
     ]
   }
-  await useFetch("/api/sendgrid", {
-    method: "POST",
-    body: msg
-  }).then(() => {
-    router.push('/thank-you');
-  }).catch((err) => {
-    toast.add({
-      severity: 'error',
-      detail: err.message,
-      life: 3000,
+  await $fetch("https://api.sendgrid.com/v3/mail/send",
+    {
+      method: "POST",
+      headers: {
+        Authorization: "Bearer " + config.SENDGRID_API_KEY,
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: msg
+    })
+  // await useFetch("/api/sendgrid", {
+  //   method: "POST",
+  //   body: msg
+  // })
+    .then(() => {
+      router.push('/thank-you');
+    }).catch((err) => {
+      toast.add({
+        severity: 'error',
+        detail: err.message,
+        life: 3000,
+      });
     });
-  });
 }
 </script>
 <template>
