@@ -99,7 +99,9 @@ const sendEmail = async (formData) => {
       headers: {
         Authorization: "Bearer " + import.meta.env.VITE_SENDGRID_API_KEY,
         "Content-Type": "application/json",
-        Accept: "application/json"
+        Accept: "application/json",
+        'Access-Control-Allow-Origin': 'https://sendgrid.com ',
+        'Access-Control-Allow-Methods': 'POST, OPTIONS',
       },
       body: msg
     })
@@ -110,6 +112,7 @@ const sendEmail = async (formData) => {
     .then(() => {
       router.push('/thank-you');
     }).catch((err) => {
+      console.error(err)
       toast.add({
         severity: 'error',
         detail: err.message,
