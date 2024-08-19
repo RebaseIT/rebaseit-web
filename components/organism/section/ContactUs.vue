@@ -95,13 +95,12 @@ const sendEmail = async (formData) => {
   }
   await $fetch("https://api.sendgrid.com/v3/mail/send",
     {
+      mode: 'no-cors',
       method: "POST",
       headers: {
         Authorization: "Bearer " + import.meta.env.VITE_SENDGRID_API_KEY,
         "Content-Type": "application/json",
         Accept: "application/json",
-        'Access-Control-Allow-Origin': 'https://sendgrid.api-docs.io',
-        'Access-Control-Allow-Methods': 'POST, OPTIONS',
       },
       body: msg
     })
