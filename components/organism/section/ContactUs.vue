@@ -59,7 +59,6 @@ const fields = ref([
 ]);
 
 const sendEmail = async (formData) => {
-  const config = useRuntimeConfig();
   const template = `
     <div>
       <h1>¡Hola!</h1>
@@ -98,7 +97,7 @@ const sendEmail = async (formData) => {
     {
       method: "POST",
       headers: {
-        Authorization: "Bearer " + config.SENDGRID_API_KEY,
+        Authorization: "Bearer " + import.meta.env.SENDGRID_API_KEY,
         "Content-Type": "application/json",
         Accept: "application/json"
       },
