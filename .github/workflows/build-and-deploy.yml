@@ -24,7 +24,7 @@ jobs:
     - name: set variables
       run: |
         touch .env
-        echo "SENDGRID_API_KEY=${{ secrets.SENDGRID_API_KEY }}" >> .env
+        echo "VITE_SENDGRID_API_KEY=${{ secrets.SENDGRID_API_KEY }}" >> .env
         echo >> .env
     - name: Install & Generate 🔧
       run: |

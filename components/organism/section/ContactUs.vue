@@ -97,7 +97,7 @@ const sendEmail = async (formData) => {
     {
       method: "POST",
       headers: {
-        Authorization: "Bearer " + import.meta.env.SENDGRID_API_KEY,
+        Authorization: "Bearer " + import.meta.env.VITE_SENDGRID_API_KEY,
         "Content-Type": "application/json",
         Accept: "application/json"
       },
