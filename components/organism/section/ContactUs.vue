@@ -93,7 +93,7 @@ const sendEmail = async (formData) => {
       }
     ]
   }
-  await $fetch("https://api.sendgrid.com/v3/mail/send",
+  await useFetch("https://api.sendgrid.com/v3/mail/send",
     {
       mode: 'no-cors',
       method: "POST",
@@ -104,10 +104,6 @@ const sendEmail = async (formData) => {
       },
       body: msg
     })
-  // await useFetch("/api/sendgrid", {
-  //   method: "POST",
-  //   body: msg
-  // })
     .then(() => {
       router.push('/thank-you');
     }).catch((err) => {
