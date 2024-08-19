@@ -101,7 +101,8 @@ const sendEmail = async (formData) => {
         'Accept': "application/json",
       },
       method: "POST",
-      body: msg
+      body: msg,
+      mode: "no-cors"
     })
     .then(() => {
       router.push('/thank-you');
