@@ -59,51 +59,11 @@ const fields = ref([
 ]);
 
 const sendEmail = async (formData) => {
-  const template = `
-    <div>
-      <h1>¡Hola!</h1>
-      <p>Recibiste un mensaje de ${formData.name} ${formData.lastName}</p>
-      <p>Nombre: ${formData.name}</p>
-      <p>Apellido: ${formData.lastName}</p>
-      <p>Correo: ${formData.email}</p>
-      <p>Teléfono: ${formData.phone}</p>
-      <p>Mensaje: ${formData.message}</p>
-    </div>
-  `;
-  const msg = {
-    personalizations: [
-      {
-        to: [
-          {
-            email: "jorge.covello@rebaseit.tech",
-            name: "Rebase IT"
-          }
-        ]
-      }
-    ],
-    from: {
-      email: "devops@rebaseit.tech",
-      name: "Rebase IT"
-    },
-    subject: "Solicitud de contacto desde web",
-    content: [
-      {
-        type: "text/html",
-        value: template
-      }
-    ]
-  }
-  await useFetch("https://api.sendgrid.com/v3/mail/send",
-    {
-      headers: {
-        'Authorization': `Bearer ${import.meta.env.VITE_SENDGRID_API_KEY}`,
-        "Content-Type": "application/json",
-        'Accept': "application/json",
-        'Access-Control-Allow-Headers': '*'
-      },
-      method: "POST",
-      body: msg,
-    })
+  await $fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: {...formData, access_key: import.meta.env.VITE_WEB3FORMS_KEY},
+  })
     .then(() => {
       router.push('/thank-you');
     }).catch((err) => {
