@@ -99,10 +99,10 @@ const sendEmail = async (formData) => {
         'Authorization': `Bearer ${import.meta.env.VITE_SENDGRID_API_KEY}`,
         "Content-Type": "application/json",
         'Accept': "application/json",
+        'Access-Control-Allow-Headers': '*'
       },
       method: "POST",
       body: msg,
-      mode: "no-cors"
     })
     .then(() => {
       router.push('/thank-you');
