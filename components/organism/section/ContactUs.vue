@@ -100,7 +100,7 @@ const sendEmail = async (formData) => {
         Authorization: "Bearer " + import.meta.env.VITE_SENDGRID_API_KEY,
         "Content-Type": "application/json",
         Accept: "application/json",
-        'Access-Control-Allow-Origin': 'https://sendgrid.com ',
+        'Access-Control-Allow-Origin': 'https://sendgrid.api-docs.io',
         'Access-Control-Allow-Methods': 'POST, OPTIONS',
       },
       body: msg
