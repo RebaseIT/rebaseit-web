@@ -1,9 +1,11 @@
 <script setup>
+import ReSecondaryButton from "~/components/atoms/button/ReSecondaryButton.vue";
 import { useViewport } from "~/composables/useViewport";
 
 const { t } = useI18n()
 const { isSmaller: isMobile } = useViewport('xl');
 const { projects } = useProjects()
+const { services } = useServices()
 const externalProjectsLogos = projects.filter(project => !project.isInternalProject).map(projectLogo => projectLogo.image)
 
 const scrollToSection = (id) => {
@@ -101,10 +103,30 @@ const scrollToSection = (id) => {
     </div>
   </ReSectionTop>
   <ReSectionProducts>
-    <div class="py-8 px-4">
+    <div class="pt-8 px-4">
       <ReTitleGradient>
-        {{ t('homePage.ourProducts') }}
+        {{ t('homePage.ourServices') }}
       </ReTitleGradient>
+      <div
+        class="justify-content-center mt-4 text-center"
+        :class="{ 'flex': !isMobile }"
+      >
+        <ReSecondaryCard
+          v-for="service in services"
+          :key="service"
+          :title="t(service.title)"
+          :content="t(service.content)"
+        />
+      </div>
+    </div>
+  </ReSectionProducts>
+  <ReSectionProducts>
+    <div class="py-8 px-4">
+      <div class="flex justify-content-end">
+        <ReTitleGradient>
+          {{ t('homePage.ourProducts') }}
+        </ReTitleGradient>
+      </div>
       <div class="py-4">
         <ServicesTabView />
       </div>

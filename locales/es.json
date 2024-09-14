@@ -22,10 +22,19 @@
     "welcomeMessage": "En Rebase IT nos especializamos en desarrollo e implementación de SW a medida y servicios de consultoría. Aprovechando nuestro amplio abanico de habilidades interdisciplinarias, recurrimos a nuestra experiencia en diseño, ingeniería y operaciones, para brindarles a nuestros clientes el servicio de calidad que merecen.",
     "contactUs": "Contactanos",
     "knowOurServices": "Conocé nuestros servicios",
+    "ourServices": "Nuestros servicios",
     "ourProducts": "Nuestros productos",
     "ourClients": "Nuestros clientes",
     "whatWeDo": "¿Qué hacemos?",
     "whatWeDoDetails": "En RebaseIT nos especializamos en múltiples frentes, manteniéndonos en la vanguardia de la industria y ofreciendo el más amplio abanico de soluciones para cada caso."
+  },
+  "servicesSummary": {
+    "swDevelopmentTitle": "Desarrollo de software",
+    "swDevelopmentContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris finibus venenatis suscipit. Donec mi erat, convallis in porttitor eget, dignissim et purus. Ut feugiat aliquet nisi a congue. Morbi tristique erat non ante congue, id maximus enim vestibulum. Mauris in metus accumsan, sodales sem eu, malesuada arcu. Etiam convallis ipsum sed ipsum lobortis, sed consectetur purus gravida. Nam varius posuere nulla a faucibus. Duis tempor, diam ut ullamcorper aliquam, quam velit aliquet ipsum, in ullamcorper erat diam non orci. Cras sodales erat faucibus nisl malesuada, et vulputate nibh finibus.",
+    "swRecruitingTitle": "Reclutamiento de software",
+    "swRecruitingContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris finibus venenatis suscipit. Donec mi erat, convallis in porttitor eget, dignissim et purus. Ut feugiat aliquet nisi a congue. Morbi tristique erat non ante congue, id maximus enim vestibulum. Mauris in metus accumsan, sodales sem eu, malesuada arcu. Etiam convallis ipsum sed ipsum lobortis, sed consectetur purus gravida. Nam varius posuere nulla a faucibus. Duis tempor, diam ut ullamcorper aliquam, quam velit aliquet ipsum, in ullamcorper erat diam non orci. Cras sodales erat faucibus nisl malesuada, et vulputate nibh finibus.",
+    "swConsultancyTitle": "Consultoría de software",
+    "swConsultancyContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris finibus venenatis suscipit. Donec mi erat, convallis in porttitor eget, dignissim et purus. Ut feugiat aliquet nisi a congue. Morbi tristique erat non ante congue, id maximus enim vestibulum. Mauris in metus accumsan, sodales sem eu, malesuada arcu. Etiam convallis ipsum sed ipsum lobortis, sed consectetur purus gravida. Nam varius posuere nulla a faucibus. Duis tempor, diam ut ullamcorper aliquam, quam velit aliquet ipsum, in ullamcorper erat diam non orci. Cras sodales erat faucibus nisl malesuada, et vulputate nibh finibus."
   },
   "products": {
     "nineContent": "Realizamos el proceso de configuración del sistema de administración digital de iluminación LED de nuestro cliente Nine Shopping, para que pudieran celebrar las fiestas de la mejor manera.",
