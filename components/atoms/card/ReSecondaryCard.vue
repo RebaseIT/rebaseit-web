@@ -51,9 +51,13 @@ defineProps({
 .card-style {
   &:deep(.p-card){
     background-color: var(--light-blue-10);
-    height: 470px;
-    width: 300px;
+    height: 420px;
+    width: 270px;
     text-align: center;
   }
+}
+.add-white-spaces {
+  white-space:pre-wrap;
+  font-size: 17px;
 }
 </style>
