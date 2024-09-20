@@ -113,6 +113,7 @@ const scrollToSection = (id) => {
       >
         <ReSecondaryCard
           v-for="service in services"
+          class="centered-card"
           :key="service"
           :title="t(service.title)"
           :content="t(service.content)"
@@ -191,3 +192,8 @@ const scrollToSection = (id) => {
   </ReSectionWhatWeDo>
   <ContactUs />
 </template>
+<style scope>
+.centered-card {
+  text-align: -webkit-center;
+}
+</style>
