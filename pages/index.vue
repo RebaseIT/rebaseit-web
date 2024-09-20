@@ -103,7 +103,7 @@ const scrollToSection = (id) => {
     </div>
   </ReSectionTop>
   <ReSectionProducts>
-    <div class="pt-8 px-4">
+    <div class="pt-6 px-4">
       <ReTitleGradient>
         {{ t('homePage.ourServices') }}
       </ReTitleGradient>
@@ -135,7 +135,7 @@ const scrollToSection = (id) => {
   </ReSectionProducts>
   <ReSectionClients>
     <div class="pb-8 px-4">
-      <ReTitleGradient class="flex justify-content-end pt-4 mb-4">
+      <ReTitleGradient class="flex justify-content-end mb-4">
         {{ t('homePage.ourClients') }}
       </ReTitleGradient>
       <div
