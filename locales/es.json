@@ -22,10 +22,19 @@
     "welcomeMessage": "En Rebase IT nos especializamos en desarrollo e implementación de SW a medida y servicios de consultoría. Aprovechando nuestro amplio abanico de habilidades interdisciplinarias, recurrimos a nuestra experiencia en diseño, ingeniería y operaciones, para brindarles a nuestros clientes el servicio de calidad que merecen.",
     "contactUs": "Contactanos",
     "knowOurServices": "Conocé nuestros servicios",
+    "ourServices": "Nuestros servicios",
     "ourProducts": "Nuestros productos",
     "ourClients": "Nuestros clientes",
     "whatWeDo": "¿Qué hacemos?",
     "whatWeDoDetails": "En RebaseIT nos especializamos en múltiples frentes, manteniéndonos en la vanguardia de la industria y ofreciendo el más amplio abanico de soluciones para cada caso."
+  },
+  "servicesSummary": {
+    "swDevelopmentTitle": "Desarrollo de software",
+    "swDevelopmentContent": "Creamos soluciones de software personalizadas adaptadas a las necesidades específicas de tu negocio. \n\n Nuestro equipo de expertos trabaja contigo para diseñar y desarrollar aplicaciones que optimizan tus procesos y mejoran la eficiencia, garantizando calidad y escalabilidad.",
+    "swRecruitingTitle": "Reclutamiento de software",
+    "swRecruitingContent": "Reforzá tu equipo con nuestros profesionales altamente capacitados en desarrollo de software. \n\n Brindamos talento técnico especializado que se integrará rápidamente a tus proyectos, mejorando la productividad y acelerando el cumplimiento de objetivos sin comprometer la calidad.",
+    "swConsultancyTitle": "Consultoría de software",
+    "swConsultancyContent": "Ofrecemos consultoría especializada para ayudarte a tomar decisiones estratégicas en tecnología. \n\n Desde la selección de plataformas hasta la optimización de sistemas existentes, te asesoramos para implementar soluciones que impulsen la innovación y el crecimiento de tu empresa."
   },
   "products": {
     "nineContent": "Realizamos el proceso de configuración del sistema de administración digital de iluminación LED de nuestro cliente Nine Shopping, para que pudieran celebrar las fiestas de la mejor manera.",

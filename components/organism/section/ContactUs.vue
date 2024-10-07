@@ -81,7 +81,7 @@ const sendEmail = async (formData) => {
     background="/images/background/background-2.png"
     id="contact-us-section"
   >
-    <div class="py-8 px-4">
+    <div class="py-6 px-4">
       <div class="w-full">
         <ReTitleGradient> {{ t('homePage.contactUs') }} </ReTitleGradient>
         <div class="py-4">

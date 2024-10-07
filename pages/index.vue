@@ -1,9 +1,11 @@
 <script setup>
+import ReSecondaryButton from "~/components/atoms/button/ReSecondaryButton.vue";
 import { useViewport } from "~/composables/useViewport";
 
 const { t } = useI18n()
 const { isSmaller: isMobile } = useViewport('xl');
 const { projects } = useProjects()
+const { services } = useServices()
 const externalProjectsLogos = projects.filter(project => !project.isInternalProject).map(projectLogo => projectLogo.image)
 
 const scrollToSection = (id) => {
@@ -101,10 +103,31 @@ const scrollToSection = (id) => {
     </div>
   </ReSectionTop>
   <ReSectionProducts>
-    <div class="py-8 px-4">
+    <div class="pt-6 px-4">
       <ReTitleGradient>
-        {{ t('homePage.ourProducts') }}
+        {{ t('homePage.ourServices') }}
       </ReTitleGradient>
+      <div
+        class="justify-content-center mt-4 text-center"
+        :class="{ 'flex': !isMobile }"
+      >
+        <ReSecondaryCard
+          v-for="service in services"
+          class="centered-card"
+          :key="service"
+          :title="t(service.title)"
+          :content="t(service.content)"
+        />
+      </div>
+    </div>
+  </ReSectionProducts>
+  <ReSectionProducts>
+    <div class="py-6 px-4">
+      <div class="flex justify-content-end">
+        <ReTitleGradient>
+          {{ t('homePage.ourProducts') }}
+        </ReTitleGradient>
+      </div>
       <div class="py-4">
         <ServicesTabView />
       </div>
@@ -112,7 +135,7 @@ const scrollToSection = (id) => {
   </ReSectionProducts>
   <ReSectionClients>
     <div class="pb-8 px-4">
-      <ReTitleGradient class="flex justify-content-end pt-4 mb-4">
+      <ReTitleGradient class="flex justify-content-end mb-4">
         {{ t('homePage.ourClients') }}
       </ReTitleGradient>
       <div
@@ -169,3 +192,8 @@ const scrollToSection = (id) => {
   </ReSectionWhatWeDo>
   <ContactUs />
 </template>
+<style scope>
+.centered-card {
+  text-align: -webkit-center;
+}
+</style>

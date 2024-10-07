@@ -22,10 +22,19 @@
     "welcomeMessage": "At Rebase IT we specialize in development and implementation of custom SW and consulting services. Leveraging our broad range of interdisciplinary skills, we draw on our expertise in design, engineering and operations to provide our clients with the quality service they deserve.",
     "contactUs": "Contact us",
     "knowOurServices": "Our services",
+    "ourServices": "Our services",
     "ourProducts": "Our products",
     "ourClients": "Our clients",
     "whatWeDo": "What we do?",
     "whatWeDoDetails": "At Rebase IT we specialize on multiple fronts, staying at the forefront of the industry and offering the widest range of solutions for each case."
+  },
+  "servicesSummary": {
+    "swDevelopmentTitle": "Software development",
+    "swDevelopmentContent": "We create custom software solutions tailored to the specific needs of your business. \n\n Our team of experts works with you to design and develop applications that optimize your processes and improve efficiency, guaranteeing quality and scalability.",
+    "swRecruitingTitle": "Software recruiting",
+    "swRecruitingContent": "Strengthen your team with our highly trained software development professionals. \n\n We provide specialized technical talent that will quickly integrate into your projects, improving productivity and fullfing your objectives without compromising quality.",
+    "swConsultancyTitle": "Software consultancy",
+    "swConsultancyContent": "We offer specialized consulting to help you make strategic decisions in technology. \n\n From the selection of platforms to the optimization of existing systems, we advise you to implement solutions that drive innovation and growth of your company."
   },
   "products": {
     "nineContent": "We carried out the configuration process of our client Nine Shopping's digital LED lighting management system, so that they could celebrate the holidays in the best way.",
