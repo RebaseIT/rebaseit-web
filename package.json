@@ -14,20 +14,20 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
-    "@nuxtjs/eslint-module": "^4.1.0",
-    "@types/node": "^18.16.19",
-    "@vueuse/core": "^10.7.0",
-    "@vueuse/nuxt": "^10.7.0",
-    "eslint": "^8.45.0",
-    "eslint-plugin-vue": "^9.15.1",
-    "nuxt": "^3.6.2"
+    "@nuxtjs/eslint-module": "4.1.0",
+    "@types/node": "18.16.19",
+    "@vueuse/core": "10.7.0",
+    "@vueuse/nuxt": "10.7.0",
+    "eslint": "8.45.0",
+    "eslint-plugin-vue": "9.15.1",
+    "nuxt": "3.6.2"
   },
   "dependencies": {
-    "primeflex": "^3.3.1",
-    "primeicons": "^7.0.0",
-    "primevue": "^3.45.0",
-    "sass": "^1.63.6",
-    "vee-validate": "^4.12.4",
+    "primeflex": "3.3.1",
+    "primeicons": "7.0.0",
+    "primevue": "3.45.0",
+    "sass": "1.63.6",
+    "vee-validate": "4.12.4",
     "vue-i18n": "9"
   }
 }
