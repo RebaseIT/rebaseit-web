@@ -1,8 +1,9 @@
 <script setup>
 import { useForm } from 'vee-validate';
 
-const { t } = useI18n()
-const { handleSubmit } = useForm();
+const { t, locale } = useI18n()
+const { handleSubmit, resetForm } = useForm();
+watch(locale, resetForm)
 const emit = defineEmits(['form']);
 const props = defineProps({
   fields: {
