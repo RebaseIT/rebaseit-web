@@ -92,7 +92,7 @@ const selectedLanguage = computed({
 }
 
 .menu-bar .p-menuitem-content .selected-option-text {
-  color: white!important;
+  color: black!important;
 }
 .select-option-button{
   display: contents;
@@ -103,8 +103,9 @@ const selectedLanguage = computed({
 }
 
 :deep(.select-option-button) .p-button.p-component.p-highlight{
-  background: var(--primary-500);
-  border-color: var(--primary-500);
+  background: var(--third-color);
+  border-color: var(--third-color);
+  margin: 8px;
 }
 
 </style>
