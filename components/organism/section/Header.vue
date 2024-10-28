@@ -38,7 +38,8 @@ const menuItems = ref([
   {
     src: '/images/flags/Flag_EN.svg',
     isLanguage: true,
-    value: 'en'
+    value: 'en',
+    class: 'no-background-color'
   }
 ])
 
@@ -236,5 +237,9 @@ const menuItems = ref([
   100% {
     opacity: 1;
   }
+}
+
+:deep(.no-background-color.p-menuitem) .p-menuitem-content {
+  background: white !important;
 }
 </style>

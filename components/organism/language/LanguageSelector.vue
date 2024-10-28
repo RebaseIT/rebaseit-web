@@ -50,13 +50,14 @@ const selectedLanguage = computed({
   </Dropdown>
   <div
     v-else
-    class="flex align-items-center justify-content-center"
+    class="flex align-items-center justify-content-center w-100"
   >
     <SelectButton
       v-model="selectedLanguage"
       :options="languages"
       option-label="optionLabel"
       data-key="optionValue"
+      class="w-100 select-option-button"
     >
       <template #option="slotProps">
         <i>
@@ -93,4 +94,17 @@ const selectedLanguage = computed({
 .menu-bar .p-menuitem-content .selected-option-text {
   color: white!important;
 }
+.select-option-button{
+  display: contents;
+}
+:deep(.select-option-button) .p-button.p-component {
+  display: block!important;
+  width: 100%;
+}
+
+:deep(.select-option-button) .p-button.p-component.p-highlight{
+  background: var(--primary-500);
+  border-color: var(--primary-500);
+}
+
 </style>
