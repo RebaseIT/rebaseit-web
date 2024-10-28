@@ -39,7 +39,7 @@ const menuItems = ref([
     src: '/images/flags/Flag_EN.svg',
     isLanguage: true,
     value: 'en',
-    class: 'no-background-color'
+    class: 'language-item'
   }
 ])
 
@@ -239,7 +239,8 @@ const menuItems = ref([
   }
 }
 
-:deep(.no-background-color.p-menuitem) .p-menuitem-content {
+:deep(.language-item.p-menuitem) .p-menuitem-content {
   background: white !important;
+  padding: 0px !important;
 }
 </style>
