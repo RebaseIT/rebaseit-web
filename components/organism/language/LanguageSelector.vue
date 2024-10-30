@@ -76,7 +76,7 @@ const selectedLanguage = computed({
 </template>
 <style lang="scss" scoped>
 .re-language-selector {
-  background: transparent;
+  background-color: var(--surface-b);
   border: none;
   display: flex !important;
   flex-direction: row-reverse;
