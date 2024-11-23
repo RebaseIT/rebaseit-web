@@ -36,6 +36,14 @@ const menuItems = ref([
     command: () => router.push('/blog')
   },
   {
+    label: 'header.contactUs',
+    command: () => {
+      if (document.getElementById('contact-us-section')) {
+        document.getElementById('contact-us-section').scrollIntoView({ behavior: 'smooth' })
+      }
+    }
+  },
+  {
     src: '/images/flags/Flag_EN.svg',
     isLanguage: true,
     value: 'en',
@@ -84,6 +92,7 @@ const menuItems = ref([
         <span
           v-else
           :class="{ 'current-page': item.url === route.path }"
+          @click="item.command"
         >
           <span>{{ t(item.label) }}</span>
         </span>
