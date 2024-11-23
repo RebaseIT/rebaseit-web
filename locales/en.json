@@ -3,7 +3,7 @@
   "goBack": "Go back",
   "header": {
     "aboutUs": "About us",
-    "projects": "Projects",
+    "projects": "Our projects",
     "services": "Services",
     "servicesSubTitles": {
       "frontend": "Frontend",
@@ -14,7 +14,7 @@
   "pages": {
     "home": "Home - Rebase IT",
     "aboutUs": "About us - Rebase IT",
-    "projects": "Projects - Rebase IT",
+    "projects": "Our projects - Rebase IT",
     "services": "Services - Rebase IT",
     "blog": "Blog - Rebase IT"
   },
@@ -37,7 +37,6 @@
     "swConsultancyContent": "We offer specialized consulting to help you make strategic decisions in technology. \n\n From the selection of platforms to the optimization of existing systems, we advise you to implement solutions that drive innovation and growth of your company."
   },
   "products": {
-    "nineContent": "We carried out the configuration process of our client Nine Shopping's digital LED lighting management system, so that they could celebrate the holidays in the best way.",
     "sherlockContent": "Have you ever been hacked or suffered hacking attempts in your organization?\n\nSherlock centralizes and automates incident response tasks, allowing your cybersecurity analysts to faster and more efficiently. Ensure your peace of mind with the advanced protection that only Sherlock can offer.",
     "trackAndTraceContent": "Rebase IT - Track & Trace is a traceability solution designed to meet compliance regulations and adapt to each client's specific needs.\n\nAdditionally, it provides added value to the business through the generation of reports and alerts, enabling more informed and strategic decision-making.",
     "reconnectContent": "The hiring process and data management of a high volume of candidates can be chaotic and confusing.\n\nRebase Connect is a data analytics application designed specifically for recruiters. With our solution you will be able to standardize information, track searches and generate key metrics indicators."
@@ -159,7 +158,7 @@
       "sherlock": "- Sherlock, TOP 6 best papers in Argentina!"
     },
     "projects": {
-      "title": "Projects",
+      "title": "Our projects",
       "hr": "- If you work in HR, we invite you to fill out a brief survey",
       "sherlock": "- Introducing Sherlock, the best response for your cybersecurity analysis"
     }, 

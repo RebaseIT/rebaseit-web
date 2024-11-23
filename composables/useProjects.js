@@ -1,16 +1,6 @@
 export default () => {
   const projects = [
     {
-      content: 'products.nineContent',
-      image: {
-        src: "/images/clients/nineAzul.png",
-        alt: "nineAzul",
-        maxWidth: "120px",
-      },
-      route: 'https://www.linkedin.com/posts/rebase-it_tech-sales-project-activity-7002987786941181952-cAVt',
-      isInternalProject: false
-    },
-    {
       content: null,
       image: {
         src:"/images/clients/pillmaykenAzul.png",

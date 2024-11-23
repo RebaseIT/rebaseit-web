@@ -3,7 +3,7 @@
   "goBack": "Volver",
   "header": {
     "aboutUs": "Conocenos",
-    "projects": "Proyectos",
+    "projects": "Nuestros proyectos",
     "services": "Servicios",
     "servicesSubTitles": {
       "frontend": "Frontend",
@@ -14,7 +14,7 @@
   "pages": {
     "home": "Home - Rebase IT",
     "aboutUs": "Nosotros - Rebase IT",
-    "projects": "Proyectos - Rebase IT",
+    "projects": "Nuestros proyectos - Rebase IT",
     "services": "Servicios - Rebase IT",
     "blog": "Blog - Rebase IT"
   },
@@ -37,7 +37,6 @@
     "swConsultancyContent": "Ofrecemos consultoría especializada para ayudarte a tomar decisiones estratégicas en tecnología. \n\n Desde la selección de plataformas hasta la optimización de sistemas existentes, te asesoramos para implementar soluciones que impulsen la innovación y el crecimiento de tu empresa."
   },
   "products": {
-    "nineContent": "Realizamos el proceso de configuración del sistema de administración digital de iluminación LED de nuestro cliente Nine Shopping, para que pudieran celebrar las fiestas de la mejor manera.",
     "sherlockContent": "¿Alguna vez te han hackeado o has sufrido intentos de hackeo en tu organización?\n\nSherlock centraliza y automatiza las tareas de respuesta a incidentes, permitiendo a tus analistas de ciberseguridad actuar de manera más rápida y eficiente. Asegurá tu tranquilidad con la protección avanzada que sólo Sherlock puede ofrecer.",
     "trackAndTraceContent": "Rebase IT - Track & Trace es una solución de trazabilidad diseñada para cumplir con regulaciones de compliance y adaptarse a las necesidades específicas de cada cliente.\n\nAdemás, ofrece valor añadido al negocio mediante la generación de reportes y alertas, facilitando decisiones más informadas y estratégicas.",
     "reconnectContent": "El proceso de contratación y la gestión de datos de un gran volumen de candidatos puede ser caótico y confuso.\n\nRebase Connect es una aplicación de análisis de datos diseñada específicamente para reclutadores. Con nuestra solución podrás estandarizar la información, realizar un seguimiento de las búsquedas y generar indicadores de métricas clave."
@@ -195,7 +194,7 @@
   "footer": {
     "home": "Home",
     "aboutUs": "Conocenos",
-    "projects": "Proyectos",
+    "projects": "Nuestros proyectos",
     "services": "Servicios",
     "blog": "Blog",
     "allArticles": "Todos los artículos",
