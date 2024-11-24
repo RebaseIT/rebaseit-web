@@ -36,20 +36,18 @@ const menuItems = ref([
     command: () => router.push('/blog')
   },
   {
-    label: 'header.contactUs',
-    command: () => {
-      if (document.getElementById('contact-us-section')) {
-        document.getElementById('contact-us-section').scrollIntoView({ behavior: 'smooth' })
-      }
-    }
-  },
-  {
     src: '/images/flags/Flag_EN.svg',
     isLanguage: true,
     value: 'en',
     class: 'language-item'
   }
 ])
+
+const scrollToSection = (id) => {
+  if (document.getElementById(id)) {
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' })
+  }
+}
 
 </script>
 
@@ -91,13 +89,17 @@ const menuItems = ref([
         </template>
         <span
           v-else
-          :class="{ 'current-page': item.url === route.path }"
-          @click="item.command"
+          :class="{ 'current-page': item.url === route.path}"
         >
           <span>{{ t(item.label) }}</span>
         </span>
       </template>
     </Menubar>
+    <ReButton
+      @click="scrollToSection('contact-us-section')"
+      :label="t('homePage.contactUs')"
+      class="my-3 mx-3"
+    />
   </div>
 </template>
 
