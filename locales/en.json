@@ -3,7 +3,7 @@
   "goBack": "Go back",
   "header": {
     "aboutUs": "About us",
-    "products": "Our products",
+    "products": "Products",
     "services": "Services",
     "servicesSubTitles": {
       "frontend": "Frontend",
@@ -41,7 +41,7 @@
     "trackAndTraceContent": "Rebase IT - Track & Trace is a traceability solution designed to meet compliance regulations and adapt to each client's specific needs.\n\nAdditionally, it provides added value to the business through the generation of reports and alerts, enabling more informed and strategic decision-making.",
     "reconnectContent": "The hiring process and data management of a high volume of candidates can be chaotic and confusing.\n\nRebase Connect is a data analytics application designed specifically for recruiters. With our solution you will be able to standardize information, track searches and generate key metrics indicators.",
     "title": "Our products",
-    "subtitle": "At Rebase IT, we accompany our clients throughout the project life cycle, providing them with superior solutions tailored to their particular needs.",
+    "subtitle": "At Rebase IT, we develop innovative products that enhance business efficiency, streamline processes, and provide tailored technological solutions.",
     "knowMore": "Know more"
   },
   "contactUs": {
