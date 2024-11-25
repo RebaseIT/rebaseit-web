@@ -9,7 +9,8 @@
       "frontend": "Frontend",
       "backend": "Backend"
     },
-    "blog": "Blog"
+    "blog": "Blog",
+    "contactUs":"Contact us"
   },
   "pages": {
     "home": "Home - Rebase IT",

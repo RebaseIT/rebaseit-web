@@ -12,6 +12,7 @@ defineProps({
   <Button
     :type="type"
     class="re-button"
+    size="small"
   />
 </template>
 

@@ -1,5 +1,6 @@
 <script setup>
 const { t } = useI18n()
+const { isSmaller: isMobile } = useViewport('lg')
 const route = useRoute()
 const router = useRouter()
 const menuItems = ref([
@@ -40,8 +41,21 @@ const menuItems = ref([
     isLanguage: true,
     value: 'en',
     class: 'language-item'
+  },
+  {
+    isButton: true,
+    buttonProps: {
+      onClick: () => scrollToSection('contact-us-section'),
+      label: t('homePage.contactUs'),
+    }
   }
 ])
+
+const scrollToSection = (id) => {
+  if (document.getElementById(id)) {
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' })
+  }
+}
 
 </script>
 
@@ -81,9 +95,14 @@ const menuItems = ref([
             </div>
           </div>
         </template>
+        <ReButton
+          v-else-if="item.isButton"
+          v-bind="item.buttonProps"
+          :class="isMobile ? 'w-full' : '' "
+        />
         <span
           v-else
-          :class="{ 'current-page': item.url === route.path }"
+          :class="{ 'current-page': item.url === route.path}"
         >
           <span>{{ t(item.label) }}</span>
         </span>
@@ -136,7 +155,7 @@ const menuItems = ref([
     border-radius: 8px;
     padding: 0.75rem 1.25rem;
     color: var(--primary-color) !important;
-    & span {
+    & span:not(.p-button-label) {
       color: var(--primary-color) !important;
     }
     &:has(.re-language-selector){
@@ -239,8 +258,12 @@ const menuItems = ref([
   }
 }
 
-:deep(.language-item.p-menuitem) .p-menuitem-content {
+:deep(.p-menuitem.language-item) .p-menuitem-content {
   background: white !important;
-  padding: 0px !important;
 }
+:deep(.p-menuitem) .p-menuitem-content {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
 </style>

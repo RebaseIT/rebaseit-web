@@ -11,6 +11,7 @@ defineProps({
 <template>
   <Button
     :type="type"
+    size="small"
     outlined
     class="re-secondary-button"
   />
