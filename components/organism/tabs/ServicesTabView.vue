@@ -3,8 +3,8 @@ import { useViewport } from '~/composables/useViewport';
 
 const { isSmaller: isMobile } = useViewport('md');
 const { t } = useI18n()
-const { projects } = useProjects()
-const projectsToShow = projects.filter(project => project.content && project.isInternalProject)
+const { products } = useProducts()
+const productsToShow = products.filter(project => project.content && project.isInternalProject)
 </script>
 
 <template>
@@ -13,7 +13,7 @@ const projectsToShow = projects.filter(project => project.content && project.isI
       class="card-tab-view"
     >
       <TabPanel
-        v-for="projectToShow in projectsToShow"
+        v-for="projectToShow in productsToShow"
         :key="projectToShow"
       >
         <template #header>

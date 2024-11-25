@@ -45,7 +45,7 @@ const image = {
         </ReTitleGradient>
         <NuxtLink to="/blog/sherlock">
           <ReButton
-            :label="t('projects.knowMore')"
+            :label="t('products.knowMore')"
             class="max-w-12rem"
           />
         </NuxtLink>

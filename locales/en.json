@@ -3,7 +3,7 @@
   "goBack": "Go back",
   "header": {
     "aboutUs": "About us",
-    "projects": "Projects",
+    "products": "Products",
     "services": "Services",
     "servicesSubTitles": {
       "frontend": "Frontend",
@@ -15,7 +15,7 @@
   "pages": {
     "home": "Home - Rebase IT",
     "aboutUs": "About us - Rebase IT",
-    "projects": "Projects - Rebase IT",
+    "products": "Our products - Rebase IT",
     "services": "Services - Rebase IT",
     "blog": "Blog - Rebase IT"
   },
@@ -33,15 +33,17 @@
     "swDevelopmentTitle": "Software development",
     "swDevelopmentContent": "We create custom software solutions tailored to the specific needs of your business. \n\n Our team of experts works with you to design and develop applications that optimize your processes and improve efficiency, guaranteeing quality and scalability.",
     "swRecruitingTitle": "Software recruiting",
-    "swRecruitingContent": "Strengthen your team with our highly trained software development professionals. \n\n We provide specialized technical talent that will quickly integrate into your projects, improving productivity and fullfing your objectives without compromising quality.",
+    "swRecruitingContent": "Strengthen your team with our highly trained software development professionals. \n\n We provide specialized technical talent that will quickly integrate into your products, improving productivity and fullfing your objectives without compromising quality.",
     "swConsultancyTitle": "Software consultancy",
     "swConsultancyContent": "We offer specialized consulting to help you make strategic decisions in technology. \n\n From the selection of platforms to the optimization of existing systems, we advise you to implement solutions that drive innovation and growth of your company."
   },
   "products": {
-    "nineContent": "We carried out the configuration process of our client Nine Shopping's digital LED lighting management system, so that they could celebrate the holidays in the best way.",
     "sherlockContent": "Have you ever been hacked or suffered hacking attempts in your organization?\n\nSherlock centralizes and automates incident response tasks, allowing your cybersecurity analysts to faster and more efficiently. Ensure your peace of mind with the advanced protection that only Sherlock can offer.",
     "trackAndTraceContent": "Rebase IT - Track & Trace is a traceability solution designed to meet compliance regulations and adapt to each client's specific needs.\n\nAdditionally, it provides added value to the business through the generation of reports and alerts, enabling more informed and strategic decision-making.",
-    "reconnectContent": "The hiring process and data management of a high volume of candidates can be chaotic and confusing.\n\nRebase Connect is a data analytics application designed specifically for recruiters. With our solution you will be able to standardize information, track searches and generate key metrics indicators."
+    "reconnectContent": "The hiring process and data management of a high volume of candidates can be chaotic and confusing.\n\nRebase Connect is a data analytics application designed specifically for recruiters. With our solution you will be able to standardize information, track searches and generate key metrics indicators.",
+    "title": "Our products",
+    "subtitle": "At Rebase IT, we develop innovative products that enhance business efficiency, streamline processes, and provide tailored technological solutions.",
+    "knowMore": "Know more"
   },
   "contactUs": {
     "name": "Name *",
@@ -87,12 +89,7 @@
     "missionTitle": "Mission",
     "missionDetail": "To connect each of our clients with the most appropriate solution for their needs, guaranteeing their quality and profitability.",
     "valueTitle": "Vision",
-    "valueDetail": "To become a leading company in the custom software market, ensuring quality in each of our projects."
-  },
-  "projects": {
-    "title": "Our projects",
-    "subtitle": "At Rebase IT, we accompany our clients throughout the project life cycle, providing them with superior solutions tailored to their particular needs.",
-    "knowMore": "Know more"
+    "valueDetail": "To become a leading company in the custom software market, ensuring quality in each of our products."
   },
   "services": {
     "title": "Our services",
@@ -159,8 +156,8 @@
       "title": "News",
       "sherlock": "- Sherlock, TOP 6 best papers in Argentina!"
     },
-    "projects": {
-      "title": "Projects",
+    "products": {
+      "title": "Our products",
       "hr": "- If you work in HR, we invite you to fill out a brief survey",
       "sherlock": "- Introducing Sherlock, the best response for your cybersecurity analysis"
     }, 
@@ -196,7 +193,7 @@
   "footer": {
     "home": "Home",
     "aboutUs": "About us",
-    "projects": "Projects",
+    "products": "Products",
     "services": "Services",
     "blog": "Blog",
     "allArticles": "All Articles",

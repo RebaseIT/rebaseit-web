@@ -10,9 +10,9 @@ const menuItems = ref([
     command: () => router.push('/about-us')
   },
   {
-    label: 'header.projects',
-    url: '/projects',
-    command: () => router.push('/projects')
+    label: 'header.products',
+    url: '/products',
+    command: () => router.push('/products')
   },
   {
     label: 'header.services',

@@ -16,7 +16,7 @@ const recentPosts = ref([
     ]
   },
   {
-    title: 'blog.projects.title',
+    title: 'blog.products.title',
     image: {
       src: '/images/posts/helmet.png',
       maxWidth: '130px',
@@ -24,11 +24,11 @@ const recentPosts = ref([
     },
     items: [
       {
-        text: 'blog.projects.hr',
+        text: 'blog.products.hr',
         route: 'https://www.linkedin.com/feed/update/urn:li:activity:7008800849233633280/'
       },
       {
-        text: 'blog.projects.sherlock',
+        text: 'blog.products.sherlock',
         route: 'https://www.linkedin.com/posts/rebase-it_security-information-incidentresponse-activity-6994309011672068096-uj3V'
       }
     ]
