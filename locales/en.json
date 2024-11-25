@@ -39,7 +39,10 @@
   "products": {
     "sherlockContent": "Have you ever been hacked or suffered hacking attempts in your organization?\n\nSherlock centralizes and automates incident response tasks, allowing your cybersecurity analysts to faster and more efficiently. Ensure your peace of mind with the advanced protection that only Sherlock can offer.",
     "trackAndTraceContent": "Rebase IT - Track & Trace is a traceability solution designed to meet compliance regulations and adapt to each client's specific needs.\n\nAdditionally, it provides added value to the business through the generation of reports and alerts, enabling more informed and strategic decision-making.",
-    "reconnectContent": "The hiring process and data management of a high volume of candidates can be chaotic and confusing.\n\nRebase Connect is a data analytics application designed specifically for recruiters. With our solution you will be able to standardize information, track searches and generate key metrics indicators."
+    "reconnectContent": "The hiring process and data management of a high volume of candidates can be chaotic and confusing.\n\nRebase Connect is a data analytics application designed specifically for recruiters. With our solution you will be able to standardize information, track searches and generate key metrics indicators.",
+    "title": "Our products",
+    "subtitle": "At Rebase IT, we accompany our clients throughout the project life cycle, providing them with superior solutions tailored to their particular needs.",
+    "knowMore": "Know more"
   },
   "contactUs": {
     "name": "Name *",
@@ -86,11 +89,6 @@
     "missionDetail": "To connect each of our clients with the most appropriate solution for their needs, guaranteeing their quality and profitability.",
     "valueTitle": "Vision",
     "valueDetail": "To become a leading company in the custom software market, ensuring quality in each of our products."
-  },
-  "products": {
-    "title": "Our products",
-    "subtitle": "At Rebase IT, we accompany our clients throughout the project life cycle, providing them with superior solutions tailored to their particular needs.",
-    "knowMore": "Know more"
   },
   "services": {
     "title": "Our services",
@@ -194,7 +192,7 @@
   "footer": {
     "home": "Home",
     "aboutUs": "About us",
-    "products": "products",
+    "products": "Products",
     "services": "Services",
     "blog": "Blog",
     "allArticles": "All Articles",

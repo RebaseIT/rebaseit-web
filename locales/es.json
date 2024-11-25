@@ -39,7 +39,10 @@
   "products": {
     "sherlockContent": "¿Alguna vez te han hackeado o has sufrido intentos de hackeo en tu organización?\n\nSherlock centraliza y automatiza las tareas de respuesta a incidentes, permitiendo a tus analistas de ciberseguridad actuar de manera más rápida y eficiente. Asegurá tu tranquilidad con la protección avanzada que sólo Sherlock puede ofrecer.",
     "trackAndTraceContent": "Rebase IT - Track & Trace es una solución de trazabilidad diseñada para cumplir con regulaciones de compliance y adaptarse a las necesidades específicas de cada cliente.\n\nAdemás, ofrece valor añadido al negocio mediante la generación de reportes y alertas, facilitando decisiones más informadas y estratégicas.",
-    "reconnectContent": "El proceso de contratación y la gestión de datos de un gran volumen de candidatos puede ser caótico y confuso.\n\nRebase Connect es una aplicación de análisis de datos diseñada específicamente para reclutadores. Con nuestra solución podrás estandarizar la información, realizar un seguimiento de las búsquedas y generar indicadores de métricas clave."
+    "reconnectContent": "El proceso de contratación y la gestión de datos de un gran volumen de candidatos puede ser caótico y confuso.\n\nRebase Connect es una aplicación de análisis de datos diseñada específicamente para reclutadores. Con nuestra solución podrás estandarizar la información, realizar un seguimiento de las búsquedas y generar indicadores de métricas clave.",
+    "title": "Nuestros productos",
+    "subtitle": "Desde Rebase IT, acompañamos a nuestros clientes en todo el ciclo de vida del proyecto, brindándoles soluciones superadoras y ajustadas a sus necesidades particulares.",
+    "knowMore": "Conocé más"
   },
   "contactUs": {
     "name": "Nombre *",
@@ -86,11 +89,6 @@
     "missionDetail": "Conectar a cada uno de nuestros clientes con la solución más adecuada para sus necesidades, garantizando la calidad y rentabilidad de las mismas.",
     "valueTitle": "Visión",
     "valueDetail": "Convertirnos en una empresa líder del mercado de software a medida, asegurando la calidad en cada uno de nuestros proyectos."
-  },
-  "products": {
-    "title": "Nuestros productos",
-    "subtitle": "Desde Rebase IT, acompañamos a nuestros clientes en todo el ciclo de vida del proyecto, brindándoles soluciones superadoras y ajustadas a sus necesidades particulares.",
-    "knowMore": "Conocé más"
   },
   "services": {
     "title": "Nuestros servicios",
@@ -158,7 +156,7 @@
       "sherlock": "- Sherlock, TOP 6 mejores trabajos en Argentina!"
     },
     "products": {
-      "title": "Proyectos",
+      "title": "Productos",
       "hr": "- Si trabajás en RRHH, te invitamos a rellenar una breve encuesta",
       "sherlock": "- Presentamos Sherlock, la mejor respuesta para tu análisis de ciberseguridad"
     }, 
@@ -194,7 +192,7 @@
   "footer": {
     "home": "Home",
     "aboutUs": "Conocenos",
-    "products": "Nuestros proyectos",
+    "products": "Nuestros productos",
     "services": "Servicios",
     "blog": "Blog",
     "allArticles": "Todos los artículos",
