@@ -3,7 +3,7 @@
   "goBack": "Go back",
   "header": {
     "aboutUs": "About us",
-    "projects": "Our projects",
+    "products": "Our products",
     "services": "Services",
     "servicesSubTitles": {
       "frontend": "Frontend",
@@ -14,7 +14,7 @@
   "pages": {
     "home": "Home - Rebase IT",
     "aboutUs": "About us - Rebase IT",
-    "projects": "Our projects - Rebase IT",
+    "products": "Our products - Rebase IT",
     "services": "Services - Rebase IT",
     "blog": "Blog - Rebase IT"
   },
@@ -32,7 +32,7 @@
     "swDevelopmentTitle": "Software development",
     "swDevelopmentContent": "We create custom software solutions tailored to the specific needs of your business. \n\n Our team of experts works with you to design and develop applications that optimize your processes and improve efficiency, guaranteeing quality and scalability.",
     "swRecruitingTitle": "Software recruiting",
-    "swRecruitingContent": "Strengthen your team with our highly trained software development professionals. \n\n We provide specialized technical talent that will quickly integrate into your projects, improving productivity and fullfing your objectives without compromising quality.",
+    "swRecruitingContent": "Strengthen your team with our highly trained software development professionals. \n\n We provide specialized technical talent that will quickly integrate into your products, improving productivity and fullfing your objectives without compromising quality.",
     "swConsultancyTitle": "Software consultancy",
     "swConsultancyContent": "We offer specialized consulting to help you make strategic decisions in technology. \n\n From the selection of platforms to the optimization of existing systems, we advise you to implement solutions that drive innovation and growth of your company."
   },
@@ -85,10 +85,10 @@
     "missionTitle": "Mission",
     "missionDetail": "To connect each of our clients with the most appropriate solution for their needs, guaranteeing their quality and profitability.",
     "valueTitle": "Vision",
-    "valueDetail": "To become a leading company in the custom software market, ensuring quality in each of our projects."
+    "valueDetail": "To become a leading company in the custom software market, ensuring quality in each of our products."
   },
-  "projects": {
-    "title": "Our projects",
+  "products": {
+    "title": "Our products",
     "subtitle": "At Rebase IT, we accompany our clients throughout the project life cycle, providing them with superior solutions tailored to their particular needs.",
     "knowMore": "Know more"
   },
@@ -157,8 +157,8 @@
       "title": "News",
       "sherlock": "- Sherlock, TOP 6 best papers in Argentina!"
     },
-    "projects": {
-      "title": "Our projects",
+    "products": {
+      "title": "Our products",
       "hr": "- If you work in HR, we invite you to fill out a brief survey",
       "sherlock": "- Introducing Sherlock, the best response for your cybersecurity analysis"
     }, 
@@ -194,7 +194,7 @@
   "footer": {
     "home": "Home",
     "aboutUs": "About us",
-    "projects": "Projects",
+    "products": "products",
     "services": "Services",
     "blog": "Blog",
     "allArticles": "All Articles",

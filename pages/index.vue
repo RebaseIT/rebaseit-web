@@ -4,9 +4,9 @@ import { useViewport } from "~/composables/useViewport";
 
 const { t } = useI18n()
 const { isSmaller: isMobile } = useViewport('xl');
-const { projects } = useProjects()
+const { products } = useProducts()
 const { services } = useServices()
-const externalProjectsLogos = projects.filter(project => !project.isInternalProject).map(projectLogo => projectLogo.image)
+const externalproductsLogos = products.filter(project => !project.isInternalProject).map(projectLogo => projectLogo.image)
 
 const scrollToSection = (id) => {
   if (document.getElementById(id)) {
@@ -144,7 +144,7 @@ const scrollToSection = (id) => {
       >
         <ReImage
           :class="{ 'mx-5 mt-4': !isMobile }"
-          v-for="externalProject in externalProjectsLogos"
+          v-for="externalProject in externalproductsLogos"
           :key="externalProject.alt"
           :src="externalProject.src"
           :alt="externalProject.alt"

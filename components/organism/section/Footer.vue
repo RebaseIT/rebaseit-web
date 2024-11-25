@@ -13,19 +13,19 @@ const menus = ref([
     anchor: "about-us-section"
   },
   {
-    title: "footer.projects",
-    to: "/projects",
-    anchor: "our-projects-section",
+    title: "footer.products",
+    to: "/products",
+    anchor: "our-products-section",
     menus: [
       {
         title: "footer.sherlock",
-        to: "/projects",
-        anchor: "projects-carousel"
+        to: "/products",
+        anchor: "products-carousel"
       },
       {
         title: "footer.rebaseConnect",
-        to: "/projects",
-        anchor: "projects-carousel"
+        to: "/products",
+        anchor: "products-carousel"
       },
     ]
   },
@@ -81,7 +81,7 @@ const menus = ref([
         anchor: "post-by-category"
       },
       {
-        title: "footer.projects",
+        title: "footer.products",
         to: "/blog",
         anchor: "post-by-category"
       },

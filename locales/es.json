@@ -3,7 +3,7 @@
   "goBack": "Volver",
   "header": {
     "aboutUs": "Conocenos",
-    "projects": "Nuestros proyectos",
+    "products": "Nuestros productos",
     "services": "Servicios",
     "servicesSubTitles": {
       "frontend": "Frontend",
@@ -14,7 +14,7 @@
   "pages": {
     "home": "Home - Rebase IT",
     "aboutUs": "Nosotros - Rebase IT",
-    "projects": "Nuestros proyectos - Rebase IT",
+    "products": "Nuestros productos - Rebase IT",
     "services": "Servicios - Rebase IT",
     "blog": "Blog - Rebase IT"
   },
@@ -87,8 +87,8 @@
     "valueTitle": "Visión",
     "valueDetail": "Convertirnos en una empresa líder del mercado de software a medida, asegurando la calidad en cada uno de nuestros proyectos."
   },
-  "projects": {
-    "title": "Nuestros proyectos",
+  "products": {
+    "title": "Nuestros productos",
     "subtitle": "Desde Rebase IT, acompañamos a nuestros clientes en todo el ciclo de vida del proyecto, brindándoles soluciones superadoras y ajustadas a sus necesidades particulares.",
     "knowMore": "Conocé más"
   },
@@ -157,7 +157,7 @@
       "title": "Noticias",
       "sherlock": "- Sherlock, TOP 6 mejores trabajos en Argentina!"
     },
-    "projects": {
+    "products": {
       "title": "Proyectos",
       "hr": "- Si trabajás en RRHH, te invitamos a rellenar una breve encuesta",
       "sherlock": "- Presentamos Sherlock, la mejor respuesta para tu análisis de ciberseguridad"
@@ -194,7 +194,7 @@
   "footer": {
     "home": "Home",
     "aboutUs": "Conocenos",
-    "projects": "Nuestros proyectos",
+    "products": "Nuestros proyectos",
     "services": "Servicios",
     "blog": "Blog",
     "allArticles": "Todos los artículos",
