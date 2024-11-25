@@ -2,8 +2,8 @@
 import { useViewport } from '~/composables/useViewport';
 const { t } = useI18n()
 const { isSmaller: isMobile } = useViewport('lg');
-const { projects } = useProjects()
-const projectsToShow = projects.filter(project => project.content)
+const { products } = useProducts()
+const productsToShow = products.filter(project => project.content)
 
 const responsiveOptions = ref([
   {
@@ -15,10 +15,10 @@ const responsiveOptions = ref([
 
 const carrouselItems = computed(() => {
   if (isMobile.value) {
-    return [...projectsToShow];
+    return [...productsToShow];
   }
   // Add empty items to the start and end of the array to make the first and last items invisible in desktop
-  return [{}, ...projectsToShow, {}];
+  return [{}, ...productsToShow, {}];
 });
 
 const middleIndex = ref(1);
@@ -35,7 +35,7 @@ const updateMiddleIndex = (event) => {
 <template>
   <Carousel
     class="carousel"
-    id="projects-carousel"
+    id="products-carousel"
     :value="carrouselItems"
     :num-visible="3"
     :num-scroll="1"
@@ -77,7 +77,7 @@ const updateMiddleIndex = (event) => {
               >
                 <!-- <ReButton
                   class="button-link"
-                  :label="t('projects.knowMore')"
+                  :label="t('products.knowMore')"
                 /> -->
               </a>
             </div>

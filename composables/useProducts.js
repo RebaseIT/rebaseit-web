@@ -1,5 +1,5 @@
 export default () => {
-  const projects = [
+  const products = [
     {
       content: null,
       image: {
@@ -78,6 +78,6 @@ export default () => {
     }
   ]
   return {
-    projects
+    products
   }
 }
