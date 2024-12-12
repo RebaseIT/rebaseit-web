@@ -3,7 +3,7 @@ const { t } = useI18n()
 const { isSmaller: isMobile } = useViewport('lg')
 const route = useRoute()
 const router = useRouter()
-const menuItems = ref([
+const menuItems = computed(() => [
   {
     label: 'header.aboutUs',
     url: '/about-us',
