@@ -2,6 +2,7 @@
 import { useViewport } from '~/composables/useViewport';
 import { useToast } from 'primevue/usetoast';
 import { isRequired, isValidEmail, isValidPhone, minLength } from '~/constants/fieldErrors';
+import emailjs from 'emailjs-com';
 
 const { t } = useI18n()
 const { isSmaller: isMobile } = useViewport('lg');
@@ -57,6 +58,24 @@ const fields = ref([
     ]
   }
 ]);
+const sendConfirmationEmail = (user) => {
+  emailjs.send(
+    'service_65b5hhl',        // ID del servicio (EmailJS)
+    'template_wg7g6yi',       // ID de la plantilla de correo
+    {
+      user_email: user.email,  
+      subject: t('email.subject'),
+      message: `${t('email.greeting')} ${user.name}! \n \n ${t('email.messageReceived')} \n \n "${user.message}" \n \n ${t('email.finalMessage')}`,
+    },
+    'L7xFdBwoFqY2rWaY0'            // ID de usuario
+  )
+    .then((response) => {
+      console.log('Correo enviado', response);
+    })
+    .catch((error) => { 
+      console.error('Error al enviar el correo', error);
+    });
+};
 
 const sendEmail = async (formData) => {
   await $fetch('https://api.web3forms.com/submit', {
@@ -65,11 +84,12 @@ const sendEmail = async (formData) => {
     body: {...formData, access_key: import.meta.env.VITE_WEB3FORMS_KEY},
   })
     .then(() => {
+      sendConfirmationEmail(formData);
       router.push('/thank-you');
     }).catch((err) => {
       console.error(err)
       toast.add({
-        severity: 'error',
+        severity: 'error', 
         detail: err.message,
         life: 3000,
       });

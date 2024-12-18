@@ -1,4 +1,4 @@
-{
+﻿{
   "test": "Prueba",
   "goBack": "Volver",
   "header": {
@@ -216,5 +216,11 @@
     "required": "Este campo es requerido",
     "phone": "Por favor, introduce un número de teléfono válido",
     "minLength": "Este campo debe tener al menos {min} caracteres"
+  },
+  "email": {
+    "subject": "Rebase IT está para vos!",
+    "greeting": "Hola",
+    "messageReceived": "Recibimos tu mensaje: ",
+    "finalMessage": "Estaremos contactándonos a la brevedad. Si quisieras agregar cualquier otro comentario, no dudes en contestar este mail con más detalles. \n \n Gracias! \n \n Equipo de Rebase IT."
   }
 }
