@@ -23,5 +23,6 @@ export default defineNuxtConfig({
       pathPrefix: false,
     },
   ],
+  compatibilityDate: '2024-12-18',
 })
 
