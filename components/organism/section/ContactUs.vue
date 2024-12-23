@@ -60,14 +60,14 @@ const fields = ref([
 ]);
 const sendConfirmationEmail = (user) => {
   emailjs.send(
-    'service_65b5hhl',        // ID del servicio (EmailJS)
-    'template_wg7g6yi',       // ID de la plantilla de correo
+    import.meta.env.VITE_EMAILJS_SERVICE,        // ID del servicio (EmailJS)
+    import.meta.env.VITE_EMAILJS_TEMPLATE,       // ID de la plantilla de correo
     {
       user_email: user.email,  
       subject: t('email.subject'),
       message: `${t('email.greeting')} ${user.name}! \n \n ${t('email.messageReceived')} \n \n "${user.message}" \n \n ${t('email.finalMessage')}`,
     },
-    'L7xFdBwoFqY2rWaY0'            // ID de usuario
+    import.meta.env.VITE_EMAILJS_ID            // ID de usuario
   )
     .then((response) => {
       console.log('Correo enviado', response);
