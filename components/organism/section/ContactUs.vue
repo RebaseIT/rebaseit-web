@@ -65,16 +65,10 @@ const sendConfirmationEmail = (user) => {
     {
       user_email: user.email,  
       subject: t('email.subject'),
-      message: `${t('email.greeting')} ${user.name}! \n \n ${t('email.messageReceived')} \n \n "${user.message}" \n \n ${t('email.finalMessage')}`,
+      message: t('email.body', { name: user.name, message: user.message  }),
     },
     import.meta.env.VITE_EMAILJS_ID            // ID de usuario
   )
-    .then((response) => {
-      console.log('Correo enviado', response);
-    })
-    .catch((error) => { 
-      console.error('Error al enviar el correo', error);
-    });
 };
 
 const sendEmail = async (formData) => {

@@ -219,8 +219,6 @@
   },
   "email": {
     "subject": "Rebase IT is here for you!",
-    "greeting": "Hello",
-    "messageReceived": "We received your message: ",
-    "finalMessage": "We will be in touch soon. If you would like to add any other comment, feel free to reply to this email with more details. \n \n Thanks! \n \n Rebase IT team."
+    "body": "Hello {name}! \n \n We received your message: \n \n '{message}' \n \n We will be in touch soon. If you would like to add any other comment, feel free to reply to this email with more details. \n \n Thanks! \n \n Rebase IT team."
   }
 }
