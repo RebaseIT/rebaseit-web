@@ -24,6 +24,9 @@ jobs:
     - name: set variables
       run: |
         touch .env
+        echo "VITE_EMAILJS_SERVICE=${{ secrets.VITE_EMAILJS_SERVICE }}" >> .env
+        echo "VITE_EMAILJS_TEMPLATE=${{ secrets.VITE_EMAILJS_TEMPLATE }}" >> .env
+        echo "VITE_EMAILJS_ID=${{ secrets.VITE_EMAILJS_ID }}" >> .env
         echo "VITE_WEB3FORMS_KEY=${{ secrets.VITE_WEB3FORMS_KEY }}" >> .env
         echo >> .env
     - name: Install & Generate 🔧
