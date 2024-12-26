@@ -94,15 +94,9 @@ const sendEmail = async (formData) => {
         </div>
       </div>
       <div
-        class="flex flex-row gap-4 justify-space-between"
+        class="flex flex-row gap-4 justify-content-center"
         :class="{ 'flex-column-reverse align-items-center': isMobile }"
       >
-        <div
-          class="carrousel-container"
-          :class="{ 'align-self-center': isMobile }"
-        >
-          <ReviewsCarousel />
-        </div>
         <div class="contact-card">
           <Card>
             <template #content>

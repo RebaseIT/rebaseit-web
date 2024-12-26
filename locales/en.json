@@ -5,6 +5,7 @@
     "aboutUs": "About us",
     "products": "Products",
     "services": "Services",
+    "clients": "Clients",
     "servicesSubTitles": {
       "frontend": "Frontend",
       "backend": "Backend"
@@ -56,6 +57,8 @@
     "getInTouchShortly": "We will get in touch shortly."
   },
   "clientReviews": {
+    "title": "Our clients",
+    "subtitle":"Those who choose us recommend us and would choose us again. This constant support reflects the trust our clients place in us and motivates us to continue perfecting every detail of what we do, ensuring we meet and exceed their expectations in every interaction. \n \n Feedback from our clients fills us with pride and serves as the driving force that propels us forward, maintaining the highest standards of quality. Every word of encouragement and every shared opinion reminds us that our commitment is not only about providing excellent service but also about building lasting relationships based on satisfaction, trust, and mutual respect.",
     "giancolaContent": "Thanks to the reservation system developed by Rebase IT, we manage all the requests of our clients without complications. Our clients even thank us for the ease when reserving their rooms at the hotel.",
     "giancolaTitle": "Sales Manager",
     "solangeContent": "They did an excellent job! They are super committed professionals, with a strong orientation towards resolution and adaptation to changes in order to meet their client.",
@@ -65,7 +68,7 @@
     "title": "We are Rebase IT",
     "subtitle": "Our team of dedicated and experienced professionals combines talent, experience and creativity to find the perfect solution for each client.",
     "ourStory": "Our story",
-    "ourStoryDetail1": "Rebase IT is the result of the meeting of five systems engineers who met and graduated from the Universidad Tecnológica Nacional Regional Buenos Aires. Sharing a passion for technology and innovation, we decided to come together to create a significant impact in the world of software development.",
+    "ourStoryDetail1": "Rebase IT is the result of the meeting of five systems engineers who met and graduated from the Universidad TecnolÃ³gica Nacional Regional Buenos Aires. Sharing a passion for technology and innovation, we decided to come together to create a significant impact in the world of software development.",
     "ourStoryDetail2": "One of the fundamental milestones in our history was participation in the CONAIISI (National Congress of Computer Engineering and Information Systems). In this context, our project, Sherlock, stood out by being selected as one of the seven most promising academic solutions in Argentina. This recognition encouraged us to continue our journey together and laid the foundation for the creation of Rebase IT.",
     "ourStoryDetail3": "Our purpose is clear: to promote and help different companies make their ideas and products a reality through innovative and technological solutions. At Rebase IT, we are dedicated to offering custom software development and consulting services, always committed to excellence and customer satisfaction.",
     "meetOurTeam": "Meet our team",

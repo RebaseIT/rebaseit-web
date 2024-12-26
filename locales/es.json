@@ -5,6 +5,7 @@
     "aboutUs": "Conocenos",
     "products": "Productos",
     "services": "Servicios",
+    "clients": "Clientes",
     "servicesSubTitles": {
       "frontend": "Frontend",
       "backend": "Backend"
@@ -56,6 +57,8 @@
     "getInTouchShortly": "Nos comunicaremos en breve."
   },
   "clientReviews": {
+    "title": "Somos Rebase IT",
+    "subtitle": "Nuestro pato equipo formado por profesionales dedicados y experimentados, combina talento, experiencia y creatividad para encontrar la soluci�n perfecta para cada cliente.",
     "giancolaContent": "Gracias al sistema de reservas desarrollado por Rebase IT, gestionamos sin complicaciones todas las solicitudes de nuestros clientes, quienes también nos agradecieron por la facilidad al reservar sus habitaciones en el hotel.",
     "giancolaTitle": "Gerente Comercial",
     "solangeContent": "¡Hicieron un excelente trabajo! Son profesionales súper comprometidos, con una fuerte orientación a la resolución y adaptación a los cambios en post de cumplir con su cliente.",

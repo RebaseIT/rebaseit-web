@@ -35,6 +35,11 @@ const menuItems = computed(() => [
     label: 'header.blog',
     url: '/blog',
     command: () => router.push('/blog')
+  }, 
+  {
+    label: 'header.clients',
+    url: '/clients',
+    command: () => router.push('/clients')
   },
   {
     src: '/images/flags/Flag_EN.svg',
