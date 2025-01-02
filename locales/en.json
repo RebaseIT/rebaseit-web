@@ -219,5 +219,9 @@
     "required": "This field is required",
     "phone": "Please enter a valid phone number",
     "minLength": "This field must be at least {min} characters long"
+  },
+  "email": {
+    "subject": "Rebase IT is here for you!",
+    "body": "Hello {name}! \n \n We received your message: \n \n '{message}' \n \n We will be in touch soon. If you would like to add any other comment, feel free to reply to this email with more details. \n \n Thanks! \n \n Rebase IT team."
   }
 }
