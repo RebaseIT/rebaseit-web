@@ -5,6 +5,7 @@
     "aboutUs": "About us",
     "products": "Products",
     "services": "Services",
+    "clients": "Clients",
     "servicesSubTitles": {
       "frontend": "Frontend",
       "backend": "Backend"
@@ -56,6 +57,8 @@
     "getInTouchShortly": "We will get in touch shortly."
   },
   "clientReviews": {
+    "title": "Our clients",
+    "subtitle":"Those who choose us recommend us and would choose us again. This constant support reflects the trust our clients place in us and motivates us to continue perfecting every detail of what we do, ensuring we meet and exceed their expectations in every interaction. \n \n Feedback from our clients fills us with pride and serves as the driving force that propels us forward, maintaining the highest standards of quality. Every word of encouragement and every shared opinion reminds us that our commitment is not only about providing excellent service but also about building lasting relationships based on satisfaction, trust, and mutual respect.",
     "giancolaContent": "Thanks to the reservation system developed by Rebase IT, we manage all the requests of our clients without complications. Our clients even thank us for the ease when reserving their rooms at the hotel.",
     "giancolaTitle": "Sales Manager",
     "solangeContent": "They did an excellent job! They are super committed professionals, with a strong orientation towards resolution and adaptation to changes in order to meet their client.",

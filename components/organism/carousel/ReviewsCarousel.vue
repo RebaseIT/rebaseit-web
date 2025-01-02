@@ -16,18 +16,11 @@ const { clientReviews } = useClientReviews()
         <div
           class="border surface-border border-round pt-6 px-2 pb-0"
         >
-          <ReParagraphSpan
-            color="black"
-            font-weight
-          >
-            {{ t(slotProps.data.content) }}
-          </ReParagraphSpan>
-
           <div class="pt-4 row">
             <img
               :src="slotProps.data.src"
-              height="60"
-              width="60"
+              height="60%"
+              width="60%"
               class="img-border"
             >
 
@@ -49,6 +42,13 @@ const { clientReviews } = useClientReviews()
               </ReTitleSpan>
             </div>
           </div>
+          <ReParagraphSpan
+            color="black"
+            font-weight
+            class="comment-text"
+          >
+            {{ t(slotProps.data.content) }}
+          </ReParagraphSpan>
         </div>
       </template>
     </Carousel>
@@ -76,6 +76,33 @@ const { clientReviews } = useClientReviews()
   }
   &:deep(.p-carousel-item){
     // flex: 1 0 100% !important;
+  }
+}
+.comment-text {
+  font-size: 1.5rem;
+}
+
+.border {
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+  gap: 1rem; 
+}
+
+.comment-text {
+  flex: 1; 
+  font-size: 1.5rem;
+}
+@media only screen and (max-width: 600px) {
+  .border {
+    display: block; 
+    align-items: center;
+    justify-content: center;
+    gap: 1rem; 
+  }
+  .img-border{
+    display: flex;
+    margin: auto;
   }
 }
 </style>
