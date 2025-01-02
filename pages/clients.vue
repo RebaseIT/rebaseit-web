@@ -19,4 +19,5 @@ const image = {
   <ReSectionContainer background="/images/background/background-3.png">
     <ReviewsCarousel />
   </ReSectionContainer> 
+  <ContactUs />
 </template>
