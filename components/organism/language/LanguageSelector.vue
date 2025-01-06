@@ -57,8 +57,8 @@ onMounted(() => {
       </div>
     </template>
   </Dropdown>
-  <div 
-    v-else 
+  <div
+    v-else
     class="flex align-items-center justify-content-center w-100"
   >
     <SelectButton
