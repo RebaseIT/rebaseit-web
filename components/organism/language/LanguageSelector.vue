@@ -1,6 +1,8 @@
 <script setup>
 import ReParagraphSpan from '~/components/atoms/typography/ReParagraphSpan.vue';
 import SelectButton from 'primevue/selectbutton';
+import { useI18n } from 'vue-i18n';
+import { ref, computed, onMounted } from 'vue';
 
 const { isSmaller: isMobile } = useViewport('lg')
 const { locale } = useI18n()
@@ -10,13 +12,20 @@ const languages = ref([
 ])
 const selectedLanguage = computed({
   get: () => {
-    return languages.value.find(language => language.optionValue === locale.value) || languages[0]
+    return languages.value.find(language => language.optionValue === locale.value) || languages.value[0];  
   },
   set: (value) => {
     locale.value = value.optionValue
+    localStorage.setItem('locale', value.optionValue);
   }
 })
 // TODO seems like primevue does not supports Listbox and panel in mobile view, refactor that once its fixed
+onMounted(() => {
+  const savedLocale = localStorage.getItem('locale');
+  if (savedLocale) {
+    locale.value = savedLocale;
+  }
+});
 </script>
 <template>
   <Dropdown
@@ -48,8 +57,8 @@ const selectedLanguage = computed({
       </div>
     </template>
   </Dropdown>
-  <div
-    v-else
+  <div 
+    v-else 
     class="flex align-items-center justify-content-center w-100"
   >
     <SelectButton
