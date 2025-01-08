@@ -142,7 +142,7 @@ const scrollToSection = (id) => {
     margin-top: 12px;
     border-radius: 8px;
     width: initial;
-    @media (max-width: 960px) {
+    @media (max-width: 1080px) {
       position: relative;
       margin-top: 0px;
       margin-bottom: 16px;
@@ -200,7 +200,7 @@ const scrollToSection = (id) => {
     transition: all .5s ease-in-out;
     z-index: 1 !important;
     animation: fadeIn .5s ease-in-out forwards;
-    @media (max-width: 960px) {
+    @media (max-width: 1080px) {
       margin-top: 0px;
     }
   }
@@ -218,7 +218,7 @@ const scrollToSection = (id) => {
   &:deep(.p-menuitem) {
     .flag {
       margin-top: 5px;
-      @media (max-width: 960px) {
+      @media (max-width: 1080px) {
         margin-top: 0px;
       }
     }
@@ -226,7 +226,7 @@ const scrollToSection = (id) => {
   &:deep(.p-menuitem-content) {
     border-radius: 8px;
     margin: 0 4px;
-    @media (max-width: 960px) {
+    @media (max-width: 1080px) {
       margin-top: 16px;
       margin-bottom: 16px;
       margin-left: 16px;
@@ -238,7 +238,7 @@ const scrollToSection = (id) => {
     width: 4rem;
     height: 4rem;
   }
-  @media (min-width: 961px) {
+  @media (min-width: 1081px) {
     align-items: center;
     padding: 0.5rem;
     background: var(--surface-b);
