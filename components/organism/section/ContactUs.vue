@@ -2,11 +2,14 @@
 import { useViewport } from '~/composables/useViewport';
 import { useToast } from 'primevue/usetoast';
 import { isRequired, isValidEmail, isValidPhone, minLength } from '~/constants/fieldErrors';
+import { useRoute } from 'vue-router';
 
 const { t } = useI18n()
 const { isSmaller: isMobile } = useViewport('lg');
 const router = useRouter();
 const toast = useToast();
+const route = useRoute();
+const isHomePage = computed(() => route.path === '/');
 
 const fields = ref([
   {
@@ -94,9 +97,18 @@ const sendEmail = async (formData) => {
         </div>
       </div>
       <div
-        class="flex flex-row gap-4 justify-content-center"
-        :class="{ 'flex-column-reverse align-items-center': isMobile }"
+        class="flex flex-row gap-4"
+        :class="{ 
+          'justify-between': isHomePage,
+          'justify-content-center': !isHomePage,
+          'flex-column-reverse align-items-center': isMobile }"
       >
+        <div 
+          v-if="isHomePage" 
+          class="carousel"
+        >
+          <ReviewsCarousel :is-home="true" />
+        </div>
         <div class="contact-card">
           <Card>
             <template #content>
@@ -135,13 +147,15 @@ const sendEmail = async (formData) => {
   &:deep(.p-card-body){
     padding: 32px;
   }
+  
 }
-.carrousel-container {
-  width: 100%;
-  max-width: 625px;
-  margin: 0 auto;
-  @media (min-width: 1080px) {
-    margin: 0;
+
+.carousel{
+  width: 60%;
+}
+@media only screen and (max-width: 1080px) {
+  .carousel{
+    width: 100%;
   }
 }
 </style>

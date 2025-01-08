@@ -1,15 +1,21 @@
 <script setup>
 const { t } = useI18n()
 const { clientReviews } = useClientReviews()
+defineProps({
+  isHome: {
+    type: Boolean,
+    default: false,
+  },
+});
 </script>
 
 <template>
-  <div class="card">
+  <div>
     <Carousel
       :value="clientReviews"
       :num-visible="1"
       :num-scroll="1"
-      class="carousel-color"
+      :class="['carousel-color', { 'carousel--home': isHome }]"
       circular
     >
       <template #item="slotProps">
@@ -19,8 +25,8 @@ const { clientReviews } = useClientReviews()
           <div class="pt-4 row">
             <img
               :src="slotProps.data.src"
-              height="60%"
-              width="60%"
+              height="100%"
+              width="100%"
               class="img-border"
             >
 
@@ -77,10 +83,6 @@ const { clientReviews } = useClientReviews()
   &:deep(.p-carousel-item){
     // flex: 1 0 100% !important;
   }
-}
-.comment-text {
-  font-size: 1.5rem;
-}
 
 .border {
   display: flex;
@@ -90,19 +92,54 @@ const { clientReviews } = useClientReviews()
 }
 
 .comment-text {
-  flex: 1; 
   font-size: 1.5rem;
 }
 @media only screen and (max-width: 600px) {
   .border {
     display: block; 
-    align-items: center;
-    justify-content: center;
     gap: 1rem; 
   }
   .img-border{
+    width: 40%;
+    height: 40%;
     display: flex;
     margin: auto;
+  }
+  .comment-text {
+      font-size: 1rem;
+    }
+    .font-size-text{
+      font-size: 1.2rem !important;
+    }
+}
+}
+//Estilos para el home, solo se aplican cuando se envia una prop verdadera como en el ContactUs
+//cuando se lo llama desde el home
+.carousel--home{
+  .img-border {
+    width: 40%;
+    height: 40%;
+    display: flex;
+    margin: auto;
+    border-radius: 100%;
+  }
+ 
+  .comment-text {
+    font-size: 1.5rem;
+  }
+  .border {
+    display: grid;
+    flex-direction: row; 
+    align-items: center;
+    gap: 1rem; 
+  }
+  @media only screen and (max-width: 600px) {
+    .comment-text {
+      font-size: 0.8rem;
+    }
+    .font-size-text{
+      font-size: 1rem !important;
+    }
   }
 }
 </style>
